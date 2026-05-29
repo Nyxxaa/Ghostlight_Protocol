@@ -1,4 +1,5 @@
 <!doctype html>
+
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -7,19 +8,92 @@
   <link rel="stylesheet" href="../site/style.css">
 </head>
 <body>
-  <main class="ghost-page ">
+  <main class="ghost-page">
     <article class="ghost-card">
 
-      <p class="breadcrumb">trunk</p>
-      <h1>GHOSTLIGHT PROTOCOL // LAYER 03</h1>
-      <section class="gate"><h2>header artifact</h2><p>Read the headers and TXT records as a sideways hand.</p><pre class="code-block">X-Ghostlight-Next: signal/layer_04_ghostlight.wav</pre></section>
-      
-      <ul class="path-list">
-        <li><a href="hub.html">hub</a></li>
-      </ul>
+```
+  <p class="breadcrumb">trunk</p>
+  <h1>GHOSTLIGHT PROTOCOL // LAYER 03</h1>
 
-    </article>
+  <section class="gate">
+    <h2>header artifact</h2>
+    <p>Read the headers and TXT records as a sideways hand.</p>
+    <pre class="code-block">HTTP/1.1 204 No Surface Content
+```
+
+Server: ghostlight-relay/1.0
+X-Ghostlight-Layer: 03
+X-Ghostlight-Reward: She wants strange, brilliant, darkly creative, emotionally warm, and technically playful.
+X-Receiver-Rule: access-is-not-entitlement
+X-Old-Web-Note: a header can be a hand pointing sideways
+X-Ghostlight-Next: signal/layer_04_ghostlight.wav
+X-Ghostlight-Assist: tools/spectrogram_hint.md
+
+TXT ghostlight.protocol "sound is not only heard"
+TXT ghostlight.protocol "signal is sometimes seen"
+TXT ghostlight.protocol "inspect the waveform visually"</pre> </section>
+
+```
+  <section class="gate" aria-labelledby="answer-title">
+    <h2 id="answer-title">receiver input</h2>
+    <p>Enter the next artifact path or one of the TXT signal phrases.</p>
+
+    <form id="layer-03-answer-form">
+      <label for="layer-03-answer">answer packet</label><br>
+      <input
+        id="layer-03-answer"
+        name="answer"
+        type="text"
+        autocomplete="off"
+        spellcheck="false"
+        class="answer-input"
+        placeholder="signal/..."
+      >
+      <button class="audio-button" type="submit">submit packet</button>
+    </form>
+
+    <p id="layer-03-answer-status" class="audio-status" aria-live="polite"></p>
+  </section>
+
+  <ul class="path-list">
+    <li><a href="hub.html">hub</a></li>
+  </ul>
+
+</article>
+```
+
   </main>
+
   <script src="../site/script.js?v=d2c2981"></script>
+
+  <script>
+    const form = document.getElementById("layer-03-answer-form");
+    const input = document.getElementById("layer-03-answer");
+    const status = document.getElementById("layer-03-answer-status");
+
+    const acceptedAnswers = new Set([
+      "signal/layer_04_ghostlight.wav",
+      "layer_04_ghostlight.wav",
+      "sound is not only heard",
+      "signal is sometimes seen",
+      "inspect the waveform visually"
+    ]);
+
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      const answer = input.value.trim().toLowerCase().replace(/\s+/g, " ");
+
+      if (acceptedAnswers.has(answer)) {
+        status.textContent = "signal accepted";
+        window.location.href = "trunk_rewards/layer_03_reward.html";
+        return;
+      }
+
+      status.textContent = "checksum failed";
+      window.location.href = "fail/puzzle_failed.html";
+    });
+  </script>
+
 </body>
 </html>
