@@ -1,6 +1,6 @@
 const button = document.querySelector("[data-signal-trigger]");
 const statusLine = document.querySelector("[data-signal-status]");
-const scriptUrl = new URL(document.currentScript.src);
+const rewardScriptUrl = new URL(document.currentScript.src);
 
 function playRewardSignal() {
   const clips = [
@@ -20,7 +20,7 @@ function playRewardSignal() {
     0,
   );
   const clip = clips[seed % clips.length];
-  const audioUrl = new URL(`../assets/audio/${clip}`, scriptUrl);
+  const audioUrl = new URL(`../assets/audio/${clip}`, rewardScriptUrl);
   const audio = new Audio(audioUrl.href);
   audio.addEventListener("ended", () => {
     if (statusLine) statusLine.textContent = "voice signal complete";
