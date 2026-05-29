@@ -1,9 +1,0 @@
-GHOSTLIGHT PROTOCOL // REWARD ALIAS // NODE_01
-
-equivalent signal accepted:
-ask_before_you_assume resolves as ask_before_assuming.
-
-canonical path:
-node_01_reward_ask_before_assuming__si.txt
-
-Open the canonical path above.

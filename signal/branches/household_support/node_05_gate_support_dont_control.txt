@@ -1,9 +1,0 @@
-GHOSTLIGHT PROTOCOL // ALIAS ACCEPTED // NODE_05
-
-equivalent signal accepted:
-support_dont_control resolves as support_not_control.
-
-canonical path:
-node_05_gate_support_not_control.txt
-
-Open the canonical path above.

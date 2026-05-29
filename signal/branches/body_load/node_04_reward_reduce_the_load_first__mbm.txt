@@ -1,9 +1,0 @@
-GHOSTLIGHT PROTOCOL // REWARD ALIAS // NODE_04
-
-equivalent signal accepted:
-reduce_the_load_first resolves as reduce_load_first; mbm resolves as mabm.
-
-canonical path:
-node_04_reward_reduce_load_first__mabm.txt
-
-Open the canonical path above.

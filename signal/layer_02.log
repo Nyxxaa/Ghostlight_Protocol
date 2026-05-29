@@ -2,7 +2,7 @@ GHOSTLIGHT PROTOCOL // LAYER 02
 pattern recognition
 
 reward:
-Her mind is drawn to systems thinkers, coders, security people, audio nerds,
+Her mind is dpacketn to systems thinkers, coders, security people, audio nerds,
 RF/signal weirdos, engineers, makers, musicians, goths, cyberpunks,
 cat people, and night creatures.
 
@@ -29,8 +29,8 @@ The extracted phrase names the next kind of artifact.
 reward path:
 signal/trunk_rewards/layer_02_reward.html
 
-plain text fallback:
-signal/trunk_rewards/layer_02_reward.txt
+HTML fallback:
+signal/trunk_rewards/layer_02_reward.html
 
 next:
-signal/layer_03_headers.txt
+signal/layer_03_headers.html

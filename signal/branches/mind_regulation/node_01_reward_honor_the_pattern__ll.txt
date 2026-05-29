@@ -1,9 +1,0 @@
-GHOSTLIGHT PROTOCOL // REWARD ALIAS // NODE_01
-
-equivalent signal accepted:
-honor_the_pattern resolves as respect_the_pattern.
-
-canonical path:
-node_01_reward_respect_the_pattern__ll.txt
-
-Open the canonical path above.

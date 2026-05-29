@@ -1,9 +1,0 @@
-GHOSTLIGHT PROTOCOL // REWARD ALIAS // NODE_03
-
-equivalent signal accepted:
-honor_patterns resolves as respect_the_pattern; tap resolves as tp.
-
-canonical path:
-node_03_reward_respect_the_pattern__tp.txt
-
-Open the canonical path above.

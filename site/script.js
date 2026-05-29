@@ -56,7 +56,7 @@ function bindAudioButton(button) {
     window.setTimeout(() => setLaughing(button, false), 1800);
   });
 
-  button.addEventListener("click", async () => {
+  async function openAudioChannel({ autoplay = false } = {}) {
     if (!audio.paused) {
       stopAudio(audio, button);
       setLaughing(button, false);
@@ -81,10 +81,24 @@ function bindAudioButton(button) {
       button.textContent = button.dataset.playingText || "Pause Signal";
       if (status) status.textContent = "audio channel open";
     } catch {
-      if (status) status.textContent = "audio channel failed; visual signal only";
+      if (status) {
+        status.textContent = autoplay
+          ? "autoplay blocked by browser; tap Play Signal"
+          : "audio channel failed; visual signal only";
+      }
       window.setTimeout(() => setLaughing(button, false), 1800);
     }
-  });
+  }
+
+  button.addEventListener("click", () => openAudioChannel());
+  button.openAudioChannel = openAudioChannel;
 }
 
 document.querySelectorAll("[data-audio-target]").forEach(bindAudioButton);
+
+window.addEventListener("load", () => {
+  const firstButton = document.querySelector("[data-audio-target]");
+  if (firstButton && typeof firstButton.openAudioChannel === "function") {
+    firstButton.openAudioChannel({ autoplay: true });
+  }
+});

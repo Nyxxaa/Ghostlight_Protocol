@@ -1,9 +1,0 @@
-GHOSTLIGHT PROTOCOL // REWARD ALIAS // NODE_10
-
-equivalent signal accepted:
-care_shows_up_as_care resolves as care_behaves_like_care.
-
-canonical path:
-node_10_reward_care_behaves_like_care__fpl.txt
-
-Open the canonical path above.

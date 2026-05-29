@@ -1,9 +1,0 @@
-GHOSTLIGHT PROTOCOL // REWARD ALIAS // NODE_01
-
-equivalent signal accepted:
-hold_many_realities resolves as hold_multiple_truths.
-
-canonical path:
-node_01_reward_hold_multiple_truths__ci.txt
-
-Open the canonical path above.

@@ -1,9 +1,0 @@
-GHOSTLIGHT PROTOCOL // REWARD ALIAS // NODE_02
-
-equivalent signal accepted:
-pv resolves as pav for this topic phrase.
-
-canonical path:
-node_02_reward_hold_multiple_truths__pav.txt
-
-Open the canonical path above.

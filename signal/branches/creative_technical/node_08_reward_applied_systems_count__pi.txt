@@ -1,9 +1,0 @@
-GHOSTLIGHT PROTOCOL // REWARD ALIAS // NODE_08
-
-equivalent signal accepted:
-applied_systems_count resolves as applied_systems_matter.
-
-canonical path:
-node_08_reward_applied_systems_matter__pi.txt
-
-Open the canonical path above.

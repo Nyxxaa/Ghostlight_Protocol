@@ -1,9 +1,0 @@
-GHOSTLIGHT PROTOCOL // REWARD ALIAS // NODE_09
-
-equivalent signal accepted:
-sbi resolves as si for this topic phrase.
-
-canonical path:
-node_09_reward_hold_multiple_truths__si.txt
-
-Open the canonical path above.

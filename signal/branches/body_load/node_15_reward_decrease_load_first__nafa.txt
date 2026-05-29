@@ -1,9 +1,0 @@
-GHOSTLIGHT PROTOCOL // REWARD ALIAS // NODE_15
-
-equivalent signal accepted:
-decrease_load_first resolves as reduce_load_first.
-
-canonical path:
-node_15_reward_reduce_load_first__nafa.txt
-
-Open the canonical path above.

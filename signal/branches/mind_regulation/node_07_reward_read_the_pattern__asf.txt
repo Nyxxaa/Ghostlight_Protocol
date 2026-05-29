@@ -1,9 +1,0 @@
-GHOSTLIGHT PROTOCOL // REWARD ALIAS // NODE_07
-
-equivalent signal accepted:
-read_the_pattern resolves as respect_the_pattern; asf resolves as af.
-
-canonical path:
-node_07_reward_respect_the_pattern__af.txt
-
-Open the canonical path above.

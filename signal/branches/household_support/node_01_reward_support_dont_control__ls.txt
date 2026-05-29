@@ -1,9 +1,0 @@
-GHOSTLIGHT PROTOCOL // REWARD ALIAS // NODE_01
-
-equivalent signal accepted:
-support_dont_control resolves as support_not_control.
-
-canonical path:
-node_01_reward_support_not_control__ls.txt
-
-Open the canonical path above.

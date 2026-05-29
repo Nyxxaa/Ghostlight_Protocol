@@ -1,9 +1,0 @@
-GHOSTLIGHT PROTOCOL // REWARD ALIAS // NODE_06
-
-equivalent signal accepted:
-hpvr resolves as hpavr for this topic phrase.
-
-canonical path:
-node_06_reward_reduce_load_first__hpavr.txt
-
-Open the canonical path above.

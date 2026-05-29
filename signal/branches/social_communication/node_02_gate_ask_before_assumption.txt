@@ -1,9 +1,0 @@
-GHOSTLIGHT PROTOCOL // ALIAS ACCEPTED // NODE_02
-
-equivalent signal accepted:
-ask_before_assumption resolves as ask_before_assuming.
-
-canonical path:
-node_02_gate_ask_before_assuming.txt
-
-Open the canonical path above.

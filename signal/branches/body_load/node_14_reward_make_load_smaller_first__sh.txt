@@ -1,9 +1,0 @@
-GHOSTLIGHT PROTOCOL // REWARD ALIAS // NODE_14
-
-equivalent signal accepted:
-make_load_smaller_first resolves as reduce_load_first; sh resolves as sah.
-
-canonical path:
-node_14_reward_reduce_load_first__sah.txt
-
-Open the canonical path above.

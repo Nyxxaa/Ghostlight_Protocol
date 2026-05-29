@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GHOSTLIGHT PROTOCOL // SIGNAL ROUTER</title>
+  <link rel="stylesheet" href="/Ghostlight_Protocol/site/style.css">
+</head>
+<body>
+  <main class="ghost-page">
+    <article class="ghost-card failure failure-puzzle">
+      <p class="breadcrumb">signal router</p>
+      <h1>GHOSTLIGHT PROTOCOL // SIGNAL NOT FOUND</h1>
+      <section class="diagnostic">
+        <p>Old text channels have been folded into the HTML interface.</p>
+        <p id="router-status">checking alternate route...</p>
+      </section>
+      <ul class="nav-links">
+        <li><a href="/Ghostlight_Protocol/signal/hub.html">hub</a></li>
+      </ul>
+    </article>
+  </main>
+  <script>
+    (function () {
+      var status = document.getElementById("router-status");
+      var path = window.location.pathname;
+      var next = path.replace(/\.(txt|log|md)$/i, ".html");
+      if (next !== path) {
+        status.textContent = "redirecting to HTML signal...";
+        window.location.replace(next + window.location.search + window.location.hash);
+      } else {
+        status.textContent = "signal rejected; recalibrate from the hub.";
+      }
+    }());
+  </script>
+</body>
+</html>

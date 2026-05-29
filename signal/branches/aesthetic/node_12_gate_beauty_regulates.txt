@@ -1,9 +1,0 @@
-GHOSTLIGHT PROTOCOL // ALIAS ACCEPTED // NODE_12
-
-equivalent signal accepted:
-beauty_regulates resolves as beauty_is_regulation.
-
-canonical path:
-node_12_gate_beauty_is_regulation.txt
-
-Open the canonical path above.

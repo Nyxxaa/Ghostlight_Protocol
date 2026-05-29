@@ -1,9 +1,0 @@
-GHOSTLIGHT PROTOCOL // REWARD ALIAS // NODE_04
-
-equivalent signal accepted:
-actual_food_first resolves as actual_intake_first.
-
-canonical path:
-node_04_reward_actual_intake_first__sf.txt
-
-Open the canonical path above.

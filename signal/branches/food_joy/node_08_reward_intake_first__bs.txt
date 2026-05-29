@@ -1,9 +1,0 @@
-GHOSTLIGHT PROTOCOL // REWARD ALIAS // NODE_08
-
-equivalent signal accepted:
-intake_first resolves as actual_intake_first.
-
-canonical path:
-node_08_reward_actual_intake_first__bs.txt
-
-Open the canonical path above.

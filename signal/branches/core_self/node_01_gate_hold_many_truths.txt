@@ -1,9 +1,0 @@
-GHOSTLIGHT PROTOCOL // ALIAS ACCEPTED // NODE_01
-
-equivalent signal accepted:
-hold_many_truths resolves as hold_multiple_truths.
-
-canonical path:
-node_01_gate_hold_multiple_truths.txt
-
-Open the canonical path above.

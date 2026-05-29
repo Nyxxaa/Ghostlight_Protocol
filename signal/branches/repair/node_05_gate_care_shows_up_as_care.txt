@@ -1,9 +1,0 @@
-GHOSTLIGHT PROTOCOL // ALIAS ACCEPTED // NODE_05
-
-equivalent signal accepted:
-care_shows_up_as_care resolves as care_behaves_like_care.
-
-canonical path:
-node_05_gate_care_behaves_like_care.txt
-
-Open the canonical path above.

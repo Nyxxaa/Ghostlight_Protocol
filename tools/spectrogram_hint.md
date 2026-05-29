@@ -16,14 +16,14 @@ The visible spectrogram phrase points toward the next gate.
 Next:
 
 ```txt
-signal/layer_05_capacity_gate.txt
+signal/layer_05_capacity_gate.html
 ```
 
 reward path:
 signal/trunk_rewards/layer_04_reward.html
 
-plain text fallback:
-signal/trunk_rewards/layer_04_reward.txt
+HTML fallback:
+signal/trunk_rewards/layer_04_reward.html
 
 next:
-signal/layer_05_capacity_gate.txt
+signal/layer_05_capacity_gate.html

@@ -1,9 +1,0 @@
-GHOSTLIGHT PROTOCOL // ALIAS ACCEPTED // NODE_12
-
-equivalent signal accepted:
-eat_first resolves as actual_intake_first.
-
-canonical path:
-node_12_gate_actual_intake_first.txt
-
-Open the canonical path above.

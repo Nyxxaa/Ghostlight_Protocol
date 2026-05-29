@@ -1,9 +1,0 @@
-GHOSTLIGHT PROTOCOL // REWARD ALIAS // NODE_14
-
-equivalent signal accepted:
-eat_first resolves as actual_intake_first.
-
-canonical path:
-node_14_reward_actual_intake_first__jap.txt
-
-Open the canonical path above.

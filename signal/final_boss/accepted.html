@@ -3,19 +3,30 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>GHOSTLIGHT PROTOCOL // FINAL BOSS // BAD KEY MATERIAL</title>
+  <title>GHOSTLIGHT PROTOCOL // FINAL BOSS // ACCEPTANCE GATE</title>
   <link rel="stylesheet" href="../../site/style.css">
 </head>
 <body>
   <main class="ghost-page">
-    <article class="ghost-card failure failure-boss">
-      <p class="breadcrumb">dead relay diagnostic</p>
-      <h1>GHOSTLIGHT PROTOCOL // FINAL BOSS // BAD KEY MATERIAL</h1>
+    <article class="ghost-card gate">
+      <p class="breadcrumb">dead relay acceptance gate</p>
+      <h1>GHOSTLIGHT PROTOCOL // FINAL BOSS // ACCEPTANCE GATE</h1>
       <section class="warning">
-        <p>This is not the accepted final relay door.</p>
-        <p>When the validator accepts the reconstructed final_boss key, use that key in the accepted-path filename.</p>
+        <p>Enter the reconstructed final_boss key. The page checks the key hash locally and reveals the final payload channel only after acceptance.</p>
       </section>
-      <pre class="code-block">signal/final_boss/accepted_&lt;final_boss_key&gt;.html</pre>
+      <form id="final-boss-form" class="gate" action="../fail/final_boss_failed.html">
+        <label for="final-boss-key">final_boss key</label>
+        <input id="final-boss-key" class="code-block" name="final_boss_key" autocomplete="off" spellcheck="false">
+        <button class="audio-button" type="submit">Validate Signal</button>
+      </form>
+      <p id="final-boss-status" class="audio-status" aria-live="polite"></p>
+      <section id="final-payload-door" class="reward" hidden>
+        <p>Final relay status: payload channel unlocked.</p>
+        <ul class="path-list">
+          <li><a href="../final_payload.html">final payload interface</a></li>
+          <li><a href="../../tools/cipher_helper.py">cipher helper</a></li>
+        </ul>
+      </section>
       <ul class="nav-links">
         <li><a href="index.html">dead lab</a></li>
         <li><a href="../fail/final_boss_failed.html">failed reconstruction page</a></li>
@@ -24,5 +35,37 @@
     </article>
   </main>
   <script src="../../site/script.js?v=d2c2981"></script>
+  <script>
+    (function () {
+      var expected = "bf942d07f3d95d83e83b5e2c3cf8c6512c6560040283d316e4e831729b3e30bd";
+      var form = document.getElementById("final-boss-form");
+      var input = document.getElementById("final-boss-key");
+      var status = document.getElementById("final-boss-status");
+      var door = document.getElementById("final-payload-door");
+
+      function hex(buffer) {
+        return Array.prototype.map.call(new Uint8Array(buffer), function (byte) {
+          return byte.toString(16).padStart(2, "0");
+        }).join("");
+      }
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        var value = input.value.trim();
+        crypto.subtle.digest("SHA-256", new TextEncoder().encode(value)).then(function (digest) {
+          if (hex(digest) === expected) {
+            door.hidden = false;
+            status.textContent = "final_boss key accepted; payload channel open";
+          } else {
+            door.hidden = true;
+            status.textContent = "signal rejected; recalibrate";
+            window.location.href = "../fail/final_boss_failed.html";
+          }
+        }).catch(function () {
+          status.textContent = "validator unavailable; use the local tool";
+        });
+      });
+    }());
+  </script>
 </body>
 </html>

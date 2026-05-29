@@ -1,9 +1,0 @@
-GHOSTLIGHT PROTOCOL // REWARD ALIAS // NODE_05
-
-equivalent signal accepted:
-correct_maps_lead resolves as corrected_maps_lead.
-
-canonical path:
-node_05_reward_corrected_maps_lead__df.txt
-
-Open the canonical path above.

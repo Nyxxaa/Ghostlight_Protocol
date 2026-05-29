@@ -1,8 +1,0 @@
-GHOSTLIGHT PROTOCOL // CARE GATE FAILED
-
-signal rejected:
-The receiver packet did not preserve the signal.
-Return to the gate and recalibrate.
-
-failure page:
-signal/fail/care_gate_failed.html

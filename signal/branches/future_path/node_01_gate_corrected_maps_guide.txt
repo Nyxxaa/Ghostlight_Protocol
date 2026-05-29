@@ -1,9 +1,0 @@
-GHOSTLIGHT PROTOCOL // ALIAS ACCEPTED // NODE_01
-
-equivalent signal accepted:
-corrected_maps_guide resolves as corrected_maps_lead.
-
-canonical path:
-node_01_gate_corrected_maps_lead.txt
-
-Open the canonical path above.

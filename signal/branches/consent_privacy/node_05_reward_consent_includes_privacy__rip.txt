@@ -1,9 +1,0 @@
-GHOSTLIGHT PROTOCOL // REWARD ALIAS // NODE_05
-
-equivalent signal accepted:
-consent_includes_privacy resolves as privacy_is_consent.
-
-canonical path:
-node_05_reward_privacy_is_consent__rip.txt
-
-Open the canonical path above.
