@@ -1,0 +1,7 @@
+GHOSTLIGHT PROTOCOL // BAD KEY MATERIAL
+
+signal rejected:
+The key does not fit the lock.
+
+Receiver instruction:
+Keys are earned by following the signal path, not by forcing the door.

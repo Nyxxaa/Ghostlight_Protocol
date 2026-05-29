@@ -25,3 +25,12 @@ Watch the first stable word of each anomalous line.
 
 route:
 The extracted phrase names the next kind of artifact.
+
+reward path:
+signal/trunk_rewards/layer_02_reward.html
+
+plain text fallback:
+signal/trunk_rewards/layer_02_reward.txt
+
+next:
+signal/layer_03_headers.txt

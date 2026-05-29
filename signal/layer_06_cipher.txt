@@ -15,3 +15,12 @@ zfcaq ayg: xkhha_icztggavud_jwaxe. qhrzrgz pzntsb sirf: qhxs_xie, fmcgyl_sir, ns
 
 tool:
 tools/cipher_helper.py can perform Vigenere decrypts if you provide the key.
+
+reward path:
+signal/trunk_rewards/layer_06_reward.html
+
+plain text fallback:
+signal/trunk_rewards/layer_06_reward.txt
+
+next:
+signal/final_boss/README.txt

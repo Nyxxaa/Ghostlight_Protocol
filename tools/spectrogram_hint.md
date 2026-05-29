@@ -18,3 +18,12 @@ Next:
 ```txt
 signal/layer_05_capacity_gate.txt
 ```
+
+reward path:
+signal/trunk_rewards/layer_04_reward.html
+
+plain text fallback:
+signal/trunk_rewards/layer_04_reward.txt
+
+next:
+signal/layer_05_capacity_gate.txt

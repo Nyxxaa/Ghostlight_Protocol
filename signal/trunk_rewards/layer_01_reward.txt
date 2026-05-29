@@ -1,0 +1,16 @@
+GHOSTLIGHT PROTOCOL // TRUNK REWARD // LAYER 01
+
+reward:
+Wynter likes people who inspect the strange thing instead of scrolling past it.
+
+Trunk resonance:
+curiosity opens the door.
+
+Next:
+signal/layer_02.log
+
+Html Next:
+../layer_02.html
+
+Return:
+../hub.html

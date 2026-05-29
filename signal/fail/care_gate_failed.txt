@@ -1,0 +1,10 @@
+GHOSTLIGHT PROTOCOL // CARE GATE FAILED
+
+signal rejected:
+The packet preserved neither care nor consent.
+
+Access is not blocked forever.
+It is waiting for a better pattern.
+
+Receiver instruction:
+Return to the gate. Choose the response that preserves connection without control, panic, abandonment, entitlement, or force.

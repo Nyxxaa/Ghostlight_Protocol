@@ -21,3 +21,12 @@ When you know the answer, normalize it as lowercase snake_case.
 
 Next:
 signal/layer_06_cipher.txt
+
+reward path:
+signal/trunk_rewards/layer_05_reward.html
+
+plain text fallback:
+signal/trunk_rewards/layer_05_reward.txt
+
+next:
+signal/layer_06_cipher.txt

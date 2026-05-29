@@ -10,3 +10,12 @@ This layer gives you another.
 method: base64
 payload:
 c2lnbmFsL2xheWVyXzAyLmxvZw==
+
+reward path:
+signal/trunk_rewards/layer_01_reward.html
+
+plain text fallback:
+signal/trunk_rewards/layer_01_reward.txt
+
+next:
+signal/layer_02.log

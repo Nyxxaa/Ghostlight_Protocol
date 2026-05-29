@@ -10,3 +10,12 @@ X-Ghostlight-Assist: tools/spectrogram_hint.md
 TXT ghostlight.protocol "sound is not only heard"
 TXT ghostlight.protocol "signal is sometimes seen"
 TXT ghostlight.protocol "inspect the waveform visually"
+
+reward path:
+signal/trunk_rewards/layer_03_reward.html
+
+plain text fallback:
+signal/trunk_rewards/layer_03_reward.txt
+
+next:
+signal/layer_04_ghostlight.wav
