@@ -2,35 +2,37 @@ const button = document.querySelector("[data-signal-trigger]");
 const statusLine = document.querySelector("[data-signal-status]");
 
 function playRewardSignal() {
-  const AudioContext = window.AudioContext || window.webkitAudioContext;
-  if (!AudioContext) {
-    if (statusLine) statusLine.textContent = "audio unavailable";
-    return;
-  }
-
-  const context = new AudioContext();
-  const master = context.createGain();
-  master.gain.setValueAtTime(0.0001, context.currentTime);
-  master.gain.exponentialRampToValueAtTime(0.18, context.currentTime + 0.04);
-  master.gain.exponentialRampToValueAtTime(0.0001, context.currentTime + 1.2);
-  master.connect(context.destination);
-
-  [196, 293.66, 392, 587.33].forEach((frequency, index) => {
-    const osc = context.createOscillator();
-    const gain = context.createGain();
-    const start = context.currentTime + index * 0.12;
-    osc.type = index % 2 ? "triangle" : "sine";
-    osc.frequency.setValueAtTime(frequency, start);
-    gain.gain.setValueAtTime(0.0001, start);
-    gain.gain.exponentialRampToValueAtTime(0.22, start + 0.035);
-    gain.gain.exponentialRampToValueAtTime(0.0001, start + 0.5);
-    osc.connect(gain);
-    gain.connect(master);
-    osc.start(start);
-    osc.stop(start + 0.55);
+  const scriptUrl = new URL(document.currentScript.src);
+  const clips = [
+    "reward_01.wav",
+    "reward_02.wav",
+    "reward_03.wav",
+    "reward_04.wav",
+    "reward_05.wav",
+    "reward_06.wav",
+    "reward_07.wav",
+    "reward_08.wav",
+    "reward_09.wav",
+    "reward_10.wav",
+  ];
+  const seed = Array.from(window.location.pathname).reduce(
+    (total, ch) => total + ch.charCodeAt(0),
+    0,
+  );
+  const clip = clips[seed % clips.length];
+  const audioUrl = new URL(`../assets/audio/${clip}`, scriptUrl);
+  const audio = new Audio(audioUrl.href);
+  audio.addEventListener("ended", () => {
+    if (statusLine) statusLine.textContent = "voice signal complete";
   });
-
-  if (statusLine) statusLine.textContent = "reward signal played";
+  audio.addEventListener("error", () => {
+    if (statusLine) statusLine.textContent = "voice signal unavailable";
+  });
+  audio.play().then(() => {
+    if (statusLine) statusLine.textContent = "voice signal playing";
+  }).catch(() => {
+    if (statusLine) statusLine.textContent = "voice signal blocked";
+  });
 }
 
 if (button) {
