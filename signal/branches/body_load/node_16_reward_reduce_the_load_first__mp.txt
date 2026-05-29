@@ -1,0 +1,9 @@
+GHOSTLIGHT PROTOCOL // REWARD ALIAS // NODE_16
+
+equivalent signal accepted:
+reduce_the_load_first resolves as reduce_load_first; mp resolves as map.
+
+canonical path:
+node_16_reward_reduce_load_first__map.txt
+
+Open the canonical path above.

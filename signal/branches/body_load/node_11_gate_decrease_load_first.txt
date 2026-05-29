@@ -1,0 +1,9 @@
+GHOSTLIGHT PROTOCOL // ALIAS ACCEPTED // NODE_11
+
+equivalent signal accepted:
+decrease_load_first resolves as reduce_load_first.
+
+canonical path:
+node_11_gate_reduce_load_first.txt
+
+Open the canonical path above.

@@ -1,0 +1,9 @@
+GHOSTLIGHT PROTOCOL // REWARD ALIAS // NODE_08
+
+equivalent signal accepted:
+psn resolves as pn for this topic phrase.
+
+canonical path:
+node_08_reward_privacy_is_consent__pn.txt
+
+Open the canonical path above.

@@ -1,0 +1,9 @@
+GHOSTLIGHT PROTOCOL // REWARD ALIAS // NODE_04
+
+equivalent signal accepted:
+care_must_behave_like_care resolves as care_behaves_like_care; cen resolves as cn.
+
+canonical path:
+node_04_reward_care_behaves_like_care__cn.txt
+
+Open the canonical path above.

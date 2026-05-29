@@ -1,0 +1,9 @@
+GHOSTLIGHT PROTOCOL // REWARD ALIAS // NODE_07
+
+equivalent signal accepted:
+systems_matter resolves as applied_systems_matter; wa resolves as waA.
+
+canonical path:
+node_07_reward_applied_systems_matter__waA.txt
+
+Open the canonical path above.

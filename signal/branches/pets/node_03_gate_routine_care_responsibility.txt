@@ -1,0 +1,9 @@
+GHOSTLIGHT PROTOCOL // ALIAS ACCEPTED // NODE_03
+
+equivalent signal accepted:
+routine_care_responsibility resolves as routine_comfort_responsibility.
+
+canonical path:
+node_03_gate_routine_comfort_responsibility.txt
+
+Open the canonical path above.

@@ -1,0 +1,9 @@
+GHOSTLIGHT PROTOCOL // REWARD ALIAS // NODE_01
+
+equivalent signal accepted:
+privacy_means_consent resolves as privacy_is_consent; mrl resolves as ml.
+
+canonical path:
+node_01_reward_privacy_is_consent__ml.txt
+
+Open the canonical path above.

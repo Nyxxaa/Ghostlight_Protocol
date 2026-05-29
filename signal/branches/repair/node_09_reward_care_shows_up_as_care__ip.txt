@@ -1,0 +1,9 @@
+GHOSTLIGHT PROTOCOL // REWARD ALIAS // NODE_09
+
+equivalent signal accepted:
+care_shows_up_as_care resolves as care_behaves_like_care.
+
+canonical path:
+node_09_reward_care_behaves_like_care__ip.txt
+
+Open the canonical path above.

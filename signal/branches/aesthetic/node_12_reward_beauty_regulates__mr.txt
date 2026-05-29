@@ -1,0 +1,9 @@
+GHOSTLIGHT PROTOCOL // REWARD ALIAS // NODE_12
+
+equivalent signal accepted:
+beauty_regulates resolves as beauty_is_regulation.
+
+canonical path:
+node_12_reward_beauty_is_regulation__mr.txt
+
+Open the canonical path above.

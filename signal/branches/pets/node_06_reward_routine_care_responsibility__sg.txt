@@ -1,0 +1,9 @@
+GHOSTLIGHT PROTOCOL // REWARD ALIAS // NODE_06
+
+equivalent signal accepted:
+routine_care_responsibility resolves as routine_comfort_responsibility.
+
+canonical path:
+node_06_reward_routine_comfort_responsibility__sg.txt
+
+Open the canonical path above.

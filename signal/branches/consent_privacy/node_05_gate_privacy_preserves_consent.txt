@@ -1,0 +1,9 @@
+GHOSTLIGHT PROTOCOL // ALIAS ACCEPTED // NODE_05
+
+equivalent signal accepted:
+privacy_preserves_consent resolves as privacy_is_consent.
+
+canonical path:
+node_05_gate_privacy_is_consent.txt
+
+Open the canonical path above.

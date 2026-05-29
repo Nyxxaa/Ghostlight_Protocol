@@ -1,0 +1,9 @@
+GHOSTLIGHT PROTOCOL // ALIAS ACCEPTED // NODE_13
+
+equivalent signal accepted:
+read_the_pattern resolves as respect_the_pattern.
+
+canonical path:
+node_13_gate_respect_the_pattern.txt
+
+Open the canonical path above.

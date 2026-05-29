@@ -1,0 +1,9 @@
+GHOSTLIGHT PROTOCOL // REWARD ALIAS // NODE_07
+
+equivalent signal accepted:
+eat_first resolves as actual_intake_first.
+
+canonical path:
+node_07_reward_actual_intake_first__hcf.txt
+
+Open the canonical path above.

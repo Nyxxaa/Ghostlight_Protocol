@@ -1,0 +1,9 @@
+GHOSTLIGHT PROTOCOL // LAYER 05 // ALIAS ACCEPTED
+
+equivalent signal accepted:
+This answer resolves to the accepted Layer 05 packet.
+
+canonical path:
+trunk_rewards/layer_05_reward.txt
+
+Open the canonical path above.

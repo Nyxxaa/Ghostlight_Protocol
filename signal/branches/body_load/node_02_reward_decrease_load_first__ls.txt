@@ -1,0 +1,9 @@
+GHOSTLIGHT PROTOCOL // REWARD ALIAS // NODE_02
+
+equivalent signal accepted:
+decrease_load_first resolves as reduce_load_first.
+
+canonical path:
+node_02_reward_reduce_load_first__ls.txt
+
+Open the canonical path above.
