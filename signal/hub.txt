@@ -40,8 +40,10 @@ The final payload requires the trunk key, every branch fragment, and the final b
 locked final relay:
 signal/final_boss/README.txt
 signal/final_boss/index.html
-signal/final_payload.txt
-signal/final_payload.html
+
+after validator accepts the final_boss key:
+signal/final_boss/accepted_<final_boss_key>.html
+signal/final_boss/accepted_<final_boss_key>.txt
 
 composite format:
 trunk::core::repair::aesthetic::body::mind::support::pets::creative::food::future::social::consent::final_boss

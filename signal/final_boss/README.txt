@@ -40,6 +40,13 @@ solve path:
 
    python tools/final_boss_validator.py <candidate_key>
 
+8. If the validator accepts the key, use the accepted path format:
+
+   signal/final_boss/accepted_<final_boss_key>.html
+
+   plain text fallback:
+   signal/final_boss/accepted_<final_boss_key>.txt
+
 note:
 This boss is meant to feel like hostile signal reconstruction while staying entirely
 inside a made-up dataset.

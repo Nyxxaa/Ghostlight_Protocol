@@ -15,11 +15,11 @@ signal/final_boss/README.txt
 Final Boss Html:
 ../final_boss/index.html
 
-Final Payload:
-signal/final_payload.txt
+After validator accepts:
+signal/final_boss/accepted_<final_boss_key>.html
 
-Final Payload Html:
-../final_payload.html
+Accepted fallback:
+signal/final_boss/accepted_<final_boss_key>.txt
 
 Return:
 ../hub.html

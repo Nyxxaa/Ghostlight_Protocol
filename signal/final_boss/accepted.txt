@@ -1,0 +1,13 @@
+GHOSTLIGHT PROTOCOL // FINAL BOSS // BAD KEY MATERIAL
+
+dead relay diagnostic:
+This is not the accepted final relay door.
+
+When the validator accepts the reconstructed final_boss key, use that key in
+the accepted-path filename.
+
+accepted path format:
+signal/final_boss/accepted_<final_boss_key>.html
+
+return:
+signal/final_boss/index.html
