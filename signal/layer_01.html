@@ -13,6 +13,13 @@
       <p class="breadcrumb">trunk</p>
       <h1>GHOSTLIGHT PROTOCOL // LAYER 01</h1>
       <section class="gate"><h2>basic decoder</h2><p>Decode the base64 payload.</p><pre class="code-block">c2lnbmFsL2xheWVyXzAyLmxvZw==</pre></section>
+      <section class="gate">
+        <form id="layer-01-answer">
+          <label for="layer-01-input">input answer here</label>
+          <input id="layer-01-input" name="answer" autocomplete="off" spellcheck="false">
+          <button type="submit">submit</button>
+        </form>
+      </section>
       
       <ul class="path-list">
         <li><a href="hub.html">hub</a></li>
@@ -20,6 +27,25 @@
 
     </article>
   </main>
+  <script>
+    document.getElementById("layer-01-answer").addEventListener("submit", async (event) => {
+      event.preventDefault();
+      const input = document.getElementById("layer-01-input").value;
+      const normalized = input.toLowerCase().replace(/[^a-z0-9]/g, "");
+      const bytes = new TextEncoder().encode(normalized);
+      const digest = await crypto.subtle.digest("SHA-256", bytes);
+      const hex = Array.from(new Uint8Array(digest), byte => byte.toString(16).padStart(2, "0")).join("");
+      const accepted = new Set([
+        "9ab3ffbe20ec98e5e938f9729163f95fc2cbe9d60455e1c0a10a2e3d13603c35",
+        "61af887aeb739fb9dca61f4aa745ca3acee36f485c703e446c20f957fd862fd3"
+      ]);
+      if (accepted.has(hex)) {
+        window.location.href = ["trunk_rewards", "layer_01_reward.html"].join("/");
+      } else {
+        window.location.href = ["fail", "puzzle_failed.html"].join("/");
+      }
+    });
+  </script>
   <script src="../site/script.js?v=d2c2981"></script>
 </body>
 </html>
