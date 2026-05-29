@@ -59,6 +59,17 @@ h1 {
   font-weight: 700;
 }
 
+.ghost-card h1 {
+  font-size: clamp(1.65rem, 5vw, 3.5rem);
+  line-height: 1.05;
+}
+
+h2 {
+  margin: 2rem 0 0.75rem;
+  color: var(--silver);
+  font-size: clamp(1.1rem, 3vw, 1.45rem);
+}
+
 .status-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -187,6 +198,17 @@ dd {
   display: block;
   white-space: pre-wrap;
   color: var(--silver);
+}
+
+input.code-block {
+  width: 100%;
+  font: inherit;
+  outline: none;
+}
+
+input.code-block:focus {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 2px rgba(79, 187, 255, 0.18);
 }
 
 .key-fragment {

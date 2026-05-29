@@ -12,17 +12,29 @@
 
       <p class="breadcrumb">final payload</p>
       <h1>GHOSTLIGHT PROTOCOL // FINAL PAYLOAD</h1>
-      <section class="warning"><p>This payload is the post-final-boss reward channel. If you reached it directly, return to the dead lab and complete the validator gate first.</p></section>
+      <section class="warning"><p>This payload is the post-final-boss reward channel. If you reached it directly, the interface returns you to the acceptance gate.</p></section>
       <section class="gate"><p>The payload remains encrypted. Bring the full earned composite key, including the final_boss key.</p></section>
-      <p class="code-block">method: xor-b64<br>tool: tools/cipher_helper.py</p>
+      <section class="diagnostic">
+        <p>method: xor-b64</p>
+        <p>key format:</p>
+        <p class="code-block">trunk::core::repair::aesthetic::body::mind::support::pets::creative::food::future::social::consent::final_boss</p>
+      </section>
+      <section class="reward">
+        <p>encrypted packet payload:</p>
+        <p class="code-block">Mjs7NSR/My40PC4yN0lAQX84OjokPBdoNSAwNSc+K1ViJgpECjAYQQMYOxZICARFB1JTAUUWABtefxoHFE4PBAU6QgENDBkHHAZIWxYABVUXDC0AHCwbER5ZTBEVHQYLVFkXQ08dPhIbFy0NQQIEAAYTF1NOCBgPXkUPCxdTOhwKEhIEQREEABo2HQsCA04CDBcRGw4NQxoZBk4CAxoafwccCBhMOwocFB4EFltIGgMGTAUsTAcJEX8fDhkVCxEWFDB5LFYEA38AHBYfDAMUGltBERUHBEw0AAAQQQQDfxYMAAAbVABDGxcRDQ0dBgUzQUEUEi0HCRhEWUgEEh82FABKTwUELQxfUwIIABwDFhoTExkXAw8cc0kSMQdPDxARGxVWVhdPLx4MBQAxAE94bTEcFn8bHBkcfxUQAgANF1QAEH8dBhNOCAIAFxkYATgGAQ4VT1M6HU8HLFAMFhcXGk4CABoHCRMaOgxPBQoHME0DCxE+BQEOAkt5MG4aAFAiBhY6G0gTCxAEATsRRR8EBAxPAk9YDgwCWAcYOQxTLBsCCRQAEk5JHxxfSRcBDAhzRhkdNgAEXEEQAh0VVklNVxcTCRsAAF9/EwAUAQQEAAAMHXNSFhocGgsIEFhJAwFbXkAIGQgfEE08EgYMQEwtBh8UBwZfGlsdCUEfFTIOBgoMPE0TERMQHhJOUxwLWEU6NxZZAwYMGxJOX0ERGxoMH38aGhUYSxUtDx8TBxEUMGkrHVILDABFBzADFREQK0wIBERNUxUbSzYMEQMBAQwrGFMKGhhJDQZUVB8GSRsAChcrCBoxTWUqHEUAG04aDQAxGAgVEX8ZBFIOA1QKMBpOGBE2HRJOFQUHHQ4WNgcQRwcSTBAXBQAAcWkrAlACHB0dDg0rUAISRRtcGgkOAVQOHAEoSAcDE1MrAkEdGCZJSChXCFNdVRsLF0EYBzYGHE1OCQoHfwUKBgRYY2UmUlMRRQgGVBgxSRoxBAwTFBgIGwdPGlUaAAocHToFGxQqD0ETDg0dFRpOFkEZDgZFD0UDATAfDBQQTA4SSQ4NPBcWEEFkZCoTEQcGAF0aHQEcCB4QV381OCgrFzsCHR4xBxpdVBIBPh4JPAkAEAA7EGsnHQIcElYaEQQVDlR/NxAAFwofFxpPEgYGGwABOkkZDQ8fAC1XUEtDfg==</p>
+      </section>
       <ul class="path-list">
-        <li><a href="final_payload.html">encrypted packet payload</a></li>
         <li><a href="../tools/cipher_helper.py">cipher helper</a></li>
         <li><a href="hub.html">hub</a></li>
       </ul>
 
     </article>
   </main>
+  <script>
+    if (sessionStorage.getItem("ghostlightFinalAccepted") !== "true") {
+      window.location.replace("final_boss/accepted.html");
+    }
+  </script>
   <script src="../site/script.js?v=d2c2981"></script>
 </body>
 </html>

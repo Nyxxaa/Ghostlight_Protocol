@@ -54,6 +54,7 @@
         var value = input.value.trim();
         crypto.subtle.digest("SHA-256", new TextEncoder().encode(value)).then(function (digest) {
           if (hex(digest) === expected) {
+            sessionStorage.setItem("ghostlightFinalAccepted", "true");
             door.hidden = false;
             status.textContent = "final_boss key accepted; payload channel open";
           } else {
