@@ -1,0 +1,22 @@
+GHOSTLIGHT PROTOCOL // RELATIONSHIP REPAIR // NODE 06 // REWARD
+
+source:
+Codex section 6.5
+
+puzzle check:
+care_behaves_like_care::ot
+
+information reward:
+The major trigger is not simply being alone; it is being trapped in uncertainty where hope and threat stay active together.
+
+node key:
+repair_06_clear
+
+continue branch:
+signal/branches/repair/node_07.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/repair/node_06_gate_care_behaves_like_care.txt

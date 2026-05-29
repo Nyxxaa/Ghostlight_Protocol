@@ -1,0 +1,22 @@
+GHOSTLIGHT PROTOCOL // BODY LOAD // NODE 08 // REWARD
+
+source:
+Codex section 3.10
+
+puzzle check:
+reduce_load_first::iar
+
+information reward:
+Sleep instability can make routines, transitions, and recovery harder. The reward is understanding that timing problems are access problems, not character defects.
+
+node key:
+body_load_08_clear
+
+continue branch:
+signal/branches/body_load/node_09.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/body_load/node_08_gate_reduce_load_first.txt

@@ -1,0 +1,22 @@
+GHOSTLIGHT PROTOCOL // CORE SELF // NODE 04 // REWARD
+
+source:
+Codex section 2.6
+
+puzzle check:
+hold_multiple_truths::sad
+
+information reward:
+Her skills cluster around vocals, visual art, bookbinding, AI-assisted scripting, AV systems, photography, Roblox, data architecture, simulation, rule-based worldbuilding, emergency response, and systems translation.
+
+node key:
+core_self_04_clear
+
+continue branch:
+signal/branches/core_self/node_05.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/core_self/node_04_gate_hold_multiple_truths.txt

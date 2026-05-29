@@ -6,30 +6,13 @@ Codex section 7.12
 care gate:
 Support preserves dignity and consent.
 
-correct stance:
-support_not_control
+answer:
+Open the path that matches the correct receiver stance:
 
-care key:
-support_not_control
+signal/branches/household_support/node_11_gate_<stance>.txt
 
-technical puzzle:
-Topic phrase: support-person instructions
-Take the first letter of each word in the topic phrase, then combine it with
-the care key using this format:
-
-care_key::topic_initials
-
-puzzle check:
-support_not_control::si
-
-information reward:
-Support people should use fewer words, one next step, calm tone, written cues, clear limits, and no shame.
-
-node key:
-household_support_11_clear
-
-continue branch:
-signal/hub.txt
+format:
+lowercase_snake_case
 
 return:
 signal/hub.txt

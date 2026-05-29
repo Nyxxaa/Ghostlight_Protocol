@@ -1,0 +1,22 @@
+GHOSTLIGHT PROTOCOL // RELATIONSHIP REPAIR // NODE 12 // REWARD
+
+source:
+Codex section 6.12
+
+puzzle check:
+care_behaves_like_care::b
+
+information reward:
+Boundaries are not walls against intimacy. They are the structure that makes intimacy safe.
+
+node key:
+repair_12_clear
+
+continue branch:
+signal/hub.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/repair/node_12_gate_care_behaves_like_care.txt

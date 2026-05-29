@@ -1,0 +1,22 @@
+GHOSTLIGHT PROTOCOL // MIND REGULATION BRANCH // REWARD
+
+reward:
+Wynter's regulation language works through lived patterns, not casual labels.
+Shutdown can be a load state. Symbolic systems can help organize memory,
+protection, emotional containment, identity, and decision-making. The core loop
+is awareness, regulation, reconnection.
+
+branch key:
+mind_key = awareness_regulation_reconnection
+
+return:
+signal/hub.txt
+
+deep branch care stance:
+respect_the_pattern
+
+continue branch:
+signal/branches/mind_regulation/node_01.txt
+
+previous:
+signal/branches/mind_regulation/start_gate_C.txt

@@ -6,30 +6,13 @@ Codex section 6.10
 care gate:
 Choose clarity, consent, repair, and limits over ambiguity.
 
-correct stance:
-care_behaves_like_care
+answer:
+Open the path that matches the correct receiver stance:
 
-care key:
-care_behaves_like_care
+signal/branches/repair/node_10_gate_<stance>.txt
 
-technical puzzle:
-Topic phrase: former pattern lessons
-Take the first letter of each word in the topic phrase, then combine it with
-the care key using this format:
-
-care_key::topic_initials
-
-puzzle check:
-care_behaves_like_care::fpl
-
-information reward:
-Former relationship material is reduced to safety lessons: ambiguity, coercion, dependency, hiddenness, and repair failure clarify present boundaries.
-
-node key:
-repair_10_clear
-
-continue branch:
-signal/branches/repair/node_11.txt
+format:
+lowercase_snake_case
 
 return:
 signal/hub.txt

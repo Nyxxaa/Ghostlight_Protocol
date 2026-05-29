@@ -6,30 +6,13 @@ Codex section 3.17
 care gate:
 Reduce load before demanding performance.
 
-correct stance:
-reduce_load_first
+answer:
+Open the path that matches the correct receiver stance:
 
-care key:
-reduce_load_first
+signal/branches/body_load/node_14_gate_<stance>.txt
 
-technical puzzle:
-Topic phrase: shower and hygiene
-Take the first letter of each word in the topic phrase, then combine it with
-the care key using this format:
-
-care_key::topic_initials
-
-puzzle check:
-reduce_load_first::sah
-
-information reward:
-Hygiene can fail because it requires initiation, sequencing, standing, sensory tolerance, and recovery. The useful design problem is lowering entry cost.
-
-node key:
-body_load_14_clear
-
-continue branch:
-signal/branches/body_load/node_15.txt
+format:
+lowercase_snake_case
 
 return:
 signal/hub.txt

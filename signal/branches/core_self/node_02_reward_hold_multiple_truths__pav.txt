@@ -1,0 +1,22 @@
+GHOSTLIGHT PROTOCOL // CORE SELF // NODE 02 // REWARD
+
+source:
+Codex section 2.4
+
+puzzle check:
+hold_multiple_truths::pav
+
+information reward:
+Her presence tends toward calm, guarded, observant, and deliberate. Her voice is low, velvet, and measured. Pauses, economy of speech, and quiet intensity should not be misread as disinterest.
+
+node key:
+core_self_02_clear
+
+continue branch:
+signal/branches/core_self/node_03.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/core_self/node_02_gate_hold_multiple_truths.txt

@@ -1,0 +1,22 @@
+GHOSTLIGHT PROTOCOL // HOUSEHOLD SUPPORT // NODE 06 // REWARD
+
+source:
+Codex section 7.7
+
+puzzle check:
+support_not_control::hs
+
+information reward:
+Hygiene support needs dignity: lower the first step, reduce sensory friction, and treat minimum care as real care.
+
+node key:
+household_support_06_clear
+
+continue branch:
+signal/branches/household_support/node_07.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/household_support/node_06_gate_support_not_control.txt

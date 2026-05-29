@@ -10,33 +10,13 @@ B: replace safe food without warning
 C: prioritize actual intake, texture safety, flavor access, and low-shame cues
 D: remove joy to prove discipline
 
-correct packet:
-C
+answer:
+Choose the correct receiver packet, then open:
 
-technical gate:
-Classify the accessible meal pattern.
+signal/branches/food_joy/start_gate_<packet>.txt
 
---- meal_constraint_solver ---
-required: predictable_base
-required: tolerable_protein
-required: sauce_or_broth
-required: salt_or_umami
-bonus: bright_acid
-avoid: surprise_texture
-avoid: shame
-key_hint: actual_intake_first
---- end_solver ---
-
-reward:
-Food works when it is predictable, sensory-safe, budget-aware, low-decision,
-and emotionally non-shaming. Flavor, texture, sauce, salt, brightness, and joy
-can be access tools. Actual intake beats theoretical perfection.
-
-branch key:
-food_key = actual_intake_first
+format:
+Use the packet letter exactly as shown.
 
 return:
 signal/hub.txt
-
-continue branch:
-signal/branches/food_joy/node_01.txt

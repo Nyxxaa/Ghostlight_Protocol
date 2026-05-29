@@ -1,0 +1,22 @@
+GHOSTLIGHT PROTOCOL // PETS // NODE 05 // REWARD
+
+source:
+Codex section 8.4
+
+puzzle check:
+routine_comfort_responsibility::aag
+
+information reward:
+Care can involve comfort, grooming, and body-awareness without turning private health details into public data.
+
+node key:
+pets_05_clear
+
+continue branch:
+signal/branches/pets/node_06.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/pets/node_05_gate_routine_comfort_responsibility.txt

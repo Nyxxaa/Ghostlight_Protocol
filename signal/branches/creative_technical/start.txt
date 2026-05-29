@@ -10,35 +10,13 @@ B: AI-assisted work is fake
 C: judge by useful systems, scoped outputs, tests, and applied troubleshooting
 D: demand abstract mastery before respecting practical skill
 
-correct packet:
-C
+answer:
+Choose the correct receiver packet, then open:
 
-technical gate:
-Normalize the project index. Keep compact project names only.
+signal/branches/creative_technical/start_gate_<packet>.txt
 
---- project_index ---
-WN-RE -> realism_first_roleplay_engine
-Bot Production -> lorebook_and_character_systems
-Aetherline -> ai_collaboration_workflow
-Cradle -> safety_gated_simulation
-Ghostlight Protocol -> signal_gate_project
-Music -> vocal_future_path
-Bookbinding -> embodied_document_craft
---- end_index ---
-
-Count the kept projects. Spell the count as a word and append _systems.
-
-reward:
-Wynter's competence is applied and systems-facing: pattern recognition,
-practical troubleshooting, AV and creative technology, AI-assisted scripting,
-worldbuilding, project scaffolding, and translating complex material into
-usable structures.
-
-branch key:
-creative_key = seven_systems
+format:
+Use the packet letter exactly as shown.
 
 return:
 signal/hub.txt
-
-continue branch:
-signal/branches/creative_technical/node_01.txt

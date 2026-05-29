@@ -1,0 +1,21 @@
+GHOSTLIGHT PROTOCOL // FOOD JOY BRANCH // REWARD
+
+reward:
+Food works when it is predictable, sensory-safe, budget-aware, low-decision,
+and emotionally non-shaming. Flavor, texture, sauce, salt, brightness, and joy
+can be access tools. Actual intake beats theoretical perfection.
+
+branch key:
+food_key = actual_intake_first
+
+return:
+signal/hub.txt
+
+deep branch care stance:
+actual_intake_first
+
+continue branch:
+signal/branches/food_joy/node_01.txt
+
+previous:
+signal/branches/food_joy/start_gate_C.txt

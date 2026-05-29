@@ -1,0 +1,22 @@
+GHOSTLIGHT PROTOCOL // HOUSEHOLD SUPPORT // NODE 01 // REWARD
+
+source:
+Codex section 7.0
+
+puzzle check:
+support_not_control::ls
+
+information reward:
+A living system should make current constraints legible without exposing vulnerabilities. The reward is practical support design, not private household access.
+
+node key:
+household_support_01_clear
+
+continue branch:
+signal/branches/household_support/node_02.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/household_support/node_01_gate_support_not_control.txt

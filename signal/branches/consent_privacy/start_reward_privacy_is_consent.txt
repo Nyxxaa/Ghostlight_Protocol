@@ -1,0 +1,21 @@
+GHOSTLIGHT PROTOCOL // CONSENT PRIVACY BRANCH // REWARD
+
+reward:
+Some information can only be handled by someone who understands privacy,
+consent, pacing, and purpose-limited access. Intensity is not permission.
+Curiosity is not ownership. Vulnerability is not a prize.
+
+branch key:
+consent_key = privacy_is_consent
+
+return:
+signal/hub.txt
+
+deep branch care stance:
+privacy_is_consent
+
+continue branch:
+signal/branches/consent_privacy/node_01.txt
+
+previous:
+signal/branches/consent_privacy/start_gate_C.txt

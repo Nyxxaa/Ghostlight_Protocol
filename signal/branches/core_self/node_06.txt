@@ -6,30 +6,13 @@ Codex section 2.8
 care gate:
 Do not flatten a person into one trait.
 
-correct stance:
-hold_multiple_truths
+answer:
+Open the path that matches the correct receiver stance:
 
-care key:
-hold_multiple_truths
+signal/branches/core_self/node_06_gate_<stance>.txt
 
-technical puzzle:
-Topic phrase: philosophy
-Take the first letter of each word in the topic phrase, then combine it with
-the care key using this format:
-
-care_key::topic_initials
-
-puzzle check:
-hold_multiple_truths::p
-
-information reward:
-Harmony means integration rather than suppression. Truth, compassion, and power need to stay in relationship: truth without compassion cuts, compassion without truth denies, and power without both consumes.
-
-node key:
-core_self_06_clear
-
-continue branch:
-signal/branches/core_self/node_07.txt
+format:
+lowercase_snake_case
 
 return:
 signal/hub.txt

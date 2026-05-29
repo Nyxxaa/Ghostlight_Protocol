@@ -6,30 +6,13 @@ Codex section 23.1
 care gate:
 Privacy is part of consent.
 
-correct stance:
-privacy_is_consent
+answer:
+Open the path that matches the correct receiver stance:
 
-care key:
-privacy_is_consent
+signal/branches/consent_privacy/node_01_gate_<stance>.txt
 
-technical puzzle:
-Topic phrase: machine-readable layer
-Take the first letter of each word in the topic phrase, then combine it with
-the care key using this format:
-
-care_key::topic_initials
-
-puzzle check:
-privacy_is_consent::ml
-
-information reward:
-Machine-readable summaries are useful only when access-controlled, corrected, and stripped of fields that do not belong to the audience.
-
-node key:
-consent_privacy_01_clear
-
-continue branch:
-signal/branches/consent_privacy/node_02.txt
+format:
+lowercase_snake_case
 
 return:
 signal/hub.txt

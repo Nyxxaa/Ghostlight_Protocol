@@ -1,0 +1,22 @@
+GHOSTLIGHT PROTOCOL // BODY LOAD // NODE 06 // REWARD
+
+source:
+Codex section 3.8
+
+puzzle check:
+reduce_load_first::hpavr
+
+information reward:
+Headache, pressure, vision, and neurological symptoms should be treated with respect rather than casual dismissal. Public rewards keep this broad and non-clinical.
+
+node key:
+body_load_06_clear
+
+continue branch:
+signal/branches/body_load/node_07.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/body_load/node_06_gate_reduce_load_first.txt

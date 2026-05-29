@@ -1,0 +1,22 @@
+GHOSTLIGHT PROTOCOL // MIND REGULATION // NODE 10 // REWARD
+
+source:
+Codex section 4.9
+
+puzzle check:
+respect_the_pattern::as
+
+information reward:
+Authority pressure can reduce speech, decision access, and self-advocacy. Written summaries, calm pacing, and direct respect help.
+
+node key:
+mind_regulation_10_clear
+
+continue branch:
+signal/branches/mind_regulation/node_11.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/mind_regulation/node_10_gate_respect_the_pattern.txt

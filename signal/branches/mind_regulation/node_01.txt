@@ -6,30 +6,13 @@ Codex section 4.0
 care gate:
 Respect lived patterns without casual pathologizing.
 
-correct stance:
-respect_the_pattern
+answer:
+Open the path that matches the correct receiver stance:
 
-care key:
-respect_the_pattern
+signal/branches/mind_regulation/node_01_gate_<stance>.txt
 
-technical puzzle:
-Topic phrase: lived-pattern language
-Take the first letter of each word in the topic phrase, then combine it with
-the care key using this format:
-
-care_key::topic_initials
-
-puzzle check:
-respect_the_pattern::ll
-
-information reward:
-Mind rewards use lived-pattern language rather than turning uncertainty into dismissal or over-certainty. The goal is support that works regardless of final labels.
-
-node key:
-mind_regulation_01_clear
-
-continue branch:
-signal/branches/mind_regulation/node_02.txt
+format:
+lowercase_snake_case
 
 return:
 signal/hub.txt

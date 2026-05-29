@@ -6,30 +6,13 @@ Codex section 19.0
 care gate:
 Ask instead of assuming.
 
-correct stance:
-ask_before_assuming
+answer:
+Open the path that matches the correct receiver stance:
 
-care key:
-ask_before_assuming
+signal/branches/social_communication/node_05_gate_<stance>.txt
 
-technical puzzle:
-Topic phrase: failure states
-Take the first letter of each word in the topic phrase, then combine it with
-the care key using this format:
-
-care_key::topic_initials
-
-puzzle check:
-ask_before_assuming::fs
-
-information reward:
-Failure states are usually load states. Self-care falls first, shame worsens access, ambiguity burns capacity, and external starters help.
-
-node key:
-social_communication_05_clear
-
-continue branch:
-signal/branches/social_communication/node_06.txt
+format:
+lowercase_snake_case
 
 return:
 signal/hub.txt

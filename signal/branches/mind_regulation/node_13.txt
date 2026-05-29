@@ -6,30 +6,13 @@ Codex section 4.12
 care gate:
 Respect lived patterns without casual pathologizing.
 
-correct stance:
-respect_the_pattern
+answer:
+Open the path that matches the correct receiver stance:
 
-care key:
-respect_the_pattern
+signal/branches/mind_regulation/node_13_gate_<stance>.txt
 
-technical puzzle:
-Topic phrase: symbolic regulation
-Take the first letter of each word in the topic phrase, then combine it with
-the care key using this format:
-
-care_key::topic_initials
-
-puzzle check:
-respect_the_pattern::sr
-
-information reward:
-Symbolic systems can be functional interfaces for memory, protection, emotional containment, identity, and decision-making.
-
-node key:
-mind_regulation_13_clear
-
-continue branch:
-signal/branches/mind_regulation/node_14.txt
+format:
+lowercase_snake_case
 
 return:
 signal/hub.txt

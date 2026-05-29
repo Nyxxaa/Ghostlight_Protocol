@@ -1,0 +1,25 @@
+GHOSTLIGHT PROTOCOL // PETS BRANCH // CARE ACCEPTED
+
+technical gate:
+Read only the stable entries.
+
+--- care_log ---
+[stable] food_visible
+[noise] private_identifier
+[stable] water_checked
+[stable] litter_predictable
+[noise] private_room_setup
+[stable] behavior_changes_noticed
+[stable] comfort_matters
+--- end_log ---
+
+reward path:
+When you recover the branch key value, open:
+
+signal/branches/pets/start_reward_<branch_key_value>.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/pets/start.txt

@@ -1,0 +1,25 @@
+GHOSTLIGHT PROTOCOL // HOUSEHOLD SUPPORT // NODE 09 // CARE ACCEPTED
+
+source:
+Codex section 7.10
+
+care key:
+support_not_control
+
+technical puzzle:
+Topic phrase: environment limits
+Take the first letter of each word in the topic phrase, then combine it with
+the care key using this format:
+
+care_key::topic_initials
+
+reward path:
+When you solve the puzzle check, open:
+
+signal/branches/household_support/node_09_reward_<care_key>__<topic_initials>.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/household_support/node_09.txt

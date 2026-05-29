@@ -1,0 +1,22 @@
+GHOSTLIGHT PROTOCOL // BODY LOAD // NODE 14 // REWARD
+
+source:
+Codex section 3.17
+
+puzzle check:
+reduce_load_first::sah
+
+information reward:
+Hygiene can fail because it requires initiation, sequencing, standing, sensory tolerance, and recovery. The useful design problem is lowering entry cost.
+
+node key:
+body_load_14_clear
+
+continue branch:
+signal/branches/body_load/node_15.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/body_load/node_14_gate_reduce_load_first.txt

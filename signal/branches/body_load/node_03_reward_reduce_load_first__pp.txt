@@ -1,0 +1,22 @@
+GHOSTLIGHT PROTOCOL // BODY LOAD // NODE 03 // REWARD
+
+source:
+Codex section 3.5
+
+puzzle check:
+reduce_load_first::pp
+
+information reward:
+Pain is not isolated from cognition or mood. It can affect patience, sleep, task access, recovery time, and whether ordinary demands feel physically expensive.
+
+node key:
+body_load_03_clear
+
+continue branch:
+signal/branches/body_load/node_04.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/body_load/node_03_gate_reduce_load_first.txt

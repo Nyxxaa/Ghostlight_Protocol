@@ -6,30 +6,13 @@ Codex section 7.10
 care gate:
 Support preserves dignity and consent.
 
-correct stance:
-support_not_control
+answer:
+Open the path that matches the correct receiver stance:
 
-care key:
-support_not_control
+signal/branches/household_support/node_09_gate_<stance>.txt
 
-technical puzzle:
-Topic phrase: environment limits
-Take the first letter of each word in the topic phrase, then combine it with
-the care key using this format:
-
-care_key::topic_initials
-
-puzzle check:
-support_not_control::el
-
-information reward:
-Current limitations should be understood as design constraints, not personal failures. The goal is adaptive structure.
-
-node key:
-household_support_09_clear
-
-continue branch:
-signal/branches/household_support/node_10.txt
+format:
+lowercase_snake_case
 
 return:
 signal/hub.txt

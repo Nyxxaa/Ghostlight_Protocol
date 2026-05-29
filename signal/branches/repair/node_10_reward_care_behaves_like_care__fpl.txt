@@ -1,0 +1,22 @@
+GHOSTLIGHT PROTOCOL // RELATIONSHIP REPAIR // NODE 10 // REWARD
+
+source:
+Codex section 6.10
+
+puzzle check:
+care_behaves_like_care::fpl
+
+information reward:
+Former relationship material is reduced to safety lessons: ambiguity, coercion, dependency, hiddenness, and repair failure clarify present boundaries.
+
+node key:
+repair_10_clear
+
+continue branch:
+signal/branches/repair/node_11.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/repair/node_10_gate_care_behaves_like_care.txt

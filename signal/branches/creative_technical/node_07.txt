@@ -6,30 +6,13 @@ Codex section 9.6
 care gate:
 Practical competence counts.
 
-correct stance:
-applied_systems_matter
+answer:
+Open the path that matches the correct receiver stance:
 
-care key:
-applied_systems_matter
+signal/branches/creative_technical/node_07_gate_<stance>.txt
 
-technical puzzle:
-Topic phrase: worldbuilding and AI
-Take the first letter of each word in the topic phrase, then combine it with
-the care key using this format:
-
-care_key::topic_initials
-
-puzzle check:
-applied_systems_matter::waA
-
-information reward:
-Worldbuilding is systems modeling. AI is a cognitive scaffold for structure, formatting, continuity, implementation, and next-step visibility.
-
-node key:
-creative_technical_07_clear
-
-continue branch:
-signal/branches/creative_technical/node_08.txt
+format:
+lowercase_snake_case
 
 return:
 signal/hub.txt

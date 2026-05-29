@@ -6,30 +6,13 @@ Codex section 2.5
 care gate:
 Do not flatten a person into one trait.
 
-correct stance:
-hold_multiple_truths
+answer:
+Open the path that matches the correct receiver stance:
 
-care key:
-hold_multiple_truths
+signal/branches/core_self/node_03_gate_<stance>.txt
 
-technical puzzle:
-Topic phrase: personality throughlines
-Take the first letter of each word in the topic phrase, then combine it with
-the care key using this format:
-
-care_key::topic_initials
-
-puzzle check:
-hold_multiple_truths::pt
-
-information reward:
-Stable throughlines include pattern recognition, strategic observation, protective stabilizing, truth over hollow comfort, beauty as functional support, and a need for clarity, consistency, and repair.
-
-node key:
-core_self_03_clear
-
-continue branch:
-signal/branches/core_self/node_04.txt
+format:
+lowercase_snake_case
 
 return:
 signal/hub.txt

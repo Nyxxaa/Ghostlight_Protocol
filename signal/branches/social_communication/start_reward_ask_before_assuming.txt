@@ -1,0 +1,21 @@
+GHOSTLIGHT PROTOCOL // SOCIAL COMMUNICATION BRANCH // REWARD
+
+reward:
+Wynter communicates best with direct, specific, real language. Under load,
+fewer words, simple choices, written steps, and one next step are safer than
+speeches. Passion is not automatically anger; ask.
+
+branch key:
+social_key = ask_before_assuming
+
+return:
+signal/hub.txt
+
+deep branch care stance:
+ask_before_assuming
+
+continue branch:
+signal/branches/social_communication/node_01.txt
+
+previous:
+signal/branches/social_communication/start_gate_C.txt

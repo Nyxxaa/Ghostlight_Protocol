@@ -1,0 +1,22 @@
+GHOSTLIGHT PROTOCOL // BODY LOAD // NODE 05 // REWARD
+
+source:
+Codex section 3.7
+
+puzzle check:
+reduce_load_first::nv
+
+information reward:
+Some body events require calm safety behavior, reduced stimulation, and recovery time. The care test is whether someone can respond without panic, shame, or disbelief.
+
+node key:
+body_load_05_clear
+
+continue branch:
+signal/branches/body_load/node_06.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/body_load/node_05_gate_reduce_load_first.txt

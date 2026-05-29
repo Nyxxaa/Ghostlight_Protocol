@@ -6,30 +6,13 @@ Codex section 7.9
 care gate:
 Support preserves dignity and consent.
 
-correct stance:
-support_not_control
+answer:
+Open the path that matches the correct receiver stance:
 
-care key:
-support_not_control
+signal/branches/household_support/node_08_gate_<stance>.txt
 
-technical puzzle:
-Topic phrase: sensory environment
-Take the first letter of each word in the topic phrase, then combine it with
-the care key using this format:
-
-care_key::topic_initials
-
-puzzle check:
-support_not_control::se
-
-information reward:
-Sensory load can determine whether a room is usable. Light, sound, visual chaos, texture, and air comfort all matter.
-
-node key:
-household_support_08_clear
-
-continue branch:
-signal/branches/household_support/node_09.txt
+format:
+lowercase_snake_case
 
 return:
 signal/hub.txt

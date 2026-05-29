@@ -25,13 +25,14 @@ signal/branches/social_communication/start.txt
 signal/branches/consent_privacy/start.txt
 
 branch rule:
-Each branch begins with a care gate, a technical puzzle, an information reward,
-and a key fragment.
+Each branch begins with a care gate. The correct care answer reveals the puzzle
+path. The puzzle answer reveals the reward path and key fragment.
 
-After the first branch reward, continue deeper through node files.
+After the first branch reward, continue deeper through node files. Deep nodes use
+the same loop, but each gate, puzzle, and reward is split into a separate file.
 
 loop:
-care gate -> key proof -> tech puzzle -> information reward -> continue branch or return to trunk
+care gate -> answer path -> tech puzzle -> reward path -> information reward -> continue branch or return to trunk
 
 final rule:
 The final payload requires the trunk key, every branch fragment, and the final boss key.

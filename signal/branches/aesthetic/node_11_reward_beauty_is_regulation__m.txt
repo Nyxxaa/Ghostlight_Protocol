@@ -1,0 +1,22 @@
+GHOSTLIGHT PROTOCOL // AESTHETIC // NODE 11 // REWARD
+
+source:
+Codex section 10.10
+
+puzzle check:
+beauty_is_regulation::m
+
+information reward:
+Motifs include moons, dragons, sigils, chains, roses, mirrors, storms, antlers, scales, bells, coffins, claws, silver, glass, stone, dark water, thresholds, signals, keys, locks, archives, and books.
+
+node key:
+aesthetic_11_clear
+
+continue branch:
+signal/branches/aesthetic/node_12.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/aesthetic/node_11_gate_beauty_is_regulation.txt

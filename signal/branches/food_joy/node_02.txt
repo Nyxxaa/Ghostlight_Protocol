@@ -6,30 +6,13 @@ Codex section 11.1
 care gate:
 Actual intake beats theoretical perfection.
 
-correct stance:
-actual_intake_first
+answer:
+Open the path that matches the correct receiver stance:
 
-care key:
-actual_intake_first
+signal/branches/food_joy/node_02_gate_<stance>.txt
 
-technical puzzle:
-Topic phrase: taste profile
-Take the first letter of each word in the topic phrase, then combine it with
-the care key using this format:
-
-care_key::topic_initials
-
-puzzle check:
-actual_intake_first::tp
-
-information reward:
-Reliable flavor structures include salt, umami, tang, bright acid, savory broths, smooth sauces, cheese, starch bases, and mild sweetness when wanted.
-
-node key:
-food_joy_02_clear
-
-continue branch:
-signal/branches/food_joy/node_03.txt
+format:
+lowercase_snake_case
 
 return:
 signal/hub.txt

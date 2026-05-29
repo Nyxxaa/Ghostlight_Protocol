@@ -1,0 +1,22 @@
+GHOSTLIGHT PROTOCOL // CORE SELF // NODE 09 // REWARD
+
+source:
+Codex section 2.13
+
+puzzle check:
+hold_multiple_truths::si
+
+information reward:
+Systems, documents, templates, AI workflows, and phased plans preserve continuity when memory, initiation, or load become unreliable. The systems are access tools.
+
+node key:
+core_self_09_clear
+
+continue branch:
+signal/hub.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/core_self/node_09_gate_hold_multiple_truths.txt

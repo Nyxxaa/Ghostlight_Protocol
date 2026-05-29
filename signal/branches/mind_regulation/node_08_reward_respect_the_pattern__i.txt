@@ -1,0 +1,22 @@
+GHOSTLIGHT PROTOCOL // MIND REGULATION // NODE 08 // REWARD
+
+source:
+Codex section 4.7
+
+puzzle check:
+respect_the_pattern::i
+
+information reward:
+Body signals may arrive late around hunger, thirst, fatigue, pain escalation, and overload. External cues can prevent crashes.
+
+node key:
+mind_regulation_08_clear
+
+continue branch:
+signal/branches/mind_regulation/node_09.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/mind_regulation/node_08_gate_respect_the_pattern.txt

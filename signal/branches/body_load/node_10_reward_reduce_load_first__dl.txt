@@ -1,0 +1,22 @@
+GHOSTLIGHT PROTOCOL // BODY LOAD // NODE 10 // REWARD
+
+source:
+Codex section 3.12
+
+puzzle check:
+reduce_load_first::dl
+
+information reward:
+Food timing, comfort, and digestion can affect sleep, energy, and willingness to eat. Support should reduce friction and shame.
+
+node key:
+body_load_10_clear
+
+continue branch:
+signal/branches/body_load/node_11.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/body_load/node_10_gate_reduce_load_first.txt

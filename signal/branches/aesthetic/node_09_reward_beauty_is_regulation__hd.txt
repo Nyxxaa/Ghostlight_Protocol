@@ -1,0 +1,22 @@
+GHOSTLIGHT PROTOCOL // AESTHETIC // NODE 09 // REWARD
+
+source:
+Codex section 10.8
+
+puzzle check:
+beauty_is_regulation::hd
+
+information reward:
+Home design is sanctuary logic: sensory coherence, dark safety, low visual chaos, soft textures, creative stations, and places to recover.
+
+node key:
+aesthetic_09_clear
+
+continue branch:
+signal/branches/aesthetic/node_10.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/aesthetic/node_09_gate_beauty_is_regulation.txt

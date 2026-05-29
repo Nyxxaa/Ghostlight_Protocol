@@ -6,30 +6,13 @@ Codex section 2.4
 care gate:
 Do not flatten a person into one trait.
 
-correct stance:
-hold_multiple_truths
+answer:
+Open the path that matches the correct receiver stance:
 
-care key:
-hold_multiple_truths
+signal/branches/core_self/node_02_gate_<stance>.txt
 
-technical puzzle:
-Topic phrase: presence and voice
-Take the first letter of each word in the topic phrase, then combine it with
-the care key using this format:
-
-care_key::topic_initials
-
-puzzle check:
-hold_multiple_truths::pav
-
-information reward:
-Her presence tends toward calm, guarded, observant, and deliberate. Her voice is low, velvet, and measured. Pauses, economy of speech, and quiet intensity should not be misread as disinterest.
-
-node key:
-core_self_02_clear
-
-continue branch:
-signal/branches/core_self/node_03.txt
+format:
+lowercase_snake_case
 
 return:
 signal/hub.txt

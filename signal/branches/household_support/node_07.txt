@@ -6,30 +6,13 @@ Codex section 7.8
 care gate:
 Support preserves dignity and consent.
 
-correct stance:
-support_not_control
+answer:
+Open the path that matches the correct receiver stance:
 
-care key:
-support_not_control
+signal/branches/household_support/node_07_gate_<stance>.txt
 
-technical puzzle:
-Topic phrase: sleep support
-Take the first letter of each word in the topic phrase, then combine it with
-the care key using this format:
-
-care_key::topic_initials
-
-puzzle check:
-support_not_control::ss
-
-information reward:
-Sleep support is practical infrastructure. It protects recovery, cognition, pain tolerance, and daily function.
-
-node key:
-household_support_07_clear
-
-continue branch:
-signal/branches/household_support/node_08.txt
+format:
+lowercase_snake_case
 
 return:
 signal/hub.txt

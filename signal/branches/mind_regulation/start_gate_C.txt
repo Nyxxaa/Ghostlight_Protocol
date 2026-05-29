@@ -1,0 +1,24 @@
+GHOSTLIGHT PROTOCOL // MIND REGULATION BRANCH // CARE ACCEPTED
+
+technical gate:
+Follow the regulation loop in order.
+
+--- state_machine ---
+state: noise
+transition: face_what_is_real -> awareness
+transition: breathe_anchor_stabilize -> regulation
+transition: turn_back_and_build -> reconnection
+accepting_state: reconnection
+key_seed: awareness_regulation_reconnection
+--- end_state_machine ---
+
+reward path:
+When you recover the branch key value, open:
+
+signal/branches/mind_regulation/start_reward_<branch_key_value>.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/mind_regulation/start.txt

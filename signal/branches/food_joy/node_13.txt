@@ -6,30 +6,13 @@ Codex section 11.12
 care gate:
 Actual intake beats theoretical perfection.
 
-correct stance:
-actual_intake_first
+answer:
+Open the path that matches the correct receiver stance:
 
-care key:
-actual_intake_first
+signal/branches/food_joy/node_13_gate_<stance>.txt
 
-technical puzzle:
-Topic phrase: body change context
-Take the first letter of each word in the topic phrase, then combine it with
-the care key using this format:
-
-care_key::topic_initials
-
-puzzle check:
-actual_intake_first::bcc
-
-information reward:
-Body goals should preserve stability, joy, sensory safety, enough food, dignity, and support before restriction.
-
-node key:
-food_joy_13_clear
-
-continue branch:
-signal/branches/food_joy/node_14.txt
+format:
+lowercase_snake_case
 
 return:
 signal/hub.txt

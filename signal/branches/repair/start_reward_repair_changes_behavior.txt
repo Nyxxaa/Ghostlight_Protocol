@@ -1,0 +1,22 @@
+GHOSTLIGHT PROTOCOL // REPAIR BRANCH // REWARD
+
+reward:
+Safety is behavioral. Useful repair names what happened, acknowledges impact,
+clarifies intent without erasing harm, states what will change, and follows
+through. Boundaries are not walls against intimacy; they are the structure that
+makes intimacy safe.
+
+branch key:
+repair_key = repair_changes_behavior
+
+return:
+signal/hub.txt
+
+deep branch care stance:
+care_behaves_like_care
+
+continue branch:
+signal/branches/repair/node_01.txt
+
+previous:
+signal/branches/repair/start_gate_C.txt

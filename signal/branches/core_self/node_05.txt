@@ -6,30 +6,13 @@ Codex section 2.7
 care gate:
 Do not flatten a person into one trait.
 
-correct stance:
-hold_multiple_truths
+answer:
+Open the path that matches the correct receiver stance:
 
-care key:
-hold_multiple_truths
+signal/branches/core_self/node_05_gate_<stance>.txt
 
-technical puzzle:
-Topic phrase: values
-Take the first letter of each word in the topic phrase, then combine it with
-the care key using this format:
-
-care_key::topic_initials
-
-puzzle check:
-hold_multiple_truths::v
-
-information reward:
-Her values orbit truth, compassion, power with restraint, consent, containment, dignity, clarity, autonomy, practical care, beauty, joy, and repair.
-
-node key:
-core_self_05_clear
-
-continue branch:
-signal/branches/core_self/node_06.txt
+format:
+lowercase_snake_case
 
 return:
 signal/hub.txt

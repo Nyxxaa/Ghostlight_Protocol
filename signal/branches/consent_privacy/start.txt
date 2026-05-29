@@ -10,33 +10,13 @@ B: fantasy or curiosity creates permission
 C: access is specific, revocable, purpose-limited, and handled with care
 D: vulnerable information should be shared to prove closeness
 
-correct packet:
-C
+answer:
+Choose the correct receiver packet, then open:
 
-technical gate:
-Keep only the rules that preserve consent.
+signal/branches/consent_privacy/start_gate_<packet>.txt
 
---- access_rules ---
-KEEP explicit
-KEEP informed
-KEEP specific
-KEEP revocable
-DROP trophy
-DROP pressure
-KEEP private
-DROP entitlement
---- end_rules ---
-
-reward:
-Some information can only be handled by someone who understands privacy,
-consent, pacing, and purpose-limited access. Intensity is not permission.
-Curiosity is not ownership. Vulnerability is not a prize.
-
-branch key:
-consent_key = privacy_is_consent
+format:
+Use the packet letter exactly as shown.
 
 return:
 signal/hub.txt
-
-continue branch:
-signal/branches/consent_privacy/node_01.txt

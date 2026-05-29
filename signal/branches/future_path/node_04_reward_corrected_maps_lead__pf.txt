@@ -1,0 +1,22 @@
+GHOSTLIGHT PROTOCOL // FUTURE PATH // NODE 04 // REWARD
+
+source:
+Codex section 12.3
+
+puzzle check:
+corrected_maps_lead::pf
+
+information reward:
+Partner-finding is discernment for capacity, warmth, intelligence, integration, tenderness, consent, repair, and practical care.
+
+node key:
+future_path_04_clear
+
+continue branch:
+signal/branches/future_path/node_05.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/future_path/node_04_gate_corrected_maps_lead.txt

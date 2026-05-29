@@ -1,0 +1,25 @@
+GHOSTLIGHT PROTOCOL // BODY LOAD // NODE 14 // CARE ACCEPTED
+
+source:
+Codex section 3.17
+
+care key:
+reduce_load_first
+
+technical puzzle:
+Topic phrase: shower and hygiene
+Take the first letter of each word in the topic phrase, then combine it with
+the care key using this format:
+
+care_key::topic_initials
+
+reward path:
+When you solve the puzzle check, open:
+
+signal/branches/body_load/node_14_reward_<care_key>__<topic_initials>.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/body_load/node_14.txt

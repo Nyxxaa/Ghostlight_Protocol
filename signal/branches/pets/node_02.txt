@@ -6,30 +6,13 @@ Codex section 8.1
 care gate:
 Small lives matter.
 
-correct stance:
-routine_comfort_responsibility
+answer:
+Open the path that matches the correct receiver stance:
 
-care key:
-routine_comfort_responsibility
+signal/branches/pets/node_02_gate_<stance>.txt
 
-technical puzzle:
-Topic phrase: scope
-Take the first letter of each word in the topic phrase, then combine it with
-the care key using this format:
-
-care_key::topic_initials
-
-puzzle check:
-routine_comfort_responsibility::s
-
-information reward:
-Pet rewards stay public-safe: emotional role, care principles, and routine meaning, never private identifiers or household vulnerabilities.
-
-node key:
-pets_02_clear
-
-continue branch:
-signal/branches/pets/node_03.txt
+format:
+lowercase_snake_case
 
 return:
 signal/hub.txt

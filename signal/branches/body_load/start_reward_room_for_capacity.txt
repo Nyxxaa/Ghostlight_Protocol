@@ -1,0 +1,22 @@
+GHOSTLIGHT PROTOCOL // BODY LOAD BRANCH // REWARD
+
+reward:
+Capacity can change when sleep, pain, sensory strain, hunger, stress,
+ambiguity, and executive demand stack together. The care pattern is practical:
+lower load, give one next step, write down what matters, and do not turn access
+failure into a moral failure.
+
+branch key:
+body_key = room_for_capacity
+
+return:
+signal/hub.txt
+
+deep branch care stance:
+reduce_load_first
+
+continue branch:
+signal/branches/body_load/node_01.txt
+
+previous:
+signal/branches/body_load/start_gate_C.txt

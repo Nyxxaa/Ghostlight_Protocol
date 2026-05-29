@@ -1,0 +1,22 @@
+GHOSTLIGHT PROTOCOL // HOUSEHOLD SUPPORT // NODE 07 // REWARD
+
+source:
+Codex section 7.8
+
+puzzle check:
+support_not_control::ss
+
+information reward:
+Sleep support is practical infrastructure. It protects recovery, cognition, pain tolerance, and daily function.
+
+node key:
+household_support_07_clear
+
+continue branch:
+signal/branches/household_support/node_08.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/household_support/node_07_gate_support_not_control.txt

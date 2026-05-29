@@ -1,0 +1,22 @@
+GHOSTLIGHT PROTOCOL // FOOD JOY // NODE 12 // REWARD
+
+source:
+Codex section 11.11
+
+puzzle check:
+actual_intake_first::bs
+
+information reward:
+Evening food can support stability when planned with body comfort, texture, and low effort in mind.
+
+node key:
+food_joy_12_clear
+
+continue branch:
+signal/branches/food_joy/node_13.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/food_joy/node_12_gate_actual_intake_first.txt

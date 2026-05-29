@@ -6,30 +6,13 @@ Codex section 12.0
 care gate:
 Do not confuse desire with current fact.
 
-correct stance:
-corrected_maps_lead
+answer:
+Open the path that matches the correct receiver stance:
 
-care key:
-corrected_maps_lead
+signal/branches/future_path/node_01_gate_<stance>.txt
 
-technical puzzle:
-Topic phrase: future frame
-Take the first letter of each word in the topic phrase, then combine it with
-the care key using this format:
-
-care_key::topic_initials
-
-puzzle check:
-corrected_maps_lead::ff
-
-information reward:
-The current future frame is scoped: music development, stability and clarification in broad terms, and finding a compatible partner.
-
-node key:
-future_path_01_clear
-
-continue branch:
-signal/branches/future_path/node_02.txt
+format:
+lowercase_snake_case
 
 return:
 signal/hub.txt

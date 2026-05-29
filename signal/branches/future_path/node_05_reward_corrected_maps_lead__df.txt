@@ -1,0 +1,22 @@
+GHOSTLIGHT PROTOCOL // FUTURE PATH // NODE 05 // REWARD
+
+source:
+Codex section 12.4
+
+puzzle check:
+corrected_maps_lead::df
+
+information reward:
+Older maps can remain historical or symbolic, but corrected current facts lead. The future should not become an overwhelming all-systems fantasy.
+
+node key:
+future_path_05_clear
+
+continue branch:
+signal/branches/future_path/node_06.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/future_path/node_05_gate_corrected_maps_lead.txt

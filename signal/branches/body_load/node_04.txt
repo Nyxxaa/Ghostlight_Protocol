@@ -6,30 +6,13 @@ Codex section 3.6
 care gate:
 Reduce load before demanding performance.
 
-correct stance:
-reduce_load_first
+answer:
+Open the path that matches the correct receiver stance:
 
-care key:
-reduce_load_first
+signal/branches/body_load/node_04_gate_<stance>.txt
 
-technical puzzle:
-Topic phrase: mobility and body mechanics
-Take the first letter of each word in the topic phrase, then combine it with
-the care key using this format:
-
-care_key::topic_initials
-
-puzzle check:
-reduce_load_first::mabm
-
-information reward:
-Body mechanics and joint stability matter as practical access conditions. Support should favor pacing, rest points, and body-aware movement rather than brute force.
-
-node key:
-body_load_04_clear
-
-continue branch:
-signal/branches/body_load/node_05.txt
+format:
+lowercase_snake_case
 
 return:
 signal/hub.txt

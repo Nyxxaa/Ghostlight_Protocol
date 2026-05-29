@@ -6,30 +6,13 @@ Codex section 4.8
 care gate:
 Respect lived patterns without casual pathologizing.
 
-correct stance:
-respect_the_pattern
+answer:
+Open the path that matches the correct receiver stance:
 
-care key:
-respect_the_pattern
+signal/branches/mind_regulation/node_09_gate_<stance>.txt
 
-technical puzzle:
-Topic phrase: shutdown
-Take the first letter of each word in the topic phrase, then combine it with
-the care key using this format:
-
-care_key::topic_initials
-
-puzzle check:
-respect_the_pattern::s
-
-information reward:
-Shutdown can look quiet, frozen, disengaged, or flattened. Less pressure, fewer words, and simple choices usually work better than more demand.
-
-node key:
-mind_regulation_09_clear
-
-continue branch:
-signal/branches/mind_regulation/node_10.txt
+format:
+lowercase_snake_case
 
 return:
 signal/hub.txt

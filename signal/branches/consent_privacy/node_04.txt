@@ -6,30 +6,13 @@ Codex section 23.8
 care gate:
 Privacy is part of consent.
 
-correct stance:
-privacy_is_consent
+answer:
+Open the path that matches the correct receiver stance:
 
-care key:
-privacy_is_consent
+signal/branches/consent_privacy/node_04_gate_<stance>.txt
 
-technical puzzle:
-Topic phrase: restricted trauma summary
-Take the first letter of each word in the topic phrase, then combine it with
-the care key using this format:
-
-care_key::topic_initials
-
-puzzle check:
-privacy_is_consent::rts
-
-information reward:
-The public-safe reward is that significant history informs consent, clarity, support, and repair needs. Details remain private or restricted.
-
-node key:
-consent_privacy_04_clear
-
-continue branch:
-signal/branches/consent_privacy/node_05.txt
+format:
+lowercase_snake_case
 
 return:
 signal/hub.txt

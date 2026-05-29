@@ -6,30 +6,13 @@ Codex section 2.6
 care gate:
 Do not flatten a person into one trait.
 
-correct stance:
-hold_multiple_truths
+answer:
+Open the path that matches the correct receiver stance:
 
-care key:
-hold_multiple_truths
+signal/branches/core_self/node_04_gate_<stance>.txt
 
-technical puzzle:
-Topic phrase: skills and disciplines
-Take the first letter of each word in the topic phrase, then combine it with
-the care key using this format:
-
-care_key::topic_initials
-
-puzzle check:
-hold_multiple_truths::sad
-
-information reward:
-Her skills cluster around vocals, visual art, bookbinding, AI-assisted scripting, AV systems, photography, Roblox, data architecture, simulation, rule-based worldbuilding, emergency response, and systems translation.
-
-node key:
-core_self_04_clear
-
-continue branch:
-signal/branches/core_self/node_05.txt
+format:
+lowercase_snake_case
 
 return:
 signal/hub.txt

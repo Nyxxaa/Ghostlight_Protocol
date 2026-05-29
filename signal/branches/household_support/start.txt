@@ -10,32 +10,13 @@ B: shame the minimum version of a task
 C: lower the entry requirement and preserve dignity
 D: insist that support needs prove incapability
 
-correct packet:
-C
+answer:
+Choose the correct receiver packet, then open:
 
-technical gate:
-Reconstruct the priority queue from highest to lowest.
+signal/branches/household_support/start_gate_<packet>.txt
 
---- queue_fragments ---
-priority 03: food
-priority 01: daily_anchor
-priority 04: one_next_step
-priority 02: water
-priority 05: recovery_time
---- end_fragments ---
-
-Use the first item as the key hint.
-
-reward:
-Daily support works best when routines have minimum, ideal, and fuller versions.
-Minimum still counts. External structure, visible cues, prepared options, and
-body-doubling can make tasks accessible without turning care into control.
-
-branch key:
-support_key = minimum_still_counts
+format:
+Use the packet letter exactly as shown.
 
 return:
 signal/hub.txt
-
-continue branch:
-signal/branches/household_support/node_01.txt

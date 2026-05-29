@@ -1,0 +1,22 @@
+GHOSTLIGHT PROTOCOL // CONSENT PRIVACY // NODE 08 // REWARD
+
+source:
+Codex section 23.13
+
+puzzle check:
+privacy_is_consent::pn
+
+information reward:
+Public-safe exports can describe creative identity, broad relationship values, broad body complexity, future direction, and pet importance without unsafe details.
+
+node key:
+consent_privacy_08_clear
+
+continue branch:
+signal/hub.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/consent_privacy/node_08_gate_privacy_is_consent.txt

@@ -6,30 +6,13 @@ Codex section 11.2
 care gate:
 Actual intake beats theoretical perfection.
 
-correct stance:
-actual_intake_first
+answer:
+Open the path that matches the correct receiver stance:
 
-care key:
-actual_intake_first
+signal/branches/food_joy/node_03_gate_<stance>.txt
 
-technical puzzle:
-Topic phrase: texture rules
-Take the first letter of each word in the topic phrase, then combine it with
-the care key using this format:
-
-care_key::topic_initials
-
-puzzle check:
-actual_intake_first::tr
-
-information reward:
-Texture is access data. Predictable bite, smooth sauces, crisp/soft contrast, and no surprise chunks can determine whether food is possible.
-
-node key:
-food_joy_03_clear
-
-continue branch:
-signal/branches/food_joy/node_04.txt
+format:
+lowercase_snake_case
 
 return:
 signal/hub.txt

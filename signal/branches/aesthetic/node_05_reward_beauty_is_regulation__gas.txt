@@ -1,0 +1,22 @@
+GHOSTLIGHT PROTOCOL // AESTHETIC // NODE 05 // REWARD
+
+source:
+Codex section 10.4
+
+puzzle check:
+beauty_is_regulation::gas
+
+information reward:
+Gothic academic sacred style blends study, ritual, archive, threshold, candlelight, books, dark wood, stone, metal, and reverence.
+
+node key:
+aesthetic_05_clear
+
+continue branch:
+signal/branches/aesthetic/node_06.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/aesthetic/node_05_gate_beauty_is_regulation.txt

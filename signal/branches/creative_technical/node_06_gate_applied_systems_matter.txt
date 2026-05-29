@@ -1,0 +1,25 @@
+GHOSTLIGHT PROTOCOL // CREATIVE TECHNICAL // NODE 06 // CARE ACCEPTED
+
+source:
+Codex section 9.5
+
+care key:
+applied_systems_matter
+
+technical puzzle:
+Topic phrase: applied technical systems
+Take the first letter of each word in the topic phrase, then combine it with
+the care key using this format:
+
+care_key::topic_initials
+
+reward path:
+When you solve the puzzle check, open:
+
+signal/branches/creative_technical/node_06_reward_<care_key>__<topic_initials>.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/creative_technical/node_06.txt

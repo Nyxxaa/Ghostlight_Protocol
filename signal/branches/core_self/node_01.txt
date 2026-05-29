@@ -6,30 +6,13 @@ Codex section 2.0
 care gate:
 Do not flatten a person into one trait.
 
-correct stance:
-hold_multiple_truths
+answer:
+Open the path that matches the correct receiver stance:
 
-care key:
-hold_multiple_truths
+signal/branches/core_self/node_01_gate_<stance>.txt
 
-technical puzzle:
-Topic phrase: core integration
-Take the first letter of each word in the topic phrase, then combine it with
-the care key using this format:
-
-care_key::topic_initials
-
-puzzle check:
-hold_multiple_truths::ci
-
-information reward:
-Wynter is best understood as an integrated pattern: creative, system-building, sensory-aware, attachment-aware, direct, and structure-dependent. The reward is not one label, but the fact that the labels only make sense together.
-
-node key:
-core_self_01_clear
-
-continue branch:
-signal/branches/core_self/node_02.txt
+format:
+lowercase_snake_case
 
 return:
 signal/hub.txt

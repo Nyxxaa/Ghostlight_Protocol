@@ -1,0 +1,27 @@
+GHOSTLIGHT PROTOCOL // CREATIVE TECHNICAL BRANCH // CARE ACCEPTED
+
+technical gate:
+Normalize the project index. Keep compact project names only.
+
+--- project_index ---
+WN-RE -> realism_first_roleplay_engine
+Bot Production -> lorebook_and_character_systems
+Aetherline -> ai_collaboration_workflow
+Cradle -> safety_gated_simulation
+Ghostlight Protocol -> signal_gate_project
+Music -> vocal_future_path
+Bookbinding -> embodied_document_craft
+--- end_index ---
+
+Count the kept projects. Spell the count as a word and append _systems.
+
+reward path:
+When you recover the branch key value, open:
+
+signal/branches/creative_technical/start_reward_<branch_key_value>.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/creative_technical/start.txt

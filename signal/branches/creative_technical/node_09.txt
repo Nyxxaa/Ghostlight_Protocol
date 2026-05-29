@@ -6,30 +6,13 @@ Codex section 9.8
 care gate:
 Practical competence counts.
 
-correct stance:
-applied_systems_matter
+answer:
+Open the path that matches the correct receiver stance:
 
-care key:
-applied_systems_matter
+signal/branches/creative_technical/node_09_gate_<stance>.txt
 
-technical puzzle:
-Topic phrase: working style
-Take the first letter of each word in the topic phrase, then combine it with
-the care key using this format:
-
-care_key::topic_initials
-
-puzzle check:
-applied_systems_matter::ws
-
-information reward:
-She works best with autonomy, clear purpose, preparation time, realistic scope, and small coordinated teams or independent work.
-
-node key:
-creative_technical_09_clear
-
-continue branch:
-signal/branches/creative_technical/node_10.txt
+format:
+lowercase_snake_case
 
 return:
 signal/hub.txt

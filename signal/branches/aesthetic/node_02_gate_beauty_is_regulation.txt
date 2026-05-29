@@ -1,0 +1,25 @@
+GHOSTLIGHT PROTOCOL // AESTHETIC // NODE 02 // CARE ACCEPTED
+
+source:
+Codex section 10.1
+
+care key:
+beauty_is_regulation
+
+technical puzzle:
+Topic phrase: color palette
+Take the first letter of each word in the topic phrase, then combine it with
+the care key using this format:
+
+care_key::topic_initials
+
+reward path:
+When you solve the puzzle check, open:
+
+signal/branches/aesthetic/node_02_reward_<care_key>__<topic_initials>.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/aesthetic/node_02.txt

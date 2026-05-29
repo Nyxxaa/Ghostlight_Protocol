@@ -1,0 +1,22 @@
+GHOSTLIGHT PROTOCOL // MIND REGULATION // NODE 01 // REWARD
+
+source:
+Codex section 4.0
+
+puzzle check:
+respect_the_pattern::ll
+
+information reward:
+Mind rewards use lived-pattern language rather than turning uncertainty into dismissal or over-certainty. The goal is support that works regardless of final labels.
+
+node key:
+mind_regulation_01_clear
+
+continue branch:
+signal/branches/mind_regulation/node_02.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/mind_regulation/node_01_gate_respect_the_pattern.txt

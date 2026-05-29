@@ -6,30 +6,13 @@ Codex section 17.0
 care gate:
 Ask instead of assuming.
 
-correct stance:
-ask_before_assuming
+answer:
+Open the path that matches the correct receiver stance:
 
-care key:
-ask_before_assuming
+signal/branches/social_communication/node_04_gate_<stance>.txt
 
-technical puzzle:
-Topic phrase: learning and memory
-Take the first letter of each word in the topic phrase, then combine it with
-the care key using this format:
-
-care_key::topic_initials
-
-puzzle check:
-ask_before_assuming::lam
-
-information reward:
-Knowledge works best when written, searchable, structured, chunked, templated, externally stored, and tied to a usable next action.
-
-node key:
-social_communication_04_clear
-
-continue branch:
-signal/branches/social_communication/node_05.txt
+format:
+lowercase_snake_case
 
 return:
 signal/hub.txt

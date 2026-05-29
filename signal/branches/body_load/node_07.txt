@@ -6,30 +6,13 @@ Codex section 3.9
 care gate:
 Reduce load before demanding performance.
 
-correct stance:
-reduce_load_first
+answer:
+Open the path that matches the correct receiver stance:
 
-care key:
-reduce_load_first
+signal/branches/body_load/node_07_gate_<stance>.txt
 
-technical puzzle:
-Topic phrase: sleep support
-Take the first letter of each word in the topic phrase, then combine it with
-the care key using this format:
-
-care_key::topic_initials
-
-puzzle check:
-reduce_load_first::ss
-
-information reward:
-Sleep quality is not optional background. It affects pain, mood, cognition, and daily access. Protecting sleep is practical care.
-
-node key:
-body_load_07_clear
-
-continue branch:
-signal/branches/body_load/node_08.txt
+format:
+lowercase_snake_case
 
 return:
 signal/hub.txt

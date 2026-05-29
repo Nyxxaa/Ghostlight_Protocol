@@ -1,0 +1,22 @@
+GHOSTLIGHT PROTOCOL // FOOD JOY // NODE 11 // REWARD
+
+source:
+Codex section 11.10
+
+puzzle check:
+actual_intake_first::jf
+
+information reward:
+Joy foods restore aliveness and should not be treated as moral failure. Pleasure can support nourishment.
+
+node key:
+food_joy_11_clear
+
+continue branch:
+signal/branches/food_joy/node_12.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/food_joy/node_11_gate_actual_intake_first.txt

@@ -1,0 +1,22 @@
+GHOSTLIGHT PROTOCOL // AESTHETIC // NODE 06 // REWARD
+
+source:
+Codex section 10.5
+
+puzzle check:
+beauty_is_regulation::fs
+
+information reward:
+Silhouette is embodiment and self-recognition. Waist anchoring, dark structure, softness, armor, and comfort have to coexist.
+
+node key:
+aesthetic_06_clear
+
+continue branch:
+signal/branches/aesthetic/node_07.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/aesthetic/node_06_gate_beauty_is_regulation.txt

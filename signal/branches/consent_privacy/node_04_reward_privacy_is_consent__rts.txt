@@ -1,0 +1,22 @@
+GHOSTLIGHT PROTOCOL // CONSENT PRIVACY // NODE 04 // REWARD
+
+source:
+Codex section 23.8
+
+puzzle check:
+privacy_is_consent::rts
+
+information reward:
+The public-safe reward is that significant history informs consent, clarity, support, and repair needs. Details remain private or restricted.
+
+node key:
+consent_privacy_04_clear
+
+continue branch:
+signal/branches/consent_privacy/node_05.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/consent_privacy/node_04_gate_privacy_is_consent.txt

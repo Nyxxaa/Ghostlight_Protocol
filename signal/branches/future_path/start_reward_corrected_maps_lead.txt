@@ -1,0 +1,21 @@
+GHOSTLIGHT PROTOCOL // FUTURE PATH BRANCH // REWARD
+
+reward:
+The current future path is scoped: develop music, pursue stability and
+clarification in broad terms, and find a compatible partner with real capacity.
+Old maps may matter historically, but corrected facts lead.
+
+branch key:
+future_key = corrected_maps_lead
+
+return:
+signal/hub.txt
+
+deep branch care stance:
+corrected_maps_lead
+
+continue branch:
+signal/branches/future_path/node_01.txt
+
+previous:
+signal/branches/future_path/start_gate_C.txt

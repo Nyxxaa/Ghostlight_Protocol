@@ -1,0 +1,25 @@
+GHOSTLIGHT PROTOCOL // MIND REGULATION // NODE 03 // CARE ACCEPTED
+
+source:
+Codex section 4.2
+
+care key:
+respect_the_pattern
+
+technical puzzle:
+Topic phrase: trauma-adapted patterns
+Take the first letter of each word in the topic phrase, then combine it with
+the care key using this format:
+
+care_key::topic_initials
+
+reward path:
+When you solve the puzzle check, open:
+
+signal/branches/mind_regulation/node_03_reward_<care_key>__<topic_initials>.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/mind_regulation/node_03.txt

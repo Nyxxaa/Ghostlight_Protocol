@@ -1,0 +1,22 @@
+GHOSTLIGHT PROTOCOL // MIND REGULATION // NODE 09 // REWARD
+
+source:
+Codex section 4.8
+
+puzzle check:
+respect_the_pattern::s
+
+information reward:
+Shutdown can look quiet, frozen, disengaged, or flattened. Less pressure, fewer words, and simple choices usually work better than more demand.
+
+node key:
+mind_regulation_09_clear
+
+continue branch:
+signal/branches/mind_regulation/node_10.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/mind_regulation/node_09_gate_respect_the_pattern.txt

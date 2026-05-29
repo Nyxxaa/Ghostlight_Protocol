@@ -1,0 +1,22 @@
+GHOSTLIGHT PROTOCOL // CREATIVE TECHNICAL // NODE 01 // REWARD
+
+source:
+Codex section 9.0
+
+puzzle check:
+applied_systems_matter::cts
+
+information reward:
+Wynter's strongest pattern is systems translation: turning materials, bodies, tools, emotions, constraints, and goals into usable structure.
+
+node key:
+creative_technical_01_clear
+
+continue branch:
+signal/branches/creative_technical/node_02.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/creative_technical/node_01_gate_applied_systems_matter.txt

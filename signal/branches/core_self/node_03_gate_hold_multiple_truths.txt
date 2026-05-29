@@ -1,0 +1,25 @@
+GHOSTLIGHT PROTOCOL // CORE SELF // NODE 03 // CARE ACCEPTED
+
+source:
+Codex section 2.5
+
+care key:
+hold_multiple_truths
+
+technical puzzle:
+Topic phrase: personality throughlines
+Take the first letter of each word in the topic phrase, then combine it with
+the care key using this format:
+
+care_key::topic_initials
+
+reward path:
+When you solve the puzzle check, open:
+
+signal/branches/core_self/node_03_reward_<care_key>__<topic_initials>.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/core_self/node_03.txt

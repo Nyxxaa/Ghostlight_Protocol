@@ -6,30 +6,13 @@ Codex section 9.4
 care gate:
 Practical competence counts.
 
-correct stance:
-applied_systems_matter
+answer:
+Open the path that matches the correct receiver stance:
 
-care key:
-applied_systems_matter
+signal/branches/creative_technical/node_05_gate_<stance>.txt
 
-technical puzzle:
-Topic phrase: materials and practical systems
-Take the first letter of each word in the topic phrase, then combine it with
-the care key using this format:
-
-care_key::topic_initials
-
-puzzle check:
-applied_systems_matter::maps
-
-information reward:
-Food craft, materials, construction knowledge, preservation, textiles, paper, ceramics, and infrastructure are understood as process systems.
-
-node key:
-creative_technical_05_clear
-
-continue branch:
-signal/branches/creative_technical/node_06.txt
+format:
+lowercase_snake_case
 
 return:
 signal/hub.txt

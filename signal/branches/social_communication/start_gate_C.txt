@@ -1,0 +1,25 @@
+GHOSTLIGHT PROTOCOL // SOCIAL COMMUNICATION BRANCH // CARE ACCEPTED
+
+technical gate:
+Sort helpful phrases from harmful phrases.
+
+--- phrase_filter ---
+KEEP: ask_instead_of_assuming
+DROP: calm_down_as_control
+KEEP: written_steps_when_it_matters
+DROP: vague_reassurance_only
+KEEP: one_next_step
+DROP: fake_positivity
+KEEP: real_answers
+--- end_filter ---
+
+reward path:
+When you recover the branch key value, open:
+
+signal/branches/social_communication/start_reward_<branch_key_value>.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/social_communication/start.txt

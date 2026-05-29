@@ -1,0 +1,25 @@
+GHOSTLIGHT PROTOCOL // PETS // NODE 08 // CARE ACCEPTED
+
+source:
+Codex section 8.7
+
+care key:
+routine_comfort_responsibility
+
+technical puzzle:
+Topic phrase: warning signs
+Take the first letter of each word in the topic phrase, then combine it with
+the care key using this format:
+
+care_key::topic_initials
+
+reward path:
+When you solve the puzzle check, open:
+
+signal/branches/pets/node_08_reward_<care_key>__<topic_initials>.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/pets/node_08.txt

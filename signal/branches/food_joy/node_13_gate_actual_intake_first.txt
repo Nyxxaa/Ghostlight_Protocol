@@ -1,0 +1,25 @@
+GHOSTLIGHT PROTOCOL // FOOD JOY // NODE 13 // CARE ACCEPTED
+
+source:
+Codex section 11.12
+
+care key:
+actual_intake_first
+
+technical puzzle:
+Topic phrase: body change context
+Take the first letter of each word in the topic phrase, then combine it with
+the care key using this format:
+
+care_key::topic_initials
+
+reward path:
+When you solve the puzzle check, open:
+
+signal/branches/food_joy/node_13_reward_<care_key>__<topic_initials>.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/food_joy/node_13.txt

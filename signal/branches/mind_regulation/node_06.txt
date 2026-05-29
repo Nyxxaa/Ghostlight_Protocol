@@ -6,30 +6,13 @@ Codex section 4.5
 care gate:
 Respect lived patterns without casual pathologizing.
 
-correct stance:
-respect_the_pattern
+answer:
+Open the path that matches the correct receiver stance:
 
-care key:
-respect_the_pattern
+signal/branches/mind_regulation/node_06_gate_<stance>.txt
 
-technical puzzle:
-Topic phrase: executive dysfunction
-Take the first letter of each word in the topic phrase, then combine it with
-the care key using this format:
-
-care_key::topic_initials
-
-puzzle check:
-respect_the_pattern::ed
-
-information reward:
-The gap is often between knowing and doing, not caring and not caring. Scaffolding, body-doubling, written steps, and tiny starts matter.
-
-node key:
-mind_regulation_06_clear
-
-continue branch:
-signal/branches/mind_regulation/node_07.txt
+format:
+lowercase_snake_case
 
 return:
 signal/hub.txt

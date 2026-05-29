@@ -1,0 +1,22 @@
+GHOSTLIGHT PROTOCOL // AESTHETIC // NODE 04 // REWARD
+
+source:
+Codex section 10.3
+
+puzzle check:
+beauty_is_regulation::l
+
+information reward:
+Lighting should support low-glare, moody, indirect, stormlit, candlelit, moonlit, or otherwise controlled atmosphere.
+
+node key:
+aesthetic_04_clear
+
+continue branch:
+signal/branches/aesthetic/node_05.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/aesthetic/node_04_gate_beauty_is_regulation.txt

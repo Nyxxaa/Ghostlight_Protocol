@@ -1,0 +1,22 @@
+GHOSTLIGHT PROTOCOL // CONSENT PRIVACY // NODE 02 // REWARD
+
+source:
+Codex section 23.6
+
+puzzle check:
+privacy_is_consent::t
+
+information reward:
+Timeline rewards can reveal eras and interpretation patterns without exact restricted details, names, or crisis retellings.
+
+node key:
+consent_privacy_02_clear
+
+continue branch:
+signal/branches/consent_privacy/node_03.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/consent_privacy/node_02_gate_privacy_is_consent.txt

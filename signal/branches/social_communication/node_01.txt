@@ -6,30 +6,13 @@ Codex section 13.0
 care gate:
 Ask instead of assuming.
 
-correct stance:
-ask_before_assuming
+answer:
+Open the path that matches the correct receiver stance:
 
-care key:
-ask_before_assuming
+signal/branches/social_communication/node_01_gate_<stance>.txt
 
-technical puzzle:
-Topic phrase: social interface
-Take the first letter of each word in the topic phrase, then combine it with
-the care key using this format:
-
-care_key::topic_initials
-
-puzzle check:
-ask_before_assuming::si
-
-information reward:
-Wynter is direct, real, friendly until proven otherwise, and mostly consistent across settings. First-contact energy is not the whole baseline.
-
-node key:
-social_communication_01_clear
-
-continue branch:
-signal/branches/social_communication/node_02.txt
+format:
+lowercase_snake_case
 
 return:
 signal/hub.txt

@@ -1,0 +1,22 @@
+GHOSTLIGHT PROTOCOL // CREATIVE TECHNICAL // NODE 07 // REWARD
+
+source:
+Codex section 9.6
+
+puzzle check:
+applied_systems_matter::waA
+
+information reward:
+Worldbuilding is systems modeling. AI is a cognitive scaffold for structure, formatting, continuity, implementation, and next-step visibility.
+
+node key:
+creative_technical_07_clear
+
+continue branch:
+signal/branches/creative_technical/node_08.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/creative_technical/node_07_gate_applied_systems_matter.txt

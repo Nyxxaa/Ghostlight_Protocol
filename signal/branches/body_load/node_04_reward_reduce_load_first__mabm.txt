@@ -1,0 +1,22 @@
+GHOSTLIGHT PROTOCOL // BODY LOAD // NODE 04 // REWARD
+
+source:
+Codex section 3.6
+
+puzzle check:
+reduce_load_first::mabm
+
+information reward:
+Body mechanics and joint stability matter as practical access conditions. Support should favor pacing, rest points, and body-aware movement rather than brute force.
+
+node key:
+body_load_04_clear
+
+continue branch:
+signal/branches/body_load/node_05.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/body_load/node_04_gate_reduce_load_first.txt

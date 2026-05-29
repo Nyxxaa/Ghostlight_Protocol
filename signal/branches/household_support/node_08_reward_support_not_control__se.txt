@@ -1,0 +1,22 @@
+GHOSTLIGHT PROTOCOL // HOUSEHOLD SUPPORT // NODE 08 // REWARD
+
+source:
+Codex section 7.9
+
+puzzle check:
+support_not_control::se
+
+information reward:
+Sensory load can determine whether a room is usable. Light, sound, visual chaos, texture, and air comfort all matter.
+
+node key:
+household_support_08_clear
+
+continue branch:
+signal/branches/household_support/node_09.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/household_support/node_08_gate_support_not_control.txt

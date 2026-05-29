@@ -1,0 +1,22 @@
+GHOSTLIGHT PROTOCOL // BODY LOAD // NODE 07 // REWARD
+
+source:
+Codex section 3.9
+
+puzzle check:
+reduce_load_first::ss
+
+information reward:
+Sleep quality is not optional background. It affects pain, mood, cognition, and daily access. Protecting sleep is practical care.
+
+node key:
+body_load_07_clear
+
+continue branch:
+signal/branches/body_load/node_08.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/body_load/node_07_gate_reduce_load_first.txt

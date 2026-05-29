@@ -1,0 +1,22 @@
+GHOSTLIGHT PROTOCOL // RELATIONSHIP REPAIR // NODE 02 // REWARD
+
+source:
+Codex section 6.1
+
+puzzle check:
+care_behaves_like_care::cf
+
+information reward:
+The current frame is single and future-facing. Desire for a future bond is real, but it should not be confused with current relationship fact.
+
+node key:
+repair_02_clear
+
+continue branch:
+signal/branches/repair/node_03.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/repair/node_02_gate_care_behaves_like_care.txt

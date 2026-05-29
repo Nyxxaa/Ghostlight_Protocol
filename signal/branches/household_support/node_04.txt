@@ -6,30 +6,13 @@ Codex section 7.5
 care gate:
 Support preserves dignity and consent.
 
-correct stance:
-support_not_control
+answer:
+Open the path that matches the correct receiver stance:
 
-care key:
-support_not_control
+signal/branches/household_support/node_04_gate_<stance>.txt
 
-technical puzzle:
-Topic phrase: chores and care
-Take the first letter of each word in the topic phrase, then combine it with
-the care key using this format:
-
-care_key::topic_initials
-
-puzzle check:
-support_not_control::cac
-
-information reward:
-Chores are access-sensitive. Body-doubling, shared starts, and realistic pacing are better than shame or proof-of-worth labor.
-
-node key:
-household_support_04_clear
-
-continue branch:
-signal/branches/household_support/node_05.txt
+format:
+lowercase_snake_case
 
 return:
 signal/hub.txt

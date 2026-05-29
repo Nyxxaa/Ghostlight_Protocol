@@ -1,0 +1,22 @@
+GHOSTLIGHT PROTOCOL // CONSENT PRIVACY // NODE 07 // REWARD
+
+source:
+Codex section 23.12
+
+puzzle check:
+privacy_is_consent::ul
+
+information reward:
+Update logs prevent old facts from silently becoming current. A living document needs correction discipline.
+
+node key:
+consent_privacy_07_clear
+
+continue branch:
+signal/branches/consent_privacy/node_08.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/consent_privacy/node_07_gate_privacy_is_consent.txt

@@ -1,0 +1,22 @@
+GHOSTLIGHT PROTOCOL // CONSENT PRIVACY // NODE 06 // REWARD
+
+source:
+Codex section 23.11
+
+puzzle check:
+privacy_is_consent::sr
+
+information reward:
+A source register protects accuracy by naming what is current, deprecated, provisional, symbolic, restricted, or unsuitable for export.
+
+node key:
+consent_privacy_06_clear
+
+continue branch:
+signal/branches/consent_privacy/node_07.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/consent_privacy/node_06_gate_privacy_is_consent.txt

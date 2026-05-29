@@ -1,0 +1,22 @@
+GHOSTLIGHT PROTOCOL // CONSENT PRIVACY // NODE 05 // REWARD
+
+source:
+Codex section 23.9
+
+puzzle check:
+privacy_is_consent::rip
+
+information reward:
+The safe reward is consent architecture: explicit, informed, specific, revocable, private, paced, aftercare-aware, and never entitlement.
+
+node key:
+consent_privacy_05_clear
+
+continue branch:
+signal/branches/consent_privacy/node_06.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/consent_privacy/node_05_gate_privacy_is_consent.txt

@@ -1,0 +1,22 @@
+GHOSTLIGHT PROTOCOL // BODY LOAD // NODE 02 // REWARD
+
+source:
+Codex section 3.4
+
+puzzle check:
+reduce_load_first::ls
+
+information reward:
+Small stressors can stack into sharp function loss. The right response is to lower load, simplify steps, and stop treating variable capacity as moral failure.
+
+node key:
+body_load_02_clear
+
+continue branch:
+signal/branches/body_load/node_03.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/body_load/node_02_gate_reduce_load_first.txt

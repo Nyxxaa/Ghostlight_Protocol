@@ -6,30 +6,13 @@ Codex section 2.13
 care gate:
 Do not flatten a person into one trait.
 
-correct stance:
-hold_multiple_truths
+answer:
+Open the path that matches the correct receiver stance:
 
-care key:
-hold_multiple_truths
+signal/branches/core_self/node_09_gate_<stance>.txt
 
-technical puzzle:
-Topic phrase: system-builder identity
-Take the first letter of each word in the topic phrase, then combine it with
-the care key using this format:
-
-care_key::topic_initials
-
-puzzle check:
-hold_multiple_truths::si
-
-information reward:
-Systems, documents, templates, AI workflows, and phased plans preserve continuity when memory, initiation, or load become unreliable. The systems are access tools.
-
-node key:
-core_self_09_clear
-
-continue branch:
-signal/hub.txt
+format:
+lowercase_snake_case
 
 return:
 signal/hub.txt

@@ -1,0 +1,22 @@
+GHOSTLIGHT PROTOCOL // RELATIONSHIP REPAIR // NODE 03 // REWARD
+
+source:
+Codex section 6.2
+
+puzzle check:
+care_behaves_like_care::am
+
+information reward:
+Attachment safety comes from clarity, warmth, consistency, protection without control, disability respect, and returning when promised.
+
+node key:
+repair_03_clear
+
+continue branch:
+signal/branches/repair/node_04.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/repair/node_03_gate_care_behaves_like_care.txt

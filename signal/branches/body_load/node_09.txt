@@ -6,30 +6,13 @@ Codex section 3.11
 care gate:
 Reduce load before demanding performance.
 
-correct stance:
-reduce_load_first
+answer:
+Open the path that matches the correct receiver stance:
 
-care key:
-reduce_load_first
+signal/branches/body_load/node_09_gate_<stance>.txt
 
-technical puzzle:
-Topic phrase: autonomic-like symptoms
-Take the first letter of each word in the topic phrase, then combine it with
-the care key using this format:
-
-care_key::topic_initials
-
-puzzle check:
-reduce_load_first::as
-
-information reward:
-Lightheadedness, fatigue, and body-state instability can change what is realistic in a day. The useful stance is pacing and body-state respect.
-
-node key:
-body_load_09_clear
-
-continue branch:
-signal/branches/body_load/node_10.txt
+format:
+lowercase_snake_case
 
 return:
 signal/hub.txt

@@ -6,30 +6,13 @@ Codex section 2.12
 care gate:
 Do not flatten a person into one trait.
 
-correct stance:
-hold_multiple_truths
+answer:
+Open the path that matches the correct receiver stance:
 
-care key:
-hold_multiple_truths
+signal/branches/core_self/node_08_gate_<stance>.txt
 
-technical puzzle:
-Topic phrase: executive identity
-Take the first letter of each word in the topic phrase, then combine it with
-the care key using this format:
-
-care_key::topic_initials
-
-puzzle check:
-hold_multiple_truths::ei
-
-information reward:
-High insight and high systems intelligence can coexist with task-initiation limits, cognitive-load limits, and a need for external scaffolding. Knowing what to do is not the same as being able to start.
-
-node key:
-core_self_08_clear
-
-continue branch:
-signal/branches/core_self/node_09.txt
+format:
+lowercase_snake_case
 
 return:
 signal/hub.txt

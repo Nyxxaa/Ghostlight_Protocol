@@ -1,0 +1,22 @@
+GHOSTLIGHT PROTOCOL // CONSENT PRIVACY // NODE 01 // REWARD
+
+source:
+Codex section 23.1
+
+puzzle check:
+privacy_is_consent::ml
+
+information reward:
+Machine-readable summaries are useful only when access-controlled, corrected, and stripped of fields that do not belong to the audience.
+
+node key:
+consent_privacy_01_clear
+
+continue branch:
+signal/branches/consent_privacy/node_02.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/consent_privacy/node_01_gate_privacy_is_consent.txt

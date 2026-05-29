@@ -1,0 +1,22 @@
+GHOSTLIGHT PROTOCOL // MIND REGULATION // NODE 17 // REWARD
+
+source:
+Codex section 4.16
+
+puzzle check:
+respect_the_pattern::rp
+
+information reward:
+Regulation is a system: breath, meditation, symbolic work, music, sensory reduction, written structure, AI-assisted processing, and practical load reduction.
+
+node key:
+mind_regulation_17_clear
+
+continue branch:
+signal/hub.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/mind_regulation/node_17_gate_respect_the_pattern.txt

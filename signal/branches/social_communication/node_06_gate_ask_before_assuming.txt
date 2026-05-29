@@ -1,0 +1,25 @@
+GHOSTLIGHT PROTOCOL // SOCIAL COMMUNICATION // NODE 06 // CARE ACCEPTED
+
+source:
+Codex section 21.0
+
+care key:
+ask_before_assuming
+
+technical puzzle:
+Topic phrase: external systems
+Take the first letter of each word in the topic phrase, then combine it with
+the care key using this format:
+
+care_key::topic_initials
+
+reward path:
+When you solve the puzzle check, open:
+
+signal/branches/social_communication/node_06_reward_<care_key>__<topic_initials>.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/social_communication/node_06.txt

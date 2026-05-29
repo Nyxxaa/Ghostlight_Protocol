@@ -6,30 +6,13 @@ Codex section 23.10
 care gate:
 Practical competence counts.
 
-correct stance:
-applied_systems_matter
+answer:
+Open the path that matches the correct receiver stance:
 
-care key:
-applied_systems_matter
+signal/branches/creative_technical/node_10_gate_<stance>.txt
 
-technical puzzle:
-Topic phrase: appendix project index
-Take the first letter of each word in the topic phrase, then combine it with
-the care key using this format:
-
-care_key::topic_initials
-
-puzzle check:
-applied_systems_matter::api
-
-information reward:
-The appendix reinforces that projects should be compact, current, searchable, and connected to function rather than bloated into unfocused essays.
-
-node key:
-creative_technical_10_clear
-
-continue branch:
-signal/hub.txt
+format:
+lowercase_snake_case
 
 return:
 signal/hub.txt

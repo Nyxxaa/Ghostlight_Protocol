@@ -1,0 +1,22 @@
+GHOSTLIGHT PROTOCOL // MIND REGULATION // NODE 15 // REWARD
+
+source:
+Codex section 4.14
+
+puzzle check:
+respect_the_pattern::ps
+
+information reward:
+Protection imagery represents boundaries, containment, trait access, and regulation. It should not be mocked or literalized against intent.
+
+node key:
+mind_regulation_15_clear
+
+continue branch:
+signal/branches/mind_regulation/node_16.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/mind_regulation/node_15_gate_respect_the_pattern.txt

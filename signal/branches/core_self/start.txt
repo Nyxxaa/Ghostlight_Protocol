@@ -10,39 +10,13 @@ B: reduce her to disability
 C: reduce her to cleverness
 D: hold multiple truths at once: insight, limits, creativity, care, and structure
 
-correct packet:
-D
+answer:
+Choose the correct receiver packet, then open:
 
-technical gate:
-The signal card below has noise. Keep only lines whose marker is KEEP.
-Read the values in this order:
-presence, voice, skills, systems, key.
+signal/branches/core_self/start_gate_<packet>.txt
 
---- signal_card_fragment ---
-DROP presence = "dramatic"
-KEEP presence = "calm_guarded_observant_deliberate"
-DROP voice = "loud_static"
-KEEP voice = "low_velvet_measured"
-DROP skills = "single_trait"
-KEEP skills = "vocals_visual_art_bookbinding_ai_assisted_scripting_av_photography_roblox_data_architecture_worldbuilding"
-DROP systems = "hobby"
-KEEP systems = "external_structure_preserves_continuity"
-DROP key = "flat_person"
-KEEP key = "pattern_holds_many_shapes"
---- end_fragment ---
-
-reward:
-Wynter is best read as an integrated pattern, not a single label. Her presence
-tends to be calm, guarded, observant, and deliberate; her voice is low, velvet,
-and measured. Her skills cluster around vocals, visual art, bookbinding,
-AI-assisted scripting, AV systems, photography, Roblox, data architecture, and
-worldbuilding. Systems are not decoration; they preserve continuity.
-
-branch key:
-core_key = pattern_holds_many_shapes
+format:
+Use the packet letter exactly as shown.
 
 return:
 signal/hub.txt
-
-continue branch:
-signal/branches/core_self/node_01.txt

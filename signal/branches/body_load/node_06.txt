@@ -6,30 +6,13 @@ Codex section 3.8
 care gate:
 Reduce load before demanding performance.
 
-correct stance:
-reduce_load_first
+answer:
+Open the path that matches the correct receiver stance:
 
-care key:
-reduce_load_first
+signal/branches/body_load/node_06_gate_<stance>.txt
 
-technical puzzle:
-Topic phrase: head pressure and vision respect
-Take the first letter of each word in the topic phrase, then combine it with
-the care key using this format:
-
-care_key::topic_initials
-
-puzzle check:
-reduce_load_first::hpavr
-
-information reward:
-Headache, pressure, vision, and neurological symptoms should be treated with respect rather than casual dismissal. Public rewards keep this broad and non-clinical.
-
-node key:
-body_load_06_clear
-
-continue branch:
-signal/branches/body_load/node_07.txt
+format:
+lowercase_snake_case
 
 return:
 signal/hub.txt

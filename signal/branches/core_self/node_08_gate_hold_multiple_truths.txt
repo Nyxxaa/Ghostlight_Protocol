@@ -1,0 +1,25 @@
+GHOSTLIGHT PROTOCOL // CORE SELF // NODE 08 // CARE ACCEPTED
+
+source:
+Codex section 2.12
+
+care key:
+hold_multiple_truths
+
+technical puzzle:
+Topic phrase: executive identity
+Take the first letter of each word in the topic phrase, then combine it with
+the care key using this format:
+
+care_key::topic_initials
+
+reward path:
+When you solve the puzzle check, open:
+
+signal/branches/core_self/node_08_reward_<care_key>__<topic_initials>.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/core_self/node_08.txt

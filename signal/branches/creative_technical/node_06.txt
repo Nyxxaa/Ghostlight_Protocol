@@ -6,30 +6,13 @@ Codex section 9.5
 care gate:
 Practical competence counts.
 
-correct stance:
-applied_systems_matter
+answer:
+Open the path that matches the correct receiver stance:
 
-care key:
-applied_systems_matter
+signal/branches/creative_technical/node_06_gate_<stance>.txt
 
-technical puzzle:
-Topic phrase: applied technical systems
-Take the first letter of each word in the topic phrase, then combine it with
-the care key using this format:
-
-care_key::topic_initials
-
-puzzle check:
-applied_systems_matter::ats
-
-information reward:
-Technical strength is applied: AV, recording setup, hardware troubleshooting, basic circuits, scripting, AI-assisted coding, gaming environments, and workflows.
-
-node key:
-creative_technical_06_clear
-
-continue branch:
-signal/branches/creative_technical/node_07.txt
+format:
+lowercase_snake_case
 
 return:
 signal/hub.txt

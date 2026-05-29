@@ -6,30 +6,13 @@ Codex section 12.3
 care gate:
 Do not confuse desire with current fact.
 
-correct stance:
-corrected_maps_lead
+answer:
+Open the path that matches the correct receiver stance:
 
-care key:
-corrected_maps_lead
+signal/branches/future_path/node_04_gate_<stance>.txt
 
-technical puzzle:
-Topic phrase: partner finding
-Take the first letter of each word in the topic phrase, then combine it with
-the care key using this format:
-
-care_key::topic_initials
-
-puzzle check:
-corrected_maps_lead::pf
-
-information reward:
-Partner-finding is discernment for capacity, warmth, intelligence, integration, tenderness, consent, repair, and practical care.
-
-node key:
-future_path_04_clear
-
-continue branch:
-signal/branches/future_path/node_05.txt
+format:
+lowercase_snake_case
 
 return:
 signal/hub.txt

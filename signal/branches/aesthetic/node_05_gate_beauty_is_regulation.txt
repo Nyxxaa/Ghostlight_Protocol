@@ -1,0 +1,25 @@
+GHOSTLIGHT PROTOCOL // AESTHETIC // NODE 05 // CARE ACCEPTED
+
+source:
+Codex section 10.4
+
+care key:
+beauty_is_regulation
+
+technical puzzle:
+Topic phrase: gothic academic sacred
+Take the first letter of each word in the topic phrase, then combine it with
+the care key using this format:
+
+care_key::topic_initials
+
+reward path:
+When you solve the puzzle check, open:
+
+signal/branches/aesthetic/node_05_reward_<care_key>__<topic_initials>.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/aesthetic/node_05.txt

@@ -1,0 +1,28 @@
+GHOSTLIGHT PROTOCOL // AESTHETIC BRANCH // CARE ACCEPTED
+
+technical gate:
+Read the CSS variables whose names belong to signal, not noise.
+
+--- motif.css ---
+:root {
+  --noise-flat: beige;
+  --signal-black: matte_black;
+  --signal-red: blood_crimson;
+  --signal-silver: moonlit_silver;
+  --noise-slogan: vanity;
+  --signal-blue: storm_blue;
+  --signal-texture: velvet_satin_leather_glass_metal;
+  --signal-key: beauty_is_regulation;
+}
+--- end ---
+
+reward path:
+When you recover the branch key value, open:
+
+signal/branches/aesthetic/start_reward_<branch_key_value>.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/aesthetic/start.txt

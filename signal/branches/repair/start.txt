@@ -10,33 +10,13 @@ B: disappear until the discomfort passes
 C: name what happened, acknowledge impact, say what changes, then follow through
 D: demand comfort for feeling guilty
 
-correct packet:
-C
+answer:
+Choose the correct receiver packet, then open:
 
-technical gate:
-Apply the patch mentally. The repaired line reveals the branch key.
+signal/branches/repair/start_gate_<packet>.txt
 
---- begin patch ---
-- vague_reassurance_without_action
-- silence_as_punishment
-- shame_reversal
-+ name_the_rupture
-+ acknowledge_impact
-+ change_the_pattern
-+ follow_through
---- end patch ---
-
-reward:
-Safety is behavioral. Useful repair names what happened, acknowledges impact,
-clarifies intent without erasing harm, states what will change, and follows
-through. Boundaries are not walls against intimacy; they are the structure that
-makes intimacy safe.
-
-branch key:
-repair_key = repair_changes_behavior
+format:
+Use the packet letter exactly as shown.
 
 return:
 signal/hub.txt
-
-continue branch:
-signal/branches/repair/node_01.txt
