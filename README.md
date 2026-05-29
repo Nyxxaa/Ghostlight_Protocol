@@ -1,13 +1,14 @@
 # GHOSTLIGHT PROTOCOL
 
-A small signal puzzle for curious receivers.
+An encrypted, care-gated puzzle profile for people who think access should be earned with curiosity, competence, and respect.
 
-Status: listening  
-Receiver: unknown  
-Instruction: do not force the lock; understand the signal.
-
-Static entry point:
+Start here:
 
 ```txt
 index.html
 ```
+
+This is a static puzzle built around curiosity, technical competence, emotional care, and consent.
+
+Access is not entitlement.
+Information is a reward, not a right.
