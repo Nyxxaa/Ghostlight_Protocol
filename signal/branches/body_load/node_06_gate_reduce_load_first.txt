@@ -16,7 +16,10 @@ care_key::topic_initials
 reward path:
 When you solve the puzzle check, open:
 
-signal/branches/body_load/node_06_reward_<care_key>__<topic_initials>.txt
+signal/branches/body_load/node_06_reward_<care_key>__<topic_initials>.html
+
+plain text fallback:
+Use the same path with .txt instead of .html.
 
 return:
 signal/hub.txt
