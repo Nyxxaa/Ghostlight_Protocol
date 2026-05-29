@@ -1,4 +1,5 @@
 <!doctype html>
+
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -7,23 +8,89 @@
   <link rel="stylesheet" href="../site/style.css">
 </head>
 <body>
-  <main class="ghost-page ">
+  <main class="ghost-page">
     <article class="ghost-card">
 
-      <p class="breadcrumb">trunk</p>
-      <h1>GHOSTLIGHT PROTOCOL // LAYER 04</h1>
-      <section class="gate"><h2>spectrogram audio</h2><p>Inspect the waveform visually. The sound layer carries a visible phrase.</p><pre class="code-block">signal/layer_04_ghostlight.wav</pre></section>
-      
-      <section class="audio-panel">
-        <audio controls preload="none" src="layer_04_ghostlight.wav"></audio>
-      </section>
+  <p class="breadcrumb">trunk</p>
+  <h1>GHOSTLIGHT PROTOCOL // LAYER 04</h1>
 
-      <ul class="path-list">
-        <li><a href="hub.html">hub</a></li>
-      </ul>
+  <section class="gate">
+    <h2>spectrogram audio</h2>
+    <p>Inspect the waveform visually. The sound layer carries a visible phrase.</p>
+    <pre class="code-block">signal/layer_04_ghostlight.wav</pre>
+  </section>
 
-    </article>
+  <section class="audio-panel">
+    <audio controls preload="none" src="layer_04_ghostlight.wav"></audio>
+  </section>
+
+  <section class="gate" aria-labelledby="answer-title">
+    <h2 id="answer-title">receiver input</h2>
+    <p>Enter the visible phrase or the next artifact path.</p>
+
+    <form id="layer-04-answer-form">
+      <label for="layer-04-answer">answer packet</label><br>
+      <input
+        id="layer-04-answer"
+        name="answer"
+        type="text"
+        autocomplete="off"
+        spellcheck="false"
+        class="answer-input"
+        placeholder="visible phrase..."
+      >
+      <button class="audio-button" type="submit">submit packet</button>
+    </form>
+
+    <p id="layer-04-answer-status" class="audio-status" aria-live="polite"></p>
+  </section>
+
+  <ul class="path-list">
+    <li><a href="hub.html">hub</a></li>
+  </ul>
+
+</article>
+
   </main>
+
   <script src="../site/script.js?v=d2c2981"></script>
+
+  <script>
+    const form = document.getElementById("layer-04-answer-form");
+    const input = document.getElementById("layer-04-answer");
+    const status = document.getElementById("layer-04-answer-status");
+
+    function normalizeAnswer(value) {
+      return value
+        .trim()
+        .toLowerCase()
+        .replace(/[_-]+/g, " ")
+        .replace(/\s+/g, " ");
+    }
+
+    const acceptedAnswers = new Set([
+      "voice is a signal",
+      "signal layer 05 capacity gate.txt",
+      "layer 05 capacity gate",
+      "layer 05 capacity gate.txt",
+      "signal/layer 05 capacity gate.txt"
+    ]);
+
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      const answer = normalizeAnswer(input.value);
+
+      if (acceptedAnswers.has(answer)) {
+        status.textContent = "signal accepted";
+        window.location.href = "trunk_rewards/layer_04_reward.html";
+        return;
+      }
+
+      status.textContent = "checksum failed";
+      window.location.href = "fail/puzzle_failed.html";
+    });
+  </script>
+
 </body>
 </html>
