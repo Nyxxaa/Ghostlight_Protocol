@@ -1,0 +1,38 @@
+GHOSTLIGHT PROTOCOL // CREATIVE TECHNICAL // NODE 02
+
+source:
+Codex section 9.1
+
+care gate:
+Practical competence counts.
+
+correct stance:
+applied_systems_matter
+
+care key:
+applied_systems_matter
+
+technical puzzle:
+Topic phrase: core competence
+Take the first letter of each word in the topic phrase, then combine it with
+the care key using this format:
+
+care_key::topic_initials
+
+puzzle check:
+applied_systems_matter::cc
+
+information reward:
+Her competence is whole-system and applied: pattern recognition, practical realism, caregiving logic, creative synthesis, troubleshooting, and adaptive problem-solving.
+
+node key:
+creative_technical_02_clear
+
+continue branch:
+signal/branches/creative_technical/node_03.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/creative_technical/node_01.txt

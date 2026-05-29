@@ -1,0 +1,38 @@
+GHOSTLIGHT PROTOCOL // MIND REGULATION // NODE 07
+
+source:
+Codex section 4.6
+
+care gate:
+Respect lived patterns without casual pathologizing.
+
+correct stance:
+respect_the_pattern
+
+care key:
+respect_the_pattern
+
+technical puzzle:
+Topic phrase: action-start failure
+Take the first letter of each word in the topic phrase, then combine it with
+the care key using this format:
+
+care_key::topic_initials
+
+puzzle check:
+respect_the_pattern::af
+
+information reward:
+Wanting, intending, and understanding can exist while the action-start system fails. Shame makes that worse; small cues and starts help.
+
+node key:
+mind_regulation_07_clear
+
+continue branch:
+signal/branches/mind_regulation/node_08.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/mind_regulation/node_06.txt

@@ -1,0 +1,38 @@
+GHOSTLIGHT PROTOCOL // RELATIONSHIP REPAIR // NODE 12
+
+source:
+Codex section 6.12
+
+care gate:
+Choose clarity, consent, repair, and limits over ambiguity.
+
+correct stance:
+care_behaves_like_care
+
+care key:
+care_behaves_like_care
+
+technical puzzle:
+Topic phrase: boundaries
+Take the first letter of each word in the topic phrase, then combine it with
+the care key using this format:
+
+care_key::topic_initials
+
+puzzle check:
+care_behaves_like_care::b
+
+information reward:
+Boundaries are not walls against intimacy. They are the structure that makes intimacy safe.
+
+node key:
+repair_12_clear
+
+continue branch:
+signal/hub.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/repair/node_11.txt

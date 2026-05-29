@@ -1,0 +1,38 @@
+GHOSTLIGHT PROTOCOL // PETS // NODE 07
+
+source:
+Codex section 8.6
+
+care gate:
+Small lives matter.
+
+correct stance:
+routine_comfort_responsibility
+
+care key:
+routine_comfort_responsibility
+
+technical puzzle:
+Topic phrase: play and emotional role
+Take the first letter of each word in the topic phrase, then combine it with
+the care key using this format:
+
+care_key::topic_initials
+
+puzzle check:
+routine_comfort_responsibility::paer
+
+information reward:
+Play, softness, absurdity, and companionship make cats part of regulation and daily joy.
+
+node key:
+pets_07_clear
+
+continue branch:
+signal/branches/pets/node_08.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/pets/node_06.txt

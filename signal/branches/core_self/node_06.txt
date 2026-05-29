@@ -1,0 +1,38 @@
+GHOSTLIGHT PROTOCOL // CORE SELF // NODE 06
+
+source:
+Codex section 2.8
+
+care gate:
+Do not flatten a person into one trait.
+
+correct stance:
+hold_multiple_truths
+
+care key:
+hold_multiple_truths
+
+technical puzzle:
+Topic phrase: philosophy
+Take the first letter of each word in the topic phrase, then combine it with
+the care key using this format:
+
+care_key::topic_initials
+
+puzzle check:
+hold_multiple_truths::p
+
+information reward:
+Harmony means integration rather than suppression. Truth, compassion, and power need to stay in relationship: truth without compassion cuts, compassion without truth denies, and power without both consumes.
+
+node key:
+core_self_06_clear
+
+continue branch:
+signal/branches/core_self/node_07.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/core_self/node_05.txt

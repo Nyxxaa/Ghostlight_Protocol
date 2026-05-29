@@ -1,0 +1,38 @@
+GHOSTLIGHT PROTOCOL // CORE SELF // NODE 02
+
+source:
+Codex section 2.4
+
+care gate:
+Do not flatten a person into one trait.
+
+correct stance:
+hold_multiple_truths
+
+care key:
+hold_multiple_truths
+
+technical puzzle:
+Topic phrase: presence and voice
+Take the first letter of each word in the topic phrase, then combine it with
+the care key using this format:
+
+care_key::topic_initials
+
+puzzle check:
+hold_multiple_truths::pav
+
+information reward:
+Her presence tends toward calm, guarded, observant, and deliberate. Her voice is low, velvet, and measured. Pauses, economy of speech, and quiet intensity should not be misread as disinterest.
+
+node key:
+core_self_02_clear
+
+continue branch:
+signal/branches/core_self/node_03.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/core_self/node_01.txt

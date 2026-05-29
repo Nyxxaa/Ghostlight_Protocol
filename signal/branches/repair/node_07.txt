@@ -1,0 +1,38 @@
+GHOSTLIGHT PROTOCOL // RELATIONSHIP REPAIR // NODE 07
+
+source:
+Codex section 6.6
+
+care gate:
+Choose clarity, consent, repair, and limits over ambiguity.
+
+correct stance:
+care_behaves_like_care
+
+care key:
+care_behaves_like_care
+
+technical puzzle:
+Topic phrase: repair signals
+Take the first letter of each word in the topic phrase, then combine it with
+the care key using this format:
+
+care_key::topic_initials
+
+puzzle check:
+care_behaves_like_care::rs
+
+information reward:
+Good repair names the rupture, acknowledges impact, clarifies intent without erasing harm, states what changes, and follows through.
+
+node key:
+repair_07_clear
+
+continue branch:
+signal/branches/repair/node_08.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/repair/node_06.txt

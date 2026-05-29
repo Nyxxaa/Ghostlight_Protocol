@@ -1,0 +1,38 @@
+GHOSTLIGHT PROTOCOL // FOOD JOY // NODE 14
+
+source:
+Codex section 18.0
+
+care gate:
+Actual intake beats theoretical perfection.
+
+correct stance:
+actual_intake_first
+
+care key:
+actual_intake_first
+
+technical puzzle:
+Topic phrase: joy and play
+Take the first letter of each word in the topic phrase, then combine it with
+the care key using this format:
+
+care_key::topic_initials
+
+puzzle check:
+actual_intake_first::jap
+
+information reward:
+Joy is regulation, embodiment, rebellion, identity, and survival. Music, cats, gaming, beauty, food, humor, making things, and safe silliness matter.
+
+node key:
+food_joy_14_clear
+
+continue branch:
+signal/hub.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/food_joy/node_13.txt

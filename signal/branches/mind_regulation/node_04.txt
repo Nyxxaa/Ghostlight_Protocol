@@ -1,0 +1,38 @@
+GHOSTLIGHT PROTOCOL // MIND REGULATION // NODE 04
+
+source:
+Codex section 4.3
+
+care gate:
+Respect lived patterns without casual pathologizing.
+
+correct stance:
+respect_the_pattern
+
+care key:
+respect_the_pattern
+
+technical puzzle:
+Topic phrase: activation patterns
+Take the first letter of each word in the topic phrase, then combine it with
+the care key using this format:
+
+care_key::topic_initials
+
+puzzle check:
+respect_the_pattern::ap
+
+information reward:
+Mood and activation can be affected by sleep, pain, stress, treatment context, emotional conflict, and life instability. The care response is stabilization, not blame.
+
+node key:
+mind_regulation_04_clear
+
+continue branch:
+signal/branches/mind_regulation/node_05.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/mind_regulation/node_03.txt

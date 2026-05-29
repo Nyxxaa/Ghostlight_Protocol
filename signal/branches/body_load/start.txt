@@ -1,0 +1,43 @@
+GHOSTLIGHT PROTOCOL // BODY LOAD BRANCH
+
+care gate:
+Capacity is conditional.
+
+Choose the correct support stance:
+
+A: demand proof before lowering load
+B: treat variable capacity as laziness
+C: reduce load before demanding performance
+D: give a motivational speech with many steps
+
+correct packet:
+C
+
+technical gate:
+Resolve the dependency chain. Keep only supports that reduce load.
+
+--- load_graph ---
+bright_light -> reduce_stimulation
+cluttered_sound -> reduce_stimulation
+too_many_steps -> one_next_step
+ambiguous_task -> written_instruction
+forgotten_body_needs -> external_cue
+shame -> access_loss
+--- end_graph ---
+
+Read the first letter of each reducing support, excluding access_loss.
+
+reward:
+Capacity can change when sleep, pain, sensory strain, hunger, stress,
+ambiguity, and executive demand stack together. The care pattern is practical:
+lower load, give one next step, write down what matters, and do not turn access
+failure into a moral failure.
+
+branch key:
+body_key = room_for_capacity
+
+return:
+signal/hub.txt
+
+continue branch:
+signal/branches/body_load/node_01.txt

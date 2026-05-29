@@ -1,0 +1,38 @@
+GHOSTLIGHT PROTOCOL // HOUSEHOLD SUPPORT // NODE 10
+
+source:
+Codex section 7.11
+
+care gate:
+Support preserves dignity and consent.
+
+correct stance:
+support_not_control
+
+care key:
+support_not_control
+
+technical puzzle:
+Topic phrase: transition planning
+Take the first letter of each word in the topic phrase, then combine it with
+the care key using this format:
+
+care_key::topic_initials
+
+puzzle check:
+support_not_control::tp
+
+information reward:
+Transitions require documentation, role clarity, and current facts. Old assumptions should not drive new support plans.
+
+node key:
+household_support_10_clear
+
+continue branch:
+signal/branches/household_support/node_11.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/household_support/node_09.txt

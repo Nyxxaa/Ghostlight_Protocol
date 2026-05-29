@@ -1,0 +1,38 @@
+GHOSTLIGHT PROTOCOL // CREATIVE TECHNICAL // NODE 08
+
+source:
+Codex section 9.7
+
+care gate:
+Practical competence counts.
+
+correct stance:
+applied_systems_matter
+
+care key:
+applied_systems_matter
+
+technical puzzle:
+Topic phrase: project index
+Take the first letter of each word in the topic phrase, then combine it with
+the care key using this format:
+
+care_key::topic_initials
+
+puzzle check:
+applied_systems_matter::pi
+
+information reward:
+Projects include RP systems, bot/lorebook work, Aetherline, Cradle, Ghostlight, Roblox/world concepts, visual art, music, bookbinding, and AI collaboration.
+
+node key:
+creative_technical_08_clear
+
+continue branch:
+signal/branches/creative_technical/node_09.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/creative_technical/node_07.txt

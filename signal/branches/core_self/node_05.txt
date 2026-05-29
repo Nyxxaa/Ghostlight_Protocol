@@ -1,0 +1,38 @@
+GHOSTLIGHT PROTOCOL // CORE SELF // NODE 05
+
+source:
+Codex section 2.7
+
+care gate:
+Do not flatten a person into one trait.
+
+correct stance:
+hold_multiple_truths
+
+care key:
+hold_multiple_truths
+
+technical puzzle:
+Topic phrase: values
+Take the first letter of each word in the topic phrase, then combine it with
+the care key using this format:
+
+care_key::topic_initials
+
+puzzle check:
+hold_multiple_truths::v
+
+information reward:
+Her values orbit truth, compassion, power with restraint, consent, containment, dignity, clarity, autonomy, practical care, beauty, joy, and repair.
+
+node key:
+core_self_05_clear
+
+continue branch:
+signal/branches/core_self/node_06.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/core_self/node_04.txt

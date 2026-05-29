@@ -1,0 +1,38 @@
+GHOSTLIGHT PROTOCOL // BODY LOAD // NODE 02
+
+source:
+Codex section 3.4
+
+care gate:
+Reduce load before demanding performance.
+
+correct stance:
+reduce_load_first
+
+care key:
+reduce_load_first
+
+technical puzzle:
+Topic phrase: load stacking
+Take the first letter of each word in the topic phrase, then combine it with
+the care key using this format:
+
+care_key::topic_initials
+
+puzzle check:
+reduce_load_first::ls
+
+information reward:
+Small stressors can stack into sharp function loss. The right response is to lower load, simplify steps, and stop treating variable capacity as moral failure.
+
+node key:
+body_load_02_clear
+
+continue branch:
+signal/branches/body_load/node_03.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/body_load/node_01.txt

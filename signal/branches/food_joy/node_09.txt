@@ -1,0 +1,38 @@
+GHOSTLIGHT PROTOCOL // FOOD JOY // NODE 09
+
+source:
+Codex section 11.8
+
+care gate:
+Actual intake beats theoretical perfection.
+
+correct stance:
+actual_intake_first
+
+care key:
+actual_intake_first
+
+technical puzzle:
+Topic phrase: meal prep support
+Take the first letter of each word in the topic phrase, then combine it with
+the care key using this format:
+
+care_key::topic_initials
+
+puzzle check:
+actual_intake_first::mps
+
+information reward:
+Caregiver meal prep works when portions, textures, sauces, visibility, and low-decision access are considered.
+
+node key:
+food_joy_09_clear
+
+continue branch:
+signal/branches/food_joy/node_10.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/food_joy/node_08.txt

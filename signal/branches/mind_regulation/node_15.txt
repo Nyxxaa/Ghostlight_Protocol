@@ -1,0 +1,38 @@
+GHOSTLIGHT PROTOCOL // MIND REGULATION // NODE 15
+
+source:
+Codex section 4.14
+
+care gate:
+Respect lived patterns without casual pathologizing.
+
+correct stance:
+respect_the_pattern
+
+care key:
+respect_the_pattern
+
+technical puzzle:
+Topic phrase: protective shields
+Take the first letter of each word in the topic phrase, then combine it with
+the care key using this format:
+
+care_key::topic_initials
+
+puzzle check:
+respect_the_pattern::ps
+
+information reward:
+Protection imagery represents boundaries, containment, trait access, and regulation. It should not be mocked or literalized against intent.
+
+node key:
+mind_regulation_15_clear
+
+continue branch:
+signal/branches/mind_regulation/node_16.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/mind_regulation/node_14.txt

@@ -1,0 +1,38 @@
+GHOSTLIGHT PROTOCOL // AESTHETIC // NODE 01
+
+source:
+Codex section 10.0
+
+care gate:
+Beauty is regulation, not vanity.
+
+correct stance:
+beauty_is_regulation
+
+care key:
+beauty_is_regulation
+
+technical puzzle:
+Topic phrase: aesthetic matrix
+Take the first letter of each word in the topic phrase, then combine it with
+the care key using this format:
+
+care_key::topic_initials
+
+puzzle check:
+beauty_is_regulation::am
+
+information reward:
+The aesthetic matrix is dark-spectrum, gothic, sacred, stormlit, sensual, protective, romantic, cyber-capable, industrial-edged, and controlled.
+
+node key:
+aesthetic_01_clear
+
+continue branch:
+signal/branches/aesthetic/node_02.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/aesthetic/start.txt

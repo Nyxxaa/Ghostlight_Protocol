@@ -1,0 +1,38 @@
+GHOSTLIGHT PROTOCOL // SOCIAL COMMUNICATION // NODE 07
+
+source:
+Codex section 22.0
+
+care gate:
+Ask instead of assuming.
+
+correct stance:
+ask_before_assuming
+
+care key:
+ask_before_assuming
+
+technical puzzle:
+Topic phrase: export system
+Take the first letter of each word in the topic phrase, then combine it with
+the care key using this format:
+
+care_key::topic_initials
+
+puzzle check:
+ask_before_assuming::es
+
+information reward:
+Not every reader gets every layer. Public, private, restricted, and machine-readable exports need purpose-limited disclosure.
+
+node key:
+social_communication_07_clear
+
+continue branch:
+signal/hub.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/social_communication/node_06.txt

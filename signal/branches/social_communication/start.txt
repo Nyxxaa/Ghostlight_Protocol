@@ -1,0 +1,41 @@
+GHOSTLIGHT PROTOCOL // SOCIAL COMMUNICATION BRANCH
+
+care gate:
+Ask instead of assuming.
+
+Choose the correct communication move:
+
+A: tell her what she feels
+B: mistake passion for anger and punish it
+C: ask directly, use real language, and reduce words under load
+D: force polite scripts when honesty appears
+
+correct packet:
+C
+
+technical gate:
+Sort helpful phrases from harmful phrases.
+
+--- phrase_filter ---
+KEEP: ask_instead_of_assuming
+DROP: calm_down_as_control
+KEEP: written_steps_when_it_matters
+DROP: vague_reassurance_only
+KEEP: one_next_step
+DROP: fake_positivity
+KEEP: real_answers
+--- end_filter ---
+
+reward:
+Wynter communicates best with direct, specific, real language. Under load,
+fewer words, simple choices, written steps, and one next step are safer than
+speeches. Passion is not automatically anger; ask.
+
+branch key:
+social_key = ask_before_assuming
+
+return:
+signal/hub.txt
+
+continue branch:
+signal/branches/social_communication/node_01.txt

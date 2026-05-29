@@ -1,0 +1,38 @@
+GHOSTLIGHT PROTOCOL // PETS // NODE 01
+
+source:
+Codex section 8.0
+
+care gate:
+Small lives matter.
+
+correct stance:
+routine_comfort_responsibility
+
+care key:
+routine_comfort_responsibility
+
+technical puzzle:
+Topic phrase: pet system
+Take the first letter of each word in the topic phrase, then combine it with
+the care key using this format:
+
+care_key::topic_initials
+
+puzzle check:
+routine_comfort_responsibility::ps
+
+information reward:
+Pets are household soul, routine, emotional comfort, responsibility, and relational signal. Dismissing them is a failed care read.
+
+node key:
+pets_01_clear
+
+continue branch:
+signal/branches/pets/node_02.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/pets/start.txt

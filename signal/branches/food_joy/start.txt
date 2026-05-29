@@ -1,0 +1,42 @@
+GHOSTLIGHT PROTOCOL // FOOD JOY BRANCH
+
+care gate:
+Food is access, not a character test.
+
+Choose the correct food-support packet:
+
+A: moralize cravings
+B: replace safe food without warning
+C: prioritize actual intake, texture safety, flavor access, and low-shame cues
+D: remove joy to prove discipline
+
+correct packet:
+C
+
+technical gate:
+Classify the accessible meal pattern.
+
+--- meal_constraint_solver ---
+required: predictable_base
+required: tolerable_protein
+required: sauce_or_broth
+required: salt_or_umami
+bonus: bright_acid
+avoid: surprise_texture
+avoid: shame
+key_hint: actual_intake_first
+--- end_solver ---
+
+reward:
+Food works when it is predictable, sensory-safe, budget-aware, low-decision,
+and emotionally non-shaming. Flavor, texture, sauce, salt, brightness, and joy
+can be access tools. Actual intake beats theoretical perfection.
+
+branch key:
+food_key = actual_intake_first
+
+return:
+signal/hub.txt
+
+continue branch:
+signal/branches/food_joy/node_01.txt

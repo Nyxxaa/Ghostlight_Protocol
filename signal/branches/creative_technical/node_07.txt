@@ -1,0 +1,38 @@
+GHOSTLIGHT PROTOCOL // CREATIVE TECHNICAL // NODE 07
+
+source:
+Codex section 9.6
+
+care gate:
+Practical competence counts.
+
+correct stance:
+applied_systems_matter
+
+care key:
+applied_systems_matter
+
+technical puzzle:
+Topic phrase: worldbuilding and AI
+Take the first letter of each word in the topic phrase, then combine it with
+the care key using this format:
+
+care_key::topic_initials
+
+puzzle check:
+applied_systems_matter::waA
+
+information reward:
+Worldbuilding is systems modeling. AI is a cognitive scaffold for structure, formatting, continuity, implementation, and next-step visibility.
+
+node key:
+creative_technical_07_clear
+
+continue branch:
+signal/branches/creative_technical/node_08.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/creative_technical/node_06.txt

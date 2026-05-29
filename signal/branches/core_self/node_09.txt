@@ -1,0 +1,38 @@
+GHOSTLIGHT PROTOCOL // CORE SELF // NODE 09
+
+source:
+Codex section 2.13
+
+care gate:
+Do not flatten a person into one trait.
+
+correct stance:
+hold_multiple_truths
+
+care key:
+hold_multiple_truths
+
+technical puzzle:
+Topic phrase: system-builder identity
+Take the first letter of each word in the topic phrase, then combine it with
+the care key using this format:
+
+care_key::topic_initials
+
+puzzle check:
+hold_multiple_truths::si
+
+information reward:
+Systems, documents, templates, AI workflows, and phased plans preserve continuity when memory, initiation, or load become unreliable. The systems are access tools.
+
+node key:
+core_self_09_clear
+
+continue branch:
+signal/hub.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/core_self/node_08.txt

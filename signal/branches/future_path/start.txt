@@ -1,0 +1,40 @@
+GHOSTLIGHT PROTOCOL // FUTURE PATH BRANCH
+
+care gate:
+Do not flood the future.
+
+Choose the current frame:
+
+A: solve every life system at once
+B: preserve old plans as current even when corrected
+C: build music, clarify stability, and seek a compatible partner
+D: treat desire as already-existing fact
+
+correct packet:
+C
+
+technical gate:
+Apply version control. Keep CURRENT lines and discard DEPRECATED lines.
+
+--- roadmap.diff ---
+- DEPRECATED: forever_home_as_active_plan
+- DEPRECATED: solve_everything_now
++ CURRENT: music_development
++ CURRENT: medical_clarification_in_broad_terms
++ CURRENT: compatible_partner_discernment
++ CURRENT: corrected_facts_override_old_maps
+--- end_diff ---
+
+reward:
+The current future path is scoped: develop music, pursue stability and
+clarification in broad terms, and find a compatible partner with real capacity.
+Old maps may matter historically, but corrected facts lead.
+
+branch key:
+future_key = corrected_maps_lead
+
+return:
+signal/hub.txt
+
+continue branch:
+signal/branches/future_path/node_01.txt

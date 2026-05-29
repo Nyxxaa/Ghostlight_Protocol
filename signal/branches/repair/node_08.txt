@@ -1,0 +1,38 @@
+GHOSTLIGHT PROTOCOL // RELATIONSHIP REPAIR // NODE 08
+
+source:
+Codex section 6.7
+
+care gate:
+Choose clarity, consent, repair, and limits over ambiguity.
+
+correct stance:
+care_behaves_like_care
+
+care key:
+care_behaves_like_care
+
+technical puzzle:
+Topic phrase: future partner model
+Take the first letter of each word in the topic phrase, then combine it with
+the care key using this format:
+
+care_key::topic_initials
+
+puzzle check:
+care_behaves_like_care::fpm
+
+information reward:
+A viable partner needs warmth, capacity, intelligence, integration, care responsibility without shame, disability respect, and desire with consent and steadiness.
+
+node key:
+repair_08_clear
+
+continue branch:
+signal/branches/repair/node_09.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/repair/node_07.txt

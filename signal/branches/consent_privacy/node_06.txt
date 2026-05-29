@@ -1,0 +1,38 @@
+GHOSTLIGHT PROTOCOL // CONSENT PRIVACY // NODE 06
+
+source:
+Codex section 23.11
+
+care gate:
+Privacy is part of consent.
+
+correct stance:
+privacy_is_consent
+
+care key:
+privacy_is_consent
+
+technical puzzle:
+Topic phrase: source register
+Take the first letter of each word in the topic phrase, then combine it with
+the care key using this format:
+
+care_key::topic_initials
+
+puzzle check:
+privacy_is_consent::sr
+
+information reward:
+A source register protects accuracy by naming what is current, deprecated, provisional, symbolic, restricted, or unsuitable for export.
+
+node key:
+consent_privacy_06_clear
+
+continue branch:
+signal/branches/consent_privacy/node_07.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/consent_privacy/node_05.txt

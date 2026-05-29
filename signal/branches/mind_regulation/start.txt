@@ -1,0 +1,41 @@
+GHOSTLIGHT PROTOCOL // MIND REGULATION BRANCH
+
+care gate:
+Symbolic language can be a functional interface.
+
+Choose the correct receiver stance:
+
+A: mock what is symbolic because it is not literal
+B: demand diagnostic certainty before respecting lived patterns
+C: ask what the symbol does and respect the support pattern
+D: flatten every pattern into pathology
+
+correct packet:
+C
+
+technical gate:
+Follow the regulation loop in order.
+
+--- state_machine ---
+state: noise
+transition: face_what_is_real -> awareness
+transition: breathe_anchor_stabilize -> regulation
+transition: turn_back_and_build -> reconnection
+accepting_state: reconnection
+key_seed: awareness_regulation_reconnection
+--- end_state_machine ---
+
+reward:
+Wynter's regulation language works through lived patterns, not casual labels.
+Shutdown can be a load state. Symbolic systems can help organize memory,
+protection, emotional containment, identity, and decision-making. The core loop
+is awareness, regulation, reconnection.
+
+branch key:
+mind_key = awareness_regulation_reconnection
+
+return:
+signal/hub.txt
+
+continue branch:
+signal/branches/mind_regulation/node_01.txt

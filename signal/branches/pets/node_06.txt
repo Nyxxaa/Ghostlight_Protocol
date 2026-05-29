@@ -1,0 +1,38 @@
+GHOSTLIGHT PROTOCOL // PETS // NODE 06
+
+source:
+Codex section 8.5
+
+care gate:
+Small lives matter.
+
+correct stance:
+routine_comfort_responsibility
+
+care key:
+routine_comfort_responsibility
+
+technical puzzle:
+Topic phrase: safety gear
+Take the first letter of each word in the topic phrase, then combine it with
+the care key using this format:
+
+care_key::topic_initials
+
+puzzle check:
+routine_comfort_responsibility::sg
+
+information reward:
+Pet safety is practical care. Harnesses, nails, and gear are responsibility signals, not decoration.
+
+node key:
+pets_06_clear
+
+continue branch:
+signal/branches/pets/node_07.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/pets/node_05.txt

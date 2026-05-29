@@ -1,0 +1,38 @@
+GHOSTLIGHT PROTOCOL // SOCIAL COMMUNICATION // NODE 02
+
+source:
+Codex section 14.0
+
+care gate:
+Ask instead of assuming.
+
+correct stance:
+ask_before_assuming
+
+care key:
+ask_before_assuming
+
+technical puzzle:
+Topic phrase: daily functioning
+Take the first letter of each word in the topic phrase, then combine it with
+the care key using this format:
+
+care_key::topic_initials
+
+puzzle check:
+ask_before_assuming::df
+
+information reward:
+Daily life works through location-based routines, minimum/ideal/fuller levels, computer loops, external cues, and flexible energy-aware planning.
+
+node key:
+social_communication_02_clear
+
+continue branch:
+signal/branches/social_communication/node_03.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/social_communication/node_01.txt

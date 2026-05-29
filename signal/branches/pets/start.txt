@@ -1,0 +1,41 @@
+GHOSTLIGHT PROTOCOL // PETS BRANCH
+
+care gate:
+Pets are not decorative.
+
+Choose the correct care stance:
+
+A: dismiss the cat as unimportant
+B: treat pet care as novelty
+C: notice routine, safety, comfort, and responsibility
+D: panic at every small anomaly
+
+correct packet:
+C
+
+technical gate:
+Read only the stable entries.
+
+--- care_log ---
+[stable] food_visible
+[noise] private_identifier
+[stable] water_checked
+[stable] litter_predictable
+[noise] private_room_setup
+[stable] behavior_changes_noticed
+[stable] comfort_matters
+--- end_log ---
+
+reward:
+Sapphire is emotionally important and part of daily life. Cat care is routine,
+comfort, responsibility, and household soul. The right receiver does not treat
+that bond as disposable or childish.
+
+branch key:
+pets_key = small_life_matters
+
+return:
+signal/hub.txt
+
+continue branch:
+signal/branches/pets/node_01.txt

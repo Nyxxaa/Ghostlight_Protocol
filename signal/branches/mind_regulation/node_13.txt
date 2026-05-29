@@ -1,0 +1,38 @@
+GHOSTLIGHT PROTOCOL // MIND REGULATION // NODE 13
+
+source:
+Codex section 4.12
+
+care gate:
+Respect lived patterns without casual pathologizing.
+
+correct stance:
+respect_the_pattern
+
+care key:
+respect_the_pattern
+
+technical puzzle:
+Topic phrase: symbolic regulation
+Take the first letter of each word in the topic phrase, then combine it with
+the care key using this format:
+
+care_key::topic_initials
+
+puzzle check:
+respect_the_pattern::sr
+
+information reward:
+Symbolic systems can be functional interfaces for memory, protection, emotional containment, identity, and decision-making.
+
+node key:
+mind_regulation_13_clear
+
+continue branch:
+signal/branches/mind_regulation/node_14.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/mind_regulation/node_12.txt

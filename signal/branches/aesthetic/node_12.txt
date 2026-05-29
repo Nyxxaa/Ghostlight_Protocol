@@ -1,0 +1,38 @@
+GHOSTLIGHT PROTOCOL // AESTHETIC // NODE 12
+
+source:
+Codex section 10.11
+
+care gate:
+Beauty is regulation, not vanity.
+
+correct stance:
+beauty_is_regulation
+
+care key:
+beauty_is_regulation
+
+technical puzzle:
+Topic phrase: music resonance
+Take the first letter of each word in the topic phrase, then combine it with
+the care key using this format:
+
+care_key::topic_initials
+
+puzzle check:
+beauty_is_regulation::mr
+
+information reward:
+Music is embodied resonance, not background. Sound can shape body-state, emotion, grounding, and creative activation.
+
+node key:
+aesthetic_12_clear
+
+continue branch:
+signal/branches/aesthetic/node_13.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/aesthetic/node_11.txt

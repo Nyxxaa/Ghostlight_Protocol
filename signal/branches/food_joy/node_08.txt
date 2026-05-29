@@ -1,0 +1,38 @@
+GHOSTLIGHT PROTOCOL // FOOD JOY // NODE 08
+
+source:
+Codex section 11.7
+
+care gate:
+Actual intake beats theoretical perfection.
+
+correct stance:
+actual_intake_first
+
+care key:
+actual_intake_first
+
+technical puzzle:
+Topic phrase: budget systems
+Take the first letter of each word in the topic phrase, then combine it with
+the care key using this format:
+
+care_key::topic_initials
+
+puzzle check:
+actual_intake_first::bs
+
+information reward:
+Budget food systems need predictable staples, low-effort meals, safe backups, and realistic prep demands.
+
+node key:
+food_joy_08_clear
+
+continue branch:
+signal/branches/food_joy/node_09.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/food_joy/node_07.txt

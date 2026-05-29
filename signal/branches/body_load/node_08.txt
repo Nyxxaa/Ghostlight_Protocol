@@ -1,0 +1,38 @@
+GHOSTLIGHT PROTOCOL // BODY LOAD // NODE 08
+
+source:
+Codex section 3.10
+
+care gate:
+Reduce load before demanding performance.
+
+correct stance:
+reduce_load_first
+
+care key:
+reduce_load_first
+
+technical puzzle:
+Topic phrase: insomnia and rhythm
+Take the first letter of each word in the topic phrase, then combine it with
+the care key using this format:
+
+care_key::topic_initials
+
+puzzle check:
+reduce_load_first::iar
+
+information reward:
+Sleep instability can make routines, transitions, and recovery harder. The reward is understanding that timing problems are access problems, not character defects.
+
+node key:
+body_load_08_clear
+
+continue branch:
+signal/branches/body_load/node_09.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/body_load/node_07.txt

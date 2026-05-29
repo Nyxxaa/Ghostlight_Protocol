@@ -1,0 +1,38 @@
+GHOSTLIGHT PROTOCOL // CREATIVE TECHNICAL // NODE 03
+
+source:
+Codex section 9.2
+
+care gate:
+Practical competence counts.
+
+correct stance:
+applied_systems_matter
+
+care key:
+applied_systems_matter
+
+technical puzzle:
+Topic phrase: creative disciplines
+Take the first letter of each word in the topic phrase, then combine it with
+the care key using this format:
+
+care_key::topic_initials
+
+puzzle check:
+applied_systems_matter::cd
+
+information reward:
+Music, voice, visual design, painting, gardening, dance, and embodied perception are real intelligence and regulation systems.
+
+node key:
+creative_technical_03_clear
+
+continue branch:
+signal/branches/creative_technical/node_04.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/creative_technical/node_02.txt

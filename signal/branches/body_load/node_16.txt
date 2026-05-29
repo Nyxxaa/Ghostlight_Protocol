@@ -1,0 +1,38 @@
+GHOSTLIGHT PROTOCOL // BODY LOAD // NODE 16
+
+source:
+Codex section 3.19
+
+care gate:
+Reduce load before demanding performance.
+
+correct stance:
+reduce_load_first
+
+care key:
+reduce_load_first
+
+technical puzzle:
+Topic phrase: movement and pacing
+Take the first letter of each word in the topic phrase, then combine it with
+the care key using this format:
+
+care_key::topic_initials
+
+puzzle check:
+reduce_load_first::map
+
+information reward:
+Movement works best when paced, body-aware, and realistic. Progress is not proven by pushing through avoidable collapse.
+
+node key:
+body_load_16_clear
+
+continue branch:
+signal/hub.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/body_load/node_15.txt

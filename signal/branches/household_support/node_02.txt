@@ -1,0 +1,38 @@
+GHOSTLIGHT PROTOCOL // HOUSEHOLD SUPPORT // NODE 02
+
+source:
+Codex section 7.3
+
+care gate:
+Support preserves dignity and consent.
+
+correct stance:
+support_not_control
+
+care key:
+support_not_control
+
+technical puzzle:
+Topic phrase: partial support routines
+Take the first letter of each word in the topic phrase, then combine it with
+the care key using this format:
+
+care_key::topic_initials
+
+puzzle check:
+support_not_control::psr
+
+information reward:
+Partial support can still matter. Predictable cues, small routines, and shared starts reduce task load without requiring perfect infrastructure.
+
+node key:
+household_support_02_clear
+
+continue branch:
+signal/branches/household_support/node_03.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/household_support/node_01.txt

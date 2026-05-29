@@ -1,0 +1,38 @@
+GHOSTLIGHT PROTOCOL // CONSENT PRIVACY // NODE 02
+
+source:
+Codex section 23.6
+
+care gate:
+Privacy is part of consent.
+
+correct stance:
+privacy_is_consent
+
+care key:
+privacy_is_consent
+
+technical puzzle:
+Topic phrase: timeline
+Take the first letter of each word in the topic phrase, then combine it with
+the care key using this format:
+
+care_key::topic_initials
+
+puzzle check:
+privacy_is_consent::t
+
+information reward:
+Timeline rewards can reveal eras and interpretation patterns without exact restricted details, names, or crisis retellings.
+
+node key:
+consent_privacy_02_clear
+
+continue branch:
+signal/branches/consent_privacy/node_03.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/consent_privacy/node_01.txt

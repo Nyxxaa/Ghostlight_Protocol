@@ -1,0 +1,38 @@
+GHOSTLIGHT PROTOCOL // FOOD JOY // NODE 02
+
+source:
+Codex section 11.1
+
+care gate:
+Actual intake beats theoretical perfection.
+
+correct stance:
+actual_intake_first
+
+care key:
+actual_intake_first
+
+technical puzzle:
+Topic phrase: taste profile
+Take the first letter of each word in the topic phrase, then combine it with
+the care key using this format:
+
+care_key::topic_initials
+
+puzzle check:
+actual_intake_first::tp
+
+information reward:
+Reliable flavor structures include salt, umami, tang, bright acid, savory broths, smooth sauces, cheese, starch bases, and mild sweetness when wanted.
+
+node key:
+food_joy_02_clear
+
+continue branch:
+signal/branches/food_joy/node_03.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/food_joy/node_01.txt

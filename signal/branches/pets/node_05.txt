@@ -1,0 +1,38 @@
+GHOSTLIGHT PROTOCOL // PETS // NODE 05
+
+source:
+Codex section 8.4
+
+care gate:
+Small lives matter.
+
+correct stance:
+routine_comfort_responsibility
+
+care key:
+routine_comfort_responsibility
+
+technical puzzle:
+Topic phrase: allergy and grooming
+Take the first letter of each word in the topic phrase, then combine it with
+the care key using this format:
+
+care_key::topic_initials
+
+puzzle check:
+routine_comfort_responsibility::aag
+
+information reward:
+Care can involve comfort, grooming, and body-awareness without turning private health details into public data.
+
+node key:
+pets_05_clear
+
+continue branch:
+signal/branches/pets/node_06.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/pets/node_04.txt

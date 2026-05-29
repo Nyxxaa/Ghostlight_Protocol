@@ -1,0 +1,38 @@
+GHOSTLIGHT PROTOCOL // FOOD JOY // NODE 11
+
+source:
+Codex section 11.10
+
+care gate:
+Actual intake beats theoretical perfection.
+
+correct stance:
+actual_intake_first
+
+care key:
+actual_intake_first
+
+technical puzzle:
+Topic phrase: joy foods
+Take the first letter of each word in the topic phrase, then combine it with
+the care key using this format:
+
+care_key::topic_initials
+
+puzzle check:
+actual_intake_first::jf
+
+information reward:
+Joy foods restore aliveness and should not be treated as moral failure. Pleasure can support nourishment.
+
+node key:
+food_joy_11_clear
+
+continue branch:
+signal/branches/food_joy/node_12.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/food_joy/node_10.txt

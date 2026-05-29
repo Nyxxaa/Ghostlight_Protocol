@@ -1,0 +1,38 @@
+GHOSTLIGHT PROTOCOL // RELATIONSHIP REPAIR // NODE 03
+
+source:
+Codex section 6.2
+
+care gate:
+Choose clarity, consent, repair, and limits over ambiguity.
+
+correct stance:
+care_behaves_like_care
+
+care key:
+care_behaves_like_care
+
+technical puzzle:
+Topic phrase: attachment model
+Take the first letter of each word in the topic phrase, then combine it with
+the care key using this format:
+
+care_key::topic_initials
+
+puzzle check:
+care_behaves_like_care::am
+
+information reward:
+Attachment safety comes from clarity, warmth, consistency, protection without control, disability respect, and returning when promised.
+
+node key:
+repair_03_clear
+
+continue branch:
+signal/branches/repair/node_04.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/repair/node_02.txt

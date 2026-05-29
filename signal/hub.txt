@@ -1,0 +1,45 @@
+GHOSTLIGHT PROTOCOL // SIGNAL HUB
+
+status:
+The trunk is active.
+The branch tree is active.
+
+instruction:
+Choose how deep to inspect.
+
+trunk:
+signal/layer_01.txt
+
+branches:
+signal/branches/core_self/start.txt
+signal/branches/repair/start.txt
+signal/branches/aesthetic/start.txt
+signal/branches/body_load/start.txt
+signal/branches/mind_regulation/start.txt
+signal/branches/household_support/start.txt
+signal/branches/pets/start.txt
+signal/branches/creative_technical/start.txt
+signal/branches/food_joy/start.txt
+signal/branches/future_path/start.txt
+signal/branches/social_communication/start.txt
+signal/branches/consent_privacy/start.txt
+
+branch rule:
+Each branch begins with a care gate, a technical puzzle, an information reward,
+and a key fragment.
+
+After the first branch reward, continue deeper through node files.
+
+loop:
+care gate -> key proof -> tech puzzle -> information reward -> continue branch or return to trunk
+
+final rule:
+The final payload requires the trunk key, every branch fragment, and the final boss key.
+
+composite format:
+trunk::core::repair::aesthetic::body::mind::support::pets::creative::food::future::social::consent::final_boss
+
+boundary:
+Information is a reward, not a right.
+Access is not entitlement.
+Some Codex material is intentionally abstracted or withheld because privacy is part of consent.

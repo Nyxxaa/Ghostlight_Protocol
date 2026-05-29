@@ -1,0 +1,38 @@
+GHOSTLIGHT PROTOCOL // CONSENT PRIVACY // NODE 05
+
+source:
+Codex section 23.9
+
+care gate:
+Privacy is part of consent.
+
+correct stance:
+privacy_is_consent
+
+care key:
+privacy_is_consent
+
+technical puzzle:
+Topic phrase: restricted intimacy principles
+Take the first letter of each word in the topic phrase, then combine it with
+the care key using this format:
+
+care_key::topic_initials
+
+puzzle check:
+privacy_is_consent::rip
+
+information reward:
+The safe reward is consent architecture: explicit, informed, specific, revocable, private, paced, aftercare-aware, and never entitlement.
+
+node key:
+consent_privacy_05_clear
+
+continue branch:
+signal/branches/consent_privacy/node_06.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/consent_privacy/node_04.txt

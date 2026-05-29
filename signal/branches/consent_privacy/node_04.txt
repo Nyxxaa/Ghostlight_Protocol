@@ -1,0 +1,38 @@
+GHOSTLIGHT PROTOCOL // CONSENT PRIVACY // NODE 04
+
+source:
+Codex section 23.8
+
+care gate:
+Privacy is part of consent.
+
+correct stance:
+privacy_is_consent
+
+care key:
+privacy_is_consent
+
+technical puzzle:
+Topic phrase: restricted trauma summary
+Take the first letter of each word in the topic phrase, then combine it with
+the care key using this format:
+
+care_key::topic_initials
+
+puzzle check:
+privacy_is_consent::rts
+
+information reward:
+The public-safe reward is that significant history informs consent, clarity, support, and repair needs. Details remain private or restricted.
+
+node key:
+consent_privacy_04_clear
+
+continue branch:
+signal/branches/consent_privacy/node_05.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/consent_privacy/node_03.txt

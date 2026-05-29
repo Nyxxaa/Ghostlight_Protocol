@@ -1,0 +1,38 @@
+GHOSTLIGHT PROTOCOL // BODY LOAD // NODE 13
+
+source:
+Codex section 3.16
+
+care gate:
+Reduce load before demanding performance.
+
+correct stance:
+reduce_load_first
+
+care key:
+reduce_load_first
+
+technical puzzle:
+Topic phrase: nail system
+Take the first letter of each word in the topic phrase, then combine it with
+the care key using this format:
+
+care_key::topic_initials
+
+puzzle check:
+reduce_load_first::ns
+
+information reward:
+Nails are beauty, tactile feedback, self-recognition, and practical maintenance. The correct frame is functional adornment.
+
+node key:
+body_load_13_clear
+
+continue branch:
+signal/branches/body_load/node_14.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/body_load/node_12.txt

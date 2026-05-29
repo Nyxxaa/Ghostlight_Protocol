@@ -1,0 +1,38 @@
+GHOSTLIGHT PROTOCOL // MIND REGULATION // NODE 05
+
+source:
+Codex section 4.4
+
+care gate:
+Respect lived patterns without casual pathologizing.
+
+correct stance:
+respect_the_pattern
+
+care key:
+respect_the_pattern
+
+technical puzzle:
+Topic phrase: threat detection
+Take the first letter of each word in the topic phrase, then combine it with
+the care key using this format:
+
+care_key::topic_initials
+
+puzzle check:
+respect_the_pattern::td
+
+information reward:
+Threat detection can be accurate, overactive, or load-amplified. The useful response is calibration through specificity, honesty, and concrete next steps.
+
+node key:
+mind_regulation_05_clear
+
+continue branch:
+signal/branches/mind_regulation/node_06.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/mind_regulation/node_04.txt

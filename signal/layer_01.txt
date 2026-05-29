@@ -1,0 +1,12 @@
+GHOSTLIGHT PROTOCOL // LAYER 01
+basic decoder
+
+reward:
+Wynter likes people who inspect the strange thing instead of scrolling past it.
+
+The hub gave you a path.
+This layer gives you another.
+
+method: base64
+payload:
+c2lnbmFsL2xheWVyXzAyLmxvZw==

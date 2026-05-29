@@ -1,0 +1,38 @@
+GHOSTLIGHT PROTOCOL // PETS // NODE 03
+
+source:
+Codex section 8.2
+
+care gate:
+Small lives matter.
+
+correct stance:
+routine_comfort_responsibility
+
+care key:
+routine_comfort_responsibility
+
+technical puzzle:
+Topic phrase: Sapphire profile
+Take the first letter of each word in the topic phrase, then combine it with
+the care key using this format:
+
+care_key::topic_initials
+
+puzzle check:
+routine_comfort_responsibility::Sp
+
+information reward:
+Sapphire is emotionally important and part of daily aliveness. The public reward is the bond, not private tracking data.
+
+node key:
+pets_03_clear
+
+continue branch:
+signal/branches/pets/node_04.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/pets/node_02.txt

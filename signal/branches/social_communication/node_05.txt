@@ -1,0 +1,38 @@
+GHOSTLIGHT PROTOCOL // SOCIAL COMMUNICATION // NODE 05
+
+source:
+Codex section 19.0
+
+care gate:
+Ask instead of assuming.
+
+correct stance:
+ask_before_assuming
+
+care key:
+ask_before_assuming
+
+technical puzzle:
+Topic phrase: failure states
+Take the first letter of each word in the topic phrase, then combine it with
+the care key using this format:
+
+care_key::topic_initials
+
+puzzle check:
+ask_before_assuming::fs
+
+information reward:
+Failure states are usually load states. Self-care falls first, shame worsens access, ambiguity burns capacity, and external starters help.
+
+node key:
+social_communication_05_clear
+
+continue branch:
+signal/branches/social_communication/node_06.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/social_communication/node_04.txt

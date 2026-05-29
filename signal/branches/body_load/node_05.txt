@@ -1,0 +1,38 @@
+GHOSTLIGHT PROTOCOL // BODY LOAD // NODE 05
+
+source:
+Codex section 3.7
+
+care gate:
+Reduce load before demanding performance.
+
+correct stance:
+reduce_load_first
+
+care key:
+reduce_load_first
+
+technical puzzle:
+Topic phrase: neurological vulnerability
+Take the first letter of each word in the topic phrase, then combine it with
+the care key using this format:
+
+care_key::topic_initials
+
+puzzle check:
+reduce_load_first::nv
+
+information reward:
+Some body events require calm safety behavior, reduced stimulation, and recovery time. The care test is whether someone can respond without panic, shame, or disbelief.
+
+node key:
+body_load_05_clear
+
+continue branch:
+signal/branches/body_load/node_06.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/body_load/node_04.txt

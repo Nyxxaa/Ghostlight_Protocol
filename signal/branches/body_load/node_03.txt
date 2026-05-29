@@ -1,0 +1,38 @@
+GHOSTLIGHT PROTOCOL // BODY LOAD // NODE 03
+
+source:
+Codex section 3.5
+
+care gate:
+Reduce load before demanding performance.
+
+correct stance:
+reduce_load_first
+
+care key:
+reduce_load_first
+
+technical puzzle:
+Topic phrase: pain profile
+Take the first letter of each word in the topic phrase, then combine it with
+the care key using this format:
+
+care_key::topic_initials
+
+puzzle check:
+reduce_load_first::pp
+
+information reward:
+Pain is not isolated from cognition or mood. It can affect patience, sleep, task access, recovery time, and whether ordinary demands feel physically expensive.
+
+node key:
+body_load_03_clear
+
+continue branch:
+signal/branches/body_load/node_04.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/body_load/node_02.txt

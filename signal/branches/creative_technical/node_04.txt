@@ -1,0 +1,38 @@
+GHOSTLIGHT PROTOCOL // CREATIVE TECHNICAL // NODE 04
+
+source:
+Codex section 9.3
+
+care gate:
+Practical competence counts.
+
+correct stance:
+applied_systems_matter
+
+care key:
+applied_systems_matter
+
+technical puzzle:
+Topic phrase: human systems
+Take the first letter of each word in the topic phrase, then combine it with
+the care key using this format:
+
+care_key::topic_initials
+
+puzzle check:
+applied_systems_matter::hs
+
+information reward:
+Caregiving and communication are practical skill domains: tone, context, de-escalation, support needs, and real-world human limits.
+
+node key:
+creative_technical_04_clear
+
+continue branch:
+signal/branches/creative_technical/node_05.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/creative_technical/node_03.txt

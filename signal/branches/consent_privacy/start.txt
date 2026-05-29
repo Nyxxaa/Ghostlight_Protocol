@@ -1,0 +1,42 @@
+GHOSTLIGHT PROTOCOL // CONSENT PRIVACY BRANCH
+
+care gate:
+Privacy is part of consent.
+
+Choose the correct access ethic:
+
+A: solved information becomes a trophy
+B: fantasy or curiosity creates permission
+C: access is specific, revocable, purpose-limited, and handled with care
+D: vulnerable information should be shared to prove closeness
+
+correct packet:
+C
+
+technical gate:
+Keep only the rules that preserve consent.
+
+--- access_rules ---
+KEEP explicit
+KEEP informed
+KEEP specific
+KEEP revocable
+DROP trophy
+DROP pressure
+KEEP private
+DROP entitlement
+--- end_rules ---
+
+reward:
+Some information can only be handled by someone who understands privacy,
+consent, pacing, and purpose-limited access. Intensity is not permission.
+Curiosity is not ownership. Vulnerability is not a prize.
+
+branch key:
+consent_key = privacy_is_consent
+
+return:
+signal/hub.txt
+
+continue branch:
+signal/branches/consent_privacy/node_01.txt

@@ -1,0 +1,38 @@
+GHOSTLIGHT PROTOCOL // PETS // NODE 02
+
+source:
+Codex section 8.1
+
+care gate:
+Small lives matter.
+
+correct stance:
+routine_comfort_responsibility
+
+care key:
+routine_comfort_responsibility
+
+technical puzzle:
+Topic phrase: scope
+Take the first letter of each word in the topic phrase, then combine it with
+the care key using this format:
+
+care_key::topic_initials
+
+puzzle check:
+routine_comfort_responsibility::s
+
+information reward:
+Pet rewards stay public-safe: emotional role, care principles, and routine meaning, never private identifiers or household vulnerabilities.
+
+node key:
+pets_02_clear
+
+continue branch:
+signal/branches/pets/node_03.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/pets/node_01.txt

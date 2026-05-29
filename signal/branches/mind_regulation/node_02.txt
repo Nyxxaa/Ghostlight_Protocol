@@ -1,0 +1,38 @@
+GHOSTLIGHT PROTOCOL // MIND REGULATION // NODE 02
+
+source:
+Codex section 4.1
+
+care gate:
+Respect lived patterns without casual pathologizing.
+
+correct stance:
+respect_the_pattern
+
+care key:
+respect_the_pattern
+
+technical puzzle:
+Topic phrase: diagnostic uncertainty
+Take the first letter of each word in the topic phrase, then combine it with
+the care key using this format:
+
+care_key::topic_initials
+
+puzzle check:
+respect_the_pattern::du
+
+information reward:
+Uncertainty does not mean unreal. Historical labels, provisional labels, and lived patterns can be handled carefully without flattening the person.
+
+node key:
+mind_regulation_02_clear
+
+continue branch:
+signal/branches/mind_regulation/node_03.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/mind_regulation/node_01.txt

@@ -1,0 +1,38 @@
+GHOSTLIGHT PROTOCOL // AESTHETIC // NODE 04
+
+source:
+Codex section 10.3
+
+care gate:
+Beauty is regulation, not vanity.
+
+correct stance:
+beauty_is_regulation
+
+care key:
+beauty_is_regulation
+
+technical puzzle:
+Topic phrase: lighting
+Take the first letter of each word in the topic phrase, then combine it with
+the care key using this format:
+
+care_key::topic_initials
+
+puzzle check:
+beauty_is_regulation::l
+
+information reward:
+Lighting should support low-glare, moody, indirect, stormlit, candlelit, moonlit, or otherwise controlled atmosphere.
+
+node key:
+aesthetic_04_clear
+
+continue branch:
+signal/branches/aesthetic/node_05.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/aesthetic/node_03.txt

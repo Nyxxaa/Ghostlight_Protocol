@@ -1,0 +1,46 @@
+GHOSTLIGHT PROTOCOL // AESTHETIC BRANCH
+
+care gate:
+Beauty is regulation, not vanity.
+
+Choose the correct interpretation:
+
+A: aesthetics are costume
+B: beauty is frivolous until everything else is solved
+C: sensory coherence, music, texture, light, and atmosphere can help a person feel real
+D: dark style means danger
+
+correct packet:
+C
+
+technical gate:
+Read the CSS variables whose names belong to signal, not noise.
+
+--- motif.css ---
+:root {
+  --noise-flat: beige;
+  --signal-black: matte_black;
+  --signal-red: blood_crimson;
+  --signal-silver: moonlit_silver;
+  --noise-slogan: vanity;
+  --signal-blue: storm_blue;
+  --signal-texture: velvet_satin_leather_glass_metal;
+  --signal-key: beauty_is_regulation;
+}
+--- end ---
+
+reward:
+Wynter's aesthetic matrix is dark-spectrum, gothic, sacred, stormlit,
+romantic, cyber-capable, industrial-edged, and controlled. Black, crimson,
+silver, storm blue, velvet, satin, leather, glass, metal, low light, music,
+seasonal atmosphere, and signal imagery are not surface decoration. They are
+identity, regulation, embodiment, and meaning.
+
+branch key:
+aesthetic_key = beauty_is_regulation
+
+return:
+signal/hub.txt
+
+continue branch:
+signal/branches/aesthetic/node_01.txt

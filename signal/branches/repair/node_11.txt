@@ -1,0 +1,38 @@
+GHOSTLIGHT PROTOCOL // RELATIONSHIP REPAIR // NODE 11
+
+source:
+Codex section 6.11
+
+care gate:
+Choose clarity, consent, repair, and limits over ambiguity.
+
+correct stance:
+care_behaves_like_care
+
+care key:
+care_behaves_like_care
+
+technical puzzle:
+Topic phrase: friendship patterns
+Take the first letter of each word in the topic phrase, then combine it with
+the care key using this format:
+
+care_key::topic_initials
+
+puzzle check:
+care_behaves_like_care::fp
+
+information reward:
+Friendship works best with directness, shared meaning, disability respect, creative resonance, consistency, humor, and low-pressure honesty.
+
+node key:
+repair_11_clear
+
+continue branch:
+signal/branches/repair/node_12.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/repair/node_10.txt

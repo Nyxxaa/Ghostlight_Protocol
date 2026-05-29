@@ -1,0 +1,38 @@
+GHOSTLIGHT PROTOCOL // MIND REGULATION // NODE 11
+
+source:
+Codex section 4.10
+
+care gate:
+Respect lived patterns without casual pathologizing.
+
+correct stance:
+respect_the_pattern
+
+care key:
+respect_the_pattern
+
+technical puzzle:
+Topic phrase: repair needs
+Take the first letter of each word in the topic phrase, then combine it with
+the care key using this format:
+
+care_key::topic_initials
+
+puzzle check:
+respect_the_pattern::rn
+
+information reward:
+Repair restores clarity, connection, and safety. It names what happened, acknowledges impact, changes behavior, and does not make the harmed person manage shame.
+
+node key:
+mind_regulation_11_clear
+
+continue branch:
+signal/branches/mind_regulation/node_12.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/mind_regulation/node_10.txt

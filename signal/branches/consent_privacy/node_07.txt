@@ -1,0 +1,38 @@
+GHOSTLIGHT PROTOCOL // CONSENT PRIVACY // NODE 07
+
+source:
+Codex section 23.12
+
+care gate:
+Privacy is part of consent.
+
+correct stance:
+privacy_is_consent
+
+care key:
+privacy_is_consent
+
+technical puzzle:
+Topic phrase: update log
+Take the first letter of each word in the topic phrase, then combine it with
+the care key using this format:
+
+care_key::topic_initials
+
+puzzle check:
+privacy_is_consent::ul
+
+information reward:
+Update logs prevent old facts from silently becoming current. A living document needs correction discipline.
+
+node key:
+consent_privacy_07_clear
+
+continue branch:
+signal/branches/consent_privacy/node_08.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/consent_privacy/node_06.txt

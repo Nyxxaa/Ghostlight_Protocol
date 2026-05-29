@@ -1,0 +1,38 @@
+GHOSTLIGHT PROTOCOL // CORE SELF // NODE 07
+
+source:
+Codex section 2.11
+
+care gate:
+Do not flatten a person into one trait.
+
+correct stance:
+hold_multiple_truths
+
+care key:
+hold_multiple_truths
+
+technical puzzle:
+Topic phrase: relational identity
+Take the first letter of each word in the topic phrase, then combine it with
+the care key using this format:
+
+care_key::topic_initials
+
+puzzle check:
+hold_multiple_truths::ri
+
+information reward:
+The safe public shape is simple: single, attachment-aware, clarity/consistency/repair-oriented, and not available for ambiguity that pretends to be depth.
+
+node key:
+core_self_07_clear
+
+continue branch:
+signal/branches/core_self/node_08.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/core_self/node_06.txt

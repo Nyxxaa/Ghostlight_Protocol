@@ -1,0 +1,38 @@
+GHOSTLIGHT PROTOCOL // BODY LOAD // NODE 11
+
+source:
+Codex section 3.14
+
+care gate:
+Reduce load before demanding performance.
+
+correct stance:
+reduce_load_first
+
+care key:
+reduce_load_first
+
+technical puzzle:
+Topic phrase: skin system
+Take the first letter of each word in the topic phrase, then combine it with
+the care key using this format:
+
+care_key::topic_initials
+
+puzzle check:
+reduce_load_first::ss
+
+information reward:
+Skin care is sensory, comfort, identity, and maintenance. It should be supported as body access and self-recognition, not vanity.
+
+node key:
+body_load_11_clear
+
+continue branch:
+signal/branches/body_load/node_12.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/body_load/node_10.txt

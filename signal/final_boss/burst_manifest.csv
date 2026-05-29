@@ -1,0 +1,13 @@
+pass_id,capture_slot,interleave_index,payload_hex,frame_note
+GL-217,01,01,6465636f792f,low-elevation decoy
+GL-217,02,02,6e6f742f6974,low-elevation decoy
+GL-101,01,01,6c6f636b2f6661696c6564,unlocked decoy
+GL-404,01,01,7065726d697373696f6e2f6661696c6564,permission decoy
+GL-666,01,01,7265616c2f736f757263652f72656a6563746564,boundary decoy
+GL-314,06,03,7667604c7c7d,valid dead-lab frame
+GL-314,02,06,4c607a747d72,valid dead-lab frame
+GL-314,04,01,7d7c4c7f7a65,valid dead-lab frame
+GL-314,01,05,677b76677a70,valid dead-lab frame
+GL-314,07,07,7f,valid dead-lab frame
+GL-314,03,02,764c67726174,valid dead-lab frame
+GL-314,05,04,7f6a4c606a7d,valid dead-lab frame

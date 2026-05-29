@@ -1,0 +1,6 @@
+pass_id,elevation_deg,snr_db,drift_ppm,consent,real_world_source,lab_lock,operator_note
+GL-101,63,11,9,Y,N,N,lock never settled
+GL-217,24,19,1,Y,N,Y,clean but shallow
+GL-314,58,18,2,Y,N,Y,dead-lab candidate
+GL-404,72,21,4,N,N,Y,permission failed
+GL-666,81,24,0,Y,Y,Y,rejected by boundary rule

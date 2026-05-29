@@ -1,0 +1,38 @@
+GHOSTLIGHT PROTOCOL // HOUSEHOLD SUPPORT // NODE 01
+
+source:
+Codex section 7.0
+
+care gate:
+Support preserves dignity and consent.
+
+correct stance:
+support_not_control
+
+care key:
+support_not_control
+
+technical puzzle:
+Topic phrase: living systems
+Take the first letter of each word in the topic phrase, then combine it with
+the care key using this format:
+
+care_key::topic_initials
+
+puzzle check:
+support_not_control::ls
+
+information reward:
+A living system should make current constraints legible without exposing vulnerabilities. The reward is practical support design, not private household access.
+
+node key:
+household_support_01_clear
+
+continue branch:
+signal/branches/household_support/node_02.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/household_support/start.txt

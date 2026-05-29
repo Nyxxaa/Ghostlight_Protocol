@@ -1,0 +1,38 @@
+GHOSTLIGHT PROTOCOL // BODY LOAD // NODE 01
+
+source:
+Codex section 3.0
+
+care gate:
+Reduce load before demanding performance.
+
+correct stance:
+reduce_load_first
+
+care key:
+reduce_load_first
+
+technical puzzle:
+Topic phrase: body as operating system
+Take the first letter of each word in the topic phrase, then combine it with
+the care key using this format:
+
+care_key::topic_initials
+
+puzzle check:
+reduce_load_first::baos
+
+information reward:
+The body reward is a systems model, not a diagnosis list. Capacity is conditional, interactive, and affected by sleep, pain, sensory strain, food/water access, stress, and executive demand.
+
+node key:
+body_load_01_clear
+
+continue branch:
+signal/branches/body_load/node_02.txt
+
+return:
+signal/hub.txt
+
+previous:
+signal/branches/body_load/start.txt
