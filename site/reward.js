@@ -1,8 +1,8 @@
 const button = document.querySelector("[data-signal-trigger]");
 const statusLine = document.querySelector("[data-signal-status]");
+const scriptUrl = new URL(document.currentScript.src);
 
 function playRewardSignal() {
-  const scriptUrl = new URL(document.currentScript.src);
   const clips = [
     "reward_01.wav",
     "reward_02.wav",
