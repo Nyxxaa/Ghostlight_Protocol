@@ -27,6 +27,13 @@
 [03:27:55] EXPECT protocol debris.
 [03:28:21] READ what the machine names.
 [03:29:03] SIGNAL continues.</pre></section>
+      <section class="gate">
+        <form id="layer-02-answer">
+          <label for="layer-02-input">input answer here</label>
+          <input id="layer-02-input" name="answer" autocomplete="off" spellcheck="false">
+          <button type="submit">submit</button>
+        </form>
+      </section>
       
       <ul class="path-list">
         <li><a href="layer_02.log">raw fallback</a></li>
@@ -36,6 +43,21 @@
 
     </article>
   </main>
+  <script>
+    document.getElementById("layer-02-answer").addEventListener("submit", async (event) => {
+      event.preventDefault();
+      const input = document.getElementById("layer-02-input").value;
+      const normalized = input.toLowerCase().replace(/[^a-z0-9]/g, "");
+      const bytes = new TextEncoder().encode(normalized);
+      const digest = await crypto.subtle.digest("SHA-256", bytes);
+      const hex = Array.from(new Uint8Array(digest), byte => byte.toString(16).padStart(2, "0")).join("");
+      if (hex === "22b883c0ba1b0334c0bae24a44ec7e602de88605917779dfdc9b28ad32d836ed") {
+        window.location.href = ["trunk_rewards", "layer_02_reward.html"].join("/");
+      } else {
+        window.location.href = ["fail", "puzzle_failed.html"].join("/");
+      }
+    });
+  </script>
   <script src="../site/script.js?v=d2c2981"></script>
 </body>
 </html>
