@@ -15,6 +15,7 @@
 
 technical gate:
 Sort helpful phrases from harmful phrases.
+The first KEEP line is the archive key.
 
 --- phrase_filter ---
 KEEP: ask_instead_of_assuming
@@ -27,12 +28,9 @@ KEEP: real_answers
 --- end_filter ---
 
 reward path:
-When you recover the branch key value, open:
+When you recover the archive key, open:
 
-signal/branches/social_communication/start_reward_&lt;branch_key_value&gt;.html
-
-HTML fallback:
-Use the same path with .html instead of .html.
+signal/branches/social_communication/start_reward_&lt;archive_key&gt;.html
 
 return:
 signal/hub.html
