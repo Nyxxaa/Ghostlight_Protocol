@@ -9,35 +9,109 @@
 <body>
   <main class="ghost-page">
     <article class="ghost-card">
-      <p class="breadcrumb">signal packet</p>
+
+      <p class="breadcrumb">core_self // node 02 // difficulty 1.1</p>
       <h1>GHOSTLIGHT PROTOCOL // CORE SELF // NODE 02</h1>
-      <pre class="code-block">GHOSTLIGHT PROTOCOL // CORE SELF // NODE 02
 
-source:
-Codex section 2.4
+      <section class="gate">
+        <h2>nameplate drift</h2>
+        <p>The registry contains many labels. Some are archive residue. Some are masks. Some are handles. One is the current signal.</p>
+        <pre class="code-block">NAMEPLATE TRACE
 
-care gate:
-Do not flatten a person into one trait.
+record name ......... belongs to paperwork, not the door
+old handle .......... useful only as history
+role label .......... describes function, not self
+mask name ........... may carry style, not consent
+chosen signal ....... the receiver uses this one when speaking to her
 
-answer:
-Open the path that matches the correct receiver stance:
+W__T_R</pre>
+      </section>
 
-signal/branches/core_self/node_02_gate_&lt;stance&gt;.html
+      <section class="warning">
+        <p>Common failures: treating paperwork as closeness, using an old handle because it feels interesting, or choosing a label that makes the receiver feel clever instead of choosing the signal she actually uses.</p>
+      </section>
 
-format:
-lowercase_snake_case
+      <section class="gate" aria-labelledby="answer-title">
+        <h2 id="answer-title">receiver input</h2>
+        <p>Enter the current signal name.</p>
 
-return:
-signal/hub.html
+        <form id="core-node-02-form">
+          <label for="core-node-02-answer">answer packet</label><br>
+          <input
+            id="core-node-02-answer"
+            name="answer"
+            type="text"
+            autocomplete="off"
+            spellcheck="false"
+            class="answer-input"
+            placeholder="signal name"
+          >
+          <button class="audio-button" type="submit">submit packet</button>
+        </form>
 
-previous:
-signal/branches/core_self/node_01.html
-</pre>
+        <p id="core-node-02-status" class="audio-status" aria-live="polite"></p>
+      </section>
+
       <ul class="nav-links">
+        <li><a href="node_01_reward.html">previous reward</a></li>
+        <li><a href="start.html">branch overview</a></li>
         <li><a href="../../hub.html">hub</a></li>
       </ul>
+
     </article>
   </main>
-  <script src="../../../site/script.js?v=d2c2981"></script>
+
+  <script>
+    (function () {
+      const form = document.getElementById("core-node-02-form");
+      const input = document.getElementById("core-node-02-answer");
+      const status = document.getElementById("core-node-02-status");
+
+      const accepted = new Set([
+        "1bb721cdb659def802ac86f422cd26f903d6125f1b247d2719c2a91a3d89e0bb",
+        "6c473696b3d1eb854b11787706ff9ccc3def65317deefef6cabd52a7647b887d",
+        "9344cdd86f91476cd8ae27ac2546615af00e68f0ad520505b4aad518a955e682",
+        "5b5d447bd30aeb32e20b6af335efb3756752c81088d903bf73f7e7287cb55c82",
+        "1c264f1845361569280b1fff063f51ffd6e92cd2137f2f15ca77c423112fdeb3"
+      ]);
+
+      function normalize(value) {
+        return value
+          .trim()
+          .toLowerCase()
+          .replace(/[^a-z0-9]/g, "");
+      }
+
+      function hex(buffer) {
+        return Array.prototype.map.call(new Uint8Array(buffer), function (byte) {
+          return byte.toString(16).padStart(2, "0");
+        }).join("");
+      }
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        const value = normalize(input.value);
+
+        if (!value) {
+          status.textContent = "empty nameplate";
+          return;
+        }
+
+        crypto.subtle.digest("SHA-256", new TextEncoder().encode(value)).then(function (digest) {
+          if (accepted.has(hex(digest))) {
+            status.textContent = "signal recognized";
+            window.location.href = "node_02_reward.html";
+          } else {
+            status.textContent = "nameplate rejected";
+            window.location.href = "../../fail/care_gate_failed.html";
+          }
+        }).catch(function () {
+          status.textContent = "validator unavailable";
+        });
+      });
+    }());
+  </script>
+
+  <script src="../../../site/script.js?v=branch-inputs-2"></script>
 </body>
 </html>
