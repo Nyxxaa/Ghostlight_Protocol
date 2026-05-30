@@ -1,4 +1,5 @@
 <!doctype html>
+
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -7,12 +8,18 @@
   <link rel="stylesheet" href="../site/style.css">
 </head>
 <body>
-  <main class="ghost-page ">
+  <main class="ghost-page">
     <article class="ghost-card">
 
-      <p class="breadcrumb">trunk</p>
-      <h1>GHOSTLIGHT PROTOCOL // LAYER 02</h1>
-      <section class="gate"><h2>pattern recognition</h2><p>Watch the first stable word of each anomalous line.</p><pre class="code-block">The extracted phrase names the next kind of artifact.
+```
+  <p class="breadcrumb">trunk</p>
+  <h1>GHOSTLIGHT PROTOCOL // LAYER 02</h1>
+
+  <section class="gate">
+    <h2>pattern recognition</h2>
+    <p>Watch the first stable word of each anomalous line.</p>
+    <pre class="code-block">The extracted phrase names the next kind of artifact.
+```
 
 [03:17:22] SIGNAL carrier returns after static.
 [03:18:05] INSTRUMENTS show the same shape twice.
@@ -26,36 +33,62 @@
 [03:26:14] DATA waits under the surface.
 [03:27:55] EXPECT protocol debris.
 [03:28:21] READ what the machine names.
-[03:29:03] SIGNAL continues.</pre></section>
-      <section class="gate">
-        <form id="layer-02-answer">
-          <label for="layer-02-input">input answer here</label>
-          <input id="layer-02-input" name="answer" autocomplete="off" spellcheck="false">
-          <button type="submit">submit</button>
-        </form>
-      </section>
-      
-      <ul class="path-list">
-        <li><a href="hub.html">hub</a></li>
-      </ul>
+[03:29:03] SIGNAL continues.</pre> </section>
 
-    </article>
+```
+  <section class="gate">
+    <h2>receiver input</h2>
+    <p>Enter the extracted signal phrase.</p>
+
+    <form id="layer-02-answer">
+      <label for="layer-02-input">answer packet</label><br>
+      <input
+        id="layer-02-input"
+        name="answer"
+        type="text"
+        autocomplete="off"
+        spellcheck="false"
+        class="answer-input"
+        placeholder="artifact type"
+      >
+      <button class="audio-button" type="submit">submit packet</button>
+    </form>
+
+    <p id="layer-02-status" class="audio-status" aria-live="polite"></p>
+  </section>
+
+  <ul class="path-list">
+    <li><a href="hub.html">hub</a></li>
+  </ul>
+
+</article>
+```
+
   </main>
+
   <script>
     document.getElementById("layer-02-answer").addEventListener("submit", async (event) => {
       event.preventDefault();
+
+      const status = document.getElementById("layer-02-status");
       const input = document.getElementById("layer-02-input").value;
       const normalized = input.toLowerCase().replace(/[^a-z0-9]/g, "");
+
       const bytes = new TextEncoder().encode(normalized);
       const digest = await crypto.subtle.digest("SHA-256", bytes);
       const hex = Array.from(new Uint8Array(digest), byte => byte.toString(16).padStart(2, "0")).join("");
+
       if (hex === "22b883c0ba1b0334c0bae24a44ec7e602de88605917779dfdc9b28ad32d836ed") {
+        status.textContent = "packet accepted";
         window.location.href = ["trunk_rewards", "layer_02_reward.html"].join("/");
       } else {
+        status.textContent = "packet rejected";
         window.location.href = ["fail", "puzzle_failed.html"].join("/");
       }
     });
   </script>
-  <script src="../site/script.js?v=d2c2981"></script>
+
+  <script src="../site/script.js?v=branch-inputs-2"></script>
+
 </body>
 </html>
