@@ -1,4 +1,5 @@
 <!doctype html>
+
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -8,40 +9,75 @@
 </head>
 <body>
   <main class="ghost-page">
-    <article class="ghost-card gate">
-      <p class="breadcrumb">dead relay acceptance gate</p>
-      <h1>GHOSTLIGHT PROTOCOL // FINAL BOSS // ACCEPTANCE GATE</h1>
-      <section class="warning">
-        <p>Enter the reconstructed final_boss key. The page checks the key hash locally and reveals the final payload channel only after acceptance.</p>
-      </section>
-      <form id="final-boss-form" class="gate" action="../fail/final_boss_failed.html">
-        <label for="final-boss-key">final_boss key</label>
-        <input id="final-boss-key" class="code-block" name="final_boss_key" autocomplete="off" spellcheck="false">
-        <button class="audio-button" type="submit">Validate Signal</button>
-      </form>
-      <p id="final-boss-status" class="audio-status" aria-live="polite"></p>
-      <section id="final-payload-door" class="reward" hidden>
-        <p>Final relay status: payload channel unlocked.</p>
-        <ul class="path-list">
-          <li><a href="../final_payload.html">final payload interface</a></li>
-          <li><a href="../../tools/cipher_helper.py">cipher helper</a></li>
-        </ul>
-      </section>
-      <ul class="nav-links">
-        <li><a href="index.html">dead lab</a></li>
-        <li><a href="../fail/final_boss_failed.html">failed reconstruction page</a></li>
-        <li><a href="../hub.html">hub</a></li>
-      </ul>
-    </article>
+    <article class="ghost-card">
+
+  <p class="breadcrumb">dead relay acceptance gate</p>
+  <h1>GHOSTLIGHT PROTOCOL // FINAL BOSS // ACCEPTANCE GATE</h1>
+
+  <section class="reward">
+    <p>The dead relay has accepted the branch fragments. The assembly order is recovered here, not before.</p>
+  </section>
+
+  <section class="gate">
+    <h2>assembly order recovered</h2>
+    <p>Assemble the recovered fragments in this order to reconstruct the final_boss key.</p>
+    <pre class="code-block">trunk
+
+core
+repair
+aesthetic
+body
+mind
+support
+pets
+creative
+food
+future
+social
+consent
+final_boss</pre> </section>
+
+  <section class="warning">
+    <h2>acceptance boundary</h2>
+    <p>Enter the reconstructed final_boss key. The page checks the key hash locally and opens the final payload channel only after acceptance.</p>
+    <p>Access is not ownership. Knowledge is not permission. Understanding is not entitlement.</p>
+  </section>
+
+  <section class="gate" aria-labelledby="final-boss-title">
+    <h2 id="final-boss-title">receiver input</h2>
+
+    <form id="final-boss-form" action="../fail/final_boss_failed.html">
+      <label for="final-boss-key">final_boss key</label><br>
+      <input
+        id="final-boss-key"
+        name="final_boss_key"
+        type="text"
+        autocomplete="off"
+        spellcheck="false"
+        class="answer-input"
+        placeholder="reconstructed key"
+      >
+      <button class="audio-button" type="submit">validate signal</button>
+    </form>
+
+    <p id="final-boss-status" class="audio-status" aria-live="polite"></p>
+  </section>
+
+  <ul class="nav-links">
+    <li><a href="README.html">dead relay</a></li>
+    <li><a href="../hub.html">hub</a></li>
+  </ul>
+
+</article>
+
   </main>
-  <script src="../../site/script.js?v=d2c2981"></script>
+
   <script>
     (function () {
-      var expected = "bf942d07f3d95d83e83b5e2c3cf8c6512c6560040283d316e4e831729b3e30bd";
-      var form = document.getElementById("final-boss-form");
-      var input = document.getElementById("final-boss-key");
-      var status = document.getElementById("final-boss-status");
-      var door = document.getElementById("final-payload-door");
+      const expected = "bf942d07f3d95d83e83b5e2c3cf8c6512c6560040283d316e4e831729b3e30bd";
+      const form = document.getElementById("final-boss-form");
+      const input = document.getElementById("final-boss-key");
+      const status = document.getElementById("final-boss-status");
 
       function hex(buffer) {
         return Array.prototype.map.call(new Uint8Array(buffer), function (byte) {
@@ -49,16 +85,26 @@
         }).join("");
       }
 
+      function normalize(value) {
+        return value.trim();
+      }
+
       form.addEventListener("submit", function (event) {
         event.preventDefault();
-        var value = input.value.trim();
+
+        const value = normalize(input.value);
+
+        if (!value) {
+          status.textContent = "empty reconstruction";
+          return;
+        }
+
         crypto.subtle.digest("SHA-256", new TextEncoder().encode(value)).then(function (digest) {
           if (hex(digest) === expected) {
             sessionStorage.setItem("ghostlightFinalAccepted", "true");
-            door.hidden = false;
-            status.textContent = "final_boss key accepted; payload channel open";
+            status.textContent = "final_boss key accepted; payload channel opening";
+            window.location.href = "../final_payload.html";
           } else {
-            door.hidden = true;
             status.textContent = "signal rejected; recalibrate";
             window.location.href = "../fail/final_boss_failed.html";
           }
@@ -68,5 +114,8 @@
       });
     }());
   </script>
+
+  <script src="../../site/script.js?v=branch-inputs-2"></script>
+
 </body>
 </html>
