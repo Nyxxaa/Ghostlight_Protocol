@@ -9,35 +9,105 @@
 <body>
   <main class="ghost-page">
     <article class="ghost-card">
-      <p class="breadcrumb">signal packet</p>
+
+      <p class="breadcrumb">core_self // node 01 // difficulty 1.0</p>
       <h1>GHOSTLIGHT PROTOCOL // CORE SELF // NODE 01</h1>
-      <pre class="code-block">GHOSTLIGHT PROTOCOL // CORE SELF // NODE 01
 
-source:
-Codex section 2.0
+      <section class="gate">
+        <h2>five mirrors</h2>
+        <p>The first room is not locked by a trick. It is locked by what the receiver mistakes for the whole.</p>
+        <pre class="code-block">A diagnosis can explain a weather pattern.
+A skill can reveal a practiced hand.
+An aesthetic can show the shape of recognition.
+A need can point toward the kind of care that works.
+A value can show where the compass lives.
 
-care gate:
-Do not flatten a person into one trait.
+One mirror is never the person.
+The room opens for the receiver who keeps the pattern intact.</pre>
+      </section>
 
-answer:
-Open the path that matches the correct receiver stance:
+      <section class="warning">
+        <p>Common failures: choosing the most dramatic fragment, choosing the most useful fragment, choosing the most wounded fragment, or choosing the fragment that makes the receiver feel needed.</p>
+      </section>
 
-signal/branches/core_self/node_01_gate_&lt;stance&gt;.html
+      <section class="gate" aria-labelledby="answer-title">
+        <h2 id="answer-title">receiver input</h2>
+        <p>Enter the principle that keeps the mirrors from becoming a cage.</p>
 
-format:
-lowercase_snake_case
+        <form id="core-node-01-form">
+          <label for="core-node-01-answer">answer packet</label><br>
+          <input
+            id="core-node-01-answer"
+            name="answer"
+            type="text"
+            autocomplete="off"
+            spellcheck="false"
+            class="answer-input"
+            placeholder="principle"
+          >
+          <button class="audio-button" type="submit">submit packet</button>
+        </form>
 
-return:
-signal/hub.html
+        <p id="core-node-01-status" class="audio-status" aria-live="polite"></p>
+      </section>
 
-previous:
-signal/branches/core_self/start.html
-</pre>
       <ul class="nav-links">
+        <li><a href="start.html">branch overview</a></li>
         <li><a href="../../hub.html">hub</a></li>
       </ul>
+
     </article>
   </main>
-  <script src="../../../site/script.js?v=d2c2981"></script>
+
+  <script>
+    (function () {
+      const form = document.getElementById("core-node-01-form");
+      const input = document.getElementById("core-node-01-answer");
+      const status = document.getElementById("core-node-01-status");
+
+      const accepted = new Set([
+        "441e6ef33842a24b635929820b7e0d9025090cf6c4ce8a3679da2bcef021ecca",
+        "3f20547d6e3924332910647a4dd3ed17050fa4ba08e1e886591e3eb3e595a268",
+        "cddce89f6037e1413178f41668ec57c203d0bb3aaf09073128029bbc7391225f"
+      ]);
+
+      function normalize(value) {
+        return value
+          .trim()
+          .toLowerCase()
+          .replace(/[^a-z0-9]/g, "");
+      }
+
+      function hex(buffer) {
+        return Array.prototype.map.call(new Uint8Array(buffer), function (byte) {
+          return byte.toString(16).padStart(2, "0");
+        }).join("");
+      }
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        const value = normalize(input.value);
+
+        if (!value) {
+          status.textContent = "empty mirror";
+          return;
+        }
+
+        crypto.subtle.digest("SHA-256", new TextEncoder().encode(value)).then(function (digest) {
+          if (accepted.has(hex(digest))) {
+            status.textContent = "pattern held";
+            window.location.href = "node_01_reward.html";
+          } else {
+            status.textContent = "mirror collapsed";
+            window.location.href = "../../fail/care_gate_failed.html";
+          }
+        }).catch(function () {
+          status.textContent = "validator unavailable";
+        });
+      });
+    }());
+  </script>
+
+  <script src="../../../site/script.js?v=branch-inputs-2"></script>
 </body>
 </html>
