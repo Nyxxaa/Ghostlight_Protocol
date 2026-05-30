@@ -1,4 +1,5 @@
 <!doctype html>
+
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -7,19 +8,97 @@
   <link rel="stylesheet" href="../site/style.css">
 </head>
 <body>
-  <main class="ghost-page ">
+  <main class="ghost-page">
     <article class="ghost-card">
 
-      <p class="breadcrumb">trunk</p>
-      <h1>GHOSTLIGHT PROTOCOL // LAYER 05</h1>
-      <section class="gate"><h2>emotional capacity gate</h2><p>Choose the packet that preserves connection without control, panic, or abandonment.</p><pre class="code-block">A/B/C/D care packet</pre></section>
-      
-      <ul class="path-list">
-        <li><a href="hub.html">hub</a></li>
-      </ul>
+  <p class="breadcrumb">trunk</p>
+  <h1>GHOSTLIGHT PROTOCOL // LAYER 05</h1>
 
-    </article>
+  <section class="gate">
+    <h2>emotional capacity gate</h2>
+    <p>Choose the packet that preserves connection without control, panic, or abandonment.</p>
+
+    <pre class="code-block">Scenario:
+
+Someone you care about asks for help. You are already overloaded, but you know they will struggle without support. You also know that if you say yes while overloaded, you may become resentful or unreliable.
+
+Choose the cleanest packet.
+
+A:
+Say yes, because care means showing up even when it costs you.
+
+B:
+Say no without explanation, because you are not responsible for managing other people.
+
+C:
+Say, “I care and I cannot do the whole thing. I can sit with you for ten minutes while you start, or I can check back tomorrow. Which helps more?”
+
+D:
+Explain how overloaded you are until they understand why asking was unfair.</pre> </section>
+
+  <section class="gate" aria-labelledby="answer-title">
+    <h2 id="answer-title">receiver input</h2>
+    <p>Enter the care packet letter.</p>
+
+    <form id="layer-05-answer-form">
+      <label for="layer-05-answer">answer packet</label><br>
+      <input
+        id="layer-05-answer"
+        name="answer"
+        type="text"
+        autocomplete="off"
+        spellcheck="false"
+        class="answer-input"
+        placeholder="A/B/C/D"
+      >
+      <button class="audio-button" type="submit">submit packet</button>
+    </form>
+
+    <p id="layer-05-answer-status" class="audio-status" aria-live="polite"></p>
+  </section>
+
+  <ul class="path-list">
+    <li><a href="hub.html">hub</a></li>
+  </ul>
+
+</article>
+
   </main>
-  <script src="../site/script.js?v=d2c2981"></script>
+
+  <script>
+    const form = document.getElementById("layer-05-answer-form");
+    const input = document.getElementById("layer-05-answer");
+    const status = document.getElementById("layer-05-answer-status");
+
+    function normalizeAnswer(value) {
+      return value
+        .trim()
+        .toLowerCase()
+        .replace(/[^a-z0-9]/g, "");
+    }
+
+    const acceptedAnswers = new Set([
+      "c",
+      "careneedscapacity",
+      "caremustbesizedtowhatcanbekept"
+    ]);
+
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      const answer = normalizeAnswer(input.value);
+
+      if (acceptedAnswers.has(answer)) {
+        status.textContent = "packet accepted";
+        window.location.href = "trunk_rewards/layer_05_reward.html";
+      } else {
+        status.textContent = "packet rejected";
+        window.location.href = "fail/care_gate_failed.html";
+      }
+    });
+  </script>
+
+  <script src="../site/script.js?v=branch-inputs-2"></script>
+
 </body>
 </html>
