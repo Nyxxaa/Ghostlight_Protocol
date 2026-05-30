@@ -1,0 +1,203 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GHOSTLIGHT PROTOCOL // DAILY FUNCTIONING // NODE 02</title>
+  <link rel="stylesheet" href="../../../site/style.css">
+</head>
+<body>
+  <main class="ghost-page">
+    <article class="ghost-card">
+
+```
+  <p class="breadcrumb">daily_functioning // node 02 // difficulty 5.1</p>
+  <h1>GHOSTLIGHT PROTOCOL // DAILY FUNCTIONING // NODE 02</h1>
+
+  <section class="gate">
+    <h2>starter beats lecture</h2>
+    <p>The second room tests whether the receiver can offer an entry point instead of an explanation demand. The unsafe read asks for justification. The stable read begins beside the person and lowers the first step.</p>
+
+    <pre class="code-block">support trace:
+```
+
+"why didn't you?" .......... threshold rises
+"you know better" .......... shame increases
+"just start" ............... access still blocked
+"what's the first inch?" ... entry appears
+"I'll begin with you" ...... activation lowers
+"touch the object" ......... task becomes real
+"one small piece" .......... function returns
+
+A lecture asks for performance.
+A starter opens the door.</pre> </section>
+
+```
+  <p>Common failures: demanding an explanation before help, giving a full plan when one starter is needed, or treating support as a test of obedience.</p>
+
+  <section class="gate" aria-labelledby="answer-title">
+    <h2 id="answer-title">receiver input</h2>
+    <p>Enter the care move that opens the task without raising shame.</p>
+
+    <form id="daily-functioning-node-02-form">
+      <label for="daily-functioning-node-02-answer">answer packet</label><br>
+      <input
+        id="daily-functioning-node-02-answer"
+        name="answer"
+        type="text"
+        autocomplete="off"
+        spellcheck="false"
+        class="answer-input"
+        placeholder="care move..."
+      >
+      <button class="audio-button" type="submit">submit packet</button>
+    </form>
+
+    <p id="daily-functioning-node-02-status" class="audio-status" aria-live="polite"></p>
+  </section>
+
+  <ul class="nav-links">
+    <li><a href="node_01_reward.html">previous reward</a></li>
+    <li><a href="start.html">branch overview</a></li>
+    <li><a href="../../hub.html">hub</a></li>
+  </ul>
+
+</article>
+```
+
+  </main>
+
+  <script>
+    (function () {
+      const form = document.getElementById("daily-functioning-node-02-form");
+      const input = document.getElementById("daily-functioning-node-02-answer");
+      const status = document.getElementById("daily-functioning-node-02-status");
+
+      function normalize(value) {
+        return value.trim().toLowerCase();
+      }
+
+      function compact(value) {
+        return normalize(value).replace(/[^a-z0-9]/g, "");
+      }
+
+      function includesAny(text, terms) {
+        return terms.some((term) => text.includes(term));
+      }
+
+      const exact = new Set([
+        "starterbeatslecture",
+        "astarterbeatsalecture",
+        "starteropensaccess",
+        "starteropensthedoor",
+        "onestarteropensaccess",
+        "onefirststep",
+        "onenextthing",
+        "one small step",
+        "onesmallstep",
+        "one small piece",
+        "onesmallpiece",
+        "firstinch",
+        "thefirstinch",
+        "firstinchnotfullplan",
+        "beginwithher",
+        "beginbesideher",
+        "startbesideher",
+        "illbeginwithyou",
+        "beginwithyou",
+        "lowerthestep",
+        "lowerthethreshold",
+        "lowerentry",
+        "lowertheentry",
+        "loweractivation",
+        "reduceactivationload",
+        "touchtheobject",
+        "makeittangible",
+        "helpstart",
+        "helpinitiate",
+        "supportinitiation",
+        "openthetask",
+        "openaccess",
+        "carestartswithastarter"
+      ]);
+
+      const rejected = new Set([
+        "lecture",
+        "explain",
+        "explanation",
+        "why",
+        "shame",
+        "plan",
+        "fullplan",
+        "obedience",
+        "juststart",
+        "justdoit",
+        "tryharder",
+        "motivation",
+        "discipline",
+        "starter",
+        "help",
+        "support",
+        "task",
+        "everything"
+      ]);
+
+      function isValidAnswer(value) {
+        const text = normalize(value);
+        const key = compact(value);
+
+        if (!key) return false;
+        if (rejected.has(key)) return false;
+        if (exact.has(key)) return true;
+
+        if (
+          includesAny(text, ["starter", "first step", "first inch", "one small", "next thing", "beginning"]) &&
+          includesAny(text, ["opens", "lowers", "helps", "starts", "access", "entry", "threshold", "activation"])
+        ) return true;
+
+        if (
+          includesAny(text, ["begin", "start", "initiate"]) &&
+          includesAny(text, ["with", "beside", "together"]) &&
+          includesAny(text, ["task", "her", "them", "person", "body"])
+        ) return true;
+
+        if (
+          includesAny(text, ["not", "instead of", "rather than"]) &&
+          includesAny(text, ["lecture", "shame", "explain", "explanation", "why didn't you", "full plan"]) &&
+          includesAny(text, ["starter", "first step", "begin", "support", "entry"])
+        ) return true;
+
+        if (
+          includesAny(text, ["lower", "reduce", "lowering", "reducing"]) &&
+          includesAny(text, ["threshold", "entry", "activation", "start cost", "first step"]) &&
+          includesAny(text, ["task", "access", "function", "start"])
+        ) return true;
+
+        if (
+          includesAny(text, ["touch", "move", "open", "pick up"]) &&
+          includesAny(text, ["object", "door", "first piece", "one thing", "task"]) &&
+          includesAny(text, ["start", "begin", "access", "real"])
+        ) return true;
+
+        return false;
+      }
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        if (isValidAnswer(input.value)) {
+          status.textContent = "packet accepted";
+          window.location.href = "node_02_reward.html";
+        } else {
+          status.textContent = "lecture detected";
+          window.location.href = "../../fail/care_gate_failed.html";
+        }
+      });
+    }());
+  </script>
+
+  <script src="../../../site/script.js?v=branch-inputs-3"></script>
+
+</body>
+</html>

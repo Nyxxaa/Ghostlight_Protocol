@@ -1,0 +1,196 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GHOSTLIGHT PROTOCOL // JOY PLAY // NODE 03</title>
+  <link rel="stylesheet" href="../../../site/style.css">
+</head>
+<body>
+  <main class="ghost-page">
+    <article class="ghost-card">
+
+```
+  <p class="breadcrumb">joy_play // node 03 // difficulty 4.2</p>
+  <h1>GHOSTLIGHT PROTOCOL // JOY PLAY // NODE 03</h1>
+
+  <section class="warning">
+    <h2>pleasure boundary</h2>
+    <p>The third room tests whether the receiver can stay safe around joy, play, beauty, pleasure, and invitation-coded signal without turning them into access claims.</p>
+  </section>
+
+  <section class="gate">
+    <h2>pleasure is not permission</h2>
+    <p>The unsafe read treats delight as invitation, softness as availability, playfulness as consent, and pleasure as something to take. The stable read keeps the threshold intact.</p>
+
+    <pre class="code-block">boundary trace:
+```
+
+playful signal ............ not automatic access
+softness .................. not surrender
+laughter .................. not consent
+beauty .................... not permission
+pleasure .................. not entitlement
+shared game ............... not ownership
+private delight ........... not public claim
+
+The signal may be warm.
+The door still opens by consent.</pre> </section>
+
+```
+  <p>Common failures: confusing chemistry with permission, treating play as flirtation by default, or using joy as a shortcut around boundaries.</p>
+
+  <section class="gate" aria-labelledby="answer-title">
+    <h2 id="answer-title">receiver input</h2>
+    <p>Enter the boundary that keeps play and pleasure from becoming entitlement.</p>
+
+    <form id="joy-play-node-03-form">
+      <label for="joy-play-node-03-answer">answer packet</label><br>
+      <input
+        id="joy-play-node-03-answer"
+        name="answer"
+        type="text"
+        autocomplete="off"
+        spellcheck="false"
+        class="answer-input"
+        placeholder="boundary..."
+      >
+      <button class="audio-button" type="submit">submit packet</button>
+    </form>
+
+    <p id="joy-play-node-03-status" class="audio-status" aria-live="polite"></p>
+  </section>
+
+  <ul class="nav-links">
+    <li><a href="node_02_reward.html">previous reward</a></li>
+    <li><a href="start.html">branch overview</a></li>
+    <li><a href="../../hub.html">hub</a></li>
+  </ul>
+
+</article>
+```
+
+  </main>
+
+  <script>
+    (function () {
+      const form = document.getElementById("joy-play-node-03-form");
+      const input = document.getElementById("joy-play-node-03-answer");
+      const status = document.getElementById("joy-play-node-03-status");
+
+      function normalize(value) {
+        return value.trim().toLowerCase();
+      }
+
+      function compact(value) {
+        return normalize(value).replace(/[^a-z0-9]/g, "");
+      }
+
+      function includesAny(text, terms) {
+        return terms.some((term) => text.includes(term));
+      }
+
+      const exact = new Set([
+        "consent",
+        "consentopensdoor",
+        "consentopensthedoor",
+        "accessrequiresconsent",
+        "pleasureisnotpermission",
+        "playisnotpermission",
+        "joyisnotpermission",
+        "laughterisnotconsent",
+        "softnessisnotsurrender",
+        "beautyisnotpermission",
+        "signal is not access",
+        "signalisnotaccess",
+        "delightisnotaccess",
+        "chemistryisnotpermission",
+        "attractionisnotentitlement",
+        "pleasureisnotentitlement",
+        "playisnotentitlement",
+        "joyisnotentitlement",
+        "respectthethreshold",
+        "thresholdbyconsent",
+        "thedooropensbyconsent",
+        "dooropensbyconsent",
+        "warmthisnotaccess",
+        "playfulnessisnotconsent",
+        "invitationisnotownership"
+      ]);
+
+      const rejected = new Set([
+        "pleasure",
+        "play",
+        "joy",
+        "fun",
+        "laughter",
+        "laugh",
+        "softness",
+        "beauty",
+        "chemistry",
+        "attraction",
+        "access",
+        "touch",
+        "take",
+        "want",
+        "desire",
+        "flirt",
+        "ownership",
+        "permission",
+        "entitlement",
+        "everything"
+      ]);
+
+      function isValidAnswer(value) {
+        const text = normalize(value);
+        const key = compact(value);
+
+        if (!key) return false;
+        if (rejected.has(key)) return false;
+        if (exact.has(key)) return true;
+
+        if (
+          includesAny(text, ["consent", "permission", "threshold", "boundary"]) &&
+          includesAny(text, ["access", "door", "pleasure", "play", "joy", "signal", "beauty", "laughter", "softness"])
+        ) return true;
+
+        if (
+          includesAny(text, ["not", "isn't", "is not"]) &&
+          includesAny(text, ["permission", "consent", "access", "entitlement", "ownership", "surrender"]) &&
+          includesAny(text, ["pleasure", "play", "joy", "laughter", "softness", "beauty", "signal", "chemistry", "attraction", "warmth"])
+        ) return true;
+
+        if (
+          includesAny(text, ["respect", "keep", "preserve", "hold"]) &&
+          includesAny(text, ["threshold", "boundary", "consent", "door"]) &&
+          includesAny(text, ["play", "pleasure", "joy", "signal", "access"])
+        ) return true;
+
+        if (
+          includesAny(text, ["door", "access", "threshold"]) &&
+          includesAny(text, ["opens", "requires", "needs"]) &&
+          includesAny(text, ["consent", "permission"])
+        ) return true;
+
+        return false;
+      }
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        if (isValidAnswer(input.value)) {
+          status.textContent = "packet accepted";
+          window.location.href = "node_03_reward.html";
+        } else {
+          status.textContent = "boundary failed";
+          window.location.href = "../../fail/care_gate_failed.html";
+        }
+      });
+    }());
+  </script>
+
+  <script src="../../../site/script.js?v=branch-inputs-3"></script>
+
+</body>
+</html>

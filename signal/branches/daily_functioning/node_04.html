@@ -1,0 +1,196 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GHOSTLIGHT PROTOCOL // DAILY FUNCTIONING // NODE 04</title>
+  <link rel="stylesheet" href="../../../site/style.css">
+</head>
+<body>
+  <main class="ghost-page">
+    <article class="ghost-card">
+
+```
+  <p class="breadcrumb">daily_functioning // node 04 // difficulty 5.3</p>
+  <h1>GHOSTLIGHT PROTOCOL // DAILY FUNCTIONING // NODE 04</h1>
+
+  <section class="gate">
+    <h2>protect basics first</h2>
+    <p>The fourth room tests whether the receiver can tell the difference between urgent-looking tasks and foundational care. The unsafe read chases visible productivity. The stable read protects the basics that make function possible.</p>
+
+    <pre class="code-block">priority trace:
+```
+
+mess visible ............... loud
+paperwork waiting .......... loud
+messages stacked ........... loud
+other people asking ........ loud
+
+water ...................... foundation
+food ....................... foundation
+meds/care basics ........... foundation
+sleep/rest .................. foundation
+low-stimulus reset ......... foundation
+one clean surface .......... foundation
+
+The loud thing is not always first.
+The load-bearing thing is first.</pre> </section>
+
+```
+  <p>Common failures: pushing chores before body needs, treating rest as avoidance, or demanding visible productivity while the foundation is unstable.</p>
+
+  <section class="gate" aria-labelledby="answer-title">
+    <h2 id="answer-title">receiver input</h2>
+    <p>Enter the care priority that keeps function from collapsing again.</p>
+
+    <form id="daily-functioning-node-04-form">
+      <label for="daily-functioning-node-04-answer">answer packet</label><br>
+      <input
+        id="daily-functioning-node-04-answer"
+        name="answer"
+        type="text"
+        autocomplete="off"
+        spellcheck="false"
+        class="answer-input"
+        placeholder="care priority..."
+      >
+      <button class="audio-button" type="submit">submit packet</button>
+    </form>
+
+    <p id="daily-functioning-node-04-status" class="audio-status" aria-live="polite"></p>
+  </section>
+
+  <ul class="nav-links">
+    <li><a href="node_03_reward.html">previous reward</a></li>
+    <li><a href="start.html">branch overview</a></li>
+    <li><a href="../../hub.html">hub</a></li>
+  </ul>
+
+</article>
+```
+
+  </main>
+
+  <script>
+    (function () {
+      const form = document.getElementById("daily-functioning-node-04-form");
+      const input = document.getElementById("daily-functioning-node-04-answer");
+      const status = document.getElementById("daily-functioning-node-04-status");
+
+      function normalize(value) {
+        return value.trim().toLowerCase();
+      }
+
+      function compact(value) {
+        return normalize(value).replace(/[^a-z0-9]/g, "");
+      }
+
+      function includesAny(text, terms) {
+        return terms.some((term) => text.includes(term));
+      }
+
+      const exact = new Set([
+        "protectbasicsfirst",
+        "protectthebasicsfirst",
+        "basicsfirst",
+        "carebasicsfirst",
+        "bodybasicsfirst",
+        "foundationfirst",
+        "protectthefoundation",
+        "protectfoundation",
+        "loadbearingthingsfirst",
+        "loadbearingthingfirst",
+        "theloadbearingthingisfirst",
+        "loudisnotfirst",
+        "theloudthingisnotalwaysfirst",
+        "loudthingisnotalwaysfirst",
+        "waterfoodmedsrest",
+        "waterfoodcarebasicsrest",
+        "waterfoodrest",
+        "stabilizefirst",
+        "stabilizebeforeproductivity",
+        "bodyneedsbeforechores",
+        "bodybeforechores",
+        "foundationbeforeproductivity",
+        "basicsbeforeproductivity",
+        "restisnotavoidance",
+        "visibleproductivityisnotfirst",
+        "carebeforeoutput"
+      ]);
+
+      const rejected = new Set([
+        "chores",
+        "paperwork",
+        "messages",
+        "mess",
+        "clean",
+        "productivity",
+        "work",
+        "output",
+        "rest",
+        "water",
+        "food",
+        "sleep",
+        "meds",
+        "basics",
+        "foundation",
+        "everything"
+      ]);
+
+      function isValidAnswer(value) {
+        const text = normalize(value);
+        const key = compact(value);
+
+        if (!key) return false;
+        if (rejected.has(key)) return false;
+        if (exact.has(key)) return true;
+
+        if (
+          includesAny(text, ["basics", "foundation", "body", "care", "stabilize", "load-bearing", "load bearing"]) &&
+          includesAny(text, ["first", "before", "protect", "priority", "comes first"])
+        ) return true;
+
+        if (
+          includesAny(text, ["water", "food", "meds", "medicine", "care basics", "sleep", "rest"]) &&
+          includesAny(text, ["first", "before", "foundation", "stabilize", "protect"])
+        ) return true;
+
+        if (
+          includesAny(text, ["not", "isn't", "is not"]) &&
+          includesAny(text, ["first", "priority"]) &&
+          includesAny(text, ["loud", "visible", "urgent-looking", "productivity", "chores", "paperwork"])
+        ) return true;
+
+        if (
+          includesAny(text, ["productivity", "chores", "paperwork", "messages", "output"]) &&
+          includesAny(text, ["after", "later", "not before", "comes after"]) &&
+          includesAny(text, ["basics", "body", "foundation", "care", "stabilized"])
+        ) return true;
+
+        if (
+          includesAny(text, ["rest", "sleep", "reset"]) &&
+          includesAny(text, ["not avoidance", "foundation", "care", "stabilize", "protects function"])
+        ) return true;
+
+        return false;
+      }
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        if (isValidAnswer(input.value)) {
+          status.textContent = "packet accepted";
+          window.location.href = "node_04_reward.html";
+        } else {
+          status.textContent = "foundation missed";
+          window.location.href = "../../fail/care_gate_failed.html";
+        }
+      });
+    }());
+  </script>
+
+  <script src="../../../site/script.js?v=branch-inputs-3"></script>
+
+</body>
+</html>

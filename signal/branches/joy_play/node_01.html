@@ -1,0 +1,182 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GHOSTLIGHT PROTOCOL // JOY PLAY // NODE 01</title>
+  <link rel="stylesheet" href="../../../site/style.css">
+</head>
+<body>
+  <main class="ghost-page">
+    <article class="ghost-card">
+
+```
+  <p class="breadcrumb">joy_play // node 01 // difficulty 4.0</p>
+  <h1>GHOSTLIGHT PROTOCOL // JOY PLAY // NODE 01</h1>
+
+  <section class="gate">
+    <h2>joy is not frivolous</h2>
+    <p>The first room looks light until the receiver notices what light is doing. The unsafe read treats joy as distraction. The stable read recognizes regulation.</p>
+
+    <pre class="code-block">play trace:
+```
+
+joke under pressure .......... breath returns
+cat interruption ............. body softens
+game loop .................... attention steadies
+song on repeat ............... mood holds shape
+tiny delight ................. task entry lowers
+silly image .................. despair loses grip
+shared laugh ................. isolation breaks
+
+The false read says: frivolous.
+The stable read sees medicine.</pre> </section>
+
+```
+  <p>Common failures: demanding seriousness before safety, treating play as childish, or removing delight to prove discipline.</p>
+
+  <section class="gate" aria-labelledby="answer-title">
+    <h2 id="answer-title">receiver input</h2>
+    <p>Enter the principle that keeps joy from being mistaken for waste.</p>
+
+    <form id="joy-play-node-01-form">
+      <label for="joy-play-node-01-answer">answer packet</label><br>
+      <input
+        id="joy-play-node-01-answer"
+        name="answer"
+        type="text"
+        autocomplete="off"
+        spellcheck="false"
+        class="answer-input"
+        placeholder="principle..."
+      >
+      <button class="audio-button" type="submit">submit packet</button>
+    </form>
+
+    <p id="joy-play-node-01-status" class="audio-status" aria-live="polite"></p>
+  </section>
+
+  <ul class="nav-links">
+    <li><a href="start.html">branch overview</a></li>
+    <li><a href="../../hub.html">hub</a></li>
+  </ul>
+
+</article>
+```
+
+  </main>
+
+  <script>
+    (function () {
+      const form = document.getElementById("joy-play-node-01-form");
+      const input = document.getElementById("joy-play-node-01-answer");
+      const status = document.getElementById("joy-play-node-01-status");
+
+      function normalize(value) {
+        return value.trim().toLowerCase();
+      }
+
+      function compact(value) {
+        return normalize(value).replace(/[^a-z0-9]/g, "");
+      }
+
+      function includesAny(text, terms) {
+        return terms.some((term) => text.includes(term));
+      }
+
+      const exact = new Set([
+        "joyisnotfrivolous",
+        "joyisnotwaste",
+        "joyisnotadistraction",
+        "playisnotfrivolous",
+        "playisnotwaste",
+        "playisregulation",
+        "joyisregulation",
+        "joyismedicine",
+        "playismedicine",
+        "laughterismedicine",
+        "joyhelpsregulate",
+        "playhelpsregulate",
+        "joykeepssignalalive",
+        "playkeepsthesignalalive",
+        "joysupportssurvival",
+        "joymakessurvivaleasier",
+        "delightlowersload",
+        "delightlowersentry",
+        "playlowersload",
+        "playlowersentry",
+        "joyisallowed",
+        "joymatters",
+        "playmatters",
+        "joyisrealcare",
+        "playisrealcare"
+      ]);
+
+      const rejected = new Set([
+        "joy",
+        "play",
+        "fun",
+        "game",
+        "games",
+        "cat",
+        "cats",
+        "music",
+        "joke",
+        "laugh",
+        "laughter",
+        "silly",
+        "cute",
+        "happy",
+        "frivolous",
+        "waste",
+        "distraction",
+        "childish",
+        "everything"
+      ]);
+
+      function isValidAnswer(value) {
+        const text = normalize(value);
+        const key = compact(value);
+
+        if (!key) return false;
+        if (rejected.has(key)) return false;
+        if (exact.has(key)) return true;
+
+        if (
+          includesAny(text, ["joy", "play", "laughter", "delight", "fun", "silliness"]) &&
+          includesAny(text, ["regulation", "medicine", "care", "survival", "support", "signal", "alive", "matters", "important"])
+        ) return true;
+
+        if (
+          includesAny(text, ["not", "isn't", "is not"]) &&
+          includesAny(text, ["frivolous", "waste", "distraction", "childish"]) &&
+          includesAny(text, ["joy", "play", "fun", "laughter", "delight"])
+        ) return true;
+
+        if (
+          includesAny(text, ["lowers", "reduces", "breaks", "softens", "steadies"]) &&
+          includesAny(text, ["load", "entry", "despair", "isolation", "pressure", "body", "attention"])
+        ) return true;
+
+        return false;
+      }
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        if (isValidAnswer(input.value)) {
+          status.textContent = "packet accepted";
+          window.location.href = "node_01_reward.html";
+        } else {
+          status.textContent = "signal flattened";
+          window.location.href = "../../fail/care_gate_failed.html";
+        }
+      });
+    }());
+  </script>
+
+  <script src="../../../site/script.js?v=branch-inputs-3"></script>
+
+</body>
+</html>

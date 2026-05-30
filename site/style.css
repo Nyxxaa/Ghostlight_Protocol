@@ -347,6 +347,40 @@ input.code-block:focus {
   text-shadow: 0 0 0.55rem rgba(255, 51, 74, 0.55);
 }
 
+.color-key-copper,
+.color-key-copper .ascii-key,
+.color-key-copper code,
+.color-key-copper strong {
+  color: #c98245;
+  text-shadow: 0 0 0.55rem rgba(201, 130, 69, 0.5);
+}
+
+.color-key-starlight,
+.color-key-starlight .ascii-key,
+.color-key-starlight code,
+.color-key-starlight strong {
+  color: #ffd6ff;
+  text-shadow:
+    0 0 0.45rem rgba(255, 214, 255, 0.7),
+    0 0 0.9rem rgba(179, 107, 255, 0.45);
+}
+
+.color-key-cyan,
+.color-key-cyan .ascii-key,
+.color-key-cyan code,
+.color-key-cyan strong {
+  color: #55d9ff;
+  text-shadow: 0 0 0.55rem rgba(85, 217, 255, 0.5);
+}
+
+.color-key-teal,
+.color-key-teal .ascii-key,
+.color-key-teal code,
+.color-key-teal strong {
+  color: #37d6c2;
+  text-shadow: 0 0 0.55rem rgba(55, 214, 194, 0.5);
+}
+
 @media (prefers-reduced-motion: reduce) {
   .cursor {
     animation: none;

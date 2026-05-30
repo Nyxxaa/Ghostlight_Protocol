@@ -1,0 +1,190 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GHOSTLIGHT PROTOCOL // DAILY FUNCTIONING // NODE 01</title>
+  <link rel="stylesheet" href="../../../site/style.css">
+</head>
+<body>
+  <main class="ghost-page">
+    <article class="ghost-card">
+
+  <p class="breadcrumb">daily_functioning // node 01 // difficulty 5.0</p>
+  <h1>GHOSTLIGHT PROTOCOL // DAILY FUNCTIONING // NODE 01</h1>
+
+  <section class="gate">
+    <h2>failure is access/load, not morality</h2>
+    <p>The first room tests whether the receiver can stop moralizing function. The unsafe read sees laziness, stubbornness, drama, or lack of discipline. The stable read sees a blocked access path under load.</p>
+
+    <pre class="code-block">function trace:
+
+task known ................. still not started
+need obvious ............... still not reached
+body waiting ............... entry cost too high
+instruction present ........ activation missing
+shame applied .............. access closes further
+starter offered ............ threshold lowers
+one small beginning ........ function returns
+
+The failure is not awareness.
+The failure is access.</pre> </section>
+
+  <p>Common failures: lecturing, shaming, asking “why didn’t you just,” or treating stalled function as proof of character.</p>
+
+  <section class="gate" aria-labelledby="answer-title">
+    <h2 id="answer-title">receiver input</h2>
+    <p>Enter the principle that keeps daily functioning from becoming a morality test.</p>
+
+    <form id="daily-functioning-node-01-form">
+      <label for="daily-functioning-node-01-answer">answer packet</label><br>
+      <input
+        id="daily-functioning-node-01-answer"
+        name="answer"
+        type="text"
+        autocomplete="off"
+        spellcheck="false"
+        class="answer-input"
+        placeholder="principle..."
+      >
+      <button class="audio-button" type="submit">submit packet</button>
+    </form>
+
+    <p id="daily-functioning-node-01-status" class="audio-status" aria-live="polite"></p>
+  </section>
+
+  <ul class="nav-links">
+    <li><a href="start.html">branch overview</a></li>
+    <li><a href="../../hub.html">hub</a></li>
+  </ul>
+
+</article>
+
+  </main>
+
+  <script>
+    (function () {
+      const form = document.getElementById("daily-functioning-node-01-form");
+      const input = document.getElementById("daily-functioning-node-01-answer");
+      const status = document.getElementById("daily-functioning-node-01-status");
+
+      function normalize(value) {
+        return value.trim().toLowerCase();
+      }
+
+      function compact(value) {
+        return normalize(value).replace(/[^a-z0-9]/g, "");
+      }
+
+      function includesAny(text, terms) {
+        return terms.some((term) => text.includes(term));
+      }
+
+      const exact = new Set([
+        "failureisaccessnotmorality",
+        "functionisaccessnotmorality",
+        "dailyfunctionisnotmorality",
+        "functioningisnotmorality",
+        "accessnotmorality",
+        "accessfailure",
+        "taskaccessfailure",
+        "initiationfailureisnotlaziness",
+        "activationfailureisnotlaziness",
+        "stalledfunctionisnotcharacter",
+        "stuckisnotlazy",
+        "notlaziness",
+        "notacharacterfailure",
+        "notamoralfailure",
+        "loadnotlaziness",
+        "loadnotmorality",
+        "capacitynotcharacter",
+        "failureisload",
+        "failureisaccess",
+        "lowerthreshold",
+        "lowerentryrequirements",
+        "shameclosesaccess",
+        "starteropensaccess",
+        "starterbeatslecture",
+        "onestarteropensaccess"
+      ]);
+
+      const rejected = new Set([
+        "lazy",
+        "laziness",
+        "discipline",
+        "willpower",
+        "motivation",
+        "excuses",
+        "drama",
+        "stubborn",
+        "justdoit",
+        "tryharder",
+        "task",
+        "function",
+        "failure",
+        "access",
+        "load",
+        "starter",
+        "everything"
+      ]);
+
+      function isValidAnswer(value) {
+        const text = normalize(value);
+        const key = compact(value);
+
+        if (!key) return false;
+        if (rejected.has(key)) return false;
+        if (exact.has(key)) return true;
+
+        if (
+          includesAny(text, ["failure", "stuck", "stalled", "function", "task", "initiation", "activation"]) &&
+          includesAny(text, ["access", "load", "capacity", "threshold", "entry"]) &&
+          includesAny(text, ["not morality", "not moral", "not character", "not laziness", "not lazy"])
+        ) return true;
+
+        if (
+          includesAny(text, ["not", "isn't", "is not"]) &&
+          includesAny(text, ["lazy", "laziness", "moral failure", "character failure", "discipline failure", "willpower"]) &&
+          includesAny(text, ["function", "task", "access", "load", "initiation", "activation"])
+        ) return true;
+
+        if (
+          includesAny(text, ["shame", "lecture", "moralizing", "judgment"]) &&
+          includesAny(text, ["closes", "blocks", "worsens", "raises"]) &&
+          includesAny(text, ["access", "threshold", "entry", "load"])
+        ) return true;
+
+        if (
+          includesAny(text, ["starter", "beginning", "first step", "one small"]) &&
+          includesAny(text, ["opens", "lowers", "returns", "helps"]) &&
+          includesAny(text, ["access", "threshold", "entry", "function"])
+        ) return true;
+
+        if (
+          includesAny(text, ["lower", "reduce", "lowering", "reducing"]) &&
+          includesAny(text, ["threshold", "entry", "load", "start cost", "activation"]) &&
+          includesAny(text, ["function", "access", "task"])
+        ) return true;
+
+        return false;
+      }
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        if (isValidAnswer(input.value)) {
+          status.textContent = "packet accepted";
+          window.location.href = "node_01_reward.html";
+        } else {
+          status.textContent = "threshold raised";
+          window.location.href = "../../fail/care_gate_failed.html";
+        }
+      });
+    }());
+  </script>
+
+  <script src="../../../site/script.js?v=branch-inputs-3"></script>
+
+</body>
+</html>

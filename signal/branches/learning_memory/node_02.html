@@ -1,0 +1,190 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GHOSTLIGHT PROTOCOL // LEARNING MEMORY // NODE 02</title>
+  <link rel="stylesheet" href="../../../site/style.css">
+</head>
+<body>
+  <main class="ghost-page">
+    <article class="ghost-card">
+
+```
+  <p class="breadcrumb">learning_memory // node 02 // difficulty 3.1</p>
+  <h1>GHOSTLIGHT PROTOCOL // LEARNING MEMORY // NODE 02</h1>
+
+  <section class="gate">
+    <h2>structure is accessibility</h2>
+    <p>The second room tests whether the receiver can see structure as a load-reduction tool. The unsafe read calls it overcomplication. The stable read sees access being engineered.</p>
+
+    <pre class="code-block">access trace:
+```
+
+skeleton .................. lowers start cost
+phase plan ................ lowers decision load
+one next thing ............ lowers activation load
+file map .................. lowers search cost
+validator rubric .......... lowers ambiguity
+branch staircase .......... lowers overwhelm
+reward paragraph .......... lowers memory burden
+checklist ................. lowers dropped-thread risk
+
+The structure is not the cage.
+The structure is the ramp.</pre> </section>
+
+```
+  <p>Common failures: demanding spontaneity, mocking lists, or treating accessibility structure as control instead of support.</p>
+
+  <section class="gate" aria-labelledby="answer-title">
+    <h2 id="answer-title">receiver input</h2>
+    <p>Enter the principle that makes structure an access tool.</p>
+
+    <form id="learning-memory-node-02-form">
+      <label for="learning-memory-node-02-answer">answer packet</label><br>
+      <input
+        id="learning-memory-node-02-answer"
+        name="answer"
+        type="text"
+        autocomplete="off"
+        spellcheck="false"
+        class="answer-input"
+        placeholder="principle..."
+      >
+      <button class="audio-button" type="submit">submit packet</button>
+    </form>
+
+    <p id="learning-memory-node-02-status" class="audio-status" aria-live="polite"></p>
+  </section>
+
+  <ul class="nav-links">
+    <li><a href="node_01_reward.html">previous reward</a></li>
+    <li><a href="start.html">branch overview</a></li>
+    <li><a href="../../hub.html">hub</a></li>
+  </ul>
+
+</article>
+```
+
+  </main>
+
+  <script>
+    (function () {
+      const form = document.getElementById("learning-memory-node-02-form");
+      const input = document.getElementById("learning-memory-node-02-answer");
+      const status = document.getElementById("learning-memory-node-02-status");
+
+      function normalize(value) {
+        return value.trim().toLowerCase();
+      }
+
+      function compact(value) {
+        return normalize(value).replace(/[^a-z0-9]/g, "");
+      }
+
+      function includesAny(text, terms) {
+        return terms.some((term) => text.includes(term));
+      }
+
+      const exact = new Set([
+        "structureisaccessibility",
+        "structureisaccess",
+        "structureisanaccesstool",
+        "structuremakesmemoryusable",
+        "structuremakesaccesspossible",
+        "structurelowersload",
+        "structurelowersdecisionload",
+        "structurelowersactivationload",
+        "structurelowersoverwhelm",
+        "structurelowersstartcost",
+        "structureistheramp",
+        "thestructureistheramp",
+        "structureisnotacage",
+        "thestructureisnotthecage",
+        "structureisnotcontrol",
+        "structureissupport",
+        "accessibilitystructure",
+        "externalstructure",
+        "onethenextthing",
+        "onenextthingopensaccess",
+        "onenextthing",
+        "mapslowerload",
+        "checklistslowerload",
+        "skeletonslowerstartcost",
+        "phaseplanslowerdecisionload",
+        "rubricslowerambiguity",
+        "staircasesloweroverwhelm"
+      ]);
+
+      const rejected = new Set([
+        "structure",
+        "access",
+        "accessibility",
+        "checklist",
+        "map",
+        "maps",
+        "skeleton",
+        "rubric",
+        "plan",
+        "phase",
+        "list",
+        "lists",
+        "control",
+        "cage",
+        "ramp",
+        "overcomplication",
+        "everything"
+      ]);
+
+      function isValidAnswer(value) {
+        const text = normalize(value);
+        const key = compact(value);
+
+        if (!key) return false;
+        if (rejected.has(key)) return false;
+        if (exact.has(key)) return true;
+
+        if (
+          includesAny(text, ["structure", "map", "checklist", "skeleton", "rubric", "staircase", "plan"]) &&
+          includesAny(text, ["access", "accessibility", "support", "ramp", "usable", "possible"])
+        ) return true;
+
+        if (
+          includesAny(text, ["structure", "map", "checklist", "skeleton", "phase plan", "rubric", "staircase"]) &&
+          includesAny(text, ["lowers", "reduces", "lessens", "cuts", "removes"]) &&
+          includesAny(text, ["load", "overwhelm", "ambiguity", "start cost", "decision", "activation"])
+        ) return true;
+
+        if (
+          includesAny(text, ["not", "isn't", "is not"]) &&
+          includesAny(text, ["control", "cage", "overcomplication", "punishment"]) &&
+          includesAny(text, ["structure", "accessibility", "support", "ramp"])
+        ) return true;
+
+        if (
+          includesAny(text, ["one next thing", "next thing", "starter"]) &&
+          includesAny(text, ["access", "activation", "load", "start", "entry"])
+        ) return true;
+
+        return false;
+      }
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        if (isValidAnswer(input.value)) {
+          status.textContent = "packet accepted";
+          window.location.href = "node_02_reward.html";
+        } else {
+          status.textContent = "ramp missed";
+          window.location.href = "../../fail/puzzle_failed.html";
+        }
+      });
+    }());
+  </script>
+
+  <script src="../../../site/script.js?v=branch-inputs-3"></script>
+
+</body>
+</html>

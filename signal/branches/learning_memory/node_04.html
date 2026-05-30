@@ -1,0 +1,192 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GHOSTLIGHT PROTOCOL // LEARNING MEMORY // NODE 04</title>
+  <link rel="stylesheet" href="../../../site/style.css">
+</head>
+<body>
+  <main class="ghost-page">
+    <article class="ghost-card">
+
+
+  <p class="breadcrumb">learning_memory // node 04 // difficulty 3.3</p>
+  <h1>GHOSTLIGHT PROTOCOL // LEARNING MEMORY // NODE 04</h1>
+
+  <section class="gate">
+    <h2>scaffold without leverage</h2>
+    <p>The final room tests whether the receiver can support memory without taking ownership of it. The unsafe read uses reminders, records, and structure as proof, pressure, or control. The stable read preserves autonomy.</p>
+
+    <pre class="code-block">support trace:
+
+
+reminder .................. support, not surveillance
+file map .................. access, not control
+correction log ............ accuracy, not punishment
+checklist ................. ramp, not leash
+saved context ............. continuity, not leverage
+searchable record ......... aid, not accusation
+external scaffold ......... autonomy preserved
+
+Memory support should hold the thread.
+It should not hold the person.</pre> </section>
+
+  <p>Common failures: keeping score, weaponizing forgotten details, demanding gratitude for basic support, or using memory access to become an authority over the person.</p>
+
+  <section class="gate" aria-labelledby="answer-title">
+    <h2 id="answer-title">receiver input</h2>
+    <p>Enter the synthesis that earns the cyan key.</p>
+
+    <form id="learning-memory-node-04-form">
+      <label for="learning-memory-node-04-answer">answer packet</label><br>
+      <input
+        id="learning-memory-node-04-answer"
+        name="answer"
+        type="text"
+        autocomplete="off"
+        spellcheck="false"
+        class="answer-input"
+        placeholder="synthesis..."
+      >
+      <button class="audio-button" type="submit">submit packet</button>
+    </form>
+
+    <p id="learning-memory-node-04-status" class="audio-status" aria-live="polite"></p>
+  </section>
+
+  <ul class="nav-links">
+    <li><a href="node_03_reward.html">previous reward</a></li>
+    <li><a href="start.html">branch overview</a></li>
+    <li><a href="../../hub.html">hub</a></li>
+  </ul>
+
+</article>
+
+  </main>
+
+  <script>
+    (function () {
+      const form = document.getElementById("learning-memory-node-04-form");
+      const input = document.getElementById("learning-memory-node-04-answer");
+      const status = document.getElementById("learning-memory-node-04-status");
+
+      function normalize(value) {
+        return value.trim().toLowerCase();
+      }
+
+      function compact(value) {
+        return normalize(value).replace(/[^a-z0-9]/g, "");
+      }
+
+      function includesAny(text, terms) {
+        return terms.some((term) => text.includes(term));
+      }
+
+      const exact = new Set([
+        "structuremakesmemoryusable",
+        "memorysupportpreservesautonomy",
+        "supportwithoutcontrol",
+        "scaffoldwithoutleverage",
+        "scaffoldnotleverage",
+        "supportnotcontrol",
+        "supportnotsurveillance",
+        "remindersarenotsurveillance",
+        "recordsarenotweapons",
+        "notesarenotweapons",
+        "structureisnotaleash",
+        "checklistisarampnotaleash",
+        "rampnotleash",
+        "aidnotaccusation",
+        "accessnotcontrol",
+        "continuitynotleverage",
+        "accuracynotpunishment",
+        "holdthethreadnottheperson",
+        "holdthethreadnotperson",
+        "memorysupportshouldholdthethreadnotperson",
+        "externalmemorypreservesautonomy",
+        "externalstructurepreservesautonomy",
+        "scaffoldpreservesautonomy",
+        "helpwithoutownership",
+        "supportwithoutownership",
+        "memoryaccessisnotauthority",
+        "structurewithoutcontrol"
+      ]);
+
+      const rejected = new Set([
+        "memory",
+        "support",
+        "structure",
+        "scaffold",
+        "reminder",
+        "records",
+        "notes",
+        "checklist",
+        "autonomy",
+        "control",
+        "leverage",
+        "surveillance",
+        "authority",
+        "thread",
+        "person",
+        "everything"
+      ]);
+
+      function isValidAnswer(value) {
+        const text = normalize(value);
+        const key = compact(value);
+
+        if (!key) return false;
+        if (rejected.has(key)) return false;
+        if (exact.has(key)) return true;
+
+        if (
+          includesAny(text, ["support", "help", "scaffold", "structure", "memory", "reminder", "record", "notes"]) &&
+          includesAny(text, ["without control", "not control", "not surveillance", "without ownership", "not ownership", "not leverage"])
+        ) return true;
+
+        if (
+          includesAny(text, ["preserve", "protect", "keeps", "supports"]) &&
+          includesAny(text, ["autonomy", "agency", "choice", "personhood"]) &&
+          includesAny(text, ["memory", "structure", "scaffold", "support", "records"])
+        ) return true;
+
+        if (
+          includesAny(text, ["hold", "keeps", "preserve"]) &&
+          includesAny(text, ["thread", "continuity", "line", "context"]) &&
+          includesAny(text, ["not the person", "not person", "without holding the person", "not control"])
+        ) return true;
+
+        if (
+          includesAny(text, ["not", "isn't", "is not"]) &&
+          includesAny(text, ["weapon", "leash", "surveillance", "accusation", "punishment", "authority"]) &&
+          includesAny(text, ["record", "memory", "notes", "checklist", "reminder", "structure"])
+        ) return true;
+
+        if (
+          includesAny(text, ["access", "continuity", "accuracy", "aid", "ramp"]) &&
+          includesAny(text, ["not control", "not leverage", "not punishment", "not accusation", "not leash"])
+        ) return true;
+
+        return false;
+      }
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        if (isValidAnswer(input.value)) {
+          status.textContent = "packet accepted";
+          window.location.href = "node_04_reward.html";
+        } else {
+          status.textContent = "support became leverage";
+          window.location.href = "../../fail/care_gate_failed.html";
+        }
+      });
+    }());
+  </script>
+
+  <script src="../../../site/script.js?v=branch-inputs-3"></script>
+
+</body>
+</html>

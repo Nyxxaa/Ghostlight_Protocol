@@ -1,0 +1,201 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GHOSTLIGHT PROTOCOL // JOY PLAY // NODE 04</title>
+  <link rel="stylesheet" href="../../../site/style.css">
+</head>
+<body>
+  <main class="ghost-page">
+    <article class="ghost-card">
+
+```
+  <p class="breadcrumb">joy_play // node 04 // difficulty 4.3</p>
+  <h1>GHOSTLIGHT PROTOCOL // JOY PLAY // NODE 04</h1>
+
+  <section class="gate">
+    <h2>medicine against despair</h2>
+    <p>The final room gathers the lighter signals and asks what they are doing together. The unsafe read dismisses them because they look small. The stable read sees rebellion against flattening.</p>
+
+    <pre class="code-block">final joy trace:
+```
+
+laughter ................. air returns
+music .................... pulse finds rhythm
+games .................... attention finds a track
+cats ..................... tenderness becomes real
+beauty ................... the world becomes worth touching
+food joy ................. the body says yes
+silliness ................ despair loses authority
+creative play ............ imagination refuses the cage
+
+Not escape.
+Not childishness.
+Not decoration.
+
+A living system keeps a small flame where despair expects ash.</pre> </section>
+
+```
+  <p>Common failures: treating joy as optional, removing pleasure to prove discipline, or forgetting that survival needs reasons to stay.</p>
+
+  <section class="gate" aria-labelledby="answer-title">
+    <h2 id="answer-title">receiver input</h2>
+    <p>Enter the synthesis that earns the starlight key.</p>
+
+    <form id="joy-play-node-04-form">
+      <label for="joy-play-node-04-answer">answer packet</label><br>
+      <input
+        id="joy-play-node-04-answer"
+        name="answer"
+        type="text"
+        autocomplete="off"
+        spellcheck="false"
+        class="answer-input"
+        placeholder="synthesis..."
+      >
+      <button class="audio-button" type="submit">submit packet</button>
+    </form>
+
+    <p id="joy-play-node-04-status" class="audio-status" aria-live="polite"></p>
+  </section>
+
+  <ul class="nav-links">
+    <li><a href="node_03_reward.html">previous reward</a></li>
+    <li><a href="start.html">branch overview</a></li>
+    <li><a href="../../hub.html">hub</a></li>
+  </ul>
+
+</article>
+```
+
+  </main>
+
+  <script>
+    (function () {
+      const form = document.getElementById("joy-play-node-04-form");
+      const input = document.getElementById("joy-play-node-04-answer");
+      const status = document.getElementById("joy-play-node-04-status");
+
+      function normalize(value) {
+        return value.trim().toLowerCase();
+      }
+
+      function compact(value) {
+        return normalize(value).replace(/[^a-z0-9]/g, "");
+      }
+
+      function includesAny(text, terms) {
+        return terms.some((term) => text.includes(term));
+      }
+
+      const exact = new Set([
+        "playkeepsthesignalalive",
+        "joykeepsthesignalalive",
+        "playkeepssignalalive",
+        "joykeepssignalalive",
+        "playkeepslifealive",
+        "joykeepslifealive",
+        "joyismedicine",
+        "playismedicine",
+        "laughterismedicine",
+        "joyisrebellion",
+        "playisrebellion",
+        "joyrebelsagainstdespair",
+        "playrebelsagainstdespair",
+        "medicineagainstdespair",
+        "lightagainstdespair",
+        "smallflameagainstdespair",
+        "smallflamewhereexpectsash",
+        "keepsasmallflame",
+        "survivalneedsjoy",
+        "survivalneedsreasons",
+        "survivalneedsdelight",
+        "playkeepssystemalive",
+        "joykeepssystemalive",
+        "joysupportssurvival",
+        "playsupportssurvival",
+        "playkeepsimaginationalive",
+        "imaginationrefusesthecage",
+        "despairlosesauthority"
+      ]);
+
+      const rejected = new Set([
+        "joy",
+        "play",
+        "fun",
+        "laughter",
+        "music",
+        "games",
+        "cats",
+        "beauty",
+        "food",
+        "silliness",
+        "creative",
+        "medicine",
+        "rebellion",
+        "escape",
+        "decoration",
+        "childishness",
+        "discipline",
+        "survival",
+        "everything"
+      ]);
+
+      function isValidAnswer(value) {
+        const text = normalize(value);
+        const key = compact(value);
+
+        if (!key) return false;
+        if (rejected.has(key)) return false;
+        if (exact.has(key)) return true;
+
+        if (
+          includesAny(text, ["joy", "play", "laughter", "delight", "silliness", "music", "games", "beauty"]) &&
+          includesAny(text, ["survival", "alive", "life", "medicine", "rebellion", "despair", "signal", "flame", "reason"])
+        ) return true;
+
+        if (
+          includesAny(text, ["small flame", "flame", "light", "starlight"]) &&
+          includesAny(text, ["despair", "ash", "survival", "alive", "keeps"])
+        ) return true;
+
+        if (
+          includesAny(text, ["not escape", "not decoration", "not childish", "not childishness"]) &&
+          includesAny(text, ["medicine", "survival", "signal", "joy", "play", "alive"])
+        ) return true;
+
+        if (
+          includesAny(text, ["despair"]) &&
+          includesAny(text, ["loses", "breaks", "softens", "authority", "grip"]) &&
+          includesAny(text, ["joy", "play", "laughter", "silliness", "music", "beauty"])
+        ) return true;
+
+        if (
+          includesAny(text, ["survival", "life", "system", "signal"]) &&
+          includesAny(text, ["needs", "requires", "keeps", "supported by"]) &&
+          includesAny(text, ["joy", "play", "delight", "reason", "laughter"])
+        ) return true;
+
+        return false;
+      }
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        if (isValidAnswer(input.value)) {
+          status.textContent = "packet accepted";
+          window.location.href = "node_04_reward.html";
+        } else {
+          status.textContent = "flame lost";
+          window.location.href = "../../fail/puzzle_failed.html";
+        }
+      });
+    }());
+  </script>
+
+  <script src="../../../site/script.js?v=branch-inputs-3"></script>
+
+</body>
+</html>

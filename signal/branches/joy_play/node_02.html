@@ -1,0 +1,192 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GHOSTLIGHT PROTOCOL // JOY PLAY // NODE 02</title>
+  <link rel="stylesheet" href="../../../site/style.css">
+</head>
+<body>
+  <main class="ghost-page">
+    <article class="ghost-card">
+
+```
+  <p class="breadcrumb">joy_play // node 02 // difficulty 4.1</p>
+  <h1>GHOSTLIGHT PROTOCOL // JOY PLAY // NODE 02</h1>
+
+  <section class="gate">
+    <h2>play keeps the signal alive</h2>
+    <p>The second room looks scattered until the receiver finds the shared function. Play is not separate from survival; it is one of the ways the system stays online.</p>
+
+    <pre class="code-block">signal trace:
+```
+
+game loop ................. attention can return
+roleplay scene ............ imagination can breathe
+music repeat .............. mood can hold shape
+cat chaos ................. body remembers softness
+tiny joke ................. pressure loses teeth
+pretty object ............. world becomes tolerable
+food delight .............. body says yes again
+silly ritual .............. entry cost drops
+
+The false read says: distraction.
+The stable read sees signal maintenance.</pre> </section>
+
+```
+  <p>Common failures: ranking only serious work as real, treating play as avoidance, or missing the regulation pattern because the tool looks light.</p>
+
+  <section class="gate" aria-labelledby="answer-title">
+    <h2 id="answer-title">receiver input</h2>
+    <p>Enter the function shared by play, music, games, cats, jokes, beauty, and food joy.</p>
+
+    <form id="joy-play-node-02-form">
+      <label for="joy-play-node-02-answer">answer packet</label><br>
+      <input
+        id="joy-play-node-02-answer"
+        name="answer"
+        type="text"
+        autocomplete="off"
+        spellcheck="false"
+        class="answer-input"
+        placeholder="shared function..."
+      >
+      <button class="audio-button" type="submit">submit packet</button>
+    </form>
+
+    <p id="joy-play-node-02-status" class="audio-status" aria-live="polite"></p>
+  </section>
+
+  <ul class="nav-links">
+    <li><a href="node_01_reward.html">previous reward</a></li>
+    <li><a href="start.html">branch overview</a></li>
+    <li><a href="../../hub.html">hub</a></li>
+  </ul>
+
+</article>
+```
+
+  </main>
+
+  <script>
+    (function () {
+      const form = document.getElementById("joy-play-node-02-form");
+      const input = document.getElementById("joy-play-node-02-answer");
+      const status = document.getElementById("joy-play-node-02-status");
+
+      function normalize(value) {
+        return value.trim().toLowerCase();
+      }
+
+      function compact(value) {
+        return normalize(value).replace(/[^a-z0-9]/g, "");
+      }
+
+      function includesAny(text, terms) {
+        return terms.some((term) => text.includes(term));
+      }
+
+      const exact = new Set([
+        "signalmaintenance",
+        "signalmaintenance",
+        "playkeepsthesignalalive",
+        "joykeepsthesignalalive",
+        "playkeepssignalalive",
+        "joykeepssignalalive",
+        "keepthesignalalive",
+        "keepsthesignalalive",
+        "regulation",
+        "regulationfunction",
+        "sharedregulation",
+        "playisregulation",
+        "joyisregulation",
+        "maintenance",
+        "systemmaintenance",
+        "signalstaysonline",
+        "systemstaysonline",
+        "stayonline",
+        "keepsystemonline",
+        "keepthesystemonline",
+        "attentionreturns",
+        "bodysoftens",
+        "entrycostdrops",
+        "moodholdsshape",
+        "despairlosesgrip",
+        "playmaintainsthesystem",
+        "joymaintainsthesystem",
+        "playmaintainssignal",
+        "joymaintainssignal"
+      ]);
+
+      const rejected = new Set([
+        "play",
+        "joy",
+        "fun",
+        "games",
+        "game",
+        "music",
+        "cats",
+        "cat",
+        "jokes",
+        "joke",
+        "beauty",
+        "food",
+        "silly",
+        "pretty",
+        "distraction",
+        "avoidance",
+        "hobby",
+        "hobbies",
+        "everything"
+      ]);
+
+      function isValidAnswer(value) {
+        const text = normalize(value);
+        const key = compact(value);
+
+        if (!key) return false;
+        if (rejected.has(key)) return false;
+        if (exact.has(key)) return true;
+
+        if (
+          includesAny(text, ["signal", "system", "body", "attention", "mood"]) &&
+          includesAny(text, ["alive", "online", "maintain", "maintenance", "return", "steady", "regulate", "regulation"])
+        ) return true;
+
+        if (
+          includesAny(text, ["play", "joy", "music", "games", "jokes", "cats", "beauty", "food"]) &&
+          includesAny(text, ["regulation", "maintenance", "keeps", "support", "survival", "alive", "online"])
+        ) return true;
+
+        if (
+          includesAny(text, ["entry", "load", "pressure", "despair", "isolation"]) &&
+          includesAny(text, ["drops", "lowers", "breaks", "softens", "reduces", "loosens"])
+        ) return true;
+
+        if (
+          includesAny(text, ["not distraction", "not avoidance", "not frivolous"]) &&
+          includesAny(text, ["regulation", "maintenance", "signal", "survival", "support"])
+        ) return true;
+
+        return false;
+      }
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        if (isValidAnswer(input.value)) {
+          status.textContent = "packet accepted";
+          window.location.href = "node_02_reward.html";
+        } else {
+          status.textContent = "signal scattered";
+          window.location.href = "../../fail/puzzle_failed.html";
+        }
+      });
+    }());
+  </script>
+
+  <script src="../../../site/script.js?v=branch-inputs-3"></script>
+
+</body>
+</html>

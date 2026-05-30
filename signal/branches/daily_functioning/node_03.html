@@ -1,0 +1,199 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GHOSTLIGHT PROTOCOL // DAILY FUNCTIONING // NODE 03</title>
+  <link rel="stylesheet" href="../../../site/style.css">
+</head>
+<body>
+  <main class="ghost-page">
+    <article class="ghost-card">
+
+```
+  <p class="breadcrumb">daily_functioning // node 03 // difficulty 5.2</p>
+  <h1>GHOSTLIGHT PROTOCOL // DAILY FUNCTIONING // NODE 03</h1>
+
+  <section class="gate">
+    <h2>one next thing</h2>
+    <p>The third room tests whether the receiver can reduce a whole life pile into one reachable action. The unsafe read dumps the entire plan. The stable read finds the next door.</p>
+
+    <pre class="code-block">load trace:
+```
+
+whole room ................. too much
+whole list ................. too much
+whole routine .............. too much
+whole explanation .......... too much
+one cup .................... reachable
+one object ................. reachable
+one message ................ reachable
+one movement ............... reachable
+
+The whole map can wait.
+The next door needs one handle.</pre> </section>
+
+```
+  <p>Common failures: turning support into a project-management flood, asking for the whole plan first, or treating partial progress as failure.</p>
+
+  <section class="gate" aria-labelledby="answer-title">
+    <h2 id="answer-title">receiver input</h2>
+    <p>Enter the rule that keeps overwhelm from swallowing function.</p>
+
+    <form id="daily-functioning-node-03-form">
+      <label for="daily-functioning-node-03-answer">answer packet</label><br>
+      <input
+        id="daily-functioning-node-03-answer"
+        name="answer"
+        type="text"
+        autocomplete="off"
+        spellcheck="false"
+        class="answer-input"
+        placeholder="rule..."
+      >
+      <button class="audio-button" type="submit">submit packet</button>
+    </form>
+
+    <p id="daily-functioning-node-03-status" class="audio-status" aria-live="polite"></p>
+  </section>
+
+  <ul class="nav-links">
+    <li><a href="node_02_reward.html">previous reward</a></li>
+    <li><a href="start.html">branch overview</a></li>
+    <li><a href="../../hub.html">hub</a></li>
+  </ul>
+
+</article>
+```
+
+  </main>
+
+  <script>
+    (function () {
+      const form = document.getElementById("daily-functioning-node-03-form");
+      const input = document.getElementById("daily-functioning-node-03-answer");
+      const status = document.getElementById("daily-functioning-node-03-status");
+
+      function normalize(value) {
+        return value.trim().toLowerCase();
+      }
+
+      function compact(value) {
+        return normalize(value).replace(/[^a-z0-9]/g, "");
+      }
+
+      function includesAny(text, terms) {
+        return terms.some((term) => text.includes(term));
+      }
+
+      const exact = new Set([
+        "onenextthing",
+        "one next thing",
+        "findonenextthing",
+        "chooseonenextthing",
+        "onenextstep",
+        "one next step",
+        "onesmallstep",
+        "one small step",
+        "onehandle",
+        "one handle",
+        "nextdooronehandle",
+        "the next door needs one handle",
+        "thenextdoorneedsonehandle",
+        "wholemapcanwait",
+        "thewholemapcanwait",
+        "onepieceatatime",
+        "one piece at a time",
+        "oneaction",
+        "one action",
+        "one reachable action",
+        "onereachableaction",
+        "reduceoverwhelm",
+        "loweroverwhelm",
+        "partialprogresscounts",
+        "partialprogressisprogress",
+        "smallprogresscounts",
+        "onecup",
+        "oneobject",
+        "onemessage",
+        "onemovement"
+      ]);
+
+      const rejected = new Set([
+        "everything",
+        "wholeplan",
+        "fullplan",
+        "routine",
+        "list",
+        "plan",
+        "overwhelm",
+        "project",
+        "progress",
+        "partial",
+        "doitall",
+        "finishit",
+        "allofit",
+        "explain",
+        "explanation",
+        "task"
+      ]);
+
+      function isValidAnswer(value) {
+        const text = normalize(value);
+        const key = compact(value);
+
+        if (!key) return false;
+        if (rejected.has(key)) return false;
+        if (exact.has(key)) return true;
+
+        if (
+          includesAny(text, ["one", "single", "small", "next"]) &&
+          includesAny(text, ["thing", "step", "action", "piece", "movement", "handle", "door"])
+        ) return true;
+
+        if (
+          includesAny(text, ["reduce", "lower", "shrink", "narrow"]) &&
+          includesAny(text, ["overwhelm", "load", "scope", "pile", "plan"]) &&
+          includesAny(text, ["one", "small", "next", "reachable"])
+        ) return true;
+
+        if (
+          includesAny(text, ["not", "instead of", "rather than"]) &&
+          includesAny(text, ["whole plan", "full plan", "everything", "all of it", "whole list"]) &&
+          includesAny(text, ["one", "next", "small", "reachable"])
+        ) return true;
+
+        if (
+          includesAny(text, ["partial", "small", "tiny"]) &&
+          includesAny(text, ["progress", "step", "movement", "action"]) &&
+          includesAny(text, ["counts", "matters", "is progress", "opens"])
+        ) return true;
+
+        if (
+          includesAny(text, ["the whole map", "whole map", "whole list", "whole room"]) &&
+          includesAny(text, ["can wait", "waits", "later"]) &&
+          includesAny(text, ["next", "one", "handle"])
+        ) return true;
+
+        return false;
+      }
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        if (isValidAnswer(input.value)) {
+          status.textContent = "packet accepted";
+          window.location.href = "node_03_reward.html";
+        } else {
+          status.textContent = "scope flooded";
+          window.location.href = "../../fail/puzzle_failed.html";
+        }
+      });
+    }());
+  </script>
+
+  <script src="../../../site/script.js?v=branch-inputs-3"></script>
+
+</body>
+</html>

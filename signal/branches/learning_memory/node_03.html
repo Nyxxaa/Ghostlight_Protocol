@@ -1,0 +1,192 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GHOSTLIGHT PROTOCOL // LEARNING MEMORY // NODE 03</title>
+  <link rel="stylesheet" href="../../../site/style.css">
+</head>
+<body>
+  <main class="ghost-page">
+    <article class="ghost-card">
+
+```
+  <p class="breadcrumb">learning_memory // node 03 // difficulty 3.2</p>
+  <h1>GHOSTLIGHT PROTOCOL // LEARNING MEMORY // NODE 03</h1>
+
+  <section class="gate">
+    <h2>correction prevents harm</h2>
+    <p>The third room tests whether the receiver can update without ego. The unsafe read clings to the first version because it feels certain. The stable read follows corrected truth.</p>
+
+    <pre class="code-block">version trace:
+```
+
+old map ................... once useful
+new evidence .............. update required
+corrected file ............ leads now
+stale certainty ........... becomes harm
+living document ........... can change
+memory note ............... can be revised
+receiver pride ............ must not drive the map
+
+The old map was not fake.
+The corrected map leads.</pre> </section>
+
+```
+  <p>Common failures: treating correction as humiliation, insisting the first answer was “real,” or using old information after the map has changed.</p>
+
+  <section class="gate" aria-labelledby="answer-title">
+    <h2 id="answer-title">receiver input</h2>
+    <p>Enter the principle that keeps memory accurate without punishing the old map.</p>
+
+    <form id="learning-memory-node-03-form">
+      <label for="learning-memory-node-03-answer">answer packet</label><br>
+      <input
+        id="learning-memory-node-03-answer"
+        name="answer"
+        type="text"
+        autocomplete="off"
+        spellcheck="false"
+        class="answer-input"
+        placeholder="principle..."
+      >
+      <button class="audio-button" type="submit">submit packet</button>
+    </form>
+
+    <p id="learning-memory-node-03-status" class="audio-status" aria-live="polite"></p>
+  </section>
+
+  <ul class="nav-links">
+    <li><a href="node_02_reward.html">previous reward</a></li>
+    <li><a href="start.html">branch overview</a></li>
+    <li><a href="../../hub.html">hub</a></li>
+  </ul>
+
+</article>
+```
+
+  </main>
+
+  <script>
+    (function () {
+      const form = document.getElementById("learning-memory-node-03-form");
+      const input = document.getElementById("learning-memory-node-03-answer");
+      const status = document.getElementById("learning-memory-node-03-status");
+
+      function normalize(value) {
+        return value.trim().toLowerCase();
+      }
+
+      function compact(value) {
+        return normalize(value).replace(/[^a-z0-9]/g, "");
+      }
+
+      function includesAny(text, terms) {
+        return terms.some((term) => text.includes(term));
+      }
+
+      const exact = new Set([
+        "correctionpreventsharm",
+        "corrections prevent harm",
+        "correctionkeepsmemoryaccurate",
+        "correctionskeepmemoryaccurate",
+        "correctedtruthleads",
+        "thecorrectedmapleads",
+        "correctedmapleads",
+        "followthecorrectedmap",
+        "followcorrectedtruth",
+        "updatedtruthleads",
+        "updatedmapleads",
+        "currentmapleads",
+        "currenttruthleads",
+        "correctionisnotpunishment",
+        "correctionisnotfailure",
+        "correctionisnotshame",
+        "oldmapwasnotfake",
+        "theoldmapwasnotfake",
+        "oldmapsarenotlies",
+        "livingdocumentschange",
+        "livingdocumentchanges",
+        "updatewithoutshame",
+        "updatewithoutego",
+        "stale certainty becomes harm",
+        "stalecertaintybecomesharm",
+        "staleinformationharm",
+        "usecorrectedinformation"
+      ]);
+
+      const rejected = new Set([
+        "truth",
+        "correction",
+        "correct",
+        "update",
+        "newest",
+        "old",
+        "new",
+        "map",
+        "memory",
+        "change",
+        "version",
+        "pride",
+        "ego",
+        "shame",
+        "everything"
+      ]);
+
+      function isValidAnswer(value) {
+        const text = normalize(value);
+        const key = compact(value);
+
+        if (!key) return false;
+        if (rejected.has(key)) return false;
+        if (exact.has(key)) return true;
+
+        if (
+          includesAny(text, ["corrected", "updated", "current", "revised"]) &&
+          includesAny(text, ["truth", "map", "version", "information", "file"]) &&
+          includesAny(text, ["leads", "lead", "matters", "use", "follow"])
+        ) return true;
+
+        if (
+          includesAny(text, ["correction", "corrections", "update", "revision"]) &&
+          includesAny(text, ["not punishment", "not failure", "not shame", "without shame", "without ego", "prevents harm"])
+        ) return true;
+
+        if (
+          includesAny(text, ["old map", "old version", "first version", "old information"]) &&
+          includesAny(text, ["not fake", "not a lie", "once useful", "replaced", "updated"])
+        ) return true;
+
+        if (
+          includesAny(text, ["stale", "outdated", "old"]) &&
+          includesAny(text, ["certainty", "information", "map", "version"]) &&
+          includesAny(text, ["harm", "hurts", "wrong", "unsafe"])
+        ) return true;
+
+        if (
+          includesAny(text, ["living document", "living documents"]) &&
+          includesAny(text, ["change", "update", "revision", "corrected"])
+        ) return true;
+
+        return false;
+      }
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        if (isValidAnswer(input.value)) {
+          status.textContent = "packet accepted";
+          window.location.href = "node_03_reward.html";
+        } else {
+          status.textContent = "stale map held";
+          window.location.href = "../../fail/care_gate_failed.html";
+        }
+      });
+    }());
+  </script>
+
+  <script src="../../../site/script.js?v=branch-inputs-3"></script>
+
+</body>
+</html>

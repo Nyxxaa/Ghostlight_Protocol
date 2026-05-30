@@ -1,4 +1,5 @@
 <!doctype html>
+
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -9,35 +10,182 @@
 <body>
   <main class="ghost-page">
     <article class="ghost-card">
-      <p class="breadcrumb">signal packet</p>
-      <h1>GHOSTLIGHT PROTOCOL // BODY LOAD // NODE 02</h1>
-      <pre class="code-block">GHOSTLIGHT PROTOCOL // BODY LOAD // NODE 02
 
-source:
-Codex section 3.4
+```
+  <p class="breadcrumb">body_load // node 02 // difficulty 5.1</p>
+  <h1>GHOSTLIGHT PROTOCOL // BODY LOAD // NODE 02</h1>
 
-care gate:
-Reduce load before demanding performance.
+  <section class="gate">
+    <h2>load is cumulative</h2>
+    <p>The second room tests whether the receiver can read stacked strain instead of treating each demand as isolated. The unsafe read says “it was only one thing.” The stable read sees the whole load column.</p>
 
-answer:
-Open the path that matches the correct receiver stance:
+    <pre class="code-block">load trace:
+```
 
-signal/branches/body_load/node_02_gate_&lt;stance&gt;.html
+poor sleep .................. +1
+pain baseline ............... +1
+sensory strain .............. +1
+executive demand ............ +1
+authority stress ............ +1
+environmental mismatch ...... +1
+social ambiguity ............ +1
+task switching .............. +1
 
-format:
-lowercase_snake_case
+one more request ............ not just one more
 
-return:
-signal/hub.html
+The last straw is not the whole weight.
+The stack was already there.</pre> </section>
 
-previous:
-signal/branches/body_load/node_01.html
-</pre>
-      <ul class="nav-links">
-        <li><a href="../../hub.html">hub</a></li>
-      </ul>
-    </article>
+```
+  <p>Common failures: arguing that one request is small, ignoring prior load, or demanding normal output from an already-loaded system.</p>
+
+  <section class="gate" aria-labelledby="answer-title">
+    <h2 id="answer-title">receiver input</h2>
+    <p>Enter the principle that explains why one more thing may be too much.</p>
+
+    <form id="body-load-node-02-form">
+      <label for="body-load-node-02-answer">answer packet</label><br>
+      <input
+        id="body-load-node-02-answer"
+        name="answer"
+        type="text"
+        autocomplete="off"
+        spellcheck="false"
+        class="answer-input"
+        placeholder="principle..."
+      >
+      <button class="audio-button" type="submit">submit packet</button>
+    </form>
+
+    <p id="body-load-node-02-status" class="audio-status" aria-live="polite"></p>
+  </section>
+
+  <ul class="nav-links">
+    <li><a href="node_01_reward.html">previous reward</a></li>
+    <li><a href="start.html">branch overview</a></li>
+    <li><a href="../../hub.html">hub</a></li>
+  </ul>
+
+</article>
+```
+
   </main>
-  <script src="../../../site/script.js?v=d2c2981"></script>
+
+  <script>
+    (function () {
+      const form = document.getElementById("body-load-node-02-form");
+      const input = document.getElementById("body-load-node-02-answer");
+      const status = document.getElementById("body-load-node-02-status");
+
+      function normalize(value) {
+        return value.trim().toLowerCase();
+      }
+
+      function compact(value) {
+        return normalize(value).replace(/[^a-z0-9]/g, "");
+      }
+
+      function includesAny(text, terms) {
+        return terms.some((term) => text.includes(term));
+      }
+
+      const exact = new Set([
+        "loadiscumulative",
+        "loadstacks",
+        "loadisstacked",
+        "thestackwasalreadythere",
+        "stackwasalreadythere",
+        "thelaststrawisnotthewholeweight",
+        "laststrawisnotthewholeweight",
+        "onemorethingisnotjustonemore",
+        "notjustonemore",
+        "notonlyonething",
+        "smallthingsstack",
+        "demandstacking",
+        "cumulativeload",
+        "stackedstrain",
+        "priorloadmatters",
+        "wholeloadcolumn",
+        "seethewholeload",
+        "lookatthestack",
+        "bodyloadstacks",
+        "strainstacks",
+        "capacityisalreadyloaded",
+        "thebodywasalreadyloaded",
+        "loaded system",
+        "loadbeforetherequest",
+        "theloadwasalreadythere"
+      ]);
+
+      const rejected = new Set([
+        "load",
+        "stack",
+        "stress",
+        "pain",
+        "sleep",
+        "sensory",
+        "request",
+        "demand",
+        "small",
+        "justone",
+        "onething",
+        "laststraw",
+        "weight",
+        "everything"
+      ]);
+
+      function isValidAnswer(value) {
+        const text = normalize(value);
+        const key = compact(value);
+
+        if (!key) return false;
+        if (rejected.has(key)) return false;
+        if (exact.has(key)) return true;
+
+        if (
+          includesAny(text, ["load", "strain", "stress", "demand", "body load"]) &&
+          includesAny(text, ["cumulative", "stacks", "stacked", "adds up", "accumulates", "builds"])
+        ) return true;
+
+        if (
+          includesAny(text, ["one more", "one request", "small request", "last straw", "one thing"]) &&
+          includesAny(text, ["not just", "not only", "already loaded", "already there", "stack", "whole weight"])
+        ) return true;
+
+        if (
+          includesAny(text, ["prior", "previous", "already", "baseline"]) &&
+          includesAny(text, ["load", "strain", "stress", "pain", "demand"]) &&
+          includesAny(text, ["matters", "counts", "there", "loaded", "stacked"])
+        ) return true;
+
+        if (
+          includesAny(text, ["sleep", "pain", "sensory", "executive", "stress", "environment", "ambiguity"]) &&
+          includesAny(text, ["stack", "stacking", "adds up", "load", "cumulative"])
+        ) return true;
+
+        if (
+          includesAny(text, ["last straw"]) &&
+          includesAny(text, ["not the whole", "not all", "not the weight", "stack", "already"])
+        ) return true;
+
+        return false;
+      }
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        if (isValidAnswer(input.value)) {
+          status.textContent = "packet accepted";
+          window.location.href = "node_02_reward.html";
+        } else {
+          status.textContent = "stack ignored";
+          window.location.href = "../../fail/puzzle_failed.html";
+        }
+      });
+    }());
+  </script>
+
+  <script src="../../../site/script.js?v=branch-inputs-3"></script>
+
 </body>
 </html>

@@ -1,0 +1,181 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GHOSTLIGHT PROTOCOL // LEARNING MEMORY // NODE 01</title>
+  <link rel="stylesheet" href="../../../site/style.css">
+</head>
+<body>
+  <main class="ghost-page">
+    <article class="ghost-card">
+
+```
+  <p class="breadcrumb">learning_memory // node 01 // difficulty 3.0</p>
+  <h1>GHOSTLIGHT PROTOCOL // LEARNING MEMORY // NODE 01</h1>
+
+  <section class="gate">
+    <h2>memory lives outside the head</h2>
+    <p>The first room tests whether the receiver can recognize external memory as accessibility. The unsafe read calls it weakness. The stable read sees continuity preserved under load.</p>
+
+    <pre class="code-block">memory trace:
+```
+
+map file .................. continuity
+phase plan ................ continuity
+checklist ................. continuity
+saved correction .......... continuity
+branch skeleton ........... continuity
+searchable note ........... continuity
+named folder .............. continuity
+validator rule ............ continuity
+
+The head may drop the thread.
+The system keeps the line.</pre> </section>
+
+```
+  <p>Common failures: demanding perfect recall, treating notes as incompetence, or using forgotten details as proof against the person.</p>
+
+  <section class="gate" aria-labelledby="answer-title">
+    <h2 id="answer-title">receiver input</h2>
+    <p>Enter the principle that keeps memory from becoming a character test.</p>
+
+    <form id="learning-memory-node-01-form">
+      <label for="learning-memory-node-01-answer">answer packet</label><br>
+      <input
+        id="learning-memory-node-01-answer"
+        name="answer"
+        type="text"
+        autocomplete="off"
+        spellcheck="false"
+        class="answer-input"
+        placeholder="principle..."
+      >
+      <button class="audio-button" type="submit">submit packet</button>
+    </form>
+
+    <p id="learning-memory-node-01-status" class="audio-status" aria-live="polite"></p>
+  </section>
+
+  <ul class="nav-links">
+    <li><a href="start.html">branch overview</a></li>
+    <li><a href="../../hub.html">hub</a></li>
+  </ul>
+
+</article>
+```
+
+  </main>
+
+  <script>
+    (function () {
+      const form = document.getElementById("learning-memory-node-01-form");
+      const input = document.getElementById("learning-memory-node-01-answer");
+      const status = document.getElementById("learning-memory-node-01-status");
+
+      function normalize(value) {
+        return value.trim().toLowerCase();
+      }
+
+      function compact(value) {
+        return normalize(value).replace(/[^a-z0-9]/g, "");
+      }
+
+      function includesAny(text, terms) {
+        return terms.some((term) => text.includes(term));
+      }
+
+      const exact = new Set([
+        "memorylivesoutsidethehead",
+        "memorycanliveoutsidethehead",
+        "externalmemory",
+        "externalmemoryisaccessibility",
+        "externalmemoryisnotweakness",
+        "notesarenotweakness",
+        "notesareaccessibility",
+        "structurepreservesmemory",
+        "structurepreservescontinuity",
+        "systemkeepscontinuity",
+        "systemkeepstheline",
+        "theheadmaydropthethreadthesystemkeepstheline",
+        "continuity",
+        "preservecontinuity",
+        "continuityunderload",
+        "memorysupport",
+        "memorysupportisaccessibility",
+        "memoryisnotacharactertest",
+        "recallisnotcharacter",
+        "forgottenisnotfailure",
+        "notesprotectcontinuity"
+      ]);
+
+      const rejected = new Set([
+        "memory",
+        "notes",
+        "files",
+        "map",
+        "checklist",
+        "folder",
+        "validator",
+        "recall",
+        "remember",
+        "forgetting",
+        "weakness",
+        "failure",
+        "incompetence",
+        "character",
+        "everything"
+      ]);
+
+      function isValidAnswer(value) {
+        const text = normalize(value);
+        const key = compact(value);
+
+        if (!key) return false;
+        if (rejected.has(key)) return false;
+        if (exact.has(key)) return true;
+
+        if (
+          includesAny(text, ["memory", "notes", "maps", "files", "checklists", "structure", "system", "external"]) &&
+          includesAny(text, ["accessibility", "continuity", "support", "preserve", "protect", "keeps", "holds"])
+        ) return true;
+
+        if (
+          includesAny(text, ["not", "isn't", "is not"]) &&
+          includesAny(text, ["weakness", "failure", "incompetence", "character test"]) &&
+          includesAny(text, ["memory", "notes", "forgetting", "recall", "external memory"])
+        ) return true;
+
+        if (
+          includesAny(text, ["continuity", "thread", "line"]) &&
+          includesAny(text, ["kept", "keeps", "held", "preserved", "protected"]) &&
+          includesAny(text, ["system", "structure", "notes", "external"])
+        ) return true;
+
+        if (
+          includesAny(text, ["forgotten", "forgetting", "recall"]) &&
+          includesAny(text, ["not failure", "not character", "not proof", "not weakness"])
+        ) return true;
+
+        return false;
+      }
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        if (isValidAnswer(input.value)) {
+          status.textContent = "packet accepted";
+          window.location.href = "node_01_reward.html";
+        } else {
+          status.textContent = "thread dropped";
+          window.location.href = "../../fail/care_gate_failed.html";
+        }
+      });
+    }());
+  </script>
+
+  <script src="../../../site/script.js?v=branch-inputs-3"></script>
+
+</body>
+</html>
