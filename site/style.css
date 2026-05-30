@@ -285,6 +285,36 @@ input.code-block:focus {
   50% { filter: drop-shadow(0 0 0.8rem rgba(255, 0, 0, 1)) drop-shadow(0 0 2.2rem rgba(157, 49, 65, 0.75)); }
 }
 
+.ascii-key {
+  display: block;
+  overflow-x: auto;
+  margin: 0.9rem 0;
+  font-family: "Courier New", Consolas, monospace;
+  font-size: clamp(0.42rem, 1vw, 0.82rem);
+  line-height: 1;
+  white-space: pre;
+}
+
+.color-key {
+  border-left-color: currentColor;
+}
+
+.color-key-blue,
+.color-key-blue .ascii-key,
+.color-key-blue code,
+.color-key-blue strong {
+  color: #5db7ff;
+  text-shadow: 0 0 0.55rem rgba(93, 183, 255, 0.48);
+}
+
+.color-key-red,
+.color-key-red .ascii-key,
+.color-key-red code,
+.color-key-red strong {
+  color: var(--red);
+  text-shadow: 0 0 0.55rem rgba(255, 51, 74, 0.55);
+}
+
 @media (prefers-reduced-motion: reduce) {
   .cursor {
     animation: none;
