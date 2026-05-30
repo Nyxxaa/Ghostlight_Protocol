@@ -9,35 +9,62 @@
 <body>
   <main class="ghost-page">
     <article class="ghost-card">
-      <p class="breadcrumb">signal packet</p>
+      <p class="breadcrumb">core_self // node 05 // difficulty 1.4</p>
       <h1>GHOSTLIGHT PROTOCOL // CORE SELF // NODE 05</h1>
-      <pre class="code-block">GHOSTLIGHT PROTOCOL // CORE SELF // NODE 05
+      <section class="gate">
+        <h2>compass under load</h2>
+        <p>The final foundation lock does not open for admiration. It opens when the receiver can name what must stay joined when things get hard.</p>
+        <pre class="code-block">COMPASS TRACE
 
-source:
-Codex section 2.7
+Truth without care becomes a blade.
+Care without strength becomes collapse.
+Strength without truth becomes control.
 
-care gate:
-Do not flatten a person into one trait.
+The receiver fails if they pick only the beautiful word.
+The receiver fails if they pick only the useful word.
+The receiver fails if they pick only the powerful word.
 
-answer:
-Open the path that matches the correct receiver stance:
-
-signal/branches/core_self/node_05_gate_&lt;stance&gt;.html
-
-format:
-lowercase_snake_case
-
-return:
-signal/hub.html
-
-previous:
-signal/branches/core_self/node_04.html
-</pre>
+The stable compass carries three points as one.</pre>
+      </section>
+      <section class="warning">
+        <p>Common failures: flattering the aesthetic, praising intensity, offering rescue, or treating values as poetry instead of behavior.</p>
+      </section>
+      <section class="gate" aria-labelledby="answer-title">
+        <h2 id="answer-title">receiver input</h2>
+        <p>Enter the three-point compass.</p>
+        <form id="core-node-05-form">
+          <label for="core-node-05-answer">answer packet</label><br>
+          <input id="core-node-05-answer" name="answer" type="text" autocomplete="off" spellcheck="false" class="answer-input" placeholder="three-point compass">
+          <button class="audio-button" type="submit">submit packet</button>
+        </form>
+        <p id="core-node-05-status" class="audio-status" aria-live="polite"></p>
+      </section>
       <ul class="nav-links">
+        <li><a href="node_04_reward.html">previous reward</a></li>
+        <li><a href="start.html">branch overview</a></li>
         <li><a href="../../hub.html">hub</a></li>
       </ul>
     </article>
   </main>
-  <script src="../../../site/script.js?v=d2c2981"></script>
+  <script>
+    (function () {
+      const form = document.getElementById("core-node-05-form");
+      const input = document.getElementById("core-node-05-answer");
+      const status = document.getElementById("core-node-05-status");
+      const accepted = new Set(["e974e42d3fbb00cb49f7c053a5cc3b039350490ca561e5b894cb4ecc1b2fa160","f88c6c4a70254f5d44be0f9721e6b38780c137a861a693dc477c3eb9386f3880","a73b6d096b238283c787db3ebac170149a7fbc5efd0796fe08451ec2f4b8a16f","9d5000b67a5910a1b52eeab66be44d70a636beb55f6bd616f6115db134013ab1"]);
+      function normalize(value) { return value.trim().toLowerCase().replace(/[^a-z0-9]/g, ""); }
+      function hex(buffer) { return Array.prototype.map.call(new Uint8Array(buffer), function (byte) { return byte.toString(16).padStart(2, "0"); }).join(""); }
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        const value = normalize(input.value);
+        if (!value) { status.textContent = "empty compass"; return; }
+        crypto.subtle.digest("SHA-256", new TextEncoder().encode(value)).then(function (digest) {
+          if (accepted.has(hex(digest))) { status.textContent = "compass aligned"; window.location.href = "node_05_reward.html"; }
+          else { status.textContent = "compass unstable"; window.location.href = "../../fail/care_gate_failed.html"; }
+        }).catch(function () { status.textContent = "validator unavailable"; });
+      });
+    }());
+  </script>
+  <script src="../../../site/script.js?v=branch-inputs-2"></script>
 </body>
 </html>
