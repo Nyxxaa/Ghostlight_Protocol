@@ -100,7 +100,10 @@ function cleanPacket(value) {
 
 function addBranchAnswerForm() {
   const card = document.querySelector(".ghost-card");
-  if (!card || document.getElementById("branch-answer-form")) return;
+  if (!card) return;
+
+  // Do not inject a second form on pages that already have a static branch answer panel.
+  if (document.querySelector(".branch-answer-panel") || document.getElementById("branch-answer-form")) return;
 
   const page = window.location.pathname.split("/").pop() || "";
   if (!(page === "start.html" || page.indexOf("start_gate_") === 0)) return;
