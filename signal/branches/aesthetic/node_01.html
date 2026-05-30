@@ -67,16 +67,37 @@ The stable read names the discipline shaping it.</pre>
 
       function accepts(value) {
         const key = compact(value);
-        if (["dark", "goth", "pretty", "chaos", "black"].indexOf(key) !== -1) return false;
+        const rejected = ["dark", "goth", "pretty", "chaos", "black", "aesthetic", "vibe", "style", "color"];
+        if (rejected.indexOf(key) !== -1) return false;
 
-        const deliberate = hasAny(key, ["deliberate", "curated", "controlled", "intentional", "structure", "structured", "shaped"]);
-        const signal = hasAny(key, ["darkness", "dark", "signal", "aesthetic", "chaos"]);
+        const accepted = [
+          "order",
+          "structure",
+          "intention",
+          "intent",
+          "deliberateorder",
+          "deliberatestructure",
+          "deliberatearrangement",
+          "intentionalarrangement",
+          "curatedorder",
+          "curatedstructure",
+          "pattern",
+          "controlledpattern",
+          "controlledchaos",
+          "shapeddarkness",
+          "structureddarkness",
+          "deliberatedarkness",
+          "curateddarkness",
+          "darknessneedsstructure",
+          "darkisnotdisorder",
+          "aestheticissignal",
+          "curatedsignal",
+          "intentionalsignal",
+          "deliberatesignal"
+        ];
+        if (accepted.indexOf(key) !== -1) return true;
 
-        return (deliberate && signal) ||
-          key === "darkisnotdisorder" ||
-          key === "darknessneedsstructure" ||
-          key === "structureddarkness" ||
-          key === "aestheticissignal";
+        return hasAny(key, ["order", "structure", "intent", "intention", "deliberate", "curated", "pattern", "shaped"]);
       }
 
       form.addEventListener("submit", function (event) {
