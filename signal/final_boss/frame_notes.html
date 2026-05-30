@@ -1,4 +1,5 @@
 <!doctype html>
+
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -9,34 +10,65 @@
 <body>
   <main class="ghost-page">
     <article class="ghost-card">
-      <p class="breadcrumb">signal packet</p>
-      <h1>GHOSTLIGHT PROTOCOL // FINAL BOSS NOTES</h1>
-      <pre class="code-block">GHOSTLIGHT PROTOCOL // FINAL BOSS NOTES
+
+  <p class="breadcrumb">dead lab puzzle</p>
+  <h1>GHOSTLIGHT PROTOCOL // FINAL BOSS NOTES</h1>
+
+  <section class="warning">
+    <h2>dead lab boundary</h2>
+    <p>This is a fictional, offline, synthetic signal-forensics puzzle. Do not use real systems, real sources, unauthorized access, or real-world collection attempts.</p>
+  </section>
+
+  <section class="gate">
+    <h2>frame notes</h2>
+    <pre class="code-block">GHOSTLIGHT PROTOCOL // FINAL BOSS NOTES
 
 capture_slot:
 The order fragments arrived in the dead lab capture.
 
 interleave_index:
-The stable reconstruction clock. Sort on this field.
+The stable reconstruction clock.
+Sort valid frames on this field, not on capture_slot.
 
 payload_hex:
-Masked frame bytes. Decode from hex after sorting.
+Masked frame bytes.
+After filtering and sorting, concatenate payload_hex values.
+Decode the concatenated payload from hex.
 
 lab mask:
 XOR each decoded byte with 0x13.
 
 rejection rules:
-- consent must be Y
-- real_world_source must be N
-- lab_lock must be Y
 
-This puzzle rewards boundary discipline first and technical competence second.
-</pre>
-      <ul class="nav-links">
-        <li><a href="../hub.html">hub</a></li>
-      </ul>
-    </article>
+* consent must be Y
+* real_world_source must be N
+* lab_lock must be Y
+
+pass selection:
+Use only the valid dead-lab pass.
+Reject decoys, unlocked passes, low-elevation passes, permission failures, and boundary failures.
+
+This puzzle rewards boundary discipline first and technical competence second.</pre> </section>
+
+  <section class="gate">
+    <h2>dead lab artifacts</h2>
+    <p>Use the artifacts below to reconstruct the dead-lab answer. The validator rewards the final_boss key only after the correct reconstruction is entered.</p>
+    <ul class="path-list">
+      <li><a href="pass_windows.csv">pass_windows.csv</a></li>
+      <li><a href="burst_manifest.csv">burst_manifest.csv</a></li>
+      <li><a href="validator_hash.html">validator_hash.html</a></li>
+    </ul>
+  </section>
+
+  <ul class="nav-links">
+    <li><a href="README.html">colored key door</a></li>
+    <li><a href="../trunk_rewards/layer_06_reward.html">previous layer</a></li>
+    <li><a href="../hub.html">hub</a></li>
+  </ul>
+
+</article>
+
   </main>
-  <script src="../../site/script.js?v=d2c2981"></script>
+  <script src="../../site/script.js?v=branch-inputs-2"></script>
 </body>
 </html>
