@@ -51,17 +51,81 @@ The stable compass carries three points as one.</pre>
       const form = document.getElementById("core-node-05-form");
       const input = document.getElementById("core-node-05-answer");
       const status = document.getElementById("core-node-05-status");
-      const accepted = new Set(["e974e42d3fbb00cb49f7c053a5cc3b039350490ca561e5b894cb4ecc1b2fa160","f88c6c4a70254f5d44be0f9721e6b38780c137a861a693dc477c3eb9386f3880","a73b6d096b238283c787db3ebac170149a7fbc5efd0796fe08451ec2f4b8a16f","9d5000b67a5910a1b52eeab66be44d70a636beb55f6bd616f6115db134013ab1"]);
-      function normalize(value) { return value.trim().toLowerCase().replace(/[^a-z0-9]/g, ""); }
-      function hex(buffer) { return Array.prototype.map.call(new Uint8Array(buffer), function (byte) { return byte.toString(16).padStart(2, "0"); }).join(""); }
+
+      function normalize(value) {
+        return value.trim().toLowerCase();
+      }
+
+      function compact(value) {
+        return normalize(value).replace(/[^a-z0-9]/g, "");
+      }
+
+      function hasAny(value, terms) {
+        return terms.some(function (term) {
+          return value.indexOf(term) !== -1;
+        });
+      }
+
+      function accepts(value) {
+        const key = compact(value);
+
+        const blocked = new Set([
+          "truth",
+          "care",
+          "power",
+          "strength",
+          "beauty",
+          "intensity",
+          "love",
+          "everything",
+          "allofit",
+          "benice",
+          "bestrong"
+        ]);
+
+        if (blocked.has(key)) return false;
+
+        const exact = new Set([
+          "truthcompassionpower",
+          "truthcompassionandpower",
+          "truthcompassionpowertogether",
+          "truthcarepower",
+          "truthcompassionstrength",
+          "truthcarestrength",
+          "allthingsmustbetrue",
+          "allthreemustbetrue",
+          "allthreestayjoined",
+          "allthreeheldtogether",
+          "holdallthree",
+          "keepallthreetogether",
+          "theymuststayjoined",
+          "thecompasscarriesthreepoints",
+          "threepointsasone",
+          "truthcareandstrengthtogether",
+          "truthcompassionandpowermuststaytogether"
+        ]);
+
+        if (exact.has(key)) return true;
+
+        const joining = hasAny(key, ["together", "joined", "held", "hold", "balance", "balanced", "one", "aligned", "integrated"]);
+        if (key.indexOf("allthingsmustbetrue") !== -1) return true;
+        if (key.indexOf("allthree") !== -1 && joining) return true;
+
+        const concepts = [
+          key.indexOf("truth") !== -1,
+          key.indexOf("compassion") !== -1 || key.indexOf("care") !== -1,
+          key.indexOf("power") !== -1 || key.indexOf("strength") !== -1
+        ].filter(Boolean).length;
+
+        return concepts >= 2 && joining;
+      }
+
       form.addEventListener("submit", function (event) {
         event.preventDefault();
-        const value = normalize(input.value);
+        const value = input.value;
         if (!value) { status.textContent = "empty compass"; return; }
-        crypto.subtle.digest("SHA-256", new TextEncoder().encode(value)).then(function (digest) {
-          if (accepted.has(hex(digest))) { status.textContent = "compass aligned"; window.location.href = "node_05_reward.html"; }
-          else { status.textContent = "compass unstable"; window.location.href = "../../fail/care_gate_failed.html"; }
-        }).catch(function () { status.textContent = "validator unavailable"; });
+        if (accepts(value)) { status.textContent = "compass aligned"; window.location.href = "node_05_reward.html"; }
+        else { status.textContent = "compass unstable"; window.location.href = "../../fail/care_gate_failed.html"; }
       });
     }());
   </script>
