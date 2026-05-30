@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>GHOSTLIGHT PROTOCOL // RELATIONSHIPS ATTACHMENT // NODE 01</title><link rel="stylesheet" href="../../../site/style.css"></head>
+<body><main class="ghost-page"><article class="ghost-card">
+  <p class="breadcrumb">relationships_attachment // node 01 // difficulty 7.0</p><h1>GHOSTLIGHT PROTOCOL // RELATIONSHIPS ATTACHMENT // NODE 01</h1>
+  <section class="gate"><h2>chosen presence, not convenient attention</h2><p>The unsafe read treats attention as enough. The stable read sees deliberate choice, consistency, and presence.</p><pre class="code-block">attention .................. not enough
+chemistry .................. not enough
+convenience ................ not enough
+chosen presence ............ safety
+consistent action .......... safety
+clear preference ........... safety
+follow-through ............. safety
+
+Being wanted is not the same
+as being chosen.</pre></section>
+  <form class="gate" id="gate-form"><label for="answer">Enter the principle that separates attention from safety.</label><input class="code-block" id="answer" name="answer" autocomplete="off" required><button class="audio-button" type="submit">submit</button></form>
+</article></main><script>
+const form=document.getElementById("gate-form");const input=document.getElementById("answer");const norm=v=>v.toLowerCase().replace(/[^a-z0-9]+/g," ").trim();
+form.addEventListener("submit",event=>{event.preventDefault();const a=norm(input.value);const bad=["attention","chemistry","convenience","flirtation","attraction","wanting","when convenient","hot and cold","maybe"].some(x=>a===x||a.includes("only "+x));const good=a.includes("chosen presence")||(a.includes("chosen")&&a.includes("safety"))||(a.includes("chosen")&&a.includes("convenient"))||(a.includes("deliberate choice"))||(a.includes("consistency")&&a.includes("safety"))||(a.includes("attention")&&a.includes("not enough"))||(a.includes("wanted")&&a.includes("chosen"))||(a.includes("clear preference")&&a.includes("follow"));location.href=good?"node_01_reward.html":"../../fail/care_gate_failed.html";});
+</script><script src="../../../site/script.js?v=branch-inputs-3"></script></body></html>

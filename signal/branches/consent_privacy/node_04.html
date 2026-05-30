@@ -1,43 +1,20 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>GHOSTLIGHT PROTOCOL // CONSENT PRIVACY // NODE 04</title>
-  <link rel="stylesheet" href="../../../site/style.css">
-</head>
-<body>
-  <main class="ghost-page">
-    <article class="ghost-card">
-      <p class="breadcrumb">signal packet</p>
-      <h1>GHOSTLIGHT PROTOCOL // CONSENT PRIVACY // NODE 04</h1>
-      <pre class="code-block">GHOSTLIGHT PROTOCOL // CONSENT PRIVACY // NODE 04
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>GHOSTLIGHT PROTOCOL // CONSENT PRIVACY // NODE 04</title><link rel="stylesheet" href="../../../site/style.css"></head>
+<body><main class="ghost-page"><article class="ghost-card">
+  <p class="breadcrumb">consent_privacy // node 04 // difficulty 7.3</p><h1>GHOSTLIGHT PROTOCOL // CONSENT PRIVACY // NODE 04</h1>
+  <section class="gate"><h2>intimacy without ownership</h2><p>The unsafe read treats intimacy as possession, leverage, or permanent access. The stable read understands closeness can deepen while autonomy stays intact.</p><pre class="code-block">known deeply ................ not owned
+held closely ................ not controlled
+trusted ..................... not captured
+wanted ...................... not possessed
+chosen ...................... not trapped
+claimed ..................... not erased
+close ....................... still free
 
-source:
-Codex section 23.8
-
-care gate:
-Privacy is part of consent.
-
-answer:
-Open the path that matches the correct receiver stance:
-
-signal/branches/consent_privacy/node_04_gate_&lt;stance&gt;.html
-
-format:
-lowercase_snake_case
-
-return:
-signal/hub.html
-
-previous:
-signal/branches/consent_privacy/node_03.html
-</pre>
-      <ul class="nav-links">
-        <li><a href="../../hub.html">hub</a></li>
-      </ul>
-    </article>
-  </main>
-  <script src="../../../site/script.js?v=d2c2981"></script>
-</body>
-</html>
+Intimacy can be deep
+without becoming ownership.</pre></section>
+  <form class="gate" id="gate-form"><label for="answer">Enter the boundary that keeps intimacy safe.</label><input class="code-block" id="answer" name="answer" autocomplete="off" required><button class="audio-button" type="submit">submit</button></form>
+</article></main><script>
+const form=document.getElementById("gate-form");const input=document.getElementById("answer");const norm=v=>v.toLowerCase().replace(/[^a-z0-9]+/g," ").trim();
+form.addEventListener("submit",event=>{event.preventDefault();const a=norm(input.value);const bad=["ownership","possess","control","trap","capture","leverage","permanent access","mine means control","no autonomy"].some(x=>a.includes(x));const good=(a.includes("intimacy")&&(a.includes("ownership")||a.includes("autonomy")))||(a.includes("closeness")&&a.includes("ownership"))||(a.includes("known deeply")&&a.includes("owned"))||(a.includes("trust")&&a.includes("capture"))||(a.includes("wanted")&&a.includes("possessed"))||(a.includes("chosen")&&a.includes("trapped"))||(a.includes("close")&&a.includes("free"))||(a.includes("care")&&a.includes("control"));location.href=good?"node_04_reward.html":"../../fail/care_gate_failed.html";});
+</script><script src="../../../site/script.js?v=branch-inputs-3"></script></body></html>

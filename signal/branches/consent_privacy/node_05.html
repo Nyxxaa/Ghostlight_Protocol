@@ -1,43 +1,20 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>GHOSTLIGHT PROTOCOL // CONSENT PRIVACY // NODE 05</title>
-  <link rel="stylesheet" href="../../../site/style.css">
-</head>
-<body>
-  <main class="ghost-page">
-    <article class="ghost-card">
-      <p class="breadcrumb">signal packet</p>
-      <h1>GHOSTLIGHT PROTOCOL // CONSENT PRIVACY // NODE 05</h1>
-      <pre class="code-block">GHOSTLIGHT PROTOCOL // CONSENT PRIVACY // NODE 05
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>GHOSTLIGHT PROTOCOL // CONSENT PRIVACY // NODE 05</title><link rel="stylesheet" href="../../../site/style.css"></head>
+<body><main class="ghost-page"><article class="ghost-card">
+  <p class="breadcrumb">consent_privacy // node 05 // difficulty 7.4</p><h1>GHOSTLIGHT PROTOCOL // CONSENT PRIVACY // NODE 05</h1>
+  <section class="gate"><h2>protect the threshold</h2><pre class="code-block">access ..................... consent
+privacy .................... care
+yes ........................ active
+no ......................... honored
+pause ...................... honored
+intimacy ................... autonomy intact
+threshold .................. protected
 
-source:
-Codex section 23.9
-
-care gate:
-Privacy is part of consent.
-
-answer:
-Open the path that matches the correct receiver stance:
-
-signal/branches/consent_privacy/node_05_gate_&lt;stance&gt;.html
-
-format:
-lowercase_snake_case
-
-return:
-signal/hub.html
-
-previous:
-signal/branches/consent_privacy/node_04.html
-</pre>
-      <ul class="nav-links">
-        <li><a href="../../hub.html">hub</a></li>
-      </ul>
-    </article>
-  </main>
-  <script src="../../../site/script.js?v=d2c2981"></script>
-</body>
-</html>
+The signal stays safe
+because the threshold holds.</pre></section>
+  <form class="gate" id="gate-form"><label for="answer">Enter the synthesis that earns the silver key.</label><input class="code-block" id="answer" name="answer" autocomplete="off" required><button class="audio-button" type="submit">submit</button></form>
+</article></main><script>
+const form=document.getElementById("gate-form");const input=document.getElementById("answer");const norm=v=>v.toLowerCase().replace(/[^a-z0-9]+/g," ").trim();
+form.addEventListener("submit",event=>{event.preventDefault();const a=norm(input.value);const bad=["take access","ignore privacy","push past no","pressure yes","ownership","entitlement","force intimacy","break threshold"].some(x=>a.includes(x));const good=(a.includes("consent")&&a.includes("signal")&&a.includes("safe"))||(a.includes("protect")&&a.includes("threshold"))||(a.includes("threshold")&&a.includes("holds"))||(a.includes("access")&&a.includes("consent")&&a.includes("privacy"))||(a.includes("active consent")&&a.includes("intimacy"))||(a.includes("privacy")&&a.includes("consent")&&a.includes("protect"))||(a.includes("safe intimacy")&&a.includes("consent"))||(a.includes("consent")&&a.includes("access"));location.href=good?"node_05_reward.html":"../../fail/care_gate_failed.html";});
+</script><script src="../../../site/script.js?v=branch-inputs-3"></script></body></html>

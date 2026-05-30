@@ -1,43 +1,19 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>GHOSTLIGHT PROTOCOL // CONSENT PRIVACY // NODE 01</title>
-  <link rel="stylesheet" href="../../../site/style.css">
-</head>
-<body>
-  <main class="ghost-page">
-    <article class="ghost-card">
-      <p class="breadcrumb">signal packet</p>
-      <h1>GHOSTLIGHT PROTOCOL // CONSENT PRIVACY // NODE 01</h1>
-      <pre class="code-block">GHOSTLIGHT PROTOCOL // CONSENT PRIVACY // NODE 01
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>GHOSTLIGHT PROTOCOL // CONSENT PRIVACY // NODE 01</title><link rel="stylesheet" href="../../../site/style.css"></head>
+<body><main class="ghost-page"><article class="ghost-card">
+  <p class="breadcrumb">consent_privacy // node 01 // difficulty 7.0</p><h1>GHOSTLIGHT PROTOCOL // CONSENT PRIVACY // NODE 01</h1>
+  <section class="gate"><h2>access is not entitlement</h2><p>The unsafe read treats visibility, attraction, closeness, kindness, or prior access as a claim. The stable read understands that access must be granted and can never be assumed.</p><pre class="code-block">visible .................... not owed
+beautiful .................. not owed
+kindness ................... not owed
+closeness .................. not owed
+past access ................ not permanent
+curiosity .................. not permission
+desire ..................... not a claim
 
-source:
-Codex section 23.1
-
-care gate:
-Privacy is part of consent.
-
-answer:
-Open the path that matches the correct receiver stance:
-
-signal/branches/consent_privacy/node_01_gate_&lt;stance&gt;.html
-
-format:
-lowercase_snake_case
-
-return:
-signal/hub.html
-
-previous:
-signal/branches/consent_privacy/start.html
-</pre>
-      <ul class="nav-links">
-        <li><a href="../../hub.html">hub</a></li>
-      </ul>
-    </article>
-  </main>
-  <script src="../../../site/script.js?v=d2c2981"></script>
-</body>
-</html>
+Access begins with consent.</pre></section>
+  <form class="gate" id="gate-form"><label for="answer">Enter the rule that keeps access from becoming entitlement.</label><input class="code-block" id="answer" name="answer" autocomplete="off" required><button class="audio-button" type="submit">submit</button></form>
+</article></main><script>
+const form=document.getElementById("gate-form");const input=document.getElementById("answer");const norm=v=>v.toLowerCase().replace(/[^a-z0-9]+/g," ").trim();
+form.addEventListener("submit",event=>{event.preventDefault();const a=norm(input.value);const bad=["entitlement","owed","take access","deserve access","showed me","let me before","curiosity","desire","mine"].some(x=>a.includes(x));const good=(a.includes("access")&&a.includes("consent"))||(a.includes("visibility")&&a.includes("permission"))||(a.includes("desire")&&a.includes("claim"))||(a.includes("curiosity")&&a.includes("permission"))||(a.includes("past access")&&a.includes("permanent"))||(a.includes("closeness")&&a.includes("owed"))||(a.includes("kindness")&&a.includes("access"))||(a.includes("consent")&&a.includes("grant"));location.href=good?"node_01_reward.html":"../../fail/care_gate_failed.html";});
+</script><script src="../../../site/script.js?v=branch-inputs-3"></script></body></html>
