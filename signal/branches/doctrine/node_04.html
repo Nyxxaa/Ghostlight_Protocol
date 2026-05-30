@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GHOSTLIGHT PROTOCOL // DOCTRINE // NODE 04</title>
+  <link rel="stylesheet" href="../../../site/style.css">
+</head>
+<body>
+  <main class="ghost-page">
+    <article class="ghost-card">
+      <p class="breadcrumb">doctrine // node 04 // difficulty 3.3</p>
+      <h1>GHOSTLIGHT PROTOCOL // DOCTRINE // NODE 04</h1>
+
+      <section class="gate">
+        <h2>joy is medicine</h2>
+        <p>The receiver sees laughter, play, beauty, and pleasure after hard doctrine and treats them as unserious. The safe read understands joy as regulation and rebellion against despair.</p>
+        <pre class="code-block">JOY TRACE
+
+despair ............... narrows the room
+play .................. returns breath
+laughter .............. interrupts collapse
+joy ................... medicine, not decoration</pre>
+      </section>
+
+      <section class="gate" aria-labelledby="answer-title">
+        <h2 id="answer-title">receiver input</h2>
+        <p>Enter the doctrine role of joy.</p>
+        <form id="doctrine-node-04-form">
+          <label for="doctrine-node-04-answer">response</label><br>
+          <input id="doctrine-node-04-answer" name="answer" type="text" autocomplete="off" spellcheck="false" class="answer-input" placeholder="principle">
+          <button class="audio-button" type="submit">submit</button>
+        </form>
+        <p id="doctrine-node-04-status" class="audio-status" aria-live="polite"></p>
+      </section>
+
+      <ul class="nav-links">
+        <li><a href="node_03_reward.html">previous reward</a></li>
+        <li><a href="start.html">branch overview</a></li>
+        <li><a href="../../hub.html">hub</a></li>
+      </ul>
+    </article>
+  </main>
+
+  <script>
+    (function () {
+      const form = document.getElementById("doctrine-node-04-form");
+      const input = document.getElementById("doctrine-node-04-answer");
+      const status = document.getElementById("doctrine-node-04-status");
+      function normalize(value) { return value.trim().toLowerCase(); }
+      function compact(value) { return normalize(value).replace(/[^a-z0-9]/g, ""); }
+      function includesAny(value, terms) { return terms.some(function (term) { return value.indexOf(term) !== -1; }); }
+      function accepts(value) {
+        const key = compact(value);
+        const rejected = new Set(["joy", "play", "laughter", "fun", "pretty", "pleasure", "decoration", "escape"]);
+        const exact = new Set(["joyismedicine", "playismedicine", "laughterismedicine", "joyisrebellionagainstdespair", "joykeepssignalalive", "playkeepsthesignalalive", "joyisregulation", "joyinterruptsdespair", "joyisnotdecoration"]);
+        if (!key || rejected.has(key)) return false;
+        if (exact.has(key)) return true;
+        if (includesAny(key, ["joy", "play", "laughter"]) && includesAny(key, ["medicine", "regulation", "despair", "survival", "signal", "notdecoration", "rebellion"])) return true;
+        return includesAny(key, ["medicine", "regulation"]) && includesAny(key, ["joy", "play", "laughter"]);
+      }
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        if (!compact(input.value)) { status.textContent = "empty doctrine"; return; }
+        if (accepts(input.value)) { status.textContent = "joy held"; window.location.href = "node_04_reward.html"; }
+        else { status.textContent = "joy dismissed"; window.location.href = "../../fail/care_gate_failed.html"; }
+      });
+    }());
+  </script>
+  <script src="../../../site/script.js?v=branch-inputs-3"></script>
+</body>
+</html>

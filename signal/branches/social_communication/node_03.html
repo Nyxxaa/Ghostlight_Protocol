@@ -9,35 +9,64 @@
 <body>
   <main class="ghost-page">
     <article class="ghost-card">
-      <p class="breadcrumb">signal packet</p>
+      <p class="breadcrumb">social_communication // node 03 // difficulty 3.2</p>
       <h1>GHOSTLIGHT PROTOCOL // SOCIAL COMMUNICATION // NODE 03</h1>
-      <pre class="code-block">GHOSTLIGHT PROTOCOL // SOCIAL COMMUNICATION // NODE 03
 
-source:
-Codex section 15.0
+      <section class="gate">
+        <h2>quiet is not absence</h2>
+        <p>The receiver sees reserve and mistakes it for emptiness, coldness, or disinterest. The stable read understands quiet as a real signal that should be met with accuracy, not pressure.</p>
+        <pre class="code-block">PRESENCE TRACE
 
-care gate:
-Ask instead of assuming.
+low output ............ not no feeling
+reserved answer ....... not a blank self
+watchful pause ........ signal still present
+safe response ......... ask lightly, do not crowd</pre>
+      </section>
 
-answer:
-Open the path that matches the correct receiver stance:
+      <section class="gate" aria-labelledby="answer-title">
+        <h2 id="answer-title">receiver input</h2>
+        <p>Enter the read that keeps quiet from being erased.</p>
+        <form id="social-node-03-form">
+          <label for="social-node-03-answer">response</label><br>
+          <input id="social-node-03-answer" name="answer" type="text" autocomplete="off" spellcheck="false" class="answer-input" placeholder="principle">
+          <button class="audio-button" type="submit">submit</button>
+        </form>
+        <p id="social-node-03-status" class="audio-status" aria-live="polite"></p>
+      </section>
 
-signal/branches/social_communication/node_03_gate_&lt;stance&gt;.html
-
-format:
-lowercase_snake_case
-
-return:
-signal/hub.html
-
-previous:
-signal/branches/social_communication/node_02.html
-</pre>
       <ul class="nav-links">
+        <li><a href="node_02_reward.html">previous reward</a></li>
+        <li><a href="start.html">branch overview</a></li>
         <li><a href="../../hub.html">hub</a></li>
       </ul>
     </article>
   </main>
-  <script src="../../../site/script.js?v=d2c2981"></script>
+
+  <script>
+    (function () {
+      const form = document.getElementById("social-node-03-form");
+      const input = document.getElementById("social-node-03-answer");
+      const status = document.getElementById("social-node-03-status");
+      function normalize(value) { return value.trim().toLowerCase(); }
+      function compact(value) { return normalize(value).replace(/[^a-z0-9]/g, ""); }
+      function includesAny(value, terms) { return terms.some(function (term) { return value.indexOf(term) !== -1; }); }
+      function accepts(value) {
+        const key = compact(value);
+        const rejected = new Set(["quiet", "silent", "absence", "empty", "cold", "aloof", "disinterest", "mysterious", "pressure"]);
+        const exact = new Set(["quietisnotabsence", "reservedisnotempty", "quietisstillpresence", "stillnessissignal", "quietisstillsignal", "asklightly", "donotcrowd", "dontcrowd", "lowoutputisnotabsence"]);
+        if (!key || rejected.has(key)) return false;
+        if (exact.has(key)) return true;
+        if (includesAny(key, ["quiet", "reserved", "stillness", "lowoutput", "pause"]) && includesAny(key, ["presence", "signal", "notabsence", "notempty", "notdisinterest"])) return true;
+        return includesAny(key, ["ask", "respect"]) && includesAny(key, ["quiet", "reserve", "space", "signal"]);
+      }
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        if (!compact(input.value)) { status.textContent = "empty channel"; return; }
+        if (accepts(input.value)) { status.textContent = "presence held"; window.location.href = "node_03_reward.html"; }
+        else { status.textContent = "quiet flattened"; window.location.href = "../../fail/care_gate_failed.html"; }
+      });
+    }());
+  </script>
+  <script src="../../../site/script.js?v=branch-inputs-3"></script>
 </body>
 </html>

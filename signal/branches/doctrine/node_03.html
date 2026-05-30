@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GHOSTLIGHT PROTOCOL // DOCTRINE // NODE 03</title>
+  <link rel="stylesheet" href="../../../site/style.css">
+</head>
+<body>
+  <main class="ghost-page">
+    <article class="ghost-card">
+      <p class="breadcrumb">doctrine // node 03 // difficulty 3.2</p>
+      <h1>GHOSTLIGHT PROTOCOL // DOCTRINE // NODE 03</h1>
+
+      <section class="gate">
+        <h2>power protects</h2>
+        <p>The receiver reaches the power chamber. The unsafe read wants power as control, rank, or domination. The safe read understands power as stewardship: force used to protect the vulnerable boundary.</p>
+        <pre class="code-block">POWER TRACE
+
+domination ............ takes room
+control ............... demands obedience
+stewardship ........... carries responsibility
+protection ............ keeps the boundary alive</pre>
+      </section>
+
+      <section class="gate" aria-labelledby="answer-title">
+        <h2 id="answer-title">receiver input</h2>
+        <p>Enter what power is for.</p>
+        <form id="doctrine-node-03-form">
+          <label for="doctrine-node-03-answer">response</label><br>
+          <input id="doctrine-node-03-answer" name="answer" type="text" autocomplete="off" spellcheck="false" class="answer-input" placeholder="principle">
+          <button class="audio-button" type="submit">submit</button>
+        </form>
+        <p id="doctrine-node-03-status" class="audio-status" aria-live="polite"></p>
+      </section>
+
+      <ul class="nav-links">
+        <li><a href="node_02_reward.html">previous reward</a></li>
+        <li><a href="start.html">branch overview</a></li>
+        <li><a href="../../hub.html">hub</a></li>
+      </ul>
+    </article>
+  </main>
+
+  <script>
+    (function () {
+      const form = document.getElementById("doctrine-node-03-form");
+      const input = document.getElementById("doctrine-node-03-answer");
+      const status = document.getElementById("doctrine-node-03-status");
+      function normalize(value) { return value.trim().toLowerCase(); }
+      function compact(value) { return normalize(value).replace(/[^a-z0-9]/g, ""); }
+      function includesAny(value, terms) { return terms.some(function (term) { return value.indexOf(term) !== -1; }); }
+      function accepts(value) {
+        const key = compact(value);
+        const rejected = new Set(["power", "control", "domination", "rank", "obedience", "force", "strength", "takeover"]);
+        const exact = new Set(["powerprotects", "powerisprotection", "powerisstewardship", "stewardship", "protection", "powerisnotdomination", "powerprotectsnotcontrols", "forceprotectsboundaries", "protecttheboundary", "powerasstewardship"]);
+        if (!key || rejected.has(key)) return false;
+        if (exact.has(key)) return true;
+        if (includesAny(key, ["power", "force", "strength"]) && includesAny(key, ["protect", "steward", "boundary", "responsibility", "notcontrol", "notdomination"])) return true;
+        return includesAny(key, ["protect", "steward"]) && includesAny(key, ["boundary", "vulnerable", "responsibility"]);
+      }
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        if (!compact(input.value)) { status.textContent = "empty doctrine"; return; }
+        if (accepts(input.value)) { status.textContent = "power contained"; window.location.href = "node_03_reward.html"; }
+        else { status.textContent = "domination detected"; window.location.href = "../../fail/care_gate_failed.html"; }
+      });
+    }());
+  </script>
+  <script src="../../../site/script.js?v=branch-inputs-3"></script>
+</body>
+</html>

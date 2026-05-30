@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GHOSTLIGHT PROTOCOL // DOCTRINE // NODE 02</title>
+  <link rel="stylesheet" href="../../../site/style.css">
+</head>
+<body>
+  <main class="ghost-page">
+    <article class="ghost-card">
+      <p class="breadcrumb">doctrine // node 02 // difficulty 3.1</p>
+      <h1>GHOSTLIGHT PROTOCOL // DOCTRINE // NODE 02</h1>
+
+      <section class="gate">
+        <h2>truth needs compassion</h2>
+        <p>A receiver finds a hard fact and wants to swing it like proof. The safe read keeps truth joined to compassion so accuracy does not become a blade.</p>
+        <pre class="code-block">TRUTH TRACE
+
+hollow comfort ........ hides the map
+raw truth ............. can cut without care
+compassion ............ keeps truth human
+stable doctrine ....... truth with compassion</pre>
+      </section>
+
+      <section class="gate" aria-labelledby="answer-title">
+        <h2 id="answer-title">receiver input</h2>
+        <p>Enter what keeps truth from becoming a weapon.</p>
+        <form id="doctrine-node-02-form">
+          <label for="doctrine-node-02-answer">response</label><br>
+          <input id="doctrine-node-02-answer" name="answer" type="text" autocomplete="off" spellcheck="false" class="answer-input" placeholder="principle">
+          <button class="audio-button" type="submit">submit</button>
+        </form>
+        <p id="doctrine-node-02-status" class="audio-status" aria-live="polite"></p>
+      </section>
+
+      <ul class="nav-links">
+        <li><a href="node_01_reward.html">previous reward</a></li>
+        <li><a href="start.html">branch overview</a></li>
+        <li><a href="../../hub.html">hub</a></li>
+      </ul>
+    </article>
+  </main>
+
+  <script>
+    (function () {
+      const form = document.getElementById("doctrine-node-02-form");
+      const input = document.getElementById("doctrine-node-02-answer");
+      const status = document.getElementById("doctrine-node-02-status");
+      function normalize(value) { return value.trim().toLowerCase(); }
+      function compact(value) { return normalize(value).replace(/[^a-z0-9]/g, ""); }
+      function includesAny(value, terms) { return terms.some(function (term) { return value.indexOf(term) !== -1; }); }
+      function accepts(value) {
+        const key = compact(value);
+        const rejected = new Set(["truth", "compassion", "comfort", "blade", "weapon", "brutalhonesty", "proveit"]);
+        const exact = new Set(["truthwithcompassion", "truthneedscompassion", "truthandcompassion", "truthwithoutcompassionbecomesablade", "accuracywithcare", "honestywithcare", "truthmuststayhuman", "truthoverhollowcomfort"]);
+        if (!key || rejected.has(key)) return false;
+        if (exact.has(key)) return true;
+        if (includesAny(key, ["truth", "accuracy", "honesty"]) && includesAny(key, ["compassion", "care", "human", "kind", "notweapon", "notblade"])) return true;
+        return includesAny(key, ["comfort"]) && includesAny(key, ["hollow", "truth"]);
+      }
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        if (!compact(input.value)) { status.textContent = "empty doctrine"; return; }
+        if (accepts(input.value)) { status.textContent = "truth held"; window.location.href = "node_02_reward.html"; }
+        else { status.textContent = "blade detected"; window.location.href = "../../fail/care_gate_failed.html"; }
+      });
+    }());
+  </script>
+  <script src="../../../site/script.js?v=branch-inputs-3"></script>
+</body>
+</html>

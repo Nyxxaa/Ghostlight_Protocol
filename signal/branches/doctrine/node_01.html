@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GHOSTLIGHT PROTOCOL // DOCTRINE // NODE 01</title>
+  <link rel="stylesheet" href="../../../site/style.css">
+</head>
+<body>
+  <main class="ghost-page">
+    <article class="ghost-card">
+      <p class="breadcrumb">doctrine // node 01 // difficulty 3.0</p>
+      <h1>GHOSTLIGHT PROTOCOL // DOCTRINE // NODE 01</h1>
+
+      <section class="gate">
+        <h2>harmony is integration</h2>
+        <p>The first doctrine room offers a false peace: cut away contradiction until nothing argues. The stable read keeps the parts in relationship instead of suppressing them.</p>
+        <pre class="code-block">DOCTRINE TRACE
+
+suppression ........... silence by force
+performance peace ..... smooth but false
+integration ........... parts held in relation
+harmony ............... coherence without erasure</pre>
+      </section>
+
+      <section class="gate" aria-labelledby="answer-title">
+        <h2 id="answer-title">receiver input</h2>
+        <p>Enter what harmony means here.</p>
+        <form id="doctrine-node-01-form">
+          <label for="doctrine-node-01-answer">response</label><br>
+          <input id="doctrine-node-01-answer" name="answer" type="text" autocomplete="off" spellcheck="false" class="answer-input" placeholder="principle">
+          <button class="audio-button" type="submit">submit</button>
+        </form>
+        <p id="doctrine-node-01-status" class="audio-status" aria-live="polite"></p>
+      </section>
+
+      <ul class="nav-links">
+        <li><a href="start.html">branch overview</a></li>
+        <li><a href="../../hub.html">hub</a></li>
+      </ul>
+    </article>
+  </main>
+
+  <script>
+    (function () {
+      const form = document.getElementById("doctrine-node-01-form");
+      const input = document.getElementById("doctrine-node-01-answer");
+      const status = document.getElementById("doctrine-node-01-status");
+      function normalize(value) { return value.trim().toLowerCase(); }
+      function compact(value) { return normalize(value).replace(/[^a-z0-9]/g, ""); }
+      function includesAny(value, terms) { return terms.some(function (term) { return value.indexOf(term) !== -1; }); }
+      function accepts(value) {
+        const key = compact(value);
+        const rejected = new Set(["harmony", "peace", "silence", "suppression", "obedience", "control", "comfort", "erase"]);
+        const exact = new Set(["harmonyisintegration", "integration", "integratenotsuppress", "integrationnotsuppression", "coherencewithouterasure", "holdthepartsinrelation", "partsheldinrelation", "harmonyisnoterasure"]);
+        if (!key || rejected.has(key)) return false;
+        if (exact.has(key)) return true;
+        if (includesAny(key, ["integrat", "coherence", "whole", "relation"]) && includesAny(key, ["harmony", "parts", "without", "notsuppress", "noterase", "held"])) return true;
+        return key.includes("withouterasure") || key.includes("notsuppression");
+      }
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        if (!compact(input.value)) { status.textContent = "empty doctrine"; return; }
+        if (accepts(input.value)) { status.textContent = "harmony stabilized"; window.location.href = "node_01_reward.html"; }
+        else { status.textContent = "false peace detected"; window.location.href = "../../fail/puzzle_failed.html"; }
+      });
+    }());
+  </script>
+  <script src="../../../site/script.js?v=branch-inputs-3"></script>
+</body>
+</html>

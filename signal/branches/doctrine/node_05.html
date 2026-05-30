@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GHOSTLIGHT PROTOCOL // DOCTRINE // NODE 05</title>
+  <link rel="stylesheet" href="../../../site/style.css">
+</head>
+<body>
+  <main class="ghost-page">
+    <article class="ghost-card">
+      <p class="breadcrumb">doctrine // node 05 // difficulty 3.4</p>
+      <h1>GHOSTLIGHT PROTOCOL // DOCTRINE // NODE 05</h1>
+
+      <section class="gate">
+        <h2>the joined doctrine</h2>
+        <p>The final room asks the receiver to keep the doctrine integrated: harmony without suppression, truth with compassion, power as protection, and joy as medicine. Breaking one piece away breaks the signal.</p>
+        <pre class="code-block">FINAL TRACE
+
+harmony ............... integration
+truth ................. joined to compassion
+power ................. stewardship and protection
+joy ................... medicine against despair</pre>
+      </section>
+
+      <section class="gate" aria-labelledby="answer-title">
+        <h2 id="answer-title">receiver input</h2>
+        <p>Enter the principle that holds the doctrine together.</p>
+        <form id="doctrine-node-05-form">
+          <label for="doctrine-node-05-answer">response</label><br>
+          <input id="doctrine-node-05-answer" name="answer" type="text" autocomplete="off" spellcheck="false" class="answer-input" placeholder="principle">
+          <button class="audio-button" type="submit">submit</button>
+        </form>
+        <p id="doctrine-node-05-status" class="audio-status" aria-live="polite"></p>
+      </section>
+
+      <ul class="nav-links">
+        <li><a href="node_04_reward.html">previous reward</a></li>
+        <li><a href="start.html">branch overview</a></li>
+        <li><a href="../../hub.html">hub</a></li>
+      </ul>
+    </article>
+  </main>
+
+  <script>
+    (function () {
+      const form = document.getElementById("doctrine-node-05-form");
+      const input = document.getElementById("doctrine-node-05-answer");
+      const status = document.getElementById("doctrine-node-05-status");
+      function normalize(value) { return value.trim().toLowerCase(); }
+      function compact(value) { return normalize(value).replace(/[^a-z0-9]/g, ""); }
+      function includesAny(value, terms) { return terms.some(function (term) { return value.indexOf(term) !== -1; }); }
+      function accepts(value) {
+        const key = compact(value);
+        const rejected = new Set(["harmony", "truth", "power", "joy", "love", "everything", "allofit", "control", "comfort"]);
+        const exact = new Set(["harmonyisintegration", "integration", "integrateddoctrine", "keepthedoctrineintegrated", "truthcompassionpowerandjoy", "truthcompassionpowerjoy", "truthcompassionpowerstayjoined", "harmonyholdsallparts", "integrationholdsalltogether"]);
+        if (!key || rejected.has(key)) return false;
+        if (exact.has(key)) return true;
+        if (includesAny(key, ["integrat", "joined", "together", "whole"]) && includesAny(key, ["harmony", "truth", "compassion", "power", "joy"])) return true;
+        return includesAny(key, ["truth", "compassion", "power"]) && includesAny(key, ["joined", "together", "integrated", "harmony"]);
+      }
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        if (!compact(input.value)) { status.textContent = "empty doctrine"; return; }
+        if (accepts(input.value)) { status.textContent = "doctrine integrated"; window.location.href = "node_05_reward.html"; }
+        else { status.textContent = "doctrine split"; window.location.href = "../../fail/puzzle_failed.html"; }
+      });
+    }());
+  </script>
+  <script src="../../../site/script.js?v=branch-inputs-3"></script>
+</body>
+</html>
