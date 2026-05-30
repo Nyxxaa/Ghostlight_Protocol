@@ -11,110 +11,109 @@
   <main class="ghost-page">
     <article class="ghost-card">
 
-  <p class="breadcrumb">signal packet</p>
-  <h1>GHOSTLIGHT PROTOCOL // FINAL BOSS</h1>
+      <p class="breadcrumb">signal packet</p>
+      <h1>GHOSTLIGHT PROTOCOL // FINAL BOSS</h1>
 
-  <section class="warning">
-    <h2>dead relay lock</h2>
-    <p>The trunk is cleared. The door does not open for speed.</p>
-    <p>Recover the colored branch fragments. Enter them cleanly. The relay opens only when the keys prove the descent.</p>
-  </section>
+      <section class="warning">
+        <h2>dead relay lock</h2>
+        <p>The trunk is cleared. The door does not open for speed.</p>
+        <p>Recover the colored branch fragments. Enter them cleanly. The relay opens only when the keys prove the descent.</p>
+      </section>
 
-  <section class="gate">
-    <h2>colored key lock</h2>
-    <p>Enter the recovered fragments. The order beyond this door is still withheld.</p>
+      <section class="gate">
+        <h2>colored key lock</h2>
+        <p>Enter the recovered fragments. The order beyond this door is still withheld.</p>
 
-    <form id="final-boss-form">
-      <label for="red-key">red key</label><br>
-      <input
-        id="red-key"
-        name="red-key"
-        type="text"
-        autocomplete="off"
-        spellcheck="false"
-        class="answer-input"
-        placeholder="key fragment"
-      ><br><br>
+        <form id="final-boss-form">
+          <label for="red-key">red key</label><br>
+          <input
+            id="red-key"
+            name="red-key"
+            type="text"
+            autocomplete="off"
+            spellcheck="false"
+            class="answer-input"
+            placeholder="key fragment"
+          ><br><br>
 
-      <label for="orange-key">orange key</label><br>
-      <input
-        id="orange-key"
-        name="orange-key"
-        type="text"
-        autocomplete="off"
-        spellcheck="false"
-        class="answer-input"
-        placeholder="key fragment"
-      ><br><br>
+          <label for="orange-key">orange key</label><br>
+          <input
+            id="orange-key"
+            name="orange-key"
+            type="text"
+            autocomplete="off"
+            spellcheck="false"
+            class="answer-input"
+            placeholder="key fragment"
+          ><br><br>
 
-      <label for="yellow-key">yellow key</label><br>
-      <input
-        id="yellow-key"
-        name="yellow-key"
-        type="text"
-        autocomplete="off"
-        spellcheck="false"
-        class="answer-input"
-        placeholder="key fragment"
-      ><br><br>
+          <label for="yellow-key">yellow key</label><br>
+          <input
+            id="yellow-key"
+            name="yellow-key"
+            type="text"
+            autocomplete="off"
+            spellcheck="false"
+            class="answer-input"
+            placeholder="key fragment"
+          ><br><br>
 
-      <label for="green-key">green key</label><br>
-      <input
-        id="green-key"
-        name="green-key"
-        type="text"
-        autocomplete="off"
-        spellcheck="false"
-        class="answer-input"
-        placeholder="key fragment"
-      ><br><br>
+          <label for="green-key">green key</label><br>
+          <input
+            id="green-key"
+            name="green-key"
+            type="text"
+            autocomplete="off"
+            spellcheck="false"
+            class="answer-input"
+            placeholder="key fragment"
+          ><br><br>
 
-      <label for="blue-key">blue key</label><br>
-      <input
-        id="blue-key"
-        name="blue-key"
-        type="text"
-        autocomplete="off"
-        spellcheck="false"
-        class="answer-input"
-        placeholder="key fragment"
-      ><br><br>
+          <label for="blue-key">blue key</label><br>
+          <input
+            id="blue-key"
+            name="blue-key"
+            type="text"
+            autocomplete="off"
+            spellcheck="false"
+            class="answer-input"
+            placeholder="key fragment"
+          ><br><br>
 
-      <label for="violet-key">violet key</label><br>
-      <input
-        id="violet-key"
-        name="violet-key"
-        type="text"
-        autocomplete="off"
-        spellcheck="false"
-        class="answer-input"
-        placeholder="key fragment"
-      ><br><br>
+          <label for="violet-key">violet key</label><br>
+          <input
+            id="violet-key"
+            name="violet-key"
+            type="text"
+            autocomplete="off"
+            spellcheck="false"
+            class="answer-input"
+            placeholder="key fragment"
+          ><br><br>
 
-      <label for="silver-key">silver key</label><br>
-      <input
-        id="silver-key"
-        name="silver-key"
-        type="text"
-        autocomplete="off"
-        spellcheck="false"
-        class="answer-input"
-        placeholder="key fragment"
-      ><br><br>
+          <label for="silver-key">silver key</label><br>
+          <input
+            id="silver-key"
+            name="silver-key"
+            type="text"
+            autocomplete="off"
+            spellcheck="false"
+            class="answer-input"
+            placeholder="key fragment"
+          ><br><br>
 
-      <button class="audio-button" type="submit">open dead relay</button>
-    </form>
+          <button class="audio-button" type="submit">open dead relay</button>
+        </form>
 
-    <p id="final-boss-status" class="audio-status" aria-live="polite"></p>
-  </section>
+        <p id="final-boss-status" class="audio-status" aria-live="polite"></p>
+      </section>
 
-  <ul class="nav-links">
-    <li><a href="../trunk_rewards/layer_06_reward.html">previous layer</a></li>
-    <li><a href="../hub.html">hub</a></li>
-  </ul>
+      <ul class="nav-links">
+        <li><a href="../trunk_rewards/layer_06_reward.html">previous layer</a></li>
+        <li><a href="../hub.html">hub</a></li>
+      </ul>
 
-</article>
-
+    </article>
   </main>
 
   <script>
@@ -180,7 +179,7 @@
 
       if (allValid) {
         status.textContent = "colored keys accepted; dead lab opening";
-        window.location.href = "frame_notes.html";
+        window.location.href = "index.html";
       } else {
         status.textContent = "dead relay rejected";
         window.location.href = "../fail/puzzle_failed.html";
@@ -189,6 +188,5 @@
   </script>
 
   <script src="../../site/script.js?v=branch-inputs-2"></script>
-
 </body>
 </html>
