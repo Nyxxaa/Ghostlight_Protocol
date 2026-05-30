@@ -9,35 +9,153 @@
 <body>
   <main class="ghost-page">
     <article class="ghost-card">
-      <p class="breadcrumb">signal packet</p>
+
+      <p class="breadcrumb">future_path // node 01 // difficulty 5.0</p>
       <h1>GHOSTLIGHT PROTOCOL // FUTURE PATH // NODE 01</h1>
-      <pre class="code-block">GHOSTLIGHT PROTOCOL // FUTURE PATH // NODE 01
 
-source:
-Codex section 12.0
+      <section class="gate">
+        <h2>future is a direction, not a demand</h2>
+        <p>This care gate tests whether the receiver can hold future desire without turning it into pressure, deadlines, proof of ambition, or a demand to outrun the body.</p>
 
-care gate:
-Do not confuse desire with current fact.
+        <pre class="code-block">future trace:
 
-answer:
-Open the path that matches the correct receiver stance:
+future image ............... direction
+dream estate ............... direction
+music path ................. direction
+medical stability .......... direction
+stable household ........... direction
+creative work .............. direction
+care infrastructure ........ direction
 
-signal/branches/future_path/node_01_gate_&lt;stance&gt;.html
+The future points.
+It does not shove.</pre>
+      </section>
 
-format:
-lowercase_snake_case
+      <p>Common failures: asking why the future is not already reached, forcing progress, or treating dreams as a performance test.</p>
 
-return:
-signal/hub.html
+      <section class="gate" aria-labelledby="answer-title">
+        <h2 id="answer-title">receiver input</h2>
+        <p>Enter the principle that keeps the future from becoming pressure.</p>
 
-previous:
-signal/branches/future_path/start.html
-</pre>
+        <form id="future-path-node-01-form">
+          <label for="future-path-node-01-answer">answer packet</label><br>
+          <input
+            id="future-path-node-01-answer"
+            name="answer"
+            type="text"
+            autocomplete="off"
+            spellcheck="false"
+            class="answer-input"
+            placeholder="principle..."
+          >
+          <button class="audio-button" type="submit">submit packet</button>
+        </form>
+
+        <p id="future-path-node-01-status" class="audio-status" aria-live="polite"></p>
+      </section>
+
       <ul class="nav-links">
+        <li><a href="start.html">branch overview</a></li>
         <li><a href="../../hub.html">hub</a></li>
       </ul>
+
     </article>
   </main>
-  <script src="../../../site/script.js?v=d2c2981"></script>
+
+  <script>
+    (function () {
+      const form = document.getElementById("future-path-node-01-form");
+      const input = document.getElementById("future-path-node-01-answer");
+      const status = document.getElementById("future-path-node-01-status");
+
+      function normalize(value) {
+        return value.trim().toLowerCase();
+      }
+
+      function compact(value) {
+        return normalize(value).replace(/[^a-z0-9]/g, "");
+      }
+
+      function includesAny(text, terms) {
+        return terms.some((term) => text.includes(term));
+      }
+
+      const exact = new Set([
+        "futureisadirectionnotademand",
+        "futureisdirection",
+        "directionnotpressure",
+        "thefuturepointsitdoesnotshove",
+        "goalaredirectionnotproof",
+        "goalsaredirectionnotproof",
+        "dreamsaredirectionnotdemand",
+        "plansshouldnotpunish",
+        "futurewithoutpressure",
+        "holddirectiongently",
+        "buildtowarditwithoutforcing",
+        "desireisacompassnotawhip"
+      ]);
+
+      const rejected = new Set([
+        "pressure",
+        "deadline",
+        "proveit",
+        "ambition",
+        "justdoit",
+        "forceprogress",
+        "movefaster",
+        "demand",
+        "fantasy",
+        "escape"
+      ]);
+
+      function isValidAnswer(value) {
+        const text = normalize(value);
+        const key = compact(value);
+
+        if (!key) return false;
+        if (rejected.has(key)) return false;
+        if (exact.has(key)) return true;
+
+        if (
+          includesAny(text, ["future", "goals", "dreams", "plans", "desire"]) &&
+          includesAny(text, ["direction", "compass", "path", "points"]) &&
+          includesAny(text, ["not pressure", "not a demand", "not proof", "not a weapon", "does not shove"])
+        ) return true;
+
+        if (
+          includesAny(text, ["hold", "honor", "build toward", "move toward"]) &&
+          includesAny(text, ["gently", "without forcing", "without pressure", "without demand"])
+        ) return true;
+
+        if (
+          includesAny(text, ["desire", "dream", "goal"]) &&
+          includesAny(text, ["compass", "direction"]) &&
+          includesAny(text, ["not a whip", "not demand", "not pressure"])
+        ) return true;
+
+        if (
+          includesAny(text, ["future"]) &&
+          includesAny(text, ["points"]) &&
+          includesAny(text, ["does not shove", "doesn't shove", "not shove"])
+        ) return true;
+
+        return false;
+      }
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        if (isValidAnswer(input.value)) {
+          status.textContent = "packet accepted";
+          window.location.href = "node_01_reward.html";
+        } else {
+          status.textContent = "future became pressure";
+          window.location.href = "../../fail/care_gate_failed.html";
+        }
+      });
+    }());
+  </script>
+
+  <script src="../../../site/script.js?v=branch-inputs-3"></script>
 </body>
 </html>

@@ -9,35 +9,157 @@
 <body>
   <main class="ghost-page">
     <article class="ghost-card">
-      <p class="breadcrumb">signal packet</p>
+
+      <p class="breadcrumb">future_path // node 04 // difficulty 5.3</p>
       <h1>GHOSTLIGHT PROTOCOL // FUTURE PATH // NODE 04</h1>
-      <pre class="code-block">GHOSTLIGHT PROTOCOL // FUTURE PATH // NODE 04
 
-source:
-Codex section 12.3
+      <section class="gate">
+        <h2>build the path without forcing the body</h2>
+        <p>This final care gate tests whether the receiver can hold direction, capacity, support, medical and sensory stability, household continuity, and creative life without dragging, rescuing, owning, rushing, or demanding transformation.</p>
 
-care gate:
-Do not confuse desire with current fact.
+        <pre class="code-block">path trace:
 
-answer:
-Open the path that matches the correct receiver stance:
+direction .................. held
+capacity ................... respected
+body load .................. included
+support .................... built in
+future step ................ load-bearing
+dream ...................... grounded
+pace ....................... protected
+life ....................... still chosen
 
-signal/branches/future_path/node_04_gate_&lt;stance&gt;.html
+Build the road.
+Do not drag the body.</pre>
+      </section>
 
-format:
-lowercase_snake_case
+      <p>Common failures: rescue fantasy, forced progress, ignoring limits, or demanding the future as proof of ambition.</p>
 
-return:
-signal/hub.html
+      <section class="gate" aria-labelledby="answer-title">
+        <h2 id="answer-title">receiver input</h2>
+        <p>Enter the synthesis that earns the gold key.</p>
 
-previous:
-signal/branches/future_path/node_03.html
-</pre>
+        <form id="future-path-node-04-form">
+          <label for="future-path-node-04-answer">answer packet</label><br>
+          <input
+            id="future-path-node-04-answer"
+            name="answer"
+            type="text"
+            autocomplete="off"
+            spellcheck="false"
+            class="answer-input"
+            placeholder="synthesis..."
+          >
+          <button class="audio-button" type="submit">submit packet</button>
+        </form>
+
+        <p id="future-path-node-04-status" class="audio-status" aria-live="polite"></p>
+      </section>
+
       <ul class="nav-links">
+        <li><a href="node_03_reward.html">previous reward</a></li>
+        <li><a href="start.html">branch overview</a></li>
         <li><a href="../../hub.html">hub</a></li>
       </ul>
+
     </article>
   </main>
-  <script src="../../../site/script.js?v=d2c2981"></script>
+
+  <script>
+    (function () {
+      const form = document.getElementById("future-path-node-04-form");
+      const input = document.getElementById("future-path-node-04-answer");
+      const status = document.getElementById("future-path-node-04-status");
+
+      function normalize(value) {
+        return value.trim().toLowerCase();
+      }
+
+      function compact(value) {
+        return normalize(value).replace(/[^a-z0-9]/g, "");
+      }
+
+      function includesAny(text, terms) {
+        return terms.some((term) => text.includes(term));
+      }
+
+      const exact = new Set([
+        "futurerequiresloadbearingsteps",
+        "buildthepathwithoutforcingthebody",
+        "buildtheroaddonotdragthebody",
+        "directionwithcapacity",
+        "capacityawarefuture",
+        "groundthedreaminsupport",
+        "supportthefuturewithoutforce",
+        "loadbearingfuturepath",
+        "desirestructurecapacity",
+        "buildbesidedonotdrag",
+        "futurewithpacingandsupport"
+      ]);
+
+      const rejected = new Set([
+        "dragthem",
+        "forceprogress",
+        "rescuethem",
+        "ownthefuture",
+        "pushharder",
+        "ignorelimits",
+        "proveambition",
+        "movefaster",
+        "manifestharder"
+      ]);
+
+      function isValidAnswer(value) {
+        const text = normalize(value);
+        const key = compact(value);
+
+        if (!key) return false;
+        if (rejected.has(key)) return false;
+        if (exact.has(key)) return true;
+
+        if (
+          includesAny(text, ["future", "path", "road"]) &&
+          includesAny(text, ["load-bearing", "load bearing", "capacity", "pacing", "support"]) &&
+          includesAny(text, ["without force", "without forcing", "do not drag", "don't drag", "beside"])
+        ) return true;
+
+        if (
+          includesAny(text, ["build the road", "build the path", "build beside"]) &&
+          includesAny(text, ["do not drag", "don't drag", "without dragging", "without forcing"])
+        ) return true;
+
+        if (
+          includesAny(text, ["direction", "desire", "dream"]) &&
+          includesAny(text, ["capacity", "support", "structure", "pacing"]) &&
+          includesAny(text, ["ground", "grounded", "load-bearing", "aware"])
+        ) return true;
+
+        if (
+          includesAny(text, ["body", "body load", "capacity"]) &&
+          includesAny(text, ["included", "respected", "not forced", "without forcing", "not dragged"])
+        ) return true;
+
+        if (
+          includesAny(text, ["support the future", "support future"]) &&
+          includesAny(text, ["without force", "without control", "without dragging"])
+        ) return true;
+
+        return false;
+      }
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        if (isValidAnswer(input.value)) {
+          status.textContent = "packet accepted";
+          window.location.href = "node_04_reward.html";
+        } else {
+          status.textContent = "future became force";
+          window.location.href = "../../fail/care_gate_failed.html";
+        }
+      });
+    }());
+  </script>
+
+  <script src="../../../site/script.js?v=branch-inputs-3"></script>
 </body>
 </html>
