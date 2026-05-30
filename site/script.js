@@ -99,6 +99,13 @@ function cleanPacket(value) {
 }
 
 function addBranchAnswerForm() {
+  if (
+    document.body.classList.contains("no-auto-branch-form") ||
+    document.querySelector("[data-no-auto-branch-form]")
+  ) {
+    return;
+  }
+
   const card = document.querySelector(".ghost-card");
   if (!card) return;
 
