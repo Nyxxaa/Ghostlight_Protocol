@@ -70,24 +70,47 @@ The stable read starts where the body can actually say yes.</pre>
 
       function accepts(value) {
         const key = compact(value);
-        const rejected = new Set(["food", "eat", "discipline", "willpower", "picky", "pickiness", "cravings", "diet", "control", "justeat"]);
+        const rejected = new Set([
+          "food",
+          "eat",
+          "discipline",
+          "willpower",
+          "picky",
+          "pickiness",
+          "cravings",
+          "diet",
+          "control",
+          "justeat",
+          "spoiled",
+          "childish",
+          "dramatic"
+        ]);
         if (rejected.has(key)) return false;
 
         const exact = new Set([
+          "access",
+          "foodaccess",
+          "sensoryaccess",
           "sensorysafety",
           "sensorysafetyisnotpickiness",
+          "safetexture",
           "foodisaccess",
           "foodisnotacharactertest",
           "texturesafety",
+          "textureaccess",
+          "predictabletexture",
           "predictabilitymatters",
           "safetextureopensaccess",
           "foodsafety",
           "lowshamefood",
           "supportthetextureneed",
-          "makefoodaccessible"
+          "makefoodaccessible",
+          "startwherethebodycansayyes",
+          "wherethebodycansayyes"
         ]);
         if (exact.has(key)) return true;
 
+        if (includesAny(key, ["access", "sensory", "texture", "predictability", "predictable", "safety", "safe"])) return true;
         if (includesAny(key, ["sensory", "texture", "predictability", "predictable"]) && includesAny(key, ["safety", "safe", "access", "support"])) return true;
         if (key.indexOf("food") !== -1 && includesAny(key, ["access", "safe", "safety", "accessible", "lowshame", "notacharactertest"])) return true;
 
