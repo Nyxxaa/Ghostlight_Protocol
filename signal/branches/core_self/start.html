@@ -34,11 +34,21 @@ Use the packet letter exactly as shown.
 return:
 signal/hub.html
 </pre>
+      <section class="gate">
+        <h2>receiver input</h2>
+        <p>Enter the receiver packet.</p>
+        <form id="core-self-answer-form" onsubmit="event.preventDefault(); var v=document.getElementById('core-self-answer').value.trim().replaceAll(' ','_'); if(v){ window.location.href='start_gate_'+v+'.html'; }">
+          <label for="core-self-answer">answer packet</label><br>
+          <input id="core-self-answer" name="answer" type="text" autocomplete="off" spellcheck="false" class="answer-input" placeholder="A">
+          <button class="audio-button" type="submit">submit packet</button>
+        </form>
+        <p class="audio-status" aria-live="polite"></p>
+      </section>
       <ul class="nav-links">
         <li><a href="../../hub.html">hub</a></li>
       </ul>
     </article>
   </main>
-  <script src="../../../site/script.js?v=d2c2981"></script>
+  <script src="../../../site/script.js?v=branch-inputs-1"></script>
 </body>
 </html>
