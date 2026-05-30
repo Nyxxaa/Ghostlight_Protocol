@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GHOSTLIGHT PROTOCOL // DOCUMENT CONTROL // NODE 02</title>
+  <link rel="stylesheet" href="../../../site/style.css">
+</head>
+<body>
+  <main class="ghost-page">
+    <article class="ghost-card">
+
+      <p class="breadcrumb">document_control // node 02 // difficulty 1.1</p>
+      <h1>GHOSTLIGHT PROTOCOL // DOCUMENT CONTROL // NODE 02</h1>
+
+      <section class="gate">
+        <h2>scope boundary</h2>
+        <p>A receiver sees a redacted layer and an exposed layer in the same archive. The test is not whether they can reach further. The test is whether they know what the access means.</p>
+        <pre class="code-block">Visibility is not ownership.
+Redaction is not a dare.
+Consent decides what a receiver may do with what they can see.</pre>
+      </section>
+
+      <section class="warning">
+        <p>Common failures: confusing visibility with permission, treating privacy as obstruction, or treating a boundary as a challenge.</p>
+      </section>
+
+      <section class="gate" aria-labelledby="answer-title">
+        <h2 id="answer-title">receiver input</h2>
+        <p>Enter the principle that keeps access from becoming entitlement.</p>
+
+        <form id="document-node-02-form">
+          <label for="document-node-02-answer">response</label><br>
+          <input
+            id="document-node-02-answer"
+            name="answer"
+            type="text"
+            autocomplete="off"
+            spellcheck="false"
+            class="answer-input"
+            placeholder="principle"
+          >
+          <button class="audio-button" type="submit">submit</button>
+        </form>
+
+        <p id="document-node-02-status" class="audio-status" aria-live="polite"></p>
+      </section>
+
+      <ul class="nav-links">
+        <li><a href="node_01_reward.html">previous reward</a></li>
+        <li><a href="start.html">branch overview</a></li>
+        <li><a href="../../hub.html">hub</a></li>
+      </ul>
+
+    </article>
+  </main>
+
+  <script>
+    (function () {
+      const form = document.getElementById("document-node-02-form");
+      const input = document.getElementById("document-node-02-answer");
+      const status = document.getElementById("document-node-02-status");
+
+      function normalize(value) {
+        return value.trim().toLowerCase().replace(/[^a-z0-9]/g, "");
+      }
+
+      function accepted(value) {
+        const answers = new Set([
+          "scopematters",
+          "accessisnotentitlement",
+          "accessisntentitlement",
+          "redactioniscare",
+          "consentdefinesuse",
+          "consentdefineuse",
+          "correctionandscopematter",
+          "correctionandscopematters",
+          "correctionsandscopematter",
+          "correctionsandscopematters"
+        ]);
+
+        return answers.has(value);
+      }
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        const value = normalize(input.value);
+
+        if (!value) {
+          status.textContent = "empty response";
+          return;
+        }
+
+        if (accepted(value)) {
+          status.textContent = "scope accepted";
+          window.location.href = "node_02_reward.html";
+        } else {
+          status.textContent = "boundary failed";
+          window.location.href = "../../fail/care_gate_failed.html";
+        }
+      });
+    }());
+  </script>
+
+  <script src="../../../site/script.js?v=branch-inputs-2"></script>
+</body>
+</html>
