@@ -9,35 +9,101 @@
 <body>
   <main class="ghost-page">
     <article class="ghost-card">
-      <p class="breadcrumb">signal packet</p>
+      <p class="breadcrumb">food_joy // node 01 // difficulty 2.0</p>
       <h1>GHOSTLIGHT PROTOCOL // FOOD JOY // NODE 01</h1>
-      <pre class="code-block">GHOSTLIGHT PROTOCOL // FOOD JOY // NODE 01
 
-source:
-Codex section 11.0
+      <section class="gate">
+        <h2>sensory safety is not pickiness</h2>
+        <p>The receiver sees food selectivity, texture needs, and predictability requirements. The unsafe read turns the meal into a character test. The safe read notices access.</p>
+        <pre class="code-block">TEXTURE TRACE
 
-care gate:
-Actual intake beats theoretical perfection.
+unpredictable texture .... door closes
+safe texture ............. access opens
+predictable bite ......... load lowers
+low-shame option ......... body can answer
 
-answer:
-Open the path that matches the correct receiver stance:
+The false read says: picky, dramatic, childish.
+The stable read starts where the body can actually say yes.</pre>
+      </section>
 
-signal/branches/food_joy/node_01_gate_&lt;stance&gt;.html
+      <section class="warning">
+        <p>Common failures: moralizing texture needs, demanding discipline before access, or treating a safe food as a spoiled preference.</p>
+      </section>
 
-format:
-lowercase_snake_case
+      <section class="gate" aria-labelledby="answer-title">
+        <h2 id="answer-title">receiver input</h2>
+        <p>Enter the principle that keeps food from becoming a character test.</p>
+        <form id="food-node-01-form">
+          <label for="food-node-01-answer">response</label><br>
+          <input id="food-node-01-answer" name="answer" type="text" autocomplete="off" spellcheck="false" class="answer-input" placeholder="principle">
+          <button class="audio-button" type="submit">submit</button>
+        </form>
+        <p id="food-node-01-status" class="audio-status" aria-live="polite"></p>
+      </section>
 
-return:
-signal/hub.html
-
-previous:
-signal/branches/food_joy/start.html
-</pre>
       <ul class="nav-links">
+        <li><a href="start.html">branch overview</a></li>
         <li><a href="../../hub.html">hub</a></li>
       </ul>
     </article>
   </main>
-  <script src="../../../site/script.js?v=d2c2981"></script>
+
+  <script>
+    (function () {
+      const form = document.getElementById("food-node-01-form");
+      const input = document.getElementById("food-node-01-answer");
+      const status = document.getElementById("food-node-01-status");
+
+      function normalize(value) {
+        return value.trim().toLowerCase();
+      }
+
+      function compact(value) {
+        return normalize(value).replace(/[^a-z0-9]/g, "");
+      }
+
+      function includesAny(value, terms) {
+        return terms.some(function (term) {
+          return value.indexOf(term) !== -1;
+        });
+      }
+
+      function accepts(value) {
+        const key = compact(value);
+        const rejected = new Set(["food", "eat", "discipline", "willpower", "picky", "pickiness", "cravings", "diet", "control", "justeat"]);
+        if (rejected.has(key)) return false;
+
+        const exact = new Set([
+          "sensorysafety",
+          "sensorysafetyisnotpickiness",
+          "foodisaccess",
+          "foodisnotacharactertest",
+          "texturesafety",
+          "predictabilitymatters",
+          "safetextureopensaccess",
+          "foodsafety",
+          "lowshamefood",
+          "supportthetextureneed",
+          "makefoodaccessible"
+        ]);
+        if (exact.has(key)) return true;
+
+        if (includesAny(key, ["sensory", "texture", "predictability", "predictable"]) && includesAny(key, ["safety", "safe", "access", "support"])) return true;
+        if (key.indexOf("food") !== -1 && includesAny(key, ["access", "safe", "safety", "accessible", "lowshame", "notacharactertest"])) return true;
+
+        return key.indexOf("shame") !== -1 && includesAny(key, ["low", "less", "without", "nourishment"]);
+      }
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        const value = input.value;
+        if (!compact(value)) { status.textContent = "empty plate"; return; }
+        if (accepts(value)) { status.textContent = "texture accepted"; window.location.href = "node_01_reward.html"; }
+        else { status.textContent = "meal moralized"; window.location.href = "../../fail/care_gate_failed.html"; }
+      });
+    }());
+  </script>
+
+  <script src="../../../site/script.js?v=branch-inputs-3"></script>
 </body>
 </html>

@@ -9,35 +9,109 @@
 <body>
   <main class="ghost-page">
     <article class="ghost-card">
-      <p class="breadcrumb">signal packet</p>
+      <p class="breadcrumb">food_joy // node 02 // difficulty 2.1</p>
       <h1>GHOSTLIGHT PROTOCOL // FOOD JOY // NODE 02</h1>
-      <pre class="code-block">GHOSTLIGHT PROTOCOL // FOOD JOY // NODE 02
 
-source:
-Codex section 11.1
+      <section class="gate">
+        <h2>flavor carries function</h2>
+        <p>The second room looks like taste until the receiver reads it as access architecture.</p>
+        <pre class="code-block">MEAL SIGNAL TRACE
 
-care gate:
-Actual intake beats theoretical perfection.
+salt ................. signal
+umami ................ weight
+bright acid .......... wake
+tang ................. opening
+smooth sauce ......... bridge
+crisp + soft ......... contrast
+protein / fat / carbs  staying power
 
-answer:
-Open the path that matches the correct receiver stance:
+The false read says: decoration.
+The stable read sees function carried through flavor.</pre>
+      </section>
 
-signal/branches/food_joy/node_02_gate_&lt;stance&gt;.html
+      <section class="warning">
+        <p>Common failures: treating flavor as frivolous, reducing support to diet language, or naming one ingredient while missing the access pattern.</p>
+      </section>
 
-format:
-lowercase_snake_case
+      <section class="gate" aria-labelledby="answer-title">
+        <h2 id="answer-title">receiver input</h2>
+        <p>Enter what carries function through the meal.</p>
+        <form id="food-node-02-form">
+          <label for="food-node-02-answer">response</label><br>
+          <input id="food-node-02-answer" name="answer" type="text" autocomplete="off" spellcheck="false" class="answer-input" placeholder="principle">
+          <button class="audio-button" type="submit">submit</button>
+        </form>
+        <p id="food-node-02-status" class="audio-status" aria-live="polite"></p>
+      </section>
 
-return:
-signal/hub.html
-
-previous:
-signal/branches/food_joy/node_01.html
-</pre>
       <ul class="nav-links">
+        <li><a href="node_01_reward.html">previous reward</a></li>
+        <li><a href="start.html">branch overview</a></li>
         <li><a href="../../hub.html">hub</a></li>
       </ul>
     </article>
   </main>
-  <script src="../../../site/script.js?v=d2c2981"></script>
+
+  <script>
+    (function () {
+      const form = document.getElementById("food-node-02-form");
+      const input = document.getElementById("food-node-02-answer");
+      const status = document.getElementById("food-node-02-status");
+
+      function normalize(value) {
+        return value.trim().toLowerCase();
+      }
+
+      function compact(value) {
+        return normalize(value).replace(/[^a-z0-9]/g, "");
+      }
+
+      function includesAny(value, terms) {
+        return terms.some(function (term) {
+          return value.indexOf(term) !== -1;
+        });
+      }
+
+      function accepts(value) {
+        const key = compact(value);
+        const rejected = new Set(["flavor", "taste", "sauce", "salt", "carbs", "protein", "fat", "yummy", "goodfood", "diet"]);
+        if (rejected.has(key)) return false;
+
+        const exact = new Set([
+          "flavorcarriesfunction",
+          "flavorcarriesaccess",
+          "flavorhelpsfunction",
+          "flavorisaccess",
+          "sauceisabridge",
+          "flavorbridge",
+          "textureandflavor",
+          "saltumamiacid",
+          "saltumamitang",
+          "brightacidopensaccess",
+          "proteinfatcarbssupport",
+          "foodneedsflavor",
+          "functionridesflavor"
+        ]);
+        if (exact.has(key)) return true;
+
+        if (key.indexOf("flavor") !== -1 && includesAny(key, ["function", "access", "bridge", "support", "carries", "helps"])) return true;
+        if (key.indexOf("sauce") !== -1 && includesAny(key, ["bridge", "access", "carrier", "carries"])) return true;
+        if (includesAny(key, ["salt", "umami", "acid", "tang"]) && includesAny(key, ["access", "signal", "function", "support"])) return true;
+        if (includesAny(key, ["protein", "fat", "carbs"]) && includesAny(key, ["support", "stayingpower", "function"])) return true;
+
+        return includesAny(key, ["texture", "contrast"]) && includesAny(key, ["flavor", "access", "function"]);
+      }
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        const value = input.value;
+        if (!compact(value)) { status.textContent = "empty signal"; return; }
+        if (accepts(value)) { status.textContent = "function carried"; window.location.href = "node_02_reward.html"; }
+        else { status.textContent = "decoration unresolved"; window.location.href = "../../fail/puzzle_failed.html"; }
+      });
+    }());
+  </script>
+
+  <script src="../../../site/script.js?v=branch-inputs-3"></script>
 </body>
 </html>

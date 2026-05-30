@@ -9,35 +9,106 @@
 <body>
   <main class="ghost-page">
     <article class="ghost-card">
-      <p class="breadcrumb">signal packet</p>
+      <p class="breadcrumb">food_joy // node 03 // difficulty 2.2</p>
       <h1>GHOSTLIGHT PROTOCOL // FOOD JOY // NODE 03</h1>
-      <pre class="code-block">GHOSTLIGHT PROTOCOL // FOOD JOY // NODE 03
 
-source:
-Codex section 11.2
+      <section class="gate">
+        <h2>joy is care</h2>
+        <p>A receiver sees joy foods, cravings, comfort, sensory relief, and hunger arriving late in the day. The unsafe read treats joy as weakness or something to remove. The safe read understands support.</p>
+        <pre class="code-block">CARE TRACE
 
-care gate:
-Actual intake beats theoretical perfection.
+comfort is not failure
+pleasure can lower the gate
+low shame keeps nourishment reachable
+support feeds before it disciplines
 
-answer:
-Open the path that matches the correct receiver stance:
+The false read says: remove joy to prove control.
+The stable read keeps care from becoming punishment.</pre>
+      </section>
 
-signal/branches/food_joy/node_03_gate_&lt;stance&gt;.html
+      <section class="warning">
+        <p>Common failures: treating cravings as evidence, using discipline as punishment, or making food prove moral worth before it can support the body.</p>
+      </section>
 
-format:
-lowercase_snake_case
+      <section class="gate" aria-labelledby="answer-title">
+        <h2 id="answer-title">receiver input</h2>
+        <p>Enter the care rule that keeps nourishment from becoming punishment.</p>
+        <form id="food-node-03-form">
+          <label for="food-node-03-answer">response</label><br>
+          <input id="food-node-03-answer" name="answer" type="text" autocomplete="off" spellcheck="false" class="answer-input" placeholder="care rule">
+          <button class="audio-button" type="submit">submit</button>
+        </form>
+        <p id="food-node-03-status" class="audio-status" aria-live="polite"></p>
+      </section>
 
-return:
-signal/hub.html
-
-previous:
-signal/branches/food_joy/node_02.html
-</pre>
       <ul class="nav-links">
+        <li><a href="node_02_reward.html">previous reward</a></li>
+        <li><a href="start.html">branch overview</a></li>
         <li><a href="../../hub.html">hub</a></li>
       </ul>
     </article>
   </main>
-  <script src="../../../site/script.js?v=d2c2981"></script>
+
+  <script>
+    (function () {
+      const form = document.getElementById("food-node-03-form");
+      const input = document.getElementById("food-node-03-answer");
+      const status = document.getElementById("food-node-03-status");
+
+      function normalize(value) {
+        return value.trim().toLowerCase();
+      }
+
+      function compact(value) {
+        return normalize(value).replace(/[^a-z0-9]/g, "");
+      }
+
+      function includesAny(value, terms) {
+        return terms.some(function (term) {
+          return value.indexOf(term) !== -1;
+        });
+      }
+
+      function accepts(value) {
+        const key = compact(value);
+        const rejected = new Set(["discipline", "control", "diet", "punishment", "removejoy", "ignorecravings", "willpower", "bestrict", "eatless", "shame"]);
+        if (rejected.has(key)) return false;
+
+        const exact = new Set([
+          "joyiscare",
+          "joysupportssurvival",
+          "joymakessurvivaleasier",
+          "foodjoyiscare",
+          "nourishmentisnotpunishment",
+          "foodisnotpunishment",
+          "donotmoralizefood",
+          "dontmoralizefood",
+          "lowshamenourishment",
+          "pleasurehelpsaccess",
+          "comfortcanbesupport",
+          "carenotcontrol",
+          "supportnotdiscipline",
+          "feedingwithoutshame"
+        ]);
+        if (exact.has(key)) return true;
+
+        if (key.indexOf("joy") !== -1 && includesAny(key, ["care", "support", "survival", "nourishment", "access"])) return true;
+        if (includesAny(key, ["nourishment", "food", "feeding"]) && includesAny(key, ["notpunishment", "withoutshame", "lowshame", "notmoral", "care"])) return true;
+        if (key.indexOf("pleasure") !== -1 && includesAny(key, ["access", "support", "care"])) return true;
+
+        return key.indexOf("comfort") !== -1 && includesAny(key, ["support", "care", "access"]);
+      }
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        const value = input.value;
+        if (!compact(value)) { status.textContent = "empty care rule"; return; }
+        if (accepts(value)) { status.textContent = "joy protected"; window.location.href = "node_03_reward.html"; }
+        else { status.textContent = "nourishment punished"; window.location.href = "../../fail/care_gate_failed.html"; }
+      });
+    }());
+  </script>
+
+  <script src="../../../site/script.js?v=branch-inputs-3"></script>
 </body>
 </html>

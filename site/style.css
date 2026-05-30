@@ -315,6 +315,14 @@ input.code-block:focus {
   text-shadow: 0 0 0.55rem rgba(93, 183, 255, 0.48);
 }
 
+.color-key-green,
+.color-key-green .ascii-key,
+.color-key-green code,
+.color-key-green strong {
+  color: #45d483;
+  text-shadow: 0 0 0.55rem rgba(69, 212, 131, 0.5);
+}
+
 .color-key-red,
 .color-key-red .ascii-key,
 .color-key-red code,
