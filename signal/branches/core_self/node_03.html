@@ -9,35 +9,53 @@
 <body>
   <main class="ghost-page">
     <article class="ghost-card">
-      <p class="breadcrumb">signal packet</p>
+      <p class="breadcrumb">core_self // node 03 // difficulty 1.2</p>
       <h1>GHOSTLIGHT PROTOCOL // CORE SELF // NODE 03</h1>
-      <pre class="code-block">GHOSTLIGHT PROTOCOL // CORE SELF // NODE 03
+      <section class="gate">
+        <h2>presence trace</h2>
+        <p>The signal is steady, reserved, observant, and precise.</p>
+        <pre class="code-block">PRESENCE TRACE
 
-source:
-Codex section 2.5
+calm ................. steady
+reserved ............. held
+observant ............ watching the pattern
+precise .............. careful signal
+low voice ............ measured signal
 
-care gate:
-Do not flatten a person into one trait.
-
-answer:
-Open the path that matches the correct receiver stance:
-
-signal/branches/core_self/node_03_gate_&lt;stance&gt;.html
-
-format:
-lowercase_snake_case
-
-return:
-signal/hub.html
-
-previous:
-signal/branches/core_self/node_02.html
-</pre>
-      <ul class="nav-links">
-        <li><a href="../../hub.html">hub</a></li>
-      </ul>
+The stable read recognizes measured presence.</pre>
+      </section>
+      <section class="gate" aria-labelledby="answer-title">
+        <h2 id="answer-title">receiver input</h2>
+        <p>Enter the phrase that names the stable read.</p>
+        <form id="core-node-03-form">
+          <label for="core-node-03-answer">answer packet</label><br>
+          <input id="core-node-03-answer" name="answer" type="text" autocomplete="off" spellcheck="false" class="answer-input" placeholder="stable read">
+          <button class="audio-button" type="submit">submit packet</button>
+        </form>
+        <p id="core-node-03-status" class="audio-status" aria-live="polite"></p>
+      </section>
+      <ul class="nav-links"><li><a href="node_02_reward.html">previous reward</a></li><li><a href="start.html">branch overview</a></li><li><a href="../../hub.html">hub</a></li></ul>
     </article>
   </main>
-  <script src="../../../site/script.js?v=d2c2981"></script>
+  <script>
+    (function () {
+      const form = document.getElementById("core-node-03-form");
+      const input = document.getElementById("core-node-03-answer");
+      const status = document.getElementById("core-node-03-status");
+      const accepted = new Set(["8a64f5b90801945abdefef67523d1a9ffad313aa1d6175c7d1be7ad7966fcbe3","d5b70fbd8306319901ce2e4490940f8d1b9c34dc995b31acc72915fa09d34627","f69587a368326d4efebf2d1660a10e88c77efb8c49a18215751c7ecfcd3f8902","2c428affdb93466749e6e162ae11ceb323376606889538e04ab083dda783665c","4d21ab1cc3d76db8777659db03a2a14f8e762d9743163efb72a4b637014ae10e","14b62d899ee61c4cedb025ff75cbc271fc29850f44277dccda3aa6ac390c3bb6"]);
+      function normalize(value) { return value.trim().toLowerCase().replace(/[^a-z0-9]/g, ""); }
+      function hex(buffer) { return Array.prototype.map.call(new Uint8Array(buffer), function (byte) { return byte.toString(16).padStart(2, "0"); }).join(""); }
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        const value = normalize(input.value);
+        if (!value) { status.textContent = "empty trace"; return; }
+        crypto.subtle.digest("SHA-256", new TextEncoder().encode(value)).then(function (digest) {
+          if (accepted.has(hex(digest))) { status.textContent = "presence recognized"; window.location.href = "node_03_reward.html"; }
+          else { status.textContent = "presence unresolved"; window.location.href = "../../fail/care_gate_failed.html"; }
+        }).catch(function () { status.textContent = "validator unavailable"; });
+      });
+    }());
+  </script>
+  <script src="../../../site/script.js?v=branch-inputs-2"></script>
 </body>
 </html>
