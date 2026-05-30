@@ -66,20 +66,45 @@
         .replace(/\s+/g, " ");
     }
 
-    const acceptedAnswers = new Set([
-      "voice is a signal",
-      "signal layer 05 capacity gate.txt",
-      "layer 05 capacity gate",
-      "layer 05 capacity gate.txt",
-      "signal/layer 05 capacity gate.txt"
-    ]);
+    function compact(value) {
+      return normalizeAnswer(value).replace(/[^a-z0-9]/g, "");
+    }
+
+    function includesAny(value, terms) {
+      return terms.some((term) => value.includes(term));
+    }
+
+    function isValidAnswer(value) {
+      const text = normalizeAnswer(value);
+      const key = compact(value);
+      const rejected = new Set(["voice", "signal", "sound", "audio", "music", "resonance", "listen", "heard"]);
+      const accepted = new Set([
+        "voiceissignal",
+        "voiceisasignal",
+        "voicecarriessignal",
+        "voicecarriesasignal",
+        "soundissignal",
+        "soundisasignal",
+        "soundcarriessignal",
+        "resonanceissignal",
+        "signalvoice",
+        "signallayer05capacitygatetxt",
+        "layer05capacitygate",
+        "layer05capacitygatetxt"
+      ]);
+
+      if (!key) return false;
+      if (rejected.has(key)) return false;
+      if (accepted.has(key)) return true;
+      if (text.includes("capacity gate")) return true;
+
+      return includesAny(text, ["voice", "sound", "audio", "resonance"]) && includesAny(text, ["signal", "carries", "visible", "phrase"]);
+    }
 
     form.addEventListener("submit", (event) => {
       event.preventDefault();
 
-      const answer = normalizeAnswer(input.value);
-
-      if (acceptedAnswers.has(answer)) {
+      if (isValidAnswer(input.value)) {
         status.textContent = "packet accepted";
         window.location.href = "trunk_rewards/layer_04_reward.html";
       } else {
