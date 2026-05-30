@@ -1,5 +1,4 @@
 <!doctype html>
-
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -10,175 +9,31 @@
 <body>
   <main class="ghost-page">
     <article class="ghost-card">
+      <p class="breadcrumb">signal hub</p>
+      <h1>GHOSTLIGHT PROTOCOL // SIGNAL HUB</h1>
 
-  <p class="breadcrumb">signal hub</p>
-  <h1>GHOSTLIGHT PROTOCOL // SIGNAL HUB</h1>
+      <section class="gate">
+        <h2>return station</h2>
+        <p>Recommended route: Explore, Report, Cooperate... jk. Just have fun.</p>
+        <p>The branch tree is not listed here anymore. Branch doors open as the trunk rewards are earned.</p>
+        <p>Clear the trunk. Follow reward doors. The deepest rooms hold fragments. The dead relay withholds assembly until the end.</p>
+      </section>
 
-  <section class="gate">
-    <h2>return station</h2>
-    <p>Recommended route: Explore, Report, Cooperate... jk. Just have fun.</p>
-    <p>The branch tree is not listed here anymore. Branch doors open as the trunk rewards are earned.</p>
-    <p>Clear the trunk. Follow reward doors. The deepest rooms hold fragments. The dead relay withholds assembly until the end.</p>
-  </section>
+      <section class="gate">
+        <h2>trunk entry</h2>
+        <ul class="path-list">
+          <li><a href="layer_01.html">signal/layer_01.html</a></li>
+        </ul>
+      </section>
 
-  <section class="gate">
-    <h2>trunk entry</h2>
-    <ul class="path-list">
-      <li><a href="layer_01.html">signal/layer_01.html</a></li>
-    </ul>
-  </section>
-<section class="gate">
-  <h2>optional local care-gate judge</h2>
-  <p>Later care gates may use free-response answers. For the richer version, you can run a small local LLM on your own machine through LM Studio.</p>
+      <section class="warning">
+        <p>Information is a reward, not a right. Access is not entitlement.</p>
+      </section>
 
-  <section class="warning">
-    <p>This setup is optional. The site will not install anything or run PowerShell for you. You must copy each command yourself and choose whether to run it.</p>
-    <p>Only do this on your own computer. Keep the LM Studio server bound to localhost. Do not expose it to your network or the public internet.</p>
-  </section>
-
-  <section class="gate">
-    <h3>Step 1 — open PowerShell</h3>
-    <p>Open PowerShell as your normal user, then copy and paste this command to install LM Studio with winget:</p>
-    <pre class="code-block" id="cmd-install">winget install --id LMStudio.LMStudio -e</pre>
-    <button class="audio-button copy-command" type="button" data-copy-target="cmd-install">copy install command</button>
-    <p>If that package ID fails, run this search command and install the LM Studio result manually:</p>
-    <pre class="code-block" id="cmd-search">winget search "LM Studio"</pre>
-    <button class="audio-button copy-command" type="button" data-copy-target="cmd-search">copy search command</button>
-  </section>
-
-  <section class="gate">
-    <h3>Step 2 — open LM Studio once</h3>
-    <p>After installation, open LM Studio from the Start Menu one time. This initializes the <code>lms</code> command-line tool.</p>
-    <p>Then return to PowerShell and verify that <code>lms</code> is available:</p>
-    <pre class="code-block" id="cmd-help">lms --help</pre>
-    <button class="audio-button copy-command" type="button" data-copy-target="cmd-help">copy verify command</button>
-  </section>
-
-  <section class="gate">
-    <h3>Step 3 — download a small local model</h3>
-    <p>Copy and paste this command to download a small instruction-following model:</p>
-    <pre class="code-block" id="cmd-download">lms get qwen2.5-3b-instruct@q4_k_m</pre>
-    <button class="audio-button copy-command" type="button" data-copy-target="cmd-download">copy download command</button>
-    <p>If LM Studio cannot find that exact model, run this instead and choose a small Q4 instruction model from the results:</p>
-    <pre class="code-block" id="cmd-download-fallback">lms get qwen2.5-3b-instruct --always-show-all-results --always-show-download-options</pre>
-    <button class="audio-button copy-command" type="button" data-copy-target="cmd-download-fallback">copy fallback command</button>
-  </section>
-
-  <section class="gate">
-    <h3>Step 4 — load the model under the Ghostlight name</h3>
-    <p>First list your downloaded model keys:</p>
-    <pre class="code-block" id="cmd-list">lms ls</pre>
-    <button class="audio-button copy-command" type="button" data-copy-target="cmd-list">copy list command</button>
-
-<p>Then load the model. If your model key is different, replace <code>qwen2.5-3b-instruct</code> with the exact key shown by <code>lms ls</code>.</p>
-<pre class="code-block" id="cmd-load">lms load qwen2.5-3b-instruct --identifier ghostlight-care-judge --context-length 4096 --gpu auto</pre>
-<button class="audio-button copy-command" type="button" data-copy-target="cmd-load">copy load command</button>
-
-  </section>
-
-  <section class="gate">
-    <h3>Step 5 — start the local server for browser care gates</h3>
-    <p>This starts the LM Studio local server with browser access enabled. Keep it on localhost only.</p>
-    <pre class="code-block" id="cmd-server">lms server start --port 1234 --cors --bind 127.0.0.1</pre>
-    <button class="audio-button copy-command" type="button" data-copy-target="cmd-server">copy server command</button>
-  </section>
-
-  <section class="gate">
-    <h3>Step 6 — check that Ghostlight can see the model</h3>
-    <p>Run this in PowerShell to confirm the model is loaded:</p>
-    <pre class="code-block" id="cmd-check">lms ps</pre>
-    <button class="audio-button copy-command" type="button" data-copy-target="cmd-check">copy check command</button>
-
-<p>Then use the relay test below.</p>
-<button class="audio-button" id="test-local-judge" type="button">test local relay</button>
-<p id="local-judge-status" class="audio-status" aria-live="polite"></p>
-
-  </section>
-</section>
-
-<script>
-  (function () {
-    document.querySelectorAll(".copy-command").forEach((button) => {
-      button.addEventListener("click", async () => {
-        const targetId = button.dataset.copyTarget;
-        const target = document.getElementById(targetId);
-        if (!target) return;
-
-        try {
-          await navigator.clipboard.writeText(target.textContent.trim());
-          button.textContent = "copied";
-          window.setTimeout(() => {
-            button.textContent = button.textContent.replace("copied", "copy command");
-          }, 1200);
-        } catch {
-          button.textContent = "copy failed";
-        }
-      });
-    });
-
-    const testButton = document.getElementById("test-local-judge");
-    const status = document.getElementById("local-judge-status");
-
-    if (!testButton || !status) return;
-
-    testButton.addEventListener("click", async () => {
-      status.textContent = "testing local relay...";
-
-      try {
-        const response = await fetch("http://localhost:1234/v1/chat/completions", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json"
-          },
-          body: JSON.stringify({
-            model: "ghostlight-care-judge",
-            messages: [
-              {
-                role: "system",
-                content: "You are a local relay test. Return only the word READY."
-              },
-              {
-                role: "user",
-                content: "Test relay."
-              }
-            ],
-            temperature: 0,
-            max_tokens: 8
-          })
-        });
-
-        if (!response.ok) {
-          status.textContent = "local relay found, but the model request failed";
-          return;
-        }
-
-        const data = await response.json();
-        const text = (data.choices?.[0]?.message?.content || "").trim().toLowerCase();
-
-        if (text.includes("ready")) {
-          sessionStorage.setItem("ghostlightLocalJudgeReady", "true");
-          status.textContent = "local care-gate judge ready";
-        } else {
-          status.textContent = "local relay responded, but not in expected format";
-        }
-      } catch {
-        sessionStorage.removeItem("ghostlightLocalJudgeReady");
-        status.textContent = "local relay not available; use static gates";
-      }
-    });
-  }());
-</script>
-
-  <section class="warning">
-    <p>Information is a reward, not a right. Access is not entitlement.</p>
-  </section>
-
-  <ul class="nav-links">
-    <li><a href="layer_01.html">enter trunk</a></li>
-  </ul>
-
-</article>
-
+      <ul class="nav-links">
+        <li><a href="layer_01.html">enter trunk</a></li>
+      </ul>
+    </article>
   </main>
   <script src="../site/script.js?v=branch-inputs-2"></script>
 </body>
