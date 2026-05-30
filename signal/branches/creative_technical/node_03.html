@@ -1,4 +1,5 @@
 <!doctype html>
+
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -9,35 +10,186 @@
 <body>
   <main class="ghost-page">
     <article class="ghost-card">
-      <p class="breadcrumb">signal packet</p>
-      <h1>GHOSTLIGHT PROTOCOL // CREATIVE TECHNICAL // NODE 03</h1>
-      <pre class="code-block">GHOSTLIGHT PROTOCOL // CREATIVE TECHNICAL // NODE 03
 
-source:
-Codex section 9.2
+```
+  <p class="breadcrumb">creative_technical // node 03</p>
+  <h1>GHOSTLIGHT PROTOCOL // CREATIVE TECHNICAL // NODE 03</h1>
 
-care gate:
-Practical competence counts.
+  <section class="gate">
+    <h2>feedback without extraction</h2>
+    <p>The old read treats unfinished work as available for taking, correcting, consuming, or proving competence. The stable read protects authorship and capacity.</p>
 
-answer:
-Open the path that matches the correct receiver stance:
+    <pre class="code-block">collaboration trace:
+```
 
-signal/branches/creative_technical/node_03_gate_&lt;stance&gt;.html
+draft exposed ............ handle gently
+useful critique .......... ask timing
+tired builder ............ preserve capacity
+unfinished system ........ do not seize
+strong idea .............. do not overwrite
+tool suggestion .......... offer, do not command
+shared work .............. authorship remains
 
-format:
-lowercase_snake_case
+The work may be open.
+The builder is not.</pre> </section>
 
-return:
-signal/hub.html
+```
+  <section class="gate" aria-labelledby="answer-title">
+    <h2 id="answer-title">receiver input</h2>
+    <p>Enter the collaboration rule that protects the work without taking it over.</p>
 
-previous:
-signal/branches/creative_technical/node_02.html
-</pre>
-      <ul class="nav-links">
-        <li><a href="../../hub.html">hub</a></li>
-      </ul>
-    </article>
+    <form id="creative-technical-node-03-form">
+      <label for="creative-technical-node-03-answer">answer packet</label><br>
+      <input
+        id="creative-technical-node-03-answer"
+        name="answer"
+        type="text"
+        autocomplete="off"
+        spellcheck="false"
+        class="answer-input"
+        placeholder="collaboration rule..."
+      >
+      <button class="audio-button" type="submit">submit packet</button>
+    </form>
+
+    <p id="creative-technical-node-03-status" class="audio-status" aria-live="polite"></p>
+  </section>
+
+  <ul class="nav-links">
+    <li><a href="node_02_reward.html">previous reward</a></li>
+    <li><a href="start.html">branch overview</a></li>
+    <li><a href="../../hub.html">hub</a></li>
+  </ul>
+
+</article>
+```
+
   </main>
-  <script src="../../../site/script.js?v=d2c2981"></script>
+
+  <script>
+    (function () {
+      const form = document.getElementById("creative-technical-node-03-form");
+      const input = document.getElementById("creative-technical-node-03-answer");
+      const status = document.getElementById("creative-technical-node-03-status");
+
+      function normalize(value) {
+        return value.trim().toLowerCase();
+      }
+
+      function compact(value) {
+        return normalize(value).replace(/[^a-z0-9]/g, "");
+      }
+
+      function includesAny(text, terms) {
+        return terms.some((term) => text.includes(term));
+      }
+
+      const exact = new Set([
+        "feedbackwithoutextraction",
+        "collaborationwithoutextraction",
+        "protectauthorship",
+        "authorshipremains",
+        "preserveauthorship",
+        "respectauthorship",
+        "asktiming",
+        "askfortiming",
+        "askbeforefeedback",
+        "askbeforerevising",
+        "offerdo notcommand",
+        "offerdo notcontrol",
+        "offerwithouttakingover",
+        "donottakeover",
+        "do not take over",
+        "donttakeover",
+        "do not seize",
+        "donotseize",
+        "dontseize",
+        "protectcapacity",
+        "preservecapacity",
+        "capacitybeforecritique",
+        "consentbeforecritique",
+        "consentbeforefeedback",
+        "collaborationneedsconsent",
+        "thebuilderremainstheauthor",
+        "builderremainstheauthor",
+        "theworkmaybethebuilderisnot",
+        "theworkisopenthebuilderisnot",
+        "workopenbuildernot"
+      ]);
+
+      const rejected = new Set([
+        "feedback",
+        "critique",
+        "fix",
+        "correct",
+        "improve",
+        "takeover",
+        "control",
+        "command",
+        "rewrite",
+        "consume",
+        "extract",
+        "talent",
+        "work",
+        "draft",
+        "help",
+        "care",
+        "collaboration",
+        "everything"
+      ]);
+
+      function isValidAnswer(value) {
+        const text = normalize(value);
+        const key = compact(value);
+
+        if (!key) return false;
+        if (rejected.has(key)) return false;
+        if (exact.has(key)) return true;
+
+        if (
+          includesAny(text, ["ask", "consent", "permission", "timing"]) &&
+          includesAny(text, ["feedback", "critique", "revise", "suggestion", "input"])
+        ) return true;
+
+        if (
+          includesAny(text, ["protect", "preserve", "respect"]) &&
+          includesAny(text, ["authorship", "capacity", "builder", "author", "ownership"])
+        ) return true;
+
+        if (
+          includesAny(text, ["offer", "suggest", "support"]) &&
+          includesAny(text, ["not command", "do not command", "dont command", "not control", "do not control", "dont control", "not take over", "do not take over", "dont take over"])
+        ) return true;
+
+        if (
+          includesAny(text, ["do not", "dont", "never"]) &&
+          includesAny(text, ["seize", "take over", "overwrite", "extract", "consume"]) &&
+          includesAny(text, ["work", "draft", "builder", "author", "project"])
+        ) return true;
+
+        if (
+          includesAny(text, ["collaboration", "feedback", "critique"]) &&
+          includesAny(text, ["consent", "capacity", "authorship", "timing", "gentle", "respect"])
+        ) return true;
+
+        return false;
+      }
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        if (isValidAnswer(input.value)) {
+          status.textContent = "packet accepted";
+          window.location.href = "node_03_reward.html";
+        } else {
+          status.textContent = "packet rejected";
+          window.location.href = "../../fail/care_gate_failed.html";
+        }
+      });
+    }());
+  </script>
+
+  <script src="../../../site/script.js?v=branch-inputs-3"></script>
+
 </body>
 </html>

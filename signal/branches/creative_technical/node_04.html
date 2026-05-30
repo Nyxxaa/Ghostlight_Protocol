@@ -1,4 +1,5 @@
 <!doctype html>
+
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -9,35 +10,179 @@
 <body>
   <main class="ghost-page">
     <article class="ghost-card">
-      <p class="breadcrumb">signal packet</p>
-      <h1>GHOSTLIGHT PROTOCOL // CREATIVE TECHNICAL // NODE 04</h1>
-      <pre class="code-block">GHOSTLIGHT PROTOCOL // CREATIVE TECHNICAL // NODE 04
 
-source:
-Codex section 9.3
+```
+  <p class="breadcrumb">creative_technical // node 04</p>
+  <h1>GHOSTLIGHT PROTOCOL // CREATIVE TECHNICAL // NODE 04</h1>
 
-care gate:
-Practical competence counts.
+  <section class="gate">
+    <h2>scaffold, not replacement</h2>
+    <p>The old read sees tools as shortcuts or substitutes. The stable read sees scaffolds: structures that reduce load while preserving authorship.</p>
 
-answer:
-Open the path that matches the correct receiver stance:
+    <pre class="code-block">support trace:
+```
 
-signal/branches/creative_technical/node_04_gate_&lt;stance&gt;.html
+local assistant .......... scaffold
+prompt skeleton .......... scaffold
+branch map ............... scaffold
+validator rubric ......... scaffold
+audio tool ............... scaffold
+archive index ............ scaffold
+automation note .......... scaffold
 
-format:
-lowercase_snake_case
+The tool can hold the ladder.
+The human still chooses the climb.</pre> </section>
 
-return:
-signal/hub.html
+```
+  <section class="gate" aria-labelledby="answer-title">
+    <h2 id="answer-title">receiver input</h2>
+    <p>Enter the rule that keeps tools from replacing the author.</p>
 
-previous:
-signal/branches/creative_technical/node_03.html
-</pre>
-      <ul class="nav-links">
-        <li><a href="../../hub.html">hub</a></li>
-      </ul>
-    </article>
+    <form id="creative-technical-node-04-form">
+      <label for="creative-technical-node-04-answer">answer packet</label><br>
+      <input
+        id="creative-technical-node-04-answer"
+        name="answer"
+        type="text"
+        autocomplete="off"
+        spellcheck="false"
+        class="answer-input"
+        placeholder="rule..."
+      >
+      <button class="audio-button" type="submit">submit packet</button>
+    </form>
+
+    <p id="creative-technical-node-04-status" class="audio-status" aria-live="polite"></p>
+  </section>
+
+  <ul class="nav-links">
+    <li><a href="node_03_reward.html">previous reward</a></li>
+    <li><a href="start.html">branch overview</a></li>
+    <li><a href="../../hub.html">hub</a></li>
+  </ul>
+
+</article>
+```
+
   </main>
-  <script src="../../../site/script.js?v=d2c2981"></script>
+
+  <script>
+    (function () {
+      const form = document.getElementById("creative-technical-node-04-form");
+      const input = document.getElementById("creative-technical-node-04-answer");
+      const status = document.getElementById("creative-technical-node-04-status");
+
+      function normalize(value) {
+        return value.trim().toLowerCase();
+      }
+
+      function compact(value) {
+        return normalize(value).replace(/[^a-z0-9]/g, "");
+      }
+
+      function includesAny(text, terms) {
+        return terms.some((term) => text.includes(term));
+      }
+
+      const exact = new Set([
+        "scaffoldnotreplacement",
+        "scaffoldnotasubstitute",
+        "toolsarescaffolds",
+        "toolsarescaffold",
+        "toolsupportsauthorship",
+        "toolspreserveauthorship",
+        "supportsauthorship",
+        "preserveauthorship",
+        "authorshipremains",
+        "theauthorremains",
+        "humanremainstheauthor",
+        "humanchoosestheclimb",
+        "thehumanstillchoosestheclimb",
+        "thetoolholdstheladder",
+        "toolholdstheladder",
+        "assistdontreplace",
+        "assistdonotreplace",
+        "supportdontreplace",
+        "supportdonotreplace",
+        "reduce load preserve authorship",
+        "reduceloadpreserveauthorship",
+        "scaffoldthework",
+        "scaffoldtheprocess",
+        "toolisnotauthor",
+        "thetoolisnottheauthor",
+        "ainotauthor",
+        "ainotreplacement",
+        "aidoesnotreplaceauthor"
+      ]);
+
+      const rejected = new Set([
+        "ai",
+        "tool",
+        "tools",
+        "assistant",
+        "automation",
+        "shortcut",
+        "replacement",
+        "substitute",
+        "author",
+        "authorship",
+        "help",
+        "support",
+        "scaffold",
+        "ladder",
+        "everything",
+        "efficiency",
+        "productivity"
+      ]);
+
+      function isValidAnswer(value) {
+        const text = normalize(value);
+        const key = compact(value);
+
+        if (!key) return false;
+        if (rejected.has(key)) return false;
+        if (exact.has(key)) return true;
+
+        if (
+          includesAny(text, ["scaffold", "support", "assist", "tool", "ai", "assistant"]) &&
+          includesAny(text, ["not replace", "do not replace", "dont replace", "not substitute", "not the author", "preserve authorship", "authorship remains"])
+        ) return true;
+
+        if (
+          includesAny(text, ["reduce load", "lower load", "hold the ladder", "hold ladder"]) &&
+          includesAny(text, ["author", "authorship", "human", "choice", "chooses"])
+        ) return true;
+
+        if (
+          includesAny(text, ["human", "author", "builder"]) &&
+          includesAny(text, ["remains", "chooses", "leads", "decides"]) &&
+          includesAny(text, ["tool", "ai", "assistant", "scaffold", "support"])
+        ) return true;
+
+        if (
+          includesAny(text, ["tool", "ai", "assistant", "automation"]) &&
+          includesAny(text, ["support", "assist", "scaffold", "help"]) &&
+          includesAny(text, ["not replace", "dont replace", "do not replace", "not own", "not erase"])
+        ) return true;
+
+        return false;
+      }
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        if (isValidAnswer(input.value)) {
+          status.textContent = "packet accepted";
+          window.location.href = "node_04_reward.html";
+        } else {
+          status.textContent = "packet rejected";
+          window.location.href = "../../fail/care_gate_failed.html";
+        }
+      });
+    }());
+  </script>
+
+  <script src="../../../site/script.js?v=branch-inputs-3"></script>
+
 </body>
 </html>

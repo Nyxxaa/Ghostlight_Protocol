@@ -1,4 +1,5 @@
 <!doctype html>
+
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -9,35 +10,172 @@
 <body>
   <main class="ghost-page">
     <article class="ghost-card">
-      <p class="breadcrumb">signal packet</p>
-      <h1>GHOSTLIGHT PROTOCOL // CREATIVE TECHNICAL // NODE 02</h1>
-      <pre class="code-block">GHOSTLIGHT PROTOCOL // CREATIVE TECHNICAL // NODE 02
 
-source:
-Codex section 9.1
+```
+  <p class="breadcrumb">creative_technical // node 02</p>
+  <h1>GHOSTLIGHT PROTOCOL // CREATIVE TECHNICAL // NODE 02</h1>
 
-care gate:
-Practical competence counts.
+  <section class="gate">
+    <h2>tools change, function repeats</h2>
+    <p>The old read sorts by tool. The stable read sorts by function.</p>
 
-answer:
-Open the path that matches the correct receiver stance:
+    <pre class="code-block">artifact trace:
+```
 
-signal/branches/creative_technical/node_02_gate_&lt;stance&gt;.html
+voice track ............. signal carried through sound
+visual design ........... signal carried through shape
+branch puzzle ........... signal carried through gates
+bot scaffold ............ signal carried through structure
+world rule .............. signal carried through simulation
+debug note .............. signal carried through repair
+archive map ............. signal carried through memory
 
-format:
-lowercase_snake_case
+The tool changes.
+The signal does not.</pre> </section>
 
-return:
-signal/hub.html
+```
+  <section class="gate" aria-labelledby="answer-title">
+    <h2 id="answer-title">receiver input</h2>
+    <p>Enter the principle that lets different tools reveal the same function.</p>
 
-previous:
-signal/branches/creative_technical/node_01.html
-</pre>
-      <ul class="nav-links">
-        <li><a href="../../hub.html">hub</a></li>
-      </ul>
-    </article>
+    <form id="creative-technical-node-02-form">
+      <label for="creative-technical-node-02-answer">answer packet</label><br>
+      <input
+        id="creative-technical-node-02-answer"
+        name="answer"
+        type="text"
+        autocomplete="off"
+        spellcheck="false"
+        class="answer-input"
+        placeholder="principle..."
+      >
+      <button class="audio-button" type="submit">submit packet</button>
+    </form>
+
+    <p id="creative-technical-node-02-status" class="audio-status" aria-live="polite"></p>
+  </section>
+
+  <ul class="nav-links">
+    <li><a href="node_01_reward.html">previous reward</a></li>
+    <li><a href="start.html">branch overview</a></li>
+    <li><a href="../../hub.html">hub</a></li>
+  </ul>
+
+</article>
+```
+
   </main>
-  <script src="../../../site/script.js?v=d2c2981"></script>
+
+  <script>
+    (function () {
+      const form = document.getElementById("creative-technical-node-02-form");
+      const input = document.getElementById("creative-technical-node-02-answer");
+      const status = document.getElementById("creative-technical-node-02-status");
+
+      function normalize(value) {
+        return value.trim().toLowerCase();
+      }
+
+      function compact(value) {
+        return normalize(value).replace(/[^a-z0-9]/g, "");
+      }
+
+      function includesAny(text, terms) {
+        return terms.some((term) => text.includes(term));
+      }
+
+      const exact = new Set([
+        "toolschangefunctionrepeats",
+        "toolschangesignalrepeats",
+        "toolschangefunctionstays",
+        "toolschangefunctionremains",
+        "thetoolchangesthesignaldoesnot",
+        "toolchangesignaldoesnot",
+        "differenttoolssamefunction",
+        "differenttoolssamesignal",
+        "samefunctiondifferenttools",
+        "samesignaldifferenttools",
+        "functionrepeats",
+        "signalrepeats",
+        "samefunction",
+        "samesignal",
+        "sortbyfunction",
+        "sortbyfunctionnottool",
+        "functionovertool",
+        "signalovertool",
+        "themediumchangesthefunctionrepeats",
+        "mediumchangesfunctionrepeats",
+        "thetoolchangesthefunctionrepeats",
+        "toolchangesthefunctionrepeats"
+      ]);
+
+      const rejected = new Set([
+        "tools",
+        "tool",
+        "sound",
+        "voice",
+        "art",
+        "design",
+        "bot",
+        "code",
+        "writing",
+        "music",
+        "memory",
+        "repair",
+        "archive",
+        "signal",
+        "function",
+        "medium",
+        "project",
+        "projects",
+        "everything"
+      ]);
+
+      function isValidAnswer(value) {
+        const text = normalize(value);
+        const key = compact(value);
+
+        if (!key) return false;
+        if (rejected.has(key)) return false;
+        if (exact.has(key)) return true;
+
+        if (
+          includesAny(text, ["tool", "medium", "materials", "method", "form"]) &&
+          includesAny(text, ["change", "changes", "different", "varies", "vary"]) &&
+          includesAny(text, ["function", "signal", "pattern", "purpose"]) &&
+          includesAny(text, ["same", "repeats", "stays", "remains", "returns"])
+        ) return true;
+
+        if (
+          includesAny(text, ["same", "repeats", "repeat", "stays", "remains"]) &&
+          includesAny(text, ["function", "signal", "pattern", "purpose"]) &&
+          includesAny(text, ["different", "tools", "mediums", "forms", "materials"])
+        ) return true;
+
+        if (
+          includesAny(text, ["sort", "read", "organize"]) &&
+          includesAny(text, ["function", "signal", "purpose"]) &&
+          includesAny(text, ["not tool", "not tools", "rather than tool", "instead of tool"])
+        ) return true;
+
+        return false;
+      }
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        if (isValidAnswer(input.value)) {
+          status.textContent = "packet accepted";
+          window.location.href = "node_02_reward.html";
+        } else {
+          status.textContent = "packet rejected";
+          window.location.href = "../../fail/puzzle_failed.html";
+        }
+      });
+    }());
+  </script>
+
+  <script src="../../../site/script.js?v=branch-inputs-3"></script>
+
 </body>
 </html>

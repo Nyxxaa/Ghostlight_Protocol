@@ -1,4 +1,5 @@
 <!doctype html>
+
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -9,35 +10,189 @@
 <body>
   <main class="ghost-page">
     <article class="ghost-card">
-      <p class="breadcrumb">signal packet</p>
-      <h1>GHOSTLIGHT PROTOCOL // CREATIVE TECHNICAL // NODE 01</h1>
-      <pre class="code-block">GHOSTLIGHT PROTOCOL // CREATIVE TECHNICAL // NODE 01
 
-source:
-Codex section 9.0
+```
+  <p class="breadcrumb">creative_technical // node 01</p>
+  <h1>GHOSTLIGHT PROTOCOL // CREATIVE TECHNICAL // NODE 01</h1>
 
-care gate:
-Practical competence counts.
+  <section class="gate">
+    <h2>project is system</h2>
+    <p>The old read sees scattered hobbies. The stable read sees one builder moving through different materials.</p>
 
-answer:
-Open the path that matches the correct receiver stance:
+    <pre class="code-block">artifact trace:
+```
 
-signal/branches/creative_technical/node_01_gate_&lt;stance&gt;.html
+story draft .............. structure
+song layer ............... structure
+bot schedule ............. structure
+puzzle branch ............ structure
+visual design ............ structure
+tool patch ............... structure
+world rule ............... structure
+repair note .............. structure
 
-format:
-lowercase_snake_case
+The medium changes.
+The function repeats.</pre> </section>
 
-return:
-signal/hub.html
+```
+  <section class="gate" aria-labelledby="answer-title">
+    <h2 id="answer-title">receiver input</h2>
+    <p>Enter the principle that keeps the projects from becoming a scattered pile.</p>
 
-previous:
-signal/branches/creative_technical/start.html
-</pre>
-      <ul class="nav-links">
-        <li><a href="../../hub.html">hub</a></li>
-      </ul>
-    </article>
+    <form id="creative-technical-node-01-form">
+      <label for="creative-technical-node-01-answer">answer packet</label><br>
+      <input
+        id="creative-technical-node-01-answer"
+        name="answer"
+        type="text"
+        autocomplete="off"
+        spellcheck="false"
+        class="answer-input"
+        placeholder="principle..."
+      >
+      <button class="audio-button" type="submit">submit packet</button>
+    </form>
+
+    <p id="creative-technical-node-01-status" class="audio-status" aria-live="polite"></p>
+  </section>
+
+  <ul class="nav-links">
+    <li><a href="start.html">branch overview</a></li>
+    <li><a href="../../hub.html">hub</a></li>
+  </ul>
+
+</article>
+```
+
   </main>
-  <script src="../../../site/script.js?v=d2c2981"></script>
+
+  <script>
+    (function () {
+      const form = document.getElementById("creative-technical-node-01-form");
+      const input = document.getElementById("creative-technical-node-01-answer");
+      const status = document.getElementById("creative-technical-node-01-status");
+
+      function normalize(value) {
+        return value.trim().toLowerCase();
+      }
+
+      function compact(value) {
+        return normalize(value).replace(/[^a-z0-9]/g, "");
+      }
+
+      function includesAny(text, terms) {
+        return terms.some((term) => text.includes(term));
+      }
+
+      const exact = new Set([
+        "projectissystem",
+        "projectsaresystems",
+        "projectisasystem",
+        "theprojectisasystem",
+        "creativeworkissystem",
+        "creativeworkisasystem",
+        "creativityisasystem",
+        "living system",
+        "livingsystem",
+        "onesystem",
+        "onefunction",
+        "onefunctiondifferenttools",
+        "samefunctiondifferenttools",
+        "toolschangefunctionrepeats",
+        "functionrepeats",
+        "structure",
+        "systems",
+        "pattern",
+        "structureholdsit",
+        "structureholdstogether",
+        "structuredcreation",
+        "not scattered",
+        "notscattered",
+        "notahobby",
+        "notjusthobbies",
+        "morethanhobbies"
+      ]);
+
+      const rejected = new Set([
+        "art",
+        "music",
+        "writing",
+        "hobbies",
+        "hobby",
+        "talent",
+        "skill",
+        "skills",
+        "pretty",
+        "fun",
+        "projects",
+        "tools",
+        "stuff",
+        "everything",
+        "work"
+      ]);
+
+      function isValidAnswer(value) {
+        const text = normalize(value);
+        const key = compact(value);
+
+        if (!key) return false;
+        if (rejected.has(key)) return false;
+        if (exact.has(key)) return true;
+
+        const systemWords = [
+          "system",
+          "structure",
+          "pattern",
+          "function",
+          "architecture",
+          "framework",
+          "scaffold"
+        ];
+
+        const projectWords = [
+          "project",
+          "creative",
+          "tool",
+          "medium",
+          "work",
+          "art",
+          "story",
+          "music",
+          "bot",
+          "world",
+          "repair"
+        ];
+
+        if (includesAny(text, systemWords) && includesAny(text, projectWords)) return true;
+
+        if (
+          includesAny(text, ["same", "one", "repeats", "repeat"]) &&
+          includesAny(text, ["function", "structure", "pattern", "signal"])
+        ) return true;
+
+        if (
+          includesAny(text, ["not scattered", "not random", "not separate"]) &&
+          includesAny(text, ["system", "structure", "pattern", "signal", "function"])
+        ) return true;
+
+        return false;
+      }
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        if (isValidAnswer(input.value)) {
+          status.textContent = "packet accepted";
+          window.location.href = "node_01_reward.html";
+        } else {
+          status.textContent = "packet rejected";
+          window.location.href = "../../fail/puzzle_failed.html";
+        }
+      });
+    }());
+  </script>
+
+  <script src="../../../site/script.js?v=branch-inputs-3"></script>
+
 </body>
 </html>
