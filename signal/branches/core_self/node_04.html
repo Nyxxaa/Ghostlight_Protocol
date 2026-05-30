@@ -9,35 +9,64 @@
 <body>
   <main class="ghost-page">
     <article class="ghost-card">
-      <p class="breadcrumb">signal packet</p>
+      <p class="breadcrumb">core_self // node 04 // difficulty 1.3</p>
       <h1>GHOSTLIGHT PROTOCOL // CORE SELF // NODE 04</h1>
-      <pre class="code-block">GHOSTLIGHT PROTOCOL // CORE SELF // NODE 04
+      <section class="gate">
+        <h2>tool scatter</h2>
+        <p>The list looks scattered until the receiver notices the shared function.</p>
+        <pre class="code-block">TRACE TABLE
 
-source:
-Codex section 2.6
+sound practice ....... signal made precise
+visual work .......... shape made visible
+binding pages ........ memory given structure
+media setup .......... signal path made usable
+image capture ........ attention made visible
+small programs ....... friction reduced
+rule-worlds .......... systems made inhabitable
+organized records .... continuity protected
 
-care gate:
-Do not flatten a person into one trait.
-
-answer:
-Open the path that matches the correct receiver stance:
-
-signal/branches/core_self/node_04_gate_&lt;stance&gt;.html
-
-format:
-lowercase_snake_case
-
-return:
-signal/hub.html
-
-previous:
-signal/branches/core_self/node_03.html
-</pre>
+The false read collects trophies.
+The stable read sees one function wearing different tools.</pre>
+      </section>
+      <section class="warning">
+        <p>Common failures: treating competence as spectacle, treating projects as random hobbies, or admiring the tool while missing the structure it protects.</p>
+      </section>
+      <section class="gate" aria-labelledby="answer-title">
+        <h2 id="answer-title">receiver input</h2>
+        <p>Enter the pattern that connects the tools.</p>
+        <form id="core-node-04-form">
+          <label for="core-node-04-answer">answer packet</label><br>
+          <input id="core-node-04-answer" name="answer" type="text" autocomplete="off" spellcheck="false" class="answer-input" placeholder="connecting pattern">
+          <button class="audio-button" type="submit">submit packet</button>
+        </form>
+        <p id="core-node-04-status" class="audio-status" aria-live="polite"></p>
+      </section>
       <ul class="nav-links">
+        <li><a href="node_03_reward.html">previous reward</a></li>
+        <li><a href="start.html">branch overview</a></li>
         <li><a href="../../hub.html">hub</a></li>
       </ul>
     </article>
   </main>
-  <script src="../../../site/script.js?v=d2c2981"></script>
+  <script>
+    (function () {
+      const form = document.getElementById("core-node-04-form");
+      const input = document.getElementById("core-node-04-answer");
+      const status = document.getElementById("core-node-04-status");
+      const accepted = new Set(["b6c703f06b2b88ac747a801f54e1354c4aa1d38da7e20ee7f7c8f725e5ee6089","d454d9061e53814154cd846cf8863a529f386f4172c8aa495842becdb86b4663","d5770634b90d3022903293a7df33a8a03980da0b38009a0f8770d24a9d02dd06","d22677fe24949bfd3ebf1de049863deb205d655a637a27e31a98dbab8319b687","56d6dfe37c13875172763b5189f3df871042a7958064c64d3c669d7a4ebe5c58","632707af749fb023f535c871c95cb01521085da13c31dd2c598e0be8f362e2ec"]);
+      function normalize(value) { return value.trim().toLowerCase().replace(/[^a-z0-9]/g, ""); }
+      function hex(buffer) { return Array.prototype.map.call(new Uint8Array(buffer), function (byte) { return byte.toString(16).padStart(2, "0"); }).join(""); }
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        const value = normalize(input.value);
+        if (!value) { status.textContent = "empty trace"; return; }
+        crypto.subtle.digest("SHA-256", new TextEncoder().encode(value)).then(function (digest) {
+          if (accepted.has(hex(digest))) { status.textContent = "system recognized"; window.location.href = "node_04_reward.html"; }
+          else { status.textContent = "tool scatter unresolved"; window.location.href = "../../fail/puzzle_failed.html"; }
+        }).catch(function () { status.textContent = "validator unavailable"; });
+      });
+    }());
+  </script>
+  <script src="../../../site/script.js?v=branch-inputs-2"></script>
 </body>
 </html>
