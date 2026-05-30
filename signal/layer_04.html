@@ -53,8 +53,6 @@
 
   </main>
 
-  <script src="../site/script.js?v=d2c2981"></script>
-
   <script>
     const form = document.getElementById("layer-04-answer-form");
     const input = document.getElementById("layer-04-answer");
@@ -82,15 +80,16 @@
       const answer = normalizeAnswer(input.value);
 
       if (acceptedAnswers.has(answer)) {
-        status.textContent = "signal accepted";
+        status.textContent = "packet accepted";
         window.location.href = "trunk_rewards/layer_04_reward.html";
-        return;
+      } else {
+        status.textContent = "packet rejected";
+        window.location.href = "fail/puzzle_failed.html";
       }
-
-      status.textContent = "checksum failed";
-      window.location.href = "fail/puzzle_failed.html";
     });
   </script>
+
+  <script src="../site/script.js?v=branch-inputs-2"></script>
 
 </body>
 </html>
