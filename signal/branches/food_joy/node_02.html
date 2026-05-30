@@ -74,32 +74,53 @@ The stable read sees function carried through flavor.</pre>
 
       function accepts(value) {
         const key = compact(value);
-        const rejected = new Set(["flavor", "taste", "sauce", "salt", "carbs", "protein", "fat", "yummy", "goodfood", "diet"]);
+        const rejected = new Set([
+          "flavor",
+          "taste",
+          "sauce",
+          "salt",
+          "carbs",
+          "protein",
+          "fat",
+          "yummy",
+          "goodfood",
+          "diet",
+          "decoration",
+          "intention"
+        ]);
         if (rejected.has(key)) return false;
 
         const exact = new Set([
+          "access",
+          "function",
+          "accessarchitecture",
+          "supportarchitecture",
           "flavorcarriesfunction",
           "flavorcarriesaccess",
           "flavorhelpsfunction",
           "flavorisaccess",
-          "sauceisabridge",
+          "functionridesflavor",
           "flavorbridge",
+          "sauceisabridge",
           "textureandflavor",
           "saltumamiacid",
           "saltumamitang",
           "brightacidopensaccess",
           "proteinfatcarbssupport",
           "foodneedsflavor",
-          "functionridesflavor"
+          "intentionalsupport",
+          "intentionalfoodsupport",
+          "deliberatefoodsupport"
         ]);
         if (exact.has(key)) return true;
 
+        if (includesAny(key, ["access", "function", "bridge", "support", "architecture"])) return true;
         if (key.indexOf("flavor") !== -1 && includesAny(key, ["function", "access", "bridge", "support", "carries", "helps"])) return true;
         if (key.indexOf("sauce") !== -1 && includesAny(key, ["bridge", "access", "carrier", "carries"])) return true;
         if (includesAny(key, ["salt", "umami", "acid", "tang"]) && includesAny(key, ["access", "signal", "function", "support"])) return true;
-        if (includesAny(key, ["protein", "fat", "carbs"]) && includesAny(key, ["support", "stayingpower", "function"])) return true;
+        if (includesAny(key, ["protein", "fat", "carbs"]) && includesAny(key, ["support", "stayingpower", "function", "access"])) return true;
 
-        return includesAny(key, ["texture", "contrast"]) && includesAny(key, ["flavor", "access", "function"]);
+        return includesAny(key, ["texture", "contrast"]) && includesAny(key, ["flavor", "access", "function", "bridge", "support", "carries", "opens", "helps"]);
       }
 
       form.addEventListener("submit", function (event) {
