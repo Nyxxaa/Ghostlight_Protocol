@@ -65,20 +65,65 @@ TXT ghostlight.protocol "inspect the waveform visually"</pre> </section>
     const input = document.getElementById("layer-03-answer");
     const status = document.getElementById("layer-03-answer-status");
 
-    const acceptedAnswers = new Set([
-      "signal/layer_04_ghostlight.wav",
-      "layer_04_ghostlight.wav",
-      "sound is not only heard",
-      "signal is sometimes seen",
-      "inspect the waveform visually"
-    ]);
+    function normalize(value) {
+      return value.trim().toLowerCase().replace(/\s+/g, " ");
+    }
+
+    function compact(value) {
+      return normalize(value).replace(/[^a-z0-9]/g, "");
+    }
+
+    function includesAny(value, terms) {
+      return terms.some((term) => value.includes(term));
+    }
+
+    function isValidAnswer(value) {
+      const text = normalize(value);
+      const key = compact(value);
+      const rejected = new Set([
+        "sound",
+        "signal",
+        "audio",
+        "listen",
+        "heard",
+        "music",
+        "voice",
+        "wav"
+      ]);
+      const accepted = new Set([
+        "signallayer04ghostlightwav",
+        "layer04ghostlightwav",
+        "soundisnotonlyheard",
+        "signalissometimesseen",
+        "inspectthewaveformvisually",
+        "inspectwaveformvisually",
+        "inspectthewaveform",
+        "inspectwaveform",
+        "viewthewaveform",
+        "seethesignal",
+        "signalcanbeseen",
+        "soundcanbeseen",
+        "soundissignal",
+        "soundisasignal",
+        "soundcarriessignal",
+        "waveform",
+        "spectrogram",
+        "useaspectrogram",
+        "inspectthespectrogram"
+      ]);
+
+      if (!key) return false;
+      if (rejected.has(key)) return false;
+      if (accepted.has(key)) return true;
+      if (text.includes("waveform") || text.includes("spectrogram")) return true;
+
+      return includesAny(text, ["sound", "audio", "signal"]) && includesAny(text, ["seen", "visual", "waveform", "spectrogram", "carries"]);
+    }
 
     form.addEventListener("submit", (event) => {
       event.preventDefault();
 
-      const answer = input.value.trim().toLowerCase().replace(/\s+/g, " ");
-
-      if (acceptedAnswers.has(answer)) {
+      if (isValidAnswer(input.value)) {
         status.textContent = "packet accepted";
         window.location.href = "trunk_rewards/layer_03_reward.html";
       } else {
