@@ -9,35 +9,62 @@
 <body>
   <main class="ghost-page">
     <article class="ghost-card">
-      <p class="breadcrumb">signal packet</p>
+      <p class="breadcrumb">household_support // node 01 // difficulty 6.0</p>
       <h1>GHOSTLIGHT PROTOCOL // HOUSEHOLD SUPPORT // NODE 01</h1>
-      <pre class="code-block">GHOSTLIGHT PROTOCOL // HOUSEHOLD SUPPORT // NODE 01
+      <section class="gate">
+        <h2>household is an ecology, not a hierarchy</h2>
+        <p>The unsafe read ranks people by control, usefulness, romance, authority, or ownership. The stable read sees different roles sustaining the same sanctuary.</p>
+        <pre class="code-block">room ....................... function
+caretaker .................. function
+companion .................. function
+child/family bond .......... function
+quiet presence ............. function
+shared routine ............. function
+protected threshold ........ function
 
-source:
-Codex section 7.0
-
-care gate:
-Support preserves dignity and consent.
-
-answer:
-Open the path that matches the correct receiver stance:
-
-signal/branches/household_support/node_01_gate_&lt;stance&gt;.html
-
-format:
-lowercase_snake_case
-
-return:
-signal/hub.html
-
-previous:
-signal/branches/household_support/start.html
-</pre>
+The house is not a ladder.
+It is an ecology.</pre>
+      </section>
+      <section class="gate" aria-labelledby="answer-title">
+        <h2 id="answer-title">receiver input</h2>
+        <p>Enter the principle that keeps household from becoming hierarchy.</p>
+        <form id="household-support-node-01-form">
+          <label for="household-support-node-01-answer">answer packet</label><br>
+          <input id="household-support-node-01-answer" name="answer" type="text" autocomplete="off" spellcheck="false" class="answer-input" placeholder="principle...">
+          <button class="audio-button" type="submit">submit packet</button>
+        </form>
+        <p id="household-support-node-01-status" class="audio-status" aria-live="polite"></p>
+      </section>
       <ul class="nav-links">
+        <li><a href="start.html">branch overview</a></li>
         <li><a href="../../hub.html">hub</a></li>
       </ul>
     </article>
   </main>
-  <script src="../../../site/script.js?v=d2c2981"></script>
+  <script>
+    (function () {
+      const form = document.getElementById("household-support-node-01-form");
+      const input = document.getElementById("household-support-node-01-answer");
+      const status = document.getElementById("household-support-node-01-status");
+      const bad = ["hierarchy","control","ownership","rank","dominance","who matters most","usefulness","romance decides","authority"];
+      function norm(v){return v.trim().toLowerCase();}
+      function compact(v){return norm(v).replace(/[^a-z0-9]/g,"");}
+      function has(t,a){return a.some(x=>t.includes(x));}
+      function valid(v){
+        const t=norm(v), k=compact(v);
+        if(!k || bad.some(x=>k===compact(x))) return false;
+        if(has(t,["ecology","shared stability","sanctuary ecology","shared function"]) && has(t,["house","household","roles","sanctuary","belonging"])) return true;
+        if(has(t,["not a hierarchy","not hierarchy","not a ladder","belonging is not rank"])) return true;
+        if(has(t,["roles","different roles"]) && has(t,["support","sustain","same sanctuary","whole"])) return true;
+        return false;
+      }
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        if (valid(input.value)) { status.textContent = "packet accepted"; window.location.href = "node_01_reward.html"; }
+        else { status.textContent = "household ranked"; window.location.href = "../../fail/care_gate_failed.html"; }
+      });
+    }());
+  </script>
+  <script src="../../../site/script.js?v=branch-inputs-3"></script>
 </body>
 </html>

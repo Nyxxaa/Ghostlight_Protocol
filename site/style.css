@@ -397,6 +397,32 @@ input.code-block:focus {
   text-shadow: 0 0 0.55rem rgba(255, 209, 102, 0.55);
 }
 
+.color-key-emerald,
+.color-key-emerald .ascii-key,
+.color-key-emerald code,
+.color-key-emerald strong {
+  color: #50d98f;
+  text-shadow: 0 0 0.55rem rgba(80, 217, 143, 0.5);
+}
+
+.color-key-pearl,
+.color-key-pearl .ascii-key,
+.color-key-pearl code,
+.color-key-pearl strong {
+  color: #f2ead3;
+  text-shadow:
+    0 0 0.45rem rgba(242, 234, 211, 0.65),
+    0 0 0.85rem rgba(255, 255, 255, 0.35);
+}
+
+.color-key-rose,
+.color-key-rose .ascii-key,
+.color-key-rose code,
+.color-key-rose strong {
+  color: #ff6f91;
+  text-shadow: 0 0 0.55rem rgba(255, 111, 145, 0.5);
+}
+
 @media (prefers-reduced-motion: reduce) {
   .cursor {
     animation: none;

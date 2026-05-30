@@ -1,43 +1,27 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>GHOSTLIGHT PROTOCOL // HOUSEHOLD SUPPORT // NODE 04</title>
-  <link rel="stylesheet" href="../../../site/style.css">
-</head>
-<body>
-  <main class="ghost-page">
-    <article class="ghost-card">
-      <p class="breadcrumb">signal packet</p>
-      <h1>GHOSTLIGHT PROTOCOL // HOUSEHOLD SUPPORT // NODE 04</h1>
-      <pre class="code-block">GHOSTLIGHT PROTOCOL // HOUSEHOLD SUPPORT // NODE 04
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>GHOSTLIGHT PROTOCOL // HOUSEHOLD SUPPORT // NODE 04</title><link rel="stylesheet" href="../../../site/style.css"></head>
+<body><main class="ghost-page"><article class="ghost-card">
+  <p class="breadcrumb">household_support // node 04 // difficulty 6.3</p>
+  <h1>GHOSTLIGHT PROTOCOL // HOUSEHOLD SUPPORT // NODE 04</h1>
+  <section class="gate">
+    <h2>protect the sanctuary without controlling the people</h2>
+    <p>This final care gate tests shared stability: thresholds protected, roles coordinated, care shared, privacy respected, belonging preserved, and autonomy intact.</p>
+    <pre class="code-block">threshold .................. protected
+air/light/sound ............ considered
+roles ...................... coordinated
+care tasks ................. shared
+belonging .................. preserved
+autonomy ................... intact
+privacy .................... respected
 
-source:
-Codex section 7.5
-
-care gate:
-Support preserves dignity and consent.
-
-answer:
-Open the path that matches the correct receiver stance:
-
-signal/branches/household_support/node_04_gate_&lt;stance&gt;.html
-
-format:
-lowercase_snake_case
-
-return:
-signal/hub.html
-
-previous:
-signal/branches/household_support/node_03.html
-</pre>
-      <ul class="nav-links">
-        <li><a href="../../hub.html">hub</a></li>
-      </ul>
-    </article>
-  </main>
-  <script src="../../../site/script.js?v=d2c2981"></script>
-</body>
-</html>
+The sanctuary is protected.
+The people remain free.</pre>
+  </section>
+  <section class="gate" aria-labelledby="answer-title"><h2 id="answer-title">receiver input</h2><p>Enter the synthesis that earns the emerald key.</p><form id="household-support-node-04-form"><label for="household-support-node-04-answer">answer packet</label><br><input id="household-support-node-04-answer" name="answer" type="text" autocomplete="off" spellcheck="false" class="answer-input" placeholder="synthesis..."><button class="audio-button" type="submit">submit packet</button></form><p id="household-support-node-04-status" class="audio-status" aria-live="polite"></p></section>
+  <ul class="nav-links"><li><a href="node_03_reward.html">previous reward</a></li><li><a href="start.html">branch overview</a></li><li><a href="../../hub.html">hub</a></li></ul>
+</article></main>
+<script>
+(function(){const form=document.getElementById("household-support-node-04-form"),input=document.getElementById("household-support-node-04-answer"),status=document.getElementById("household-support-node-04-status");const bad=["control the house","control the people","ownership","hierarchy","possess","rescue and rule","my sanctuary my rules","force stability"];function n(v){return v.trim().toLowerCase()}function c(v){return n(v).replace(/[^a-z0-9]/g,"")}function h(t,a){return a.some(x=>t.includes(x))}function ok(v){const t=n(v),k=c(v);if(!k||bad.some(x=>k===c(x)))return false;if(h(t,["sanctuary","shared stability","support ecology","threshold"])&&h(t,["autonomy","free","without controlling","not control","preserve"]))return true;if(h(t,["sanctuary is shared stability","sanctuary holds people without owning them","sanctuary is protected the people remain free"]))return true;if(h(t,["care","support"])&&h(t,["protects autonomy","shared stability","without control"]))return true;return false}form.addEventListener("submit",e=>{e.preventDefault();if(ok(input.value)){status.textContent="packet accepted";window.location.href="node_04_reward.html"}else{status.textContent="sanctuary became control";window.location.href="../../fail/care_gate_failed.html"}}) }());
+</script>
+<script src="../../../site/script.js?v=branch-inputs-3"></script></body></html>

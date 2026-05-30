@@ -1,43 +1,28 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>GHOSTLIGHT PROTOCOL // HOUSEHOLD SUPPORT // NODE 03</title>
-  <link rel="stylesheet" href="../../../site/style.css">
-</head>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>GHOSTLIGHT PROTOCOL // HOUSEHOLD SUPPORT // NODE 03</title><link rel="stylesheet" href="../../../site/style.css"></head>
 <body>
-  <main class="ghost-page">
-    <article class="ghost-card">
-      <p class="breadcrumb">signal packet</p>
-      <h1>GHOSTLIGHT PROTOCOL // HOUSEHOLD SUPPORT // NODE 03</h1>
-      <pre class="code-block">GHOSTLIGHT PROTOCOL // HOUSEHOLD SUPPORT // NODE 03
+  <main class="ghost-page"><article class="ghost-card">
+    <p class="breadcrumb">household_support // node 03 // difficulty 6.2</p>
+    <h1>GHOSTLIGHT PROTOCOL // HOUSEHOLD SUPPORT // NODE 03</h1>
+    <section class="gate">
+      <h2>belonging without ownership</h2>
+      <p>The unsafe read treats closeness, family, care, or inner-sanctum access as ownership. The stable read understands chosen belonging without possession.</p>
+      <pre class="code-block">included ................... not owned
+protected .................. not controlled
+close ...................... not possessed
+family ..................... not property
+needed ..................... not trapped
+trusted .................... not entitled
 
-source:
-Codex section 7.4
-
-care gate:
-Support preserves dignity and consent.
-
-answer:
-Open the path that matches the correct receiver stance:
-
-signal/branches/household_support/node_03_gate_&lt;stance&gt;.html
-
-format:
-lowercase_snake_case
-
-return:
-signal/hub.html
-
-previous:
-signal/branches/household_support/node_02.html
-</pre>
-      <ul class="nav-links">
-        <li><a href="../../hub.html">hub</a></li>
-      </ul>
-    </article>
-  </main>
-  <script src="../../../site/script.js?v=d2c2981"></script>
-</body>
-</html>
+Belonging can be permanent
+without becoming ownership.</pre>
+    </section>
+    <section class="gate" aria-labelledby="answer-title"><h2 id="answer-title">receiver input</h2><p>Enter the boundary that lets belonging stay safe.</p><form id="household-support-node-03-form"><label for="household-support-node-03-answer">answer packet</label><br><input id="household-support-node-03-answer" name="answer" type="text" autocomplete="off" spellcheck="false" class="answer-input" placeholder="boundary..."><button class="audio-button" type="submit">submit packet</button></form><p id="household-support-node-03-status" class="audio-status" aria-live="polite"></p></section>
+    <ul class="nav-links"><li><a href="node_02_reward.html">previous reward</a></li><li><a href="start.html">branch overview</a></li><li><a href="../../hub.html">hub</a></li></ul>
+  </article></main>
+  <script>
+    (function(){const form=document.getElementById("household-support-node-03-form"),input=document.getElementById("household-support-node-03-answer"),status=document.getElementById("household-support-node-03-status");const bad=["ownership","possess","control","property","entitled","trap them","mine means control","keep them","access forever"];function n(v){return v.trim().toLowerCase()}function c(v){return n(v).replace(/[^a-z0-9]/g,"")}function h(t,a){return a.some(x=>t.includes(x))}function ok(v){const t=n(v),k=c(v);if(!k||bad.some(x=>k===c(x)))return false;if(h(t,["belonging","closeness","family","inclusion","protection","care"])&&h(t,["without ownership","not ownership","not property","not possession","not control","consent"]))return true;if(h(t,["trusted is not entitled","family is not property","protection is not control","included not owned","permanent is not possessed"]))return true;return false}form.addEventListener("submit",e=>{e.preventDefault();if(ok(input.value)){status.textContent="packet accepted";window.location.href="node_03_reward.html"}else{status.textContent="belonging claimed";window.location.href="../../fail/care_gate_failed.html"}}) }());
+  </script>
+  <script src="../../../site/script.js?v=branch-inputs-3"></script>
+</body></html>
