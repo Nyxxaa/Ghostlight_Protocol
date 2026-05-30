@@ -42,17 +42,38 @@ The stable read recognizes measured presence.</pre>
       const form = document.getElementById("core-node-03-form");
       const input = document.getElementById("core-node-03-answer");
       const status = document.getElementById("core-node-03-status");
-      const accepted = new Set(["8a64f5b90801945abdefef67523d1a9ffad313aa1d6175c7d1be7ad7966fcbe3","d5b70fbd8306319901ce2e4490940f8d1b9c34dc995b31acc72915fa09d34627","f69587a368326d4efebf2d1660a10e88c77efb8c49a18215751c7ecfcd3f8902","2c428affdb93466749e6e162ae11ceb323376606889538e04ab083dda783665c","4d21ab1cc3d76db8777659db03a2a14f8e762d9743163efb72a4b637014ae10e","14b62d899ee61c4cedb025ff75cbc271fc29850f44277dccda3aa6ac390c3bb6"]);
-      function normalize(value) { return value.trim().toLowerCase().replace(/[^a-z0-9]/g, ""); }
-      function hex(buffer) { return Array.prototype.map.call(new Uint8Array(buffer), function (byte) { return byte.toString(16).padStart(2, "0"); }).join(""); }
+      function normalize(value) { return value.trim().toLowerCase(); }
+      function compact(value) { return normalize(value).replace(/[^a-z0-9]/g, ""); }
+      function includesAny(value, terms) { return terms.some(function (term) { return value.indexOf(term) !== -1; }); }
+      function accepts(value) {
+        const key = compact(value);
+        const rejected = new Set(["cold", "empty", "absent", "aloof", "mysterious", "silent"]);
+        if (rejected.has(key)) return false;
+
+        const exact = new Set([
+          "measuredpresence",
+          "calmpresence",
+          "guardedpresence",
+          "quietisnotabsence",
+          "reservedisnotempty",
+          "observantpresence",
+          "stillnessissignal",
+          "presencenotperformance"
+        ]);
+
+        if (exact.has(key)) return true;
+        if (key.indexOf("presence") !== -1 && includesAny(key, ["measured", "calm", "guarded", "reserved", "observant", "steady"])) return true;
+        if (key.indexOf("quiet") !== -1 && includesAny(key, ["notabsence", "presence", "signal"])) return true;
+        if (key.indexOf("stillness") !== -1 && includesAny(key, ["signal", "presence"])) return true;
+
+        return key.indexOf("reserved") !== -1 && includesAny(key, ["notempty", "presence", "signal"]);
+      }
       form.addEventListener("submit", function (event) {
         event.preventDefault();
-        const value = normalize(input.value);
-        if (!value) { status.textContent = "empty trace"; return; }
-        crypto.subtle.digest("SHA-256", new TextEncoder().encode(value)).then(function (digest) {
-          if (accepted.has(hex(digest))) { status.textContent = "presence recognized"; window.location.href = "node_03_reward.html"; }
-          else { status.textContent = "presence unresolved"; window.location.href = "../../fail/care_gate_failed.html"; }
-        }).catch(function () { status.textContent = "validator unavailable"; });
+        const value = input.value;
+        if (!compact(value)) { status.textContent = "empty trace"; return; }
+        if (accepts(value)) { status.textContent = "presence recognized"; window.location.href = "node_03_reward.html"; }
+        else { status.textContent = "presence unresolved"; window.location.href = "../../fail/care_gate_failed.html"; }
       });
     }());
   </script>

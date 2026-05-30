@@ -65,56 +65,76 @@ The room opens for the receiver who keeps the pattern intact.</pre>
       const input = document.getElementById("core-node-01-answer");
       const status = document.getElementById("core-node-01-status");
 
-      const accepted = new Set([
-        "441e6ef33842a24b635929820b7e0d9025090cf6c4ce8a3679da2bcef021ecca",
-        "3f20547d6e3924332910647a4dd3ed17050fa4ba08e1e886591e3eb3e595a268",
-        "cddce89f6037e1413178f41668ec57c203d0bb3aaf09073128029bbc7391225f",
-        "d8064e8949f352ce31be03a4954cbd9f85bee52f26bb3a5dd4ba6d06b61a7aa0",
-        "f332b85b81d8ce3494abb86f5004cc282d96d8f6166cde0fe618fd0083470502",
-        "c0422e4661b816053ebcc2e2276b5b337ecf47525fefae47aef7c10c5e3b78c7",
-        "ffcd38b61464e6986618f8af4e6b6eb54a255ffb8fe8895e2bdc2a3e19f2b22e",
-        "7d4fd543edd3cd18bd9079bde0a42396642a3a642f0eed171d42983192721bb5",
-        "0499fca6dbd7def243e955812fae5f8c14aabc89771211a3e5ac5a121fa65b9e",
-        "f4ceca148f12142955ae3fac97484ea86abd97c5782b5be4fadc6fc9917cd1ca",
-        "0f407523533f1b482ea635766f756ca22adea557b36b515dcd5b8fc5a8c35367",
-        "f527a0256e422e4c999509c173975ffd565bf270878fc8f6612c902bf52ad40a",
-        "73f0fa8ba7dea5bc1b71eca2c3f2e6d9039c8c8bbb073afc8d809e4483322ceb",
-        "8c3d36076d290ba5b4e5d1a535eccd625615691194a3cff061716ad1c300e21a"
-      ]);
-
       function normalize(value) {
-        return value
-          .trim()
-          .toLowerCase()
-          .replace(/[^a-z0-9]/g, "");
+        return value.trim().toLowerCase();
       }
 
-      function hex(buffer) {
-        return Array.prototype.map.call(new Uint8Array(buffer), function (byte) {
-          return byte.toString(16).padStart(2, "0");
-        }).join("");
+      function compact(value) {
+        return normalize(value).replace(/[^a-z0-9]/g, "");
+      }
+
+      function includesAny(value, terms) {
+        return terms.some(function (term) {
+          return value.indexOf(term) !== -1;
+        });
+      }
+
+      function accepts(value) {
+        const key = compact(value);
+        const rejected = new Set([
+          "diagnosis",
+          "skill",
+          "aesthetic",
+          "need",
+          "wound",
+          "beauty",
+          "everything"
+        ]);
+
+        if (rejected.has(key)) return false;
+
+        const exact = new Set([
+          "allthelayers",
+          "alllayers",
+          "allofthelayers",
+          "everylayer",
+          "thewholeperson",
+          "wholeperson",
+          "wholepattern",
+          "holdthewholepattern",
+          "keepthepatternintact",
+          "thewholepattern",
+          "allofher",
+          "allofthem",
+          "everypartheldtogether",
+          "onemirrorisnottheperson"
+        ]);
+
+        if (exact.has(key)) return true;
+
+        if (key.indexOf("whole") !== -1 && includesAny(key, ["person", "pattern", "self", "signal"])) return true;
+        if (key.indexOf("layer") !== -1 && includesAny(key, ["all", "every", "whole", "together"])) return true;
+        if (key.indexOf("mirror") !== -1 && includesAny(key, ["notperson", "notwhole", "oneisnot"])) return true;
+
+        return key.indexOf("pattern") !== -1 && includesAny(key, ["intact", "held", "together", "whole"]);
       }
 
       form.addEventListener("submit", function (event) {
         event.preventDefault();
-        const value = normalize(input.value);
+        const value = input.value;
 
-        if (!value) {
+        if (!compact(value)) {
           status.textContent = "empty mirror";
           return;
         }
 
-        crypto.subtle.digest("SHA-256", new TextEncoder().encode(value)).then(function (digest) {
-          if (accepted.has(hex(digest))) {
-            status.textContent = "pattern held";
-            window.location.href = "node_01_reward.html";
-          } else {
-            status.textContent = "mirror collapsed";
-            window.location.href = "../../fail/care_gate_failed.html";
-          }
-        }).catch(function () {
-          status.textContent = "validator unavailable";
-        });
+        if (accepts(value)) {
+          status.textContent = "pattern held";
+          window.location.href = "node_01_reward.html";
+        } else {
+          status.textContent = "mirror collapsed";
+          window.location.href = "../../fail/care_gate_failed.html";
+        }
       });
     }());
   </script>

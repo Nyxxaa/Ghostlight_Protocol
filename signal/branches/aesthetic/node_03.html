@@ -66,9 +66,10 @@ The threshold is real even when the signal is beautiful.</pre>
 
       function accepts(value) {
         const key = compact(value);
-        if (["behot", "desire", "takeit", "proveyourself", "beauty", "intensity"].indexOf(key) !== -1) return false;
+        if (["behot", "desire", "takeit", "proveyourself", "beauty", "intensity", "want", "access", "touch"].indexOf(key) !== -1) return false;
 
         const accepted = [
+          "consent",
           "approachbyconsent",
           "approachablebyconsent",
           "beautyisnotpermission",
@@ -78,7 +79,9 @@ The threshold is real even when the signal is beautiful.</pre>
           "accessrequiresconsent",
           "beautyrequiresconsent",
           "consentopensthedoor",
-          "beautyissignalconsentisthedoor"
+          "beautyissignalconsentisthedoor",
+          "admirewithoutentitlement",
+          "respectthethreshold"
         ];
         if (accepted.indexOf(key) !== -1) return true;
 

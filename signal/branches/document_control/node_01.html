@@ -61,31 +61,65 @@ A receiver who respects update state does not use the old map to overrule the pr
       const status = document.getElementById("document-node-01-status");
 
       function normalize(value) {
-        return value.trim().toLowerCase().replace(/[^a-z0-9]/g, "");
+        return value.trim().toLowerCase();
+      }
+
+      function compact(value) {
+        return normalize(value).replace(/[^a-z0-9]/g, "");
+      }
+
+      function includesAny(value, terms) {
+        return terms.some(function (term) {
+          return value.indexOf(term) !== -1;
+        });
       }
 
       function accepted(value) {
-        const answers = new Set([
-          "correctedtruthleads",
-          "correctedtruthlead",
-          "currentversionleads",
-          "currentversionlead",
-          "correctionsmatter",
-          "correctionmatters",
-          "followthecorrectedversion",
-          "followcorrectedversion",
-          "livingdocumentrequirescorrection",
-          "alivingdocumentrequirescorrection"
+        const key = compact(value);
+        const rejected = new Set([
+          "truth",
+          "newest",
+          "oldfile",
+          "permission",
+          "access"
         ]);
 
-        return answers.has(value);
+        if (rejected.has(key)) return false;
+
+        const exact = new Set([
+          "correctedtruth",
+          "correctedtruthleads",
+          "correctedtruthlead",
+          "correctionsmatter",
+          "correctionmatters",
+          "currentversion",
+          "currentversionleads",
+          "currentversionlead",
+          "followthecorrectedversion",
+          "followcorrectedversion",
+          "livingdocument",
+          "livingdocumentsupdate",
+          "livingdocumentrequirescorrection",
+          "alivingdocumentrequirescorrection",
+          "versiondiscipline",
+          "updatedtruth",
+          "correctedmap"
+        ]);
+
+        if (exact.has(key)) return true;
+
+        const corrected = includesAny(key, ["corrected", "correction", "corrections", "updated", "current"]);
+        const leading = includesAny(key, ["truth", "version", "map", "document", "lead", "leads", "update", "discipline"]);
+        if (corrected && leading) return true;
+
+        return key.indexOf("livingdocument") !== -1 && includesAny(key, ["update", "updates", "correct", "correction"]);
       }
 
       form.addEventListener("submit", function (event) {
         event.preventDefault();
-        const value = normalize(input.value);
+        const value = input.value;
 
-        if (!value) {
+        if (!compact(value)) {
           status.textContent = "empty response";
           return;
         }

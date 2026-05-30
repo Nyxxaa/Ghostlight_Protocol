@@ -62,39 +62,71 @@ Consent decides what a receiver may do with what they can see.</pre>
       const status = document.getElementById("document-node-02-status");
 
       function normalize(value) {
-        return value.trim().toLowerCase().replace(/[^a-z0-9]/g, "");
+        return value.trim().toLowerCase();
+      }
+
+      function compact(value) {
+        return normalize(value).replace(/[^a-z0-9]/g, "");
+      }
+
+      function includesAny(value, terms) {
+        return terms.some(function (term) {
+          return value.indexOf(term) !== -1;
+        });
       }
 
       function accepted(value) {
-        const answers = new Set([
+        const key = compact(value);
+        const rejected = new Set([
+          "access",
+          "visibility",
+          "redaction",
+          "privacy",
+          "openit",
+          "forceit",
+          "moreaccess"
+        ]);
+
+        if (rejected.has(key)) return false;
+
+        const exact = new Set([
+          "scope",
+          "scopematters",
           "respecttheboundary",
           "respectboundaries",
           "respectthescope",
           "respectscope",
+          "accessisnotentitlement",
+          "accessisntentitlement",
           "accessisnotpermission",
           "visibilityisnotpermission",
           "visibilityisnotownership",
-          "consentdecidesuse",
-          "scopematters",
-          "accessisnotentitlement",
-          "accessisntentitlement",
           "redactioniscare",
           "consentdefinesuse",
           "consentdefineuse",
+          "consentdecidesuse",
+          "privacyisnotobstruction",
           "correctionandscopematter",
           "correctionandscopematters",
           "correctionsandscopematter",
           "correctionsandscopematters"
         ]);
 
-        return answers.has(value);
+        if (exact.has(key)) return true;
+
+        if (key.indexOf("scope") !== -1 && includesAny(key, ["matter", "matters", "respect", "boundary", "boundaries"])) return true;
+        if (key.indexOf("consent") !== -1 && includesAny(key, ["defines", "decides", "use", "permission"])) return true;
+        if (key.indexOf("access") !== -1 && includesAny(key, ["notpermission", "notentitlement", "isntpermission", "isntentitlement"])) return true;
+        if (key.indexOf("visibility") !== -1 && includesAny(key, ["notpermission", "notownership", "isntpermission", "isntownership"])) return true;
+
+        return key.indexOf("redaction") !== -1 && includesAny(key, ["care", "protect", "protects", "boundary"]);
       }
 
       form.addEventListener("submit", function (event) {
         event.preventDefault();
-        const value = normalize(input.value);
+        const value = input.value;
 
-        if (!value) {
+        if (!compact(value)) {
           status.textContent = "empty response";
           return;
         }
