@@ -70,16 +70,38 @@ The stable read sees structure made visible.</pre>
 
       function accepts(value) {
         const key = compact(value);
-        if (["beauty", "clothes", "fashion", "sexy", "pretty"].indexOf(key) !== -1) return false;
+        const rejected = ["beauty", "clothes", "fashion", "sexy", "pretty", "hot", "outfit", "style", "body", "legs"];
+        if (rejected.indexOf(key) !== -1) return false;
 
-        const beauty = hasAny(key, ["beauty", "style", "aesthetic", "silhouette", "line", "vertical", "waist"]);
-        const structure = hasAny(key, ["architecture", "structure", "structured", "engineered", "anchor", "anchored"]);
+        const accepted = [
+          "structure",
+          "structured",
+          "silhouettestructure",
+          "structuredsilhouette",
+          "verticalstructure",
+          "aestheticstructure",
+          "beautyhasstructure",
+          "beautyhasarchitecture",
+          "architecture",
+          "aestheticarchitecture",
+          "silhouetteisstructure",
+          "styleisengineered",
+          "engineeredstyle",
+          "engineeredbeauty",
+          "waistanchor",
+          "waistanchored",
+          "waistanchoredverticalline",
+          "verticalline",
+          "verticalemphasis",
+          "thelineholdsittogether",
+          "structuremadevisible",
+          "shapediscipline",
+          "silhouettediscipline",
+          "deliberatesilhouette"
+        ];
+        if (accepted.indexOf(key) !== -1) return true;
 
-        return (beauty && structure) ||
-          key === "waistanchoredverticalline" ||
-          key === "verticalstructure" ||
-          key === "structuredsilhouette" ||
-          key === "thesilhouetteisstructured";
+        return hasAny(key, ["structure", "architecture", "engineered", "silhouette", "waist", "vertical", "line", "discipline"]);
       }
 
       form.addEventListener("submit", function (event) {
