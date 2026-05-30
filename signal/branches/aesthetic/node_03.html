@@ -68,13 +68,24 @@ The threshold is real even when the signal is beautiful.</pre>
         const key = compact(value);
         if (["behot", "desire", "takeit", "proveyourself", "beauty", "intensity"].indexOf(key) !== -1) return false;
 
+        const accepted = [
+          "approachbyconsent",
+          "approachablebyconsent",
+          "beautyisnotpermission",
+          "signalisnotaccess",
+          "attractionisnotentitlement",
+          "aestheticisnotconsent",
+          "accessrequiresconsent",
+          "beautyrequiresconsent",
+          "consentopensthedoor",
+          "beautyissignalconsentisthedoor"
+        ];
+        if (accepted.indexOf(key) !== -1) return true;
+
         const signal = hasAny(key, ["approach", "beauty", "signal", "aesthetic", "attraction", "access"]);
         const consent = hasAny(key, ["consent", "permission", "door", "threshold"]);
 
-        return (signal && consent) ||
-          key === "approachablebyconsent" ||
-          key === "accessrequiresconsent" ||
-          key === "consentopensthedoor";
+        return signal && consent;
       }
 
       form.addEventListener("submit", function (event) {
