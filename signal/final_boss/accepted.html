@@ -4,47 +4,29 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>GHOSTLIGHT PROTOCOL // FINAL BOSS // ACCEPTANCE GATE</title>
+  <title>GHOSTLIGHT PROTOCOL // FINAL TREASURE BOX</title>
   <link rel="stylesheet" href="../../site/style.css">
 </head>
 <body>
   <main class="ghost-page">
     <article class="ghost-card">
 
-  <p class="breadcrumb">dead relay acceptance gate</p>
-  <h1>GHOSTLIGHT PROTOCOL // FINAL BOSS // ACCEPTANCE GATE</h1>
+  <p class="breadcrumb">final treasure box</p>
+  <h1>GHOSTLIGHT PROTOCOL // FINAL TREASURE BOX</h1>
 
   <section class="reward">
-    <p>The dead relay has accepted the branch fragments. The assembly order is recovered here, not before.</p>
+    <p>The dead lab has returned the final_boss key. One lock remains.</p>
   </section>
-
-  <section class="gate">
-    <h2>assembly order recovered</h2>
-    <p>Assemble the recovered fragments in this order to reconstruct the final_boss key.</p>
-    <pre class="code-block">trunk
-
-core
-repair
-aesthetic
-body
-mind
-support
-pets
-creative
-food
-future
-social
-consent
-final_boss</pre> </section>
 
   <section class="warning">
     <h2>acceptance boundary</h2>
-    <p>Enter the reconstructed final_boss key. The page checks the key hash locally and opens the final payload channel only after acceptance.</p>
+    <p>Enter the recovered final_boss key. The page checks the key hash locally and opens the final payload channel only after acceptance.</p>
     <p>Access is not ownership. Knowledge is not permission. Understanding is not entitlement.</p>
   </section>
 
   <section class="gate" aria-labelledby="final-boss-title">
     <h2 id="final-boss-title">receiver input</h2>
+    <p>Enter the final_boss key recovered from the dead lab validator.</p>
 
     <form id="final-boss-form" action="../fail/final_boss_failed.html">
       <label for="final-boss-key">final_boss key</label><br>
@@ -55,16 +37,17 @@ final_boss</pre> </section>
         autocomplete="off"
         spellcheck="false"
         class="answer-input"
-        placeholder="reconstructed key"
+        placeholder="recovered final_boss key"
       >
-      <button class="audio-button" type="submit">validate signal</button>
+      <button class="audio-button" type="submit">open treasure box</button>
     </form>
 
     <p id="final-boss-status" class="audio-status" aria-live="polite"></p>
   </section>
 
   <ul class="nav-links">
-    <li><a href="README.html">dead relay</a></li>
+    <li><a href="frame_notes.html">dead lab</a></li>
+    <li><a href="README.html">colored key door</a></li>
     <li><a href="../hub.html">hub</a></li>
   </ul>
 
@@ -95,14 +78,14 @@ final_boss</pre> </section>
         const value = normalize(input.value);
 
         if (!value) {
-          status.textContent = "empty reconstruction";
+          status.textContent = "empty key";
           return;
         }
 
         crypto.subtle.digest("SHA-256", new TextEncoder().encode(value)).then(function (digest) {
           if (hex(digest) === expected) {
             sessionStorage.setItem("ghostlightFinalAccepted", "true");
-            status.textContent = "final_boss key accepted; payload channel opening";
+            status.textContent = "final_boss key accepted; treasure box opening";
             window.location.href = "../final_payload.html";
           } else {
             status.textContent = "signal rejected; recalibrate";
