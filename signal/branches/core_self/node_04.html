@@ -53,17 +53,65 @@ The stable read sees one function wearing different tools.</pre>
       const form = document.getElementById("core-node-04-form");
       const input = document.getElementById("core-node-04-answer");
       const status = document.getElementById("core-node-04-status");
-      const accepted = new Set(["b6c703f06b2b88ac747a801f54e1354c4aa1d38da7e20ee7f7c8f725e5ee6089","d454d9061e53814154cd846cf8863a529f386f4172c8aa495842becdb86b4663","d5770634b90d3022903293a7df33a8a03980da0b38009a0f8770d24a9d02dd06","d22677fe24949bfd3ebf1de049863deb205d655a637a27e31a98dbab8319b687","56d6dfe37c13875172763b5189f3df871042a7958064c64d3c669d7a4ebe5c58","632707af749fb023f535c871c95cb01521085da13c31dd2c598e0be8f362e2ec"]);
-      function normalize(value) { return value.trim().toLowerCase().replace(/[^a-z0-9]/g, ""); }
-      function hex(buffer) { return Array.prototype.map.call(new Uint8Array(buffer), function (byte) { return byte.toString(16).padStart(2, "0"); }).join(""); }
+
+      function normalize(value) {
+        return value.trim().toLowerCase();
+      }
+
+      function compact(value) {
+        return normalize(value).replace(/[^a-z0-9]/g, "");
+      }
+
+      function containsAny(value, terms) {
+        return terms.some(function (term) {
+          return value.indexOf(term) !== -1;
+        });
+      }
+
+      function accepts(value) {
+        const key = compact(value);
+
+        const blocked = new Set([
+          "care",
+          "hobbies",
+          "talent",
+          "art",
+          "tools",
+          "competence",
+          "prettythings",
+          "everything",
+          "ilikeit",
+          "randomhobbies"
+        ]);
+
+        if (blocked.has(key)) return false;
+
+        const structure = containsAny(key, ["structure", "system", "systems", "scaffold", "framework", "architecture"]);
+        const continuity = containsAny(key, ["continuity", "memory", "signal", "pattern", "function"]);
+        const usable = containsAny(key, ["usable", "preserve", "preserving", "preserves", "protect", "protects", "organize", "organizes", "carry", "carries", "reducefriction", "reducesfriction"]);
+        const care = key.indexOf("care") !== -1 || key.indexOf("support") !== -1;
+
+        if (structure && (continuity || usable || care)) return true;
+        if (continuity && usable) return true;
+        if (care && (structure || continuity || usable)) return true;
+
+        return [
+          "structure",
+          "systems",
+          "continuity",
+          "externalstructure",
+          "onefunctionwearingdifferenttools",
+          "samefunctiondifferenttools",
+          "thesharedfunctionisstructure"
+        ].indexOf(key) !== -1;
+      }
+
       form.addEventListener("submit", function (event) {
         event.preventDefault();
-        const value = normalize(input.value);
+        const value = input.value;
         if (!value) { status.textContent = "empty trace"; return; }
-        crypto.subtle.digest("SHA-256", new TextEncoder().encode(value)).then(function (digest) {
-          if (accepted.has(hex(digest))) { status.textContent = "system recognized"; window.location.href = "node_04_reward.html"; }
-          else { status.textContent = "tool scatter unresolved"; window.location.href = "../../fail/puzzle_failed.html"; }
-        }).catch(function () { status.textContent = "validator unavailable"; });
+        if (accepts(value)) { status.textContent = "system recognized"; window.location.href = "node_04_reward.html"; }
+        else { status.textContent = "tool scatter unresolved"; window.location.href = "../../fail/puzzle_failed.html"; }
       });
     }());
   </script>
