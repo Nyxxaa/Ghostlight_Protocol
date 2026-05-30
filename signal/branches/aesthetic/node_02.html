@@ -9,35 +9,88 @@
 <body>
   <main class="ghost-page">
     <article class="ghost-card">
-      <p class="breadcrumb">signal packet</p>
+      <p class="breadcrumb">aesthetic // node 02 // difficulty 2.1</p>
       <h1>GHOSTLIGHT PROTOCOL // AESTHETIC // NODE 02</h1>
-      <pre class="code-block">GHOSTLIGHT PROTOCOL // AESTHETIC // NODE 02
 
-source:
-Codex section 10.1
+      <section class="gate">
+        <h2>architecture of beauty</h2>
+        <p>The second room is built from silhouette clues. The receiver has to find what holds the shape together.</p>
+        <pre class="code-block">SILHOUETTE TRACE
 
-care gate:
-Beauty is regulation, not vanity.
+waist anchor
+vertical line
+legs framed / revealed / armored
+soft-dangerous contrast
+repeated motifs
+silver hardware
+matte or satin finish
 
-answer:
-Open the path that matches the correct receiver stance:
+The false read says: clothes.
+The stable read sees structure made visible.</pre>
+      </section>
 
-signal/branches/aesthetic/node_02_gate_&lt;stance&gt;.html
+      <section class="warning">
+        <p>Common failures: naming beauty by itself, reducing the signal to fashion, or treating the silhouette as simple prettiness.</p>
+      </section>
 
-format:
-lowercase_snake_case
+      <section class="gate" aria-labelledby="answer-title">
+        <h2 id="answer-title">receiver input</h2>
+        <p>Enter what holds the silhouette together.</p>
+        <form id="aesthetic-node-02-form">
+          <label for="aesthetic-node-02-answer">response</label><br>
+          <input id="aesthetic-node-02-answer" name="answer" type="text" autocomplete="off" spellcheck="false" class="answer-input" placeholder="principle">
+          <button class="audio-button" type="submit">submit</button>
+        </form>
+        <p id="aesthetic-node-02-status" class="audio-status" aria-live="polite"></p>
+      </section>
 
-return:
-signal/hub.html
-
-previous:
-signal/branches/aesthetic/node_01.html
-</pre>
       <ul class="nav-links">
+        <li><a href="node_01_reward.html">previous reward</a></li>
+        <li><a href="start.html">branch overview</a></li>
         <li><a href="../../hub.html">hub</a></li>
       </ul>
     </article>
   </main>
-  <script src="../../../site/script.js?v=d2c2981"></script>
+
+  <script>
+    (function () {
+      const form = document.getElementById("aesthetic-node-02-form");
+      const input = document.getElementById("aesthetic-node-02-answer");
+      const status = document.getElementById("aesthetic-node-02-status");
+
+      function compact(value) {
+        return value.trim().toLowerCase().replace(/[^a-z0-9]/g, "");
+      }
+
+      function hasAny(value, terms) {
+        return terms.some(function (term) {
+          return value.indexOf(term) !== -1;
+        });
+      }
+
+      function accepts(value) {
+        const key = compact(value);
+        if (["beauty", "clothes", "fashion", "sexy", "pretty"].indexOf(key) !== -1) return false;
+
+        const beauty = hasAny(key, ["beauty", "style", "aesthetic", "silhouette", "line", "vertical", "waist"]);
+        const structure = hasAny(key, ["architecture", "structure", "structured", "engineered", "anchor", "anchored"]);
+
+        return (beauty && structure) ||
+          key === "waistanchoredverticalline" ||
+          key === "verticalstructure" ||
+          key === "structuredsilhouette";
+      }
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        const value = input.value;
+        if (!compact(value)) { status.textContent = "empty line"; return; }
+        if (accepts(value)) { status.textContent = "silhouette aligned"; window.location.href = "node_02_reward.html"; }
+        else { status.textContent = "shape unresolved"; window.location.href = "../../fail/puzzle_failed.html"; }
+      });
+    }());
+  </script>
+
+  <script src="../../../site/script.js?v=branch-inputs-3"></script>
 </body>
 </html>

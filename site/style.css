@@ -225,6 +225,14 @@ input.code-block:focus {
   border-left: 3px solid var(--gold);
 }
 
+.color-key-violet,
+.color-key-violet .ascii-key,
+.color-key-violet code,
+.color-key-violet strong {
+  color: #b36bff;
+  text-shadow: 0 0 0.55rem rgba(179, 107, 255, 0.5);
+}
+
 .audio-button,
 .retry-link,
 .nav-links a,

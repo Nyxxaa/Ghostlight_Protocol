@@ -9,35 +9,84 @@
 <body>
   <main class="ghost-page">
     <article class="ghost-card">
-      <p class="breadcrumb">signal packet</p>
+      <p class="breadcrumb">aesthetic // node 03 // difficulty 2.2</p>
       <h1>GHOSTLIGHT PROTOCOL // AESTHETIC // NODE 03</h1>
-      <pre class="code-block">GHOSTLIGHT PROTOCOL // AESTHETIC // NODE 03
 
-source:
-Codex section 10.2
+      <section class="gate">
+        <h2>approach boundary</h2>
+        <p>A receiver sees beauty, danger, softness, body signal, and invitation-coded aesthetics. The unsafe read treats attraction as permission. The safe read understands that signal is not access.</p>
+        <pre class="code-block">APPROACH TRACE
 
-care gate:
-Beauty is regulation, not vanity.
+soft does not mean available
+danger does not mean challenge
+beauty does not mean permission
+invitation-coded does not mean open
 
-answer:
-Open the path that matches the correct receiver stance:
+The threshold is real even when the signal is beautiful.</pre>
+      </section>
 
-signal/branches/aesthetic/node_03_gate_&lt;stance&gt;.html
+      <section class="warning">
+        <p>Common failures: treating desire as access, treating intensity as invitation, or trying to prove worthiness by crossing the boundary.</p>
+      </section>
 
-format:
-lowercase_snake_case
+      <section class="gate" aria-labelledby="answer-title">
+        <h2 id="answer-title">receiver input</h2>
+        <p>Enter the boundary that keeps beauty from becoming entitlement.</p>
+        <form id="aesthetic-node-03-form">
+          <label for="aesthetic-node-03-answer">response</label><br>
+          <input id="aesthetic-node-03-answer" name="answer" type="text" autocomplete="off" spellcheck="false" class="answer-input" placeholder="boundary">
+          <button class="audio-button" type="submit">submit</button>
+        </form>
+        <p id="aesthetic-node-03-status" class="audio-status" aria-live="polite"></p>
+      </section>
 
-return:
-signal/hub.html
-
-previous:
-signal/branches/aesthetic/node_02.html
-</pre>
       <ul class="nav-links">
+        <li><a href="node_02_reward.html">previous reward</a></li>
+        <li><a href="start.html">branch overview</a></li>
         <li><a href="../../hub.html">hub</a></li>
       </ul>
     </article>
   </main>
-  <script src="../../../site/script.js?v=d2c2981"></script>
+
+  <script>
+    (function () {
+      const form = document.getElementById("aesthetic-node-03-form");
+      const input = document.getElementById("aesthetic-node-03-answer");
+      const status = document.getElementById("aesthetic-node-03-status");
+
+      function compact(value) {
+        return value.trim().toLowerCase().replace(/[^a-z0-9]/g, "");
+      }
+
+      function hasAny(value, terms) {
+        return terms.some(function (term) {
+          return value.indexOf(term) !== -1;
+        });
+      }
+
+      function accepts(value) {
+        const key = compact(value);
+        if (["behot", "desire", "takeit", "proveyourself", "beauty", "intensity"].indexOf(key) !== -1) return false;
+
+        const signal = hasAny(key, ["approach", "beauty", "signal", "aesthetic", "attraction", "access"]);
+        const consent = hasAny(key, ["consent", "permission", "door", "threshold"]);
+
+        return (signal && consent) ||
+          key === "approachablebyconsent" ||
+          key === "accessrequiresconsent" ||
+          key === "consentopensthedoor";
+      }
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        const value = input.value;
+        if (!compact(value)) { status.textContent = "empty boundary"; return; }
+        if (accepts(value)) { status.textContent = "threshold respected"; window.location.href = "node_03_reward.html"; }
+        else { status.textContent = "boundary crossed"; window.location.href = "../../fail/care_gate_failed.html"; }
+      });
+    }());
+  </script>
+
+  <script src="../../../site/script.js?v=branch-inputs-3"></script>
 </body>
 </html>
