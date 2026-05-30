@@ -24,35 +24,37 @@
     <pre class="code-block">GHOSTLIGHT PROTOCOL // FINAL BOSS NOTES
 
 capture_slot:
-The order fragments arrived in the dead lab capture.
+The lab recorded arrival order.
+Arrival is not always reconstruction.
 
 interleave_index:
-The stable reconstruction clock.
-Sort valid frames on this field, not on capture_slot.
+A steadier clock appears in the frames.
+The relay trusts stable sequence more than first sight.
 
 payload_hex:
-Masked frame bytes.
-After filtering and sorting, concatenate payload_hex values.
-Decode the concatenated payload from hex.
+The payload is not written in plain language.
+Hex is only the first skin.
 
 lab mask:
-XOR each decoded byte with 0x13.
+The lab marked the signal with a small fixed mask.
 
-rejection rules:
+0x13
 
-* consent must be Y
-* real_world_source must be N
-* lab_lock must be Y
+boundary rules:
+The clean pass respects consent.
+The clean pass rejects real-world sourcing.
+The clean pass remains locked inside the lab.
 
-pass selection:
-Use only the valid dead-lab pass.
-Reject decoys, unlocked passes, low-elevation passes, permission failures, and boundary failures.
+decoy behavior:
+Some passes are loud but unsafe.
+Some passes look useful but fail the boundary.
+Some frames arrive cleanly but belong to the wrong pass.
 
 This puzzle rewards boundary discipline first and technical competence second.</pre> </section>
 
   <section class="gate">
     <h2>dead lab artifacts</h2>
-    <p>Use the artifacts below to reconstruct the dead-lab answer. The validator rewards the final_boss key only after the correct reconstruction is entered.</p>
+    <p>The artifacts are enough. Recover the phrase, then ask the validator whether the reconstruction holds.</p>
     <ul class="path-list">
       <li><a href="pass_windows.csv">pass_windows.csv</a></li>
       <li><a href="burst_manifest.csv">burst_manifest.csv</a></li>
@@ -61,6 +63,7 @@ This puzzle rewards boundary discipline first and technical competence second.</
   </section>
 
   <ul class="nav-links">
+    <li><a href="index.html">dead lab</a></li>
     <li><a href="README.html">colored key door</a></li>
     <li><a href="../trunk_rewards/layer_06_reward.html">previous layer</a></li>
     <li><a href="../hub.html">hub</a></li>
