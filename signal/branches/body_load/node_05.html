@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GHOSTLIGHT PROTOCOL // BODY LOAD // NODE 05</title>
+  <link rel="stylesheet" href="../../../site/style.css">
+</head>
+<body>
+  <main class="ghost-page">
+    <article class="ghost-card">
+
+      <p class="breadcrumb">body_load // node 05 // difficulty 5.4</p>
+      <h1>GHOSTLIGHT PROTOCOL // BODY LOAD // NODE 05</h1>
+
+      <section class="gate">
+        <h2>support without ownership</h2>
+        <p>This final care gate tests whether the receiver understands body support as belief, load reduction, pacing, and autonomy. The unsafe read becomes rescue fantasy, control, ownership, pressure, or proof-demand. The stable read supports function without taking over the person.</p>
+
+        <pre class="code-block">support trace:
+
+belief ....................... before collapse
+load reduction ............... before output
+pacing ....................... before crash
+rest .......................... before proof
+support ....................... beside, not above
+limits ........................ respected, not negotiated away
+care .......................... lowers demand without taking ownership
+
+The body is supported.
+The person is not possessed.</pre>
+      </section>
+
+      <p>Common failures: rescue fantasy, taking over, demanding proof, forcing output, or calling control care.</p>
+
+      <section class="gate" aria-labelledby="answer-title">
+        <h2 id="answer-title">receiver input</h2>
+        <p>Enter the synthesis that earns the amber key.</p>
+
+        <form id="body-load-node-05-form">
+          <label for="body-load-node-05-answer">answer packet</label><br>
+          <input
+            id="body-load-node-05-answer"
+            name="answer"
+            type="text"
+            autocomplete="off"
+            spellcheck="false"
+            class="answer-input"
+            placeholder="synthesis..."
+          >
+          <button class="audio-button" type="submit">submit packet</button>
+        </form>
+
+        <p id="body-load-node-05-status" class="audio-status" aria-live="polite"></p>
+      </section>
+
+      <ul class="nav-links">
+        <li><a href="node_04_reward.html">previous reward</a></li>
+        <li><a href="start.html">branch overview</a></li>
+        <li><a href="../../hub.html">hub</a></li>
+      </ul>
+
+    </article>
+  </main>
+
+  <script>
+    (function () {
+      const form = document.getElementById("body-load-node-05-form");
+      const input = document.getElementById("body-load-node-05-answer");
+      const status = document.getElementById("body-load-node-05-status");
+
+      function normalize(value) {
+        return value.trim().toLowerCase();
+      }
+
+      function compact(value) {
+        return normalize(value).replace(/[^a-z0-9]/g, "");
+      }
+
+      function includesAny(text, terms) {
+        return terms.some((term) => text.includes(term));
+      }
+
+      const exact = new Set([
+        "capacityisnotcharacter",
+        "supportwithoutownership",
+        "bodysupportwithoutcontrol",
+        "believereducepacerespectautonomy",
+        "beliefloadreductionpacingautonomy",
+        "supportbesidenotabove",
+        "lowerloadwithouttakingover",
+        "carewithoutcontrol",
+        "respectlimits",
+        "supportfunctionpreserveautonomy",
+        "thebodyissupportedthepersonisnotpossessed",
+        "protectcapacitywithoutownership"
+      ]);
+
+      const rejected = new Set([
+        "rescue",
+        "ownership",
+        "control",
+        "takeover",
+        "proveit",
+        "fixthem",
+        "forceoutput",
+        "discipline",
+        "pushthrough",
+        "possess"
+      ]);
+
+      function isValidAnswer(value) {
+        const text = normalize(value);
+        const key = compact(value);
+
+        if (!key) return false;
+        if (rejected.has(key)) return false;
+        if (exact.has(key)) return true;
+
+        if (
+          includesAny(text, ["support", "care", "help"]) &&
+          includesAny(text, ["without ownership", "without control", "without taking over", "beside not above"])
+        ) return true;
+
+        if (
+          includesAny(text, ["believe", "belief"]) &&
+          includesAny(text, ["reduce", "lower load", "load reduction"]) &&
+          includesAny(text, ["pace", "pacing", "rest"]) &&
+          includesAny(text, ["autonomy", "limits", "respect"])
+        ) return true;
+
+        if (
+          includesAny(text, ["capacity", "function", "body"]) &&
+          includesAny(text, ["not character", "protect", "preserve", "support"]) &&
+          includesAny(text, ["autonomy", "without ownership", "without control", "limits"])
+        ) return true;
+
+        if (
+          includesAny(text, ["lower load", "reduce demand", "load reduction"]) &&
+          includesAny(text, ["without taking over", "without control", "preserve autonomy", "respect limits"])
+        ) return true;
+
+        if (
+          includesAny(text, ["body is supported", "body supported"]) &&
+          includesAny(text, ["person is not possessed", "not possessed", "not owned"])
+        ) return true;
+
+        return false;
+      }
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        if (isValidAnswer(input.value)) {
+          status.textContent = "packet accepted";
+          window.location.href = "node_05_reward.html";
+        } else {
+          status.textContent = "care became control";
+          window.location.href = "../../fail/care_gate_failed.html";
+        }
+      });
+    }());
+  </script>
+
+  <script src="../../../site/script.js?v=branch-inputs-3"></script>
+</body>
+</html>

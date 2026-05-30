@@ -381,6 +381,14 @@ input.code-block:focus {
   text-shadow: 0 0 0.55rem rgba(55, 214, 194, 0.5);
 }
 
+.color-key-amber,
+.color-key-amber .ascii-key,
+.color-key-amber code,
+.color-key-amber strong {
+  color: #ffb84d;
+  text-shadow: 0 0 0.55rem rgba(255, 184, 77, 0.5);
+}
+
 @media (prefers-reduced-motion: reduce) {
   .cursor {
     animation: none;

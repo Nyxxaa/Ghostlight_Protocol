@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GHOSTLIGHT PROTOCOL // BODY LOAD // NODE 04</title>
+  <link rel="stylesheet" href="../../../site/style.css">
+</head>
+<body>
+  <main class="ghost-page">
+    <article class="ghost-card">
+
+      <p class="breadcrumb">body_load // node 04 // difficulty 5.3</p>
+      <h1>GHOSTLIGHT PROTOCOL // BODY LOAD // NODE 04</h1>
+
+      <section class="gate">
+        <h2>pacing is protection</h2>
+        <p>This room tests whether the receiver can read rest, stopping early, pacing, avoiding overload, or choosing the smaller action as protection. The unsafe read calls it avoidance or lack of ambition. The stable read sees pacing as crash prevention.</p>
+
+        <pre class="code-block">capacity trace:
+
+push through ................. debt increases
+ignore warning ............... crash risk rises
+stop early ................... function preserved
+smaller action ............... access remains
+rest interval ................ signal stabilizes
+planned pause ................ collapse avoided
+pacing ....................... protection
+
+Pacing is not quitting.
+It is keeping tomorrow possible.</pre>
+      </section>
+
+      <p>Common failures: forcing output, praising push-through harm, or treating a planned pause as failure.</p>
+
+      <section class="gate" aria-labelledby="answer-title">
+        <h2 id="answer-title">receiver input</h2>
+        <p>Enter the rule that protects function by reducing demand.</p>
+
+        <form id="body-load-node-04-form">
+          <label for="body-load-node-04-answer">answer packet</label><br>
+          <input
+            id="body-load-node-04-answer"
+            name="answer"
+            type="text"
+            autocomplete="off"
+            spellcheck="false"
+            class="answer-input"
+            placeholder="care rule..."
+          >
+          <button class="audio-button" type="submit">submit packet</button>
+        </form>
+
+        <p id="body-load-node-04-status" class="audio-status" aria-live="polite"></p>
+      </section>
+
+      <ul class="nav-links">
+        <li><a href="node_03_reward.html">previous reward</a></li>
+        <li><a href="start.html">branch overview</a></li>
+        <li><a href="../../hub.html">hub</a></li>
+      </ul>
+
+    </article>
+  </main>
+
+  <script>
+    (function () {
+      const form = document.getElementById("body-load-node-04-form");
+      const input = document.getElementById("body-load-node-04-answer");
+      const status = document.getElementById("body-load-node-04-status");
+
+      function normalize(value) {
+        return value.trim().toLowerCase();
+      }
+
+      function compact(value) {
+        return normalize(value).replace(/[^a-z0-9]/g, "");
+      }
+
+      function includesAny(text, terms) {
+        return terms.some((term) => text.includes(term));
+      }
+
+      const exact = new Set([
+        "pacingisprotection",
+        "pacingprotectsfunction",
+        "pacingisnotquitting",
+        "restprotectsfunction",
+        "stopearlytopreservecapacity",
+        "keeptomorrowpossible",
+        "reducedemandbeforecollapse",
+        "lowerloadbeforeoutput",
+        "plannedrestpreventscrash",
+        "smalleractionpreservesaccess",
+        "supportpacing",
+        "protectcapacity"
+      ]);
+
+      const rejected = new Set([
+        "pushthrough",
+        "tryharder",
+        "noexcuses",
+        "quit",
+        "avoidance",
+        "beproductive",
+        "ignoreit",
+        "discipline",
+        "forceoutput"
+      ]);
+
+      function isValidAnswer(value) {
+        const text = normalize(value);
+        const key = compact(value);
+
+        if (!key) return false;
+        if (rejected.has(key)) return false;
+        if (exact.has(key)) return true;
+
+        if (
+          includesAny(text, ["pacing", "rest", "pause", "stop early", "smaller action"]) &&
+          includesAny(text, ["protect", "preserve", "prevents crash", "prevent crash", "keeps", "stabilizes"])
+        ) return true;
+
+        if (
+          includesAny(text, ["reduce demand", "lower load", "lower demand"]) &&
+          includesAny(text, ["before collapse", "before output", "before crash", "protect", "preserve"])
+        ) return true;
+
+        if (
+          includesAny(text, ["tomorrow", "future capacity", "next day"]) &&
+          includesAny(text, ["possible", "protect", "preserve", "keep"])
+        ) return true;
+
+        if (
+          includesAny(text, ["pacing", "rest", "stopping early"]) &&
+          includesAny(text, ["not quitting", "not avoidance", "not failure"])
+        ) return true;
+
+        if (
+          includesAny(text, ["capacity", "function", "access"]) &&
+          includesAny(text, ["protect", "preserve", "support"]) &&
+          includesAny(text, ["pacing", "rest", "smaller", "pause", "lower load"])
+        ) return true;
+
+        return false;
+      }
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        if (isValidAnswer(input.value)) {
+          status.textContent = "packet accepted";
+          window.location.href = "node_04_reward.html";
+        } else {
+          status.textContent = "demand increased";
+          window.location.href = "../../fail/puzzle_failed.html";
+        }
+      });
+    }());
+  </script>
+
+  <script src="../../../site/script.js?v=branch-inputs-3"></script>
+</body>
+</html>

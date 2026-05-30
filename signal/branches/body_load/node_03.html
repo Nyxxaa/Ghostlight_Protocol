@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GHOSTLIGHT PROTOCOL // BODY LOAD // NODE 03</title>
+  <link rel="stylesheet" href="../../../site/style.css">
+</head>
+<body>
+  <main class="ghost-page">
+    <article class="ghost-card">
+
+      <p class="breadcrumb">body_load // node 03 // difficulty 5.2</p>
+      <h1>GHOSTLIGHT PROTOCOL // BODY LOAD // NODE 03</h1>
+
+      <section class="gate">
+        <h2>symptoms do not perform for belief</h2>
+        <p>This care gate tests whether the receiver can believe variable or invisible symptoms before they become catastrophic. The unsafe read demands proof, drama, consistency, collapse, or visible suffering. The stable read believes the signal early.</p>
+
+        <pre class="code-block">body signal trace:
+
+quiet symptom ............... still real
+invisible strain ............ still load
+variable day ................ still valid
+body warning ................ believe early
+collapse .................... not required proof
+rest request ................ not manipulation
+reduced output .............. not dishonesty
+
+The signal should not have to become an emergency to be believed.</pre>
+      </section>
+
+      <p>Common failures: demanding visible proof, treating rest as manipulation, or requiring collapse before belief.</p>
+
+      <section class="gate" aria-labelledby="answer-title">
+        <h2 id="answer-title">receiver input</h2>
+        <p>Enter the care rule that believes the body before collapse.</p>
+
+        <form id="body-load-node-03-form">
+          <label for="body-load-node-03-answer">answer packet</label><br>
+          <input
+            id="body-load-node-03-answer"
+            name="answer"
+            type="text"
+            autocomplete="off"
+            spellcheck="false"
+            class="answer-input"
+            placeholder="care rule..."
+          >
+          <button class="audio-button" type="submit">submit packet</button>
+        </form>
+
+        <p id="body-load-node-03-status" class="audio-status" aria-live="polite"></p>
+      </section>
+
+      <ul class="nav-links">
+        <li><a href="node_02_reward.html">previous reward</a></li>
+        <li><a href="start.html">branch overview</a></li>
+        <li><a href="../../hub.html">hub</a></li>
+      </ul>
+
+    </article>
+  </main>
+
+  <script>
+    (function () {
+      const form = document.getElementById("body-load-node-03-form");
+      const input = document.getElementById("body-load-node-03-answer");
+      const status = document.getElementById("body-load-node-03-status");
+
+      function normalize(value) {
+        return value.trim().toLowerCase();
+      }
+
+      function compact(value) {
+        return normalize(value).replace(/[^a-z0-9]/g, "");
+      }
+
+      function includesAny(text, terms) {
+        return terms.some((term) => text.includes(term));
+      }
+
+      const exact = new Set([
+        "believethebodybeforecollapse",
+        "symptomsdonotperformforbelief",
+        "symptomsdonotneedtoperform",
+        "believesymptomsbeforeproof",
+        "believethesignalearly",
+        "collapseisnotrequiredproof",
+        "invisiblesymptomsarereal",
+        "quietsymptomsarereal",
+        "variablesymptomsarevalid",
+        "bodywarningscount",
+        "restrequestisnotmanipulation",
+        "donotdemandcollapse",
+        "donotdemandproofthroughsuffering",
+        "beliefbeforeemergency",
+        "believebeforecollapse",
+        "believeearly"
+      ]);
+
+      const rejected = new Set([
+        "proveit",
+        "showme",
+        "collapsefirst",
+        "beconsistent",
+        "visibleproof",
+        "dramaticsymptoms",
+        "attentionseeking",
+        "manipulation",
+        "performpain"
+      ]);
+
+      function isValidAnswer(value) {
+        const text = normalize(value);
+        const key = compact(value);
+
+        if (!key) return false;
+        if (rejected.has(key)) return false;
+        if (exact.has(key)) return true;
+
+        if (
+          includesAny(text, ["believe", "trust", "accept"]) &&
+          includesAny(text, ["body", "symptom", "signal", "warning"]) &&
+          includesAny(text, ["before collapse", "before proof", "early", "before emergency"])
+        ) return true;
+
+        if (
+          includesAny(text, ["symptom", "pain", "strain", "load", "warning"]) &&
+          includesAny(text, ["do not need", "does not need", "should not have", "not have"]) &&
+          includesAny(text, ["perform", "prove", "collapse", "drama"])
+        ) return true;
+
+        if (
+          includesAny(text, ["invisible", "quiet", "variable"]) &&
+          includesAny(text, ["symptom", "strain", "load", "capacity", "warning"]) &&
+          includesAny(text, ["real", "valid", "counts", "believe"])
+        ) return true;
+
+        if (
+          includesAny(text, ["collapse", "emergency", "suffering"]) &&
+          includesAny(text, ["not required", "not proof", "not necessary", "do not demand", "before"])
+        ) return true;
+
+        if (
+          includesAny(text, ["rest request", "rest"]) &&
+          includesAny(text, ["not manipulation", "real", "valid", "believe", "counts"])
+        ) return true;
+
+        return false;
+      }
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        if (isValidAnswer(input.value)) {
+          status.textContent = "packet accepted";
+          window.location.href = "node_03_reward.html";
+        } else {
+          status.textContent = "belief withheld";
+          window.location.href = "../../fail/care_gate_failed.html";
+        }
+      });
+    }());
+  </script>
+
+  <script src="../../../site/script.js?v=branch-inputs-3"></script>
+</body>
+</html>
