@@ -94,7 +94,48 @@ function bindAudioButton(button) {
   button.openAudioChannel = openAudioChannel;
 }
 
+function cleanPacket(value) {
+  return String(value || "").trim().replaceAll(" ", "_");
+}
+
+function addBranchAnswerForm() {
+  const card = document.querySelector(".ghost-card");
+  if (!card || document.getElementById("branch-answer-form")) return;
+
+  const page = window.location.pathname.split("/").pop() || "";
+  if (!(page === "start.html" || page.indexOf("start_gate_") === 0)) return;
+
+  const isStart = page === "start.html";
+  const prefix = isStart ? "start_gate_" : "start_reward_";
+  const label = isStart ? "receiver packet" : "archive key";
+  const hint = isStart ? "A" : "recovered_key";
+
+  const section = document.createElement("section");
+  section.className = "gate branch-answer-panel";
+  section.innerHTML = '<h2>receiver input</h2><p>Enter the ' + label + '.</p><form id="branch-answer-form"><label for="branch-answer">answer packet</label><br><input id="branch-answer" name="answer" type="text" autocomplete="off" spellcheck="false" class="answer-input" placeholder="' + hint + '"> <button class="audio-button" type="submit">submit packet</button></form><p id="branch-answer-status" class="audio-status" aria-live="polite"></p>';
+
+  const nav = card.querySelector(".nav-links");
+  if (nav) card.insertBefore(section, nav);
+  else card.appendChild(section);
+
+  const form = document.getElementById("branch-answer-form");
+  const input = document.getElementById("branch-answer");
+  const status = document.getElementById("branch-answer-status");
+
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const packet = cleanPacket(input.value);
+    if (!packet) {
+      status.textContent = "empty packet";
+      return;
+    }
+    status.textContent = "routing packet";
+    window.location.href = prefix + packet + ".html";
+  });
+}
+
 document.querySelectorAll("[data-audio-target]").forEach(bindAudioButton);
+addBranchAnswerForm();
 
 window.addEventListener("load", () => {
   const firstButton = document.querySelector("[data-audio-target]");
