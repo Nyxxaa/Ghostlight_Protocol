@@ -1,18 +1,18 @@
-<!doctype html>
+﻿<!doctype html>
 
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>GHOSTLIGHT PROTOCOL // LAYER 02</title>
-  <link rel="stylesheet" href="../site/style.css">
+  <title>GHOSTLIGHT PROTOCOL // TAPROOT</title>
+  <link rel="stylesheet" href="../style.css">
 </head>
 <body>
   <main class="ghost-page">
     <article class="ghost-card">
 
-  <p class="breadcrumb">trunk</p>
-  <h1>GHOSTLIGHT PROTOCOL // LAYER 02</h1>
+  <p class="breadcrumb">trunk // taproot</p>
+  <h1>GHOSTLIGHT PROTOCOL // TAPROOT</h1>
 
   <section class="gate">
     <h2>pattern recognition</h2>
@@ -76,7 +76,7 @@
 
       if (hex === "22b883c0ba1b0334c0bae24a44ec7e602de88605917779dfdc9b28ad32d836ed") {
         status.textContent = "packet accepted";
-        window.location.href = ["trunk_rewards", "layer_02_reward.html"].join("/");
+        window.location.href = "layer_02_reward.html";
       } else {
         status.textContent = "packet rejected";
         window.location.href = ["fail", "puzzle_failed.html"].join("/");
@@ -84,7 +84,7 @@
     });
   </script>
 
-  <script src="../site/script.js?v=branch-inputs-2"></script>
+  <script src="../script.js?v=branch-inputs-2"></script>
 
 </body>
 </html>

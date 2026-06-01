@@ -4,16 +4,16 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>GHOSTLIGHT PROTOCOL</title>
-  <link rel="stylesheet" href="site/style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <!-- first key: inspect_the_dark -->
-  <!-- payload: c2lnbmFsL2h1Yi50eHQ= -->
+  <!-- payload: c2lnbmFsL2h1Yi5odG1s -->
   <main class="terminal" aria-label="Ghostlight Protocol terminal">
     <section class="panel">
       <p class="kicker">dark signal packet // public surface</p>
       <h1>GHOSTLIGHT PROTOCOL</h1>
-      <p class="alpha-notice">signal under construction // alpha build: rooms, locks, and rewards are still being tuned</p>
+      <p class="alpha-notice">signal under construction // alpha build: roots, branches, buds, fruit, and locks are still being tuned</p>
       <dl class="status-grid">
         <div>
           <dt>status</dt>
@@ -34,32 +34,8 @@
       </dl>
       <p class="instruction">instruction: do not force the lock; understand the signal</p>
       <p class="cursor-line" aria-hidden="true">&gt; awaiting inspection<span class="cursor">_</span></p>
-      <form id="entry-answer" class="instruction">
-        <label for="entry-input">input answer here</label><br>
-        <input id="entry-input" name="answer" autocomplete="off" spellcheck="false">
-        <button type="submit">submit</button>
-      </form>
     </section>
   </main>
-  <script>
-    document.getElementById("entry-answer").addEventListener("submit", async (event) => {
-      event.preventDefault();
-      const input = document.getElementById("entry-input").value;
-      const normalized = input.toLowerCase().replace(/[^a-z0-9]/g, "");
-      const bytes = new TextEncoder().encode(normalized);
-      const digest = await crypto.subtle.digest("SHA-256", bytes);
-      const hex = Array.from(new Uint8Array(digest), byte => byte.toString(16).padStart(2, "0")).join("");
-      const accepted = new Set([
-        "39f01cd5ae2aa6e65aa44dadad85838c7403254c76b939ade7712b507592f86e",
-        "70573bf5e7692fe830b309218ad343d86827697ff4048045541dc5e6e2a83659"
-      ]);
-      if (accepted.has(hex)) {
-        window.location.href = ["signal", "hub.html"].join("/");
-      } else {
-        window.location.href = ["signal", "fail", "puzzle_failed.html"].join("/");
-      }
-    });
-  </script>
-  <script src="site/script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

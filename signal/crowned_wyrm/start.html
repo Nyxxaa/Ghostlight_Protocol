@@ -1,0 +1,136 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GHOSTLIGHT PROTOCOL // CROWNED WYRM</title>
+  <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+  <main class="ghost-page">
+    <article class="ghost-card">
+      <p class="breadcrumb">heartwood // crowned wyrm // start</p>
+      <h1>GHOSTLIGHT PROTOCOL // CROWNED WYRM</h1>
+
+      <section class="warning">
+        <h2>threshold boundary</h2>
+        <p>This gate tests competence without crossing real-world boundaries.</p>
+        <p>No live targets. No real interception. No unauthorized systems. Only the synthetic signal may be touched.</p>
+        <p>Solving the Crowned Wyrm earns permission to send a signal back, not ownership or access.</p>
+      </section>
+
+      <section class="gate">
+        <h2>colored door</h2>
+        <p>Enter the fruit keys recovered from the branch paths. The Crowned Wyrm opens only when the descent is complete.</p>
+
+        <form id="crowned-wyrm-form">
+          <label for="red-key">red fruit key</label><br>
+          <input id="red-key" name="red-key" type="text" autocomplete="off" spellcheck="false" class="answer-input" placeholder="key fragment"><br><br>
+
+          <label for="orange-key">orange fruit key</label><br>
+          <input id="orange-key" name="orange-key" type="text" autocomplete="off" spellcheck="false" class="answer-input" placeholder="key fragment"><br><br>
+
+          <label for="yellow-key">yellow fruit key</label><br>
+          <input id="yellow-key" name="yellow-key" type="text" autocomplete="off" spellcheck="false" class="answer-input" placeholder="key fragment"><br><br>
+
+          <label for="green-key">green fruit key</label><br>
+          <input id="green-key" name="green-key" type="text" autocomplete="off" spellcheck="false" class="answer-input" placeholder="key fragment"><br><br>
+
+          <label for="blue-key">blue fruit key</label><br>
+          <input id="blue-key" name="blue-key" type="text" autocomplete="off" spellcheck="false" class="answer-input" placeholder="key fragment"><br><br>
+
+          <label for="violet-key">violet fruit key</label><br>
+          <input id="violet-key" name="violet-key" type="text" autocomplete="off" spellcheck="false" class="answer-input" placeholder="key fragment"><br><br>
+
+          <label for="silver-key">silver fruit key</label><br>
+          <input id="silver-key" name="silver-key" type="text" autocomplete="off" spellcheck="false" class="answer-input" placeholder="key fragment"><br><br>
+
+          <button class="audio-button" type="submit">open crowned wyrm</button>
+        </form>
+
+        <p id="crowned-wyrm-status" class="audio-status" aria-live="polite"></p>
+      </section>
+
+      <ul class="nav-links">
+        <li><a href="puzzle.html">enter synthetic signal gate</a></li>
+        <li><a href="../layer_06_reward.html">previous trunk fruit</a></li>
+        <li><a href="../hub.html">hub</a></li>
+      </ul>
+    </article>
+  </main>
+
+  <script>
+    const form = document.getElementById("crowned-wyrm-form");
+    const status = document.getElementById("crowned-wyrm-status");
+
+    function normalizeKey(value) {
+      return value.trim().toLowerCase().replace(/[^a-z0-9]/g, "");
+    }
+
+    async function sha256Hex(value) {
+      const bytes = new TextEncoder().encode(value);
+      const digest = await crypto.subtle.digest("SHA-256", bytes);
+      return Array.from(new Uint8Array(digest), byte => byte.toString(16).padStart(2, "0")).join("");
+    }
+
+    const acceptedKeyHashes = new Set([
+      "c74a646f8949794db303e76da4633e531b511781eafe65db8dd83f98047066de",
+      "025f26c1ca83d834e82dd26ae33ce946d9c47431c0d991022ab6af2dbec95bd8",
+      "56ffd8be1f26fde12784e9cb26923346f19ff4ddb10ec3944a1cad2d80dc34f1",
+      "c61f5e05a541687625825684bc932ffa50afeb54cd81a7db52973e255156045a",
+      "d097dd10a694491b1ec2a6cded0e5f0182191150c6e661961cdaa3d6d7b42aec",
+      "fe0c7c8a6802053314c5d3b60bbbc6617c4f162e229437c2bddbafab460712ec",
+      "69eda243479de2ecb087c1cbfc57a30a72e3ff5a470187231da2d5fd13d1db46",
+      "65d139f315053c690f1030cdb44972b9bf52e12355e051307bba45664a140808",
+      "e35edbb43c519730f1bfc0a9e7e596251778a51f949376fe735e47551703d12c",
+      "2960747ac4d5804077c349c78af83eb40adab4b3acdb4904c2488f63ffad3d5f",
+      "d52e41063b17a759e94c6744e31193a16dfd2ade8ca98843fdc09d721b46685d",
+      "f12953a68b874a1597be72eba2dc8213fdd006e4c5af09afe0bd70a2944077a4",
+      "65657997a6b328cdd7004a2ad19ebdd014eb13ffd113984df886dd289c78c215",
+      "105279c57901d5b42179024f90401f32f9e701e81e3c0c82c548ef589a45b01a",
+      "2d241c464750f51e15eeee8e232d7f76c6260862da5321b905ae8e2920748583",
+      "143e9171b64ffef27dfdf7c466eff6e48c5ff768dce8c24db45f5329fa0ef9fc",
+      "0ea4546cdd6b17024d2b1f8d622ccc948ebdd359d40d4d5e134ae5d81c7d065c",
+      "b6591114be8879230e7a03878c75834e1e01df20f6d9f7f17abff75b6c7f93b3",
+      "419a9eac69c762f6181c97a39f87bb25b20eaa50711d208d2dfd81a11b88bcc5",
+      "230cdc64c7e09c2f21d1479aa5eed43611c1a970a9859566618352de046759c9",
+      "6fa787b4c24b181382187224b2f86fea3ad264a67dba9aa66711e15ff8fb5899",
+      "8a569dc51408b2edac60e17ad058e89595e7f6603bbb38b2af446126bce8d10c",
+      "9ea77c59584dfde5ab1f70d7aef9dabc4a793afce3af95d641268bf4a4fa800c",
+      "2c4a5889218ac1dafc43ea2723ec29c75e2a47a7b6a9b46d8d272da3420888e6",
+      "35b375c78736db26cacdd63e11025cea9f57e75a7e2c03e3da972703cb7c8b70"
+    ]);
+
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+
+      const inputs = Array.from(form.querySelectorAll("input"));
+      const values = inputs.map(input => normalizeKey(input.value)).filter(Boolean);
+
+      if (values.length < inputs.length) {
+        status.textContent = "colored door incomplete";
+        return;
+      }
+
+      const uniqueValues = new Set(values);
+      if (uniqueValues.size !== values.length) {
+        status.textContent = "duplicate fruit key detected";
+        return;
+      }
+
+      const hashes = await Promise.all(values.map(sha256Hex));
+      const allValid = hashes.every(hash => acceptedKeyHashes.has(hash));
+
+      if (allValid) {
+        status.textContent = "fruit keys accepted; crowned wyrm opening";
+        window.location.href = "puzzle.html";
+      } else {
+        status.textContent = "colored door rejected";
+        window.location.href = "fail.html";
+      }
+    });
+  </script>
+
+  <script src="../../script.js?v=branch-inputs-2"></script>
+</body>
+</html>

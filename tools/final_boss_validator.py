@@ -7,16 +7,16 @@ EXPECTED_SHA256 = "bf942d07f3d95d83e83b5e2c3cf8c6512c6560040283d316e4e831729b3e3
 
 def main() -> int:
     if len(sys.argv) != 2:
-        print("usage: python tools/final_boss_validator.py <candidate_key>")
+        print("usage: python Tools/final_boss_validator.py <candidate_key>")
         return 2
 
     candidate = sys.argv[1].strip()
     digest = hashlib.sha256(candidate.encode("utf-8")).hexdigest()
     if digest == EXPECTED_SHA256:
-        print("final_boss key accepted")
+        print("Crowned Wyrm key accepted")
         return 0
 
-    print("final_boss key rejected")
+    print("Crowned Wyrm key rejected")
     return 1
 
 
