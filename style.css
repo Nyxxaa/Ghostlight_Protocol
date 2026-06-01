@@ -451,6 +451,66 @@ input.code-block:focus {
     0 0 0.9rem rgba(40, 45, 55, 0.8);
 }
 
+.color-key-indigo,
+.color-key-indigo .ascii-key,
+.color-key-indigo code,
+.color-key-indigo strong {
+  color: #8a7dff;
+  text-shadow: 0 0 0.55rem rgba(138, 125, 255, 0.52);
+}
+
+.color-key-black-white,
+.color-key-black-white .ascii-key,
+.color-key-black-white code,
+.color-key-black-white strong,
+.color-key-archive-gray,
+.color-key-archive-gray .ascii-key,
+.color-key-archive-gray code,
+.color-key-archive-gray strong {
+  color: #c5cbd4;
+  text-shadow: 0 0 0.55rem rgba(197, 203, 212, 0.42);
+}
+
+.color-key-bronze,
+.color-key-bronze .ascii-key,
+.color-key-bronze code,
+.color-key-bronze strong {
+  color: #b88a4a;
+  text-shadow: 0 0 0.55rem rgba(184, 138, 74, 0.48);
+}
+
+.color-key-bone-ash,
+.color-key-bone-ash .ascii-key,
+.color-key-bone-ash code,
+.color-key-bone-ash strong {
+  color: #d8d0bf;
+  text-shadow: 0 0 0.55rem rgba(216, 208, 191, 0.42);
+}
+
+.color-key-iron,
+.color-key-iron .ascii-key,
+.color-key-iron code,
+.color-key-iron strong {
+  color: #aeb7c2;
+  text-shadow: 0 0 0.55rem rgba(174, 183, 194, 0.44);
+}
+
+.color-key-black-red,
+.color-key-black-red .ascii-key,
+.color-key-black-red code,
+.color-key-black-red strong {
+  color: #ff4d5f;
+  text-shadow: 0 0 0.55rem rgba(255, 77, 95, 0.5);
+}
+
+.color-key-silver-blue,
+.color-key-silver-blue .ascii-key,
+.color-key-silver-blue code,
+.color-key-silver-blue strong {
+  color: #b8d8ff;
+  text-shadow: 0 0 0.55rem rgba(184, 216, 255, 0.48);
+}
+
 @media (prefers-reduced-motion: reduce) {
   .cursor {
     animation: none;

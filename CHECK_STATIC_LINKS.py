@@ -5,7 +5,7 @@ from pathlib import Path
 
 
 ROOT = Path(".")
-IGNORED_PARTS = {"Archived", "References"}
+IGNORED_PARTS = {"Archived", "References", "build_templates", "build_preview"}
 
 
 class LinkParser(HTMLParser):

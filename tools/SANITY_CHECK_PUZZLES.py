@@ -12,6 +12,9 @@ ROOT = Path(".")
 SIGNAL = ROOT / "signal"
 BRANCHES = SIGNAL / "branches"
 CROWNED_WYRM = SIGNAL / "crowned_wyrm"
+BUILD_TEMPLATES = ROOT / "Tools" / "build_templates"
+BUILD_DATA = ROOT / "Tools" / "build_data"
+BUILD_PREVIEW = ROOT / "Tools" / "build_preview"
 LOCKED_FRUIT_KEYS = {
     "document_control": "corrected_scope_matters",
     "core_self": "integrated_pattern_kept_whole",
@@ -212,12 +215,13 @@ def validate_branches() -> dict[str, int]:
         for node in node_files:
             node_id = node.stem
             node_text = read(node)
-            visible_node = re.search(r"<(?:title|h1)[^>]*>[^<]*\bNODE\b", node_text, re.I)
+            visible_node = re.search(r"<(?:title|h1|h2|p class=\"breadcrumb\")[^>]*>[^<]*\bNODE\b", node_text, re.I)
             if visible_node:
-                fail(f"{branch_dir.name}/{node_id}: visible title/heading still says NODE")
-            visible_bud = re.search(r"<(?:title|h1)[^>]*>[^<]*\bBUD\b", node_text, re.I)
-            if not visible_bud:
-                fail(f"{branch_dir.name}/{node_id}: visible title/heading does not say BUD")
+                fail(f"{branch_dir.name}/{node_id}: visible heading text still says NODE")
+            if not re.search(r"<p class=\"breadcrumb\">[^<]*\bbud\s+\d+", node_text, re.I):
+                fail(f"{branch_dir.name}/{node_id}: breadcrumb does not identify the bud")
+            if re.search(r"<h1>[^<]*\bBUD\b", node_text, re.I):
+                fail(f"{branch_dir.name}/{node_id}: big heading still uses bud number")
             reward = branch_dir / f"{node_id}_reward.html"
             if reward.exists():
                 require(reward)
@@ -238,6 +242,54 @@ def validate_branches() -> dict[str, int]:
     }
 
 
+def validate_presentation_rules() -> dict[str, int]:
+    checked_html = 0
+    intermediate_blooms = 0
+    final_fruits = 0
+
+    for path in [ROOT / "index.html", *SIGNAL.rglob("*.html")]:
+        if not path.exists():
+            continue
+        text = read(path)
+        checked_html += 1
+        if re.search(r"<input\b[^>]*\bvalue=(['\"])(?!\s*\1).+?\1", text, re.I | re.S):
+            fail(f"{path.relative_to(ROOT)} has a prefilled answer/input value")
+
+    for branch_dir in sorted(path for path in BRANCHES.iterdir() if path.is_dir()):
+        for reward in sorted(branch_dir.glob("node_*_reward.html")):
+            text = read(reward)
+            visible = " ".join(re.findall(r"<(?:title|h1|p class=\"breadcrumb\")[^>]*>(.*?)</(?:title|h1|p)>", text, re.I | re.S))
+            if "fruit key:" in text.lower():
+                final_fruits += 1
+                if "ascii-key" not in text or "color-key" not in text or "key recovered" not in text:
+                    fail(f"{reward.relative_to(ROOT)} fruit missing colored ASCII key presentation")
+            else:
+                intermediate_blooms += 1
+                if "fruit" in re.sub(r"<[^>]+>", " ", visible).lower():
+                    fail(f"{reward.relative_to(ROOT)} intermediate reward is still labeled Fruit")
+                if "bloom" not in visible.lower():
+                    fail(f"{reward.relative_to(ROOT)} intermediate reward is not labeled Bloom")
+
+    for path in BRANCHES.rglob("*.html"):
+        text = read(path)
+        if re.search(r"<(?:title|h1|h2)[^>]*>[^<]*\bNODE\b", text, re.I):
+            fail(f"{path.relative_to(ROOT)} exposes NODE in visible heading text")
+
+    for fail_page in (SIGNAL / "fail").glob("*.html"):
+        text = read(fail_page)
+        if "HTML packet" in text:
+            fail(f"{fail_page.relative_to(ROOT)} exposes an HTML packet recovery link")
+        links = re.findall(r'<a href="([^"]+)"', text)
+        if links != ["../hub.html"]:
+            fail(f"{fail_page.relative_to(ROOT)} should route only to hub after failure")
+
+    return {
+        "presentation_pages": checked_html,
+        "intermediate_blooms": intermediate_blooms,
+        "final_fruits": final_fruits,
+    }
+
+
 def validate_aliases() -> dict[str, int]:
     alias_pages = 0
     for path in BRANCHES.glob("*/*.html"):
@@ -254,25 +306,76 @@ def validate_aliases() -> dict[str, int]:
 
 
 def validate_audio() -> dict[str, int]:
-    canonical_rewards = 0
-    with_buttons = 0
-    for path in BRANCHES.glob("*/*reward*.html"):
+    buttons = 0
+    for path in SIGNAL.rglob("*.html"):
         text = read(path)
-        if "equivalent signal accepted" in text:
-            continue
-        canonical_rewards += 1
-        if 'data-audio-target="reward-audio"' in text and "../../../Assets/audio" in text:
-            with_buttons += 1
-    if canonical_rewards != with_buttons:
-        fail(f"audio coverage mismatch: {with_buttons}/{canonical_rewards}")
-    return {"canonical_reward_audio_pages": with_buttons}
+        for match in re.finditer(r'<button\b[^>]*data-audio-target="([^"]+)"[^>]*>Play Signal</button>', text, re.I):
+            buttons += 1
+            target = match.group(1)
+            if not re.search(rf'<audio\b[^>]*id="{re.escape(target)}"', text, re.I):
+                fail(f"{path.relative_to(ROOT)} Play Signal target has no matching audio element: {target}")
+            audio_match = re.search(
+                rf'<audio\b[^>]*id="{re.escape(target)}"[^>]*>.*?<source\b[^>]*src="([^"]+)"',
+                text,
+                re.I | re.S,
+            )
+            if not audio_match:
+                fail(f"{path.relative_to(ROOT)} Play Signal target has no source: {target}")
+            source = (path.parent / audio_match.group(1)).resolve()
+            if not source.exists():
+                fail(f"{path.relative_to(ROOT)} Play Signal source is missing: {audio_match.group(1)}")
+    return {"play_signal_buttons": buttons}
+
+
+def validate_template_system() -> dict[str, int]:
+    required_templates = [
+        "base.html",
+        "trunk_layer.html",
+        "branch_start.html",
+        "bud.html",
+        "bloom.html",
+        "fruit.html",
+        "failure.html",
+        "crowned_wyrm_start.html",
+        "crowned_wyrm_puzzle.html",
+        "crowned_wyrm_treasure.html",
+    ]
+    for template in required_templates:
+        require(BUILD_TEMPLATES / template)
+    require(BUILD_DATA / "tree_inventory.json")
+    require(ROOT / "Tools" / "build_pages.py")
+
+    result = subprocess.run(
+        [sys.executable, "Tools/build_pages.py", "--check"],
+        cwd=ROOT,
+        text=True,
+        capture_output=True,
+        check=False,
+    )
+    if result.returncode != 0:
+        fail("template generator check failed: " + (result.stdout + result.stderr).strip())
+
+    generated_pages = sorted(BUILD_PREVIEW.rglob("*.html"))
+    if not generated_pages:
+        fail("template generator did not produce preview pages")
+    marker = "<!-- generated by Tools/build_pages.py; edit templates/data, not this file -->"
+    for page in generated_pages:
+        text = read(page)
+        if marker not in text:
+            fail(f"generated preview page missing marker: {page.relative_to(ROOT)}")
+        if re.search(r"<h1>[^<]*\bBUD\s+\d+\b", text, re.I):
+            fail(f"generated preview page has bud number in big heading: {page.relative_to(ROOT)}")
+
+    return {"template_files": len(required_templates), "generated_preview_pages": len(generated_pages)}
 
 
 def validate_first_route() -> dict[str, str]:
     entry = read(ROOT / "index.html")
-    for needle in ['id="entry-route-form"', "signal/hub.html", "open signal hub"]:
+    for needle in ['id="entry-route-form"', "signal/hub.html", 'placeholder="enter signal"']:
         if needle not in entry:
             fail(f"entry page missing route affordance: {needle}")
+    if "open signal hub" in entry or "signal/hub.html" in re.search(r"<input\b[^>]*>", entry, re.I | re.S).group(0):
+        fail("entry page exposes the route too visibly")
 
     hub = read(SIGNAL / "hub.html")
     if "Explore, Report, Cooperate" in hub:
@@ -305,9 +408,8 @@ def validate_first_route() -> dict[str, str]:
             fail(f"document_control bud 01 missing friendly accepted phrase: {accepted_phrase}")
 
     care_fail = read(SIGNAL / "fail" / "care_gate_failed.html")
-    for needle in ["return to the bud", "../branches/document_control/start.html", "../layer_01.html"]:
-        if needle not in care_fail:
-            fail(f"care gate failure page missing recovery route: {needle}")
+    if '<a href="../hub.html">hub</a>' not in care_fail:
+        fail("care gate failure page does not route back to hub")
     if "HTML packet" in care_fail:
         fail("care gate failure page still exposes an HTML packet link")
 
@@ -343,9 +445,21 @@ def validate_fruit_keys() -> dict[str, int]:
         if branch in HEARTWOOD_BRANCHES and "heartwood //" not in read(branch_dir / "start.html"):
             fail(f"Heartwood branch start is not labeled as Heartwood: {branch}")
         found = False
-        for path in branch_dir.glob("*reward*.html"):
+        reward_pages = sorted(
+            path
+            for path in branch_dir.glob("node_*_reward.html")
+            if re.match(r"node_\d+_reward\.html$", path.name)
+        )
+        reward_pages.extend(
+            path
+            for path in branch_dir.glob("*reward*.html")
+            if path not in reward_pages
+        )
+        for path in reward_pages:
             text = read(path)
             if key in text and "fruit key" in text:
+                if "ascii-key" not in text or "color-key" not in text:
+                    fail(f"fruit key page lacks colored ASCII key display for {branch}")
                 found = True
                 break
         if not found:
@@ -464,8 +578,10 @@ def main() -> int:
     checks.update(validate_no_txt())
     checks.update(validate_trunk())
     checks.update(validate_branches())
+    checks.update(validate_presentation_rules())
     checks.update(validate_aliases())
     checks.update(validate_audio())
+    checks.update(validate_template_system())
     checks.update(validate_first_route())
     checks.update(validate_fruit_keys())
     checks.update(validate_crowned_wyrm())

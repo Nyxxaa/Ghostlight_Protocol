@@ -1,0 +1,22 @@
+      <p class="breadcrumb">{{ breadcrumb }}</p>
+      <h1>{{ h1 }}</h1>
+      <section class="gate">
+        <h2>{{ theme }}</h2>
+        <p>{{ prompt }}</p>
+        <pre class="code-block">{{ body }}</pre>
+      </section>
+      <section class="warning">
+        <p>{{ warning }}</p>
+      </section>
+      <section class="gate" aria-labelledby="{{ form_id }}-title">
+        <h2 id="{{ form_id }}-title">receiver input</h2>
+        <p>{{ answer_prompt }}</p>
+        <form id="{{ form_id }}">
+          <label for="{{ input_id }}">{{ label }}</label><br>
+          <input id="{{ input_id }}" name="answer" type="text" autocomplete="off" spellcheck="false" class="answer-input" placeholder="{{ placeholder }}">
+          <button class="audio-button" type="submit">submit</button>
+        </form>
+        <p id="{{ status_id }}" class="audio-status" aria-live="polite"></p>
+      </section>
+{{ nav }}
+{{ validator_script }}

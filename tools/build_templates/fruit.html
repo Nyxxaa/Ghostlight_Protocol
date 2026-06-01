@@ -1,0 +1,13 @@
+      <p class="breadcrumb">{{ breadcrumb }}</p>
+      <h1>{{ h1 }}</h1>
+      <section class="reward">
+        <p>{{ synthesis_text }}</p>
+      </section>
+      <div class="key-fragment"><strong>fruit key:</strong><br>{{ fruit_key }}</div>
+      <div class="key-fragment color-key color-key-{{ color_class }}">
+        <strong>{{ color_label }} key recovered:</strong>
+        <pre class="ascii-key" aria-label="{{ color_label }} key">{{ ascii_key }}</pre>
+        <code>{{ fruit_key }}</code>
+      </div>
+{{ audio }}
+{{ nav }}

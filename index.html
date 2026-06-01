@@ -13,7 +13,7 @@
     <section class="panel">
       <p class="kicker">dark signal packet // public surface</p>
       <h1>GHOSTLIGHT PROTOCOL</h1>
-      <p class="alpha-notice">signal under construction // alpha build: roots, branches, buds, fruit, and locks are still being tuned</p>
+      <p class="alpha-notice">signal under construction // alpha build</p>
       <dl class="status-grid">
         <div>
           <dt>status</dt>
@@ -32,10 +32,9 @@
           <dd>persistent</dd>
         </div>
       </dl>
-      <p class="instruction">instruction: begin with the signal route, then climb the tree</p>
       <section class="gate" aria-labelledby="entry-route-title">
         <h2 id="entry-route-title">receiver input</h2>
-        <p>Enter the first route, or use the open channel.</p>
+        <p>The first route is carried under the surface.</p>
         <form id="entry-route-form">
           <label for="entry-route">route</label><br>
           <input
@@ -45,14 +44,11 @@
             autocomplete="off"
             spellcheck="false"
             class="answer-input"
-            placeholder="signal/hub.html"
+            placeholder="enter signal"
           >
-          <button class="audio-button" type="submit">open route</button>
+          <button class="audio-button" type="submit">submit</button>
         </form>
         <p id="entry-route-status" class="audio-status" aria-live="polite"></p>
-        <ul class="nav-links">
-          <li><a href="signal/hub.html">open signal hub</a></li>
-        </ul>
       </section>
       <p class="cursor-line" aria-hidden="true">&gt; awaiting receiver<span class="cursor">_</span></p>
     </section>
@@ -69,10 +65,10 @@
         event.preventDefault();
         const route = compact(input.value);
         if (["signalhubhtml", "signalhub", "hub", "enter", "start"].includes(route)) {
-          status.textContent = "route open";
+          status.textContent = "signal found";
           window.location.href = "signal/hub.html";
         } else {
-          status.textContent = "try signal/hub.html";
+          status.textContent = "signal unresolved";
         }
       });
     }());

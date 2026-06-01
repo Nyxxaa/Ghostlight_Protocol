@@ -1,6 +1,7 @@
 desktop.ini
 **/desktop.ini
 __pycache__/
+Tools/build_preview/
 **/__pycache__/
 *.pyc
 References/
