@@ -1,8 +1,8 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>GHOSTLIGHT PROTOCOL // PETS // NODE 03</title><link rel="stylesheet" href="../../../style.css"></head>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>GHOSTLIGHT PROTOCOL // PETS // BUD 03</title><link rel="stylesheet" href="../../../style.css"></head>
 <body><main class="ghost-page"><article class="ghost-card">
-  <p class="breadcrumb">pets // bud 03 // difficulty 6.2</p><h1>GHOSTLIGHT PROTOCOL // PETS // NODE 03</h1>
+  <p class="breadcrumb">pets // bud 03 // difficulty 6.2</p><h1>GHOSTLIGHT PROTOCOL // PETS // BUD 03</h1>
   <section class="gate"><h2>affection requires consent</h2><p>The unsafe read grabs, forces cuddles, ignores body language, or treats animal affection as entitlement. The stable read respects approach, retreat, handling limits, and trust.</p><pre class="code-block">tail signal ................ information
 ears ....................... information
 retreat .................... answer
@@ -14,7 +14,7 @@ handling ................... earned slowly
 Affection is offered.
 It is not seized.</pre></section>
   <section class="gate" aria-labelledby="answer-title"><h2 id="answer-title">receiver input</h2><p>Enter the boundary that keeps affection safe.</p><form id="pets-node-03-form"><label for="pets-node-03-answer">answer packet</label><br><input id="pets-node-03-answer" name="answer" type="text" autocomplete="off" spellcheck="false" class="answer-input" placeholder="boundary..."><button class="audio-button" type="submit">submit packet</button></form><p id="pets-node-03-status" class="audio-status" aria-live="polite"></p></section>
-  <ul class="nav-links"><li><a href="node_02_reward.html">previous fruit</a></li><li><a href="start.html">branch overview</a></li><li><a href="../../hub.html">hub</a></li></ul>
+  <ul class="nav-links"><li><a href="node_02_reward.html">previous fruit</a></li><li><a href="start.html">branch start</a></li><li><a href="../../hub.html">hub</a></li></ul>
 </article></main>
 <script>
 (function(){const form=document.getElementById("pets-node-03-form"),input=document.getElementById("pets-node-03-answer"),status=document.getElementById("pets-node-03-status");const bad=["grab them","force cuddles","they like it","ignore retreat","make them","hold tighter","entitlement","mine means access"];function n(v){return v.trim().toLowerCase()}function c(v){return n(v).replace(/[^a-z0-9]/g,"")}function h(t,a){return a.some(x=>t.includes(x))}function ok(v){const t=n(v),k=c(v);if(!k||bad.some(x=>k===c(x)))return false;if(h(t,["affection","animal consent","boundaries","body language","retreat","handling","trust"])&&h(t,["consent","offered","not seized","not forced","earned","information","answer"]))return true;if(h(t,["affection is offered","do not force affection","retreat is an answer","body language is information"]))return true;return false}form.addEventListener("submit",e=>{e.preventDefault();if(ok(input.value)){status.textContent="packet accepted";window.location.href="node_03_reward.html"}else{status.textContent="affection seized";window.location.href="../../fail/care_gate_failed.html"}})}());

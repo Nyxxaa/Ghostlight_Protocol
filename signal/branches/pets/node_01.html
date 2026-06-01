@@ -1,9 +1,9 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>GHOSTLIGHT PROTOCOL // PETS // NODE 01</title><link rel="stylesheet" href="../../../style.css"></head>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>GHOSTLIGHT PROTOCOL // PETS // BUD 01</title><link rel="stylesheet" href="../../../style.css"></head>
 <body><main class="ghost-page"><article class="ghost-card">
   <p class="breadcrumb">pets // bud 01 // difficulty 6.0</p>
-  <h1>GHOSTLIGHT PROTOCOL // PETS // NODE 01</h1>
+  <h1>GHOSTLIGHT PROTOCOL // PETS // BUD 01</h1>
   <section class="gate"><h2>care beings are not props</h2><p>The unsafe read sees pets as cute accessories, emotional tools, or inconvenience. The stable read sees dependent beings with needs, boundaries, routines, and dignity.</p><pre class="code-block">cute ....................... not enough
 comfort .................... not ownership
 need ....................... real
@@ -14,7 +14,7 @@ safe handling .............. care
 
 A living being is not a decoration.</pre></section>
   <section class="gate" aria-labelledby="answer-title"><h2 id="answer-title">receiver input</h2><p>Enter the principle that keeps pets from becoming props.</p><form id="pets-node-01-form"><label for="pets-node-01-answer">answer packet</label><br><input id="pets-node-01-answer" name="answer" type="text" autocomplete="off" spellcheck="false" class="answer-input" placeholder="principle..."><button class="audio-button" type="submit">submit packet</button></form><p id="pets-node-01-status" class="audio-status" aria-live="polite"></p></section>
-  <ul class="nav-links"><li><a href="start.html">branch overview</a></li><li><a href="../../hub.html">hub</a></li></ul>
+  <ul class="nav-links"><li><a href="start.html">branch start</a></li><li><a href="../../hub.html">hub</a></li></ul>
 </article></main>
 <script>
 (function(){const form=document.getElementById("pets-node-01-form"),input=document.getElementById("pets-node-01-answer"),status=document.getElementById("pets-node-01-status");const bad=["cute","accessory","prop","decoration","toy","comfort object","inconvenience","replaceable","ownership"];function n(v){return v.trim().toLowerCase()}function c(v){return n(v).replace(/[^a-z0-9]/g,"")}function h(t,a){return a.some(x=>t.includes(x))}function ok(v){const t=n(v),k=c(v);if(!k||bad.some(x=>k===c(x)))return false;if(h(t,["pets","animals","living beings","care beings","dependent beings"])&&h(t,["not props","not decorations","dignity","welfare","need care"]))return true;if(h(t,["comfort is not ownership","care not convenience","a living being is not a decoration"]))return true;return false}form.addEventListener("submit",e=>{e.preventDefault();if(ok(input.value)){status.textContent="packet accepted";window.location.href="node_01_reward.html"}else{status.textContent="life reduced to prop";window.location.href="../../fail/care_gate_failed.html"}})}());

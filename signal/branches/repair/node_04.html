@@ -1,8 +1,8 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>GHOSTLIGHT PROTOCOL // REPAIR // NODE 04</title><link rel="stylesheet" href="../../../style.css"></head>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>GHOSTLIGHT PROTOCOL // REPAIR // BUD 04</title><link rel="stylesheet" href="../../../style.css"></head>
 <body><main class="ghost-page"><article class="ghost-card">
-  <p class="breadcrumb">repair // bud 04 // difficulty 6.3</p><h1>GHOSTLIGHT PROTOCOL // REPAIR // NODE 04</h1>
+  <p class="breadcrumb">repair // bud 04 // difficulty 6.3</p><h1>GHOSTLIGHT PROTOCOL // REPAIR // BUD 04</h1>
   <section class="gate"><h2>pattern matters</h2><p>The unsafe read treats every incident as isolated. The stable read notices pattern, repeat harm, and whether behavior actually changed.</p><pre class="code-block">one mistake ................ context
 same mistake repeated ...... pattern
 apology repeated ........... not enough
@@ -13,7 +13,7 @@ trust ...................... rebuilt by pattern
 
 The pattern is part of the truth.</pre></section>
   <section class="gate" aria-labelledby="answer-title"><h2 id="answer-title">receiver input</h2><p>Enter the rule that prevents repeated harm from hiding behind apology.</p><form id="repair-node-04-form"><label for="repair-node-04-answer">answer packet</label><br><input id="repair-node-04-answer" name="answer" type="text" autocomplete="off" spellcheck="false" class="answer-input" placeholder="rule..."><button class="audio-button" type="submit">submit packet</button></form><p id="repair-node-04-status" class="audio-status" aria-live="polite"></p></section>
-  <ul class="nav-links"><li><a href="node_03_reward.html">previous fruit</a></li><li><a href="start.html">branch overview</a></li><li><a href="../../hub.html">hub</a></li></ul>
+  <ul class="nav-links"><li><a href="node_03_reward.html">previous fruit</a></li><li><a href="start.html">branch start</a></li><li><a href="../../hub.html">hub</a></li></ul>
 </article></main>
 <script>
 (function(){const form=document.getElementById("repair-node-04-form"),input=document.getElementById("repair-node-04-answer"),status=document.getElementById("repair-node-04-status");const bad=["isolated incident","forget the pattern","apology resets everything","one mistake","ignore history","words matter more","trust me because i said sorry"];function n(v){return v.trim().toLowerCase()}function c(v){return n(v).replace(/[^a-z0-9]/g,"")}function h(t,a){return a.some(x=>t.includes(x))}function ok(v){const t=n(v),k=c(v);if(!k||bad.some(x=>k===c(x)))return false;if(h(t,["pattern","repeated harm","behavior pattern","changed behavior","changed pattern"])&&h(t,["matters","truth","data","repair","trust"]))return true;if(h(t,["the pattern is part of the truth","look at the pattern","repair must change the pattern"]))return true;return false}form.addEventListener("submit",e=>{e.preventDefault();if(ok(input.value)){status.textContent="packet accepted";window.location.href="node_04_reward.html"}else{status.textContent="pattern hidden";window.location.href="../../fail/puzzle_failed.html"}})}());

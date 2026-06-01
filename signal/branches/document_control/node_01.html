@@ -1,9 +1,9 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>GHOSTLIGHT PROTOCOL // DOCUMENT CONTROL // NODE 01</title>
+  <title>GHOSTLIGHT PROTOCOL // DOCUMENT CONTROL // BUD 01</title>
   <link rel="stylesheet" href="../../../style.css">
 </head>
 <body>
@@ -11,7 +11,7 @@
     <article class="ghost-card">
 
       <p class="breadcrumb">document_control // bud 01 // difficulty 1.0</p>
-      <h1>GHOSTLIGHT PROTOCOL // DOCUMENT CONTROL // NODE 01</h1>
+      <h1>GHOSTLIGHT PROTOCOL // DOCUMENT CONTROL // BUD 01</h1>
 
       <section class="gate">
         <h2>corrected map</h2>
@@ -47,7 +47,8 @@ A receiver who respects update state does not use the old map to overrule the pr
       </section>
 
       <ul class="nav-links">
-        <li><a href="start.html">branch overview</a></li>
+        <li><a href="start.html">branch start</a></li>
+        <li><a href="../../layer_01.html">Lateral Root</a></li>
         <li><a href="../../hub.html">hub</a></li>
       </ul>
 
@@ -90,26 +91,44 @@ A receiver who respects update state does not use the old map to overrule the pr
           "correctedtruth",
           "correctedtruthleads",
           "correctedtruthlead",
+          "correctedtruthleadsthepresent",
+          "correctedtruthleadstheway",
           "correctionsmatter",
           "correctionmatters",
+          "correctionleads",
+          "correctionslead",
           "currentversion",
           "currentversionleads",
           "currentversionlead",
+          "thecurrentversionleads",
           "followthecorrectedversion",
           "followcorrectedversion",
+          "followthecurrentversion",
+          "followcurrentversion",
+          "followthecorrectedmap",
+          "followcorrectedmap",
           "livingdocument",
           "livingdocumentsupdate",
           "livingdocumentrequirescorrection",
           "alivingdocumentrequirescorrection",
           "versiondiscipline",
           "updatedtruth",
-          "correctedmap"
+          "correctedmap",
+          "thecorrectedmap",
+          "correctedmapleads",
+          "thecorrectedmapleads",
+          "usethecorrectedmap",
+          "usecorrectedmap",
+          "respectthecorrection",
+          "respectcorrection",
+          "respecttheupdatedmap",
+          "respectupdatedmap"
         ]);
 
         if (exact.has(key)) return true;
 
-        const corrected = includesAny(key, ["corrected", "correction", "corrections", "updated", "current"]);
-        const leading = includesAny(key, ["truth", "version", "map", "document", "lead", "leads", "update", "discipline"]);
+        const corrected = includesAny(key, ["corrected", "correction", "corrections", "updated", "current", "latest"]);
+        const leading = includesAny(key, ["truth", "version", "map", "document", "lead", "leads", "follow", "use", "update", "discipline", "present"]);
         if (corrected && leading) return true;
 
         return key.indexOf("livingdocument") !== -1 && includesAny(key, ["update", "updates", "correct", "correction"]);

@@ -15,67 +15,26 @@
   <h1>GHOSTLIGHT PROTOCOL // LATERAL ROOT</h1>
 
   <section class="gate">
-    <h2>lateral root decoder</h2>
-    <p>Decode the base64 payload.</p>
-    <pre class="code-block">c2lnbmFsL2xheWVyXzAyLmxvZw==</pre>
+    <h2>access depth</h2>
+    <p>Lateral Root holds public-facing orientation and boundary principles. Start here, pick a branch, and learn how the tree answers.</p>
   </section>
 
   <section class="gate">
-    <h2>receiver input</h2>
-    <p>Enter the decoded signal path.</p>
-
-    <form id="layer-01-answer">
-      <label for="layer-01-input">answer packet</label><br>
-      <input
-        id="layer-01-input"
-        name="answer"
-        type="text"
-        autocomplete="off"
-        spellcheck="false"
-        class="answer-input"
-        placeholder="signal/..."
-      >
-      <button class="audio-button" type="submit">submit packet</button>
-    </form>
-
-    <p id="layer-01-status" class="audio-status" aria-live="polite"></p>
+    <h2>Lateral Root branches</h2>
+    <ul class="path-list">
+      <li><a href="branches/document_control/start.html">document_control branch</a></li>
+      <li><a href="branches/core_self/start.html">core_self branch</a></li>
+    </ul>
   </section>
 
   <ul class="path-list">
+    <li><a href="layer_02.html">Taproot</a></li>
     <li><a href="hub.html">hub</a></li>
   </ul>
 
 </article>
 
   </main>
-
-  <script>
-    document.getElementById("layer-01-answer").addEventListener("submit", async (event) => {
-      event.preventDefault();
-
-      const status = document.getElementById("layer-01-status");
-      const input = document.getElementById("layer-01-input").value;
-      const normalized = input.toLowerCase().replace(/[^a-z0-9]/g, "");
-
-      const bytes = new TextEncoder().encode(normalized);
-      const digest = await crypto.subtle.digest("SHA-256", bytes);
-      const hex = Array.from(new Uint8Array(digest), byte => byte.toString(16).padStart(2, "0")).join("");
-
-      const accepted = new Set([
-        "9ab3ffbe20ec98e5e938f9729163f95fc2cbe9d60455e1c0a10a2e3d13603c35",
-        "61af887aeb739fb9dca61f4aa745ca3acee36f485c703e446c20f957fd862fd3"
-      ]);
-
-      if (accepted.has(hex)) {
-        status.textContent = "packet accepted";
-        window.location.href = "layer_01_reward.html";
-      } else {
-        status.textContent = "packet rejected";
-        window.location.href = ["fail", "puzzle_failed.html"].join("/");
-      }
-    });
-  </script>
-
   <script src="../script.js?v=branch-inputs-2"></script>
 
 </body>

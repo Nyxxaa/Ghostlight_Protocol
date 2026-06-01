@@ -40,6 +40,27 @@ LOCKED_FRUIT_KEYS = {
     "appendices": "source_labels_preserve_safety",
 }
 HEARTWOOD_BRANCHES = {"life_history", "relationships_attachment", "shadow_archive", "quick_reference"}
+TRUNK_BRANCH_LINKS = {
+    "layer_01.html": ["document_control", "core_self"],
+    "layer_02.html": ["aesthetic", "food_joy"],
+    "layer_03.html": ["social_communication", "communication_language", "doctrine", "learning_memory"],
+    "layer_04.html": ["creative_technical", "joy_play"],
+    "layer_05.html": ["future_path", "daily_functioning", "body_load"],
+    "layer_06.html": [
+        "mind_regulation",
+        "repair",
+        "consent_privacy",
+        "household_support",
+        "pets",
+        "bureaucracy_systems",
+        "change_log_self",
+        "appendices",
+        "life_history",
+        "relationships_attachment",
+        "shadow_archive",
+        "quick_reference",
+    ],
+}
 
 
 def fail(message: str) -> None:
@@ -134,27 +155,23 @@ def validate_trunk() -> dict[str, int]:
     for page in trunk_pages:
         require(page)
 
-    for i in range(1, 7):
-        require(SIGNAL / f"layer_{i:02d}_reward.html")
-
     for page in trunk_pages[:7]:
         text = read(page)
         stale_reward_dir = "trunk_" + "rewards/"
         if f'href="{stale_reward_dir}' in text:
             fail(f"{page.relative_to(ROOT)} exposes a clickable trunk reward path")
+        for branch in TRUNK_BRANCH_LINKS.get(page.name, []):
+            if f"branches/{branch}/start.html" not in text:
+                fail(f"{page.relative_to(ROOT)} missing access-depth branch link: {branch}")
 
-    forbidden_reward_links = [
-        'href="../layer_',
-        'href="../crowned_wyrm/',
-        'href="../final_payload.html"',
-    ]
+    access_pages = sorted(SIGNAL.glob("layer_*_reward.html"))
+    if len(access_pages) != 6:
+        fail(f"expected 6 legacy trunk access pages, found {len(access_pages)}")
     for reward in sorted(SIGNAL.glob("layer_*_reward.html")):
         text = read(reward)
-        for forbidden in forbidden_reward_links:
-            if reward.name == "layer_01_reward.html" and forbidden == 'href="../layer_' and 'href="../layer_02.log"' in text:
-                continue
-            if forbidden in text:
-                fail(f"{reward.relative_to(ROOT)} exposes a clickable trunk continuation")
+        visible_header = " ".join(re.findall(r"<(?:title|h1|p class=\"breadcrumb\")>(.*?)</(?:title|h1|p)>", text, re.I | re.S))
+        if "FRUIT" in visible_header.upper() or "trunk fruit" in text.lower():
+            fail(f"{reward.relative_to(ROOT)} still presents a trunk layer as fruit")
 
     layer_06 = read(SIGNAL / "layer_06_reward.html")
     if "deeper access requires deeper stewardship" not in layer_06:
@@ -166,7 +183,7 @@ def validate_trunk() -> dict[str, int]:
     for branch in HEARTWOOD_BRANCHES:
         if f"branches/{branch}/start.html" not in layer_06:
             fail(f"Heartwood branch missing from layer_06 grouping: {branch}")
-    return {"trunk_pages": len(trunk_pages), "layer_fruits": 6}
+    return {"trunk_pages": len(trunk_pages), "trunk_access_pages": len(access_pages)}
 
 
 def validate_branches() -> dict[str, int]:
@@ -179,8 +196,12 @@ def validate_branches() -> dict[str, int]:
         start = branch_dir / "start.html"
         require(start)
         start_text = read(start)
+        if "BRANCH</h1>" not in start_text:
+            fail(f"{branch_dir.name}: start page heading does not identify a branch")
+        if "branch overview" in start_text:
+            fail(f"{branch_dir.name}: start page still uses overview wording")
         if "node_01.html" not in start_text and "start_gate_" not in start_text:
-            fail(f"{branch_dir.name}: start does not point to first node or start gate")
+            fail(f"{branch_dir.name}: start does not point to first bud or start gate")
         starts += 1
 
         node_files = sorted(branch_dir.glob("node_*.html"))
@@ -191,6 +212,12 @@ def validate_branches() -> dict[str, int]:
         for node in node_files:
             node_id = node.stem
             node_text = read(node)
+            visible_node = re.search(r"<(?:title|h1)[^>]*>[^<]*\bNODE\b", node_text, re.I)
+            if visible_node:
+                fail(f"{branch_dir.name}/{node_id}: visible title/heading still says NODE")
+            visible_bud = re.search(r"<(?:title|h1)[^>]*>[^<]*\bBUD\b", node_text, re.I)
+            if not visible_bud:
+                fail(f"{branch_dir.name}/{node_id}: visible title/heading does not say BUD")
             reward = branch_dir / f"{node_id}_reward.html"
             if reward.exists():
                 require(reward)
@@ -199,7 +226,7 @@ def validate_branches() -> dict[str, int]:
                 if not reward_candidates:
                     fail(f"{branch_dir.name}/{node_id}: no reward page found")
             if "node_" not in node_text and "reward" not in node_text:
-                fail(f"{branch_dir.name}/{node_id}: node lacks branch navigation text")
+                fail(f"{branch_dir.name}/{node_id}: bud lacks branch navigation text")
             buds += 1
             bud_fruits += 1
 
@@ -239,6 +266,52 @@ def validate_audio() -> dict[str, int]:
     if canonical_rewards != with_buttons:
         fail(f"audio coverage mismatch: {with_buttons}/{canonical_rewards}")
     return {"canonical_reward_audio_pages": with_buttons}
+
+
+def validate_first_route() -> dict[str, str]:
+    entry = read(ROOT / "index.html")
+    for needle in ['id="entry-route-form"', "signal/hub.html", "open signal hub"]:
+        if needle not in entry:
+            fail(f"entry page missing route affordance: {needle}")
+
+    hub = read(SIGNAL / "hub.html")
+    if "Explore, Report, Cooperate" in hub:
+        fail("hub still contains old joke route wording")
+    if "Have fun. Climb the trunk" not in hub or "layer_01.html" not in hub:
+        fail("hub does not clearly route into Lateral Root")
+
+    lateral_root = read(SIGNAL / "layer_01.html")
+    for needle in [
+        "branches/document_control/start.html",
+        "branches/core_self/start.html",
+        "layer_02.html",
+    ]:
+        if needle not in lateral_root:
+            fail(f"Lateral Root missing first-playtest route: {needle}")
+    if "layer_01_reward.html" in lateral_root:
+        fail("Lateral Root still routes to a trunk fruit/access reward instead of branch access")
+
+    doc_start = read(BRANCHES / "document_control" / "start.html")
+    if "DOCUMENT CONTROL BRANCH" not in doc_start or "node_01.html" not in doc_start:
+        fail("document_control branch start is not passable")
+
+    doc_bud = read(BRANCHES / "document_control" / "node_01.html")
+    for accepted_phrase in [
+        "correctedtruthleadsthepresent",
+        "followthecorrectedmap",
+        "respectthecorrection",
+    ]:
+        if accepted_phrase not in doc_bud:
+            fail(f"document_control bud 01 missing friendly accepted phrase: {accepted_phrase}")
+
+    care_fail = read(SIGNAL / "fail" / "care_gate_failed.html")
+    for needle in ["return to the bud", "../branches/document_control/start.html", "../layer_01.html"]:
+        if needle not in care_fail:
+            fail(f"care gate failure page missing recovery route: {needle}")
+    if "HTML packet" in care_fail:
+        fail("care gate failure page still exposes an HTML packet link")
+
+    return {"first_route": "passable"}
 
 
 def validate_fruit_keys() -> dict[str, int]:
@@ -393,6 +466,7 @@ def main() -> int:
     checks.update(validate_branches())
     checks.update(validate_aliases())
     checks.update(validate_audio())
+    checks.update(validate_first_route())
     checks.update(validate_fruit_keys())
     checks.update(validate_crowned_wyrm())
     for key, value in checks.items():

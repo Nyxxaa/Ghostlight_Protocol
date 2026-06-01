@@ -32,10 +32,51 @@
           <dd>persistent</dd>
         </div>
       </dl>
-      <p class="instruction">instruction: do not force the lock; understand the signal</p>
-      <p class="cursor-line" aria-hidden="true">&gt; awaiting inspection<span class="cursor">_</span></p>
+      <p class="instruction">instruction: begin with the signal route, then climb the tree</p>
+      <section class="gate" aria-labelledby="entry-route-title">
+        <h2 id="entry-route-title">receiver input</h2>
+        <p>Enter the first route, or use the open channel.</p>
+        <form id="entry-route-form">
+          <label for="entry-route">route</label><br>
+          <input
+            id="entry-route"
+            name="route"
+            type="text"
+            autocomplete="off"
+            spellcheck="false"
+            class="answer-input"
+            placeholder="signal/hub.html"
+          >
+          <button class="audio-button" type="submit">open route</button>
+        </form>
+        <p id="entry-route-status" class="audio-status" aria-live="polite"></p>
+        <ul class="nav-links">
+          <li><a href="signal/hub.html">open signal hub</a></li>
+        </ul>
+      </section>
+      <p class="cursor-line" aria-hidden="true">&gt; awaiting receiver<span class="cursor">_</span></p>
     </section>
   </main>
+  <script>
+    (function () {
+      const form = document.getElementById("entry-route-form");
+      const input = document.getElementById("entry-route");
+      const status = document.getElementById("entry-route-status");
+      function compact(value) {
+        return String(value || "").toLowerCase().replace(/[^a-z0-9]/g, "");
+      }
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        const route = compact(input.value);
+        if (["signalhubhtml", "signalhub", "hub", "enter", "start"].includes(route)) {
+          status.textContent = "route open";
+          window.location.href = "signal/hub.html";
+        } else {
+          status.textContent = "try signal/hub.html";
+        }
+      });
+    }());
+  </script>
   <script src="script.js"></script>
 </body>
 </html>
