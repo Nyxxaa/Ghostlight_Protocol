@@ -5,7 +5,7 @@ Layer 4 is a synthetic audio/spectrogram layer.
 Inspect:
 
 ```txt
-signal/layer_04_ghostlight.wav
+signal/layer_04.wav
 ```
 
 Reward:
@@ -16,14 +16,14 @@ The visible spectrogram phrase points toward the next gate.
 Next:
 
 ```txt
-signal/layer_05_capacity_gate.html
+signal/layer_05.html
 ```
 
 reward path:
-signal/trunk_rewards/layer_04_reward.html
+signal/layer_04_reward.html
 
 HTML fallback:
-signal/trunk_rewards/layer_04_reward.html
+signal/layer_04_reward.html
 
 next:
-signal/layer_05_capacity_gate.html
+signal/layer_05.html

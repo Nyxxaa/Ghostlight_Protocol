@@ -1,21 +1,21 @@
-<!doctype html>
+﻿<!doctype html>
 
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>GHOSTLIGHT PROTOCOL // LAYER 01</title>
-  <link rel="stylesheet" href="../site/style.css">
+  <title>GHOSTLIGHT PROTOCOL // LATERAL ROOT</title>
+  <link rel="stylesheet" href="../style.css">
 </head>
 <body>
   <main class="ghost-page">
     <article class="ghost-card">
 
-  <p class="breadcrumb">trunk</p>
-  <h1>GHOSTLIGHT PROTOCOL // LAYER 01</h1>
+  <p class="breadcrumb">trunk // lateral root</p>
+  <h1>GHOSTLIGHT PROTOCOL // LATERAL ROOT</h1>
 
   <section class="gate">
-    <h2>basic decoder</h2>
+    <h2>lateral root decoder</h2>
     <p>Decode the base64 payload.</p>
     <pre class="code-block">c2lnbmFsL2xheWVyXzAyLmxvZw==</pre>
   </section>
@@ -68,7 +68,7 @@
 
       if (accepted.has(hex)) {
         status.textContent = "packet accepted";
-        window.location.href = ["trunk_rewards", "layer_01_reward.html"].join("/");
+        window.location.href = "layer_01_reward.html";
       } else {
         status.textContent = "packet rejected";
         window.location.href = ["fail", "puzzle_failed.html"].join("/");
@@ -76,7 +76,7 @@
     });
   </script>
 
-  <script src="../site/script.js?v=branch-inputs-2"></script>
+  <script src="../script.js?v=branch-inputs-2"></script>
 
 </body>
 </html>

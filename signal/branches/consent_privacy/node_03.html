@@ -1,8 +1,8 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>GHOSTLIGHT PROTOCOL // CONSENT PRIVACY // NODE 03</title><link rel="stylesheet" href="../../../site/style.css"></head>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>GHOSTLIGHT PROTOCOL // CONSENT PRIVACY // NODE 03</title><link rel="stylesheet" href="../../../style.css"></head>
 <body><main class="ghost-page"><article class="ghost-card">
-  <p class="breadcrumb">consent_privacy // node 03 // difficulty 7.2</p><h1>GHOSTLIGHT PROTOCOL // CONSENT PRIVACY // NODE 03</h1>
+  <p class="breadcrumb">consent_privacy // bud 03 // difficulty 7.2</p><h1>GHOSTLIGHT PROTOCOL // CONSENT PRIVACY // NODE 03</h1>
   <section class="gate"><h2>consent must remain active</h2><p>The unsafe read treats consent as a one-time unlock. The stable read knows consent is active, specific, revocable, and alive.</p><pre class="code-block">yes once .................... not forever
 yes here .................... not everywhere
 yes to this ................. not to all
@@ -17,4 +17,4 @@ It must keep breathing.</pre></section>
 </article></main><script>
 const form=document.getElementById("gate-form");const input=document.getElementById("answer");const norm=v=>v.toLowerCase().replace(/[^a-z0-9]+/g," ").trim();
 form.addEventListener("submit",event=>{event.preventDefault();const a=norm(input.value);const bad=["yes forever","said yes before","silence means yes","freeze means yes","consent once","no takebacks","implied access","push past pause"].some(x=>a.includes(x));const good=a.includes("active consent")||(a.includes("consent")&&(a.includes("active")||a.includes("specific")||a.includes("revocable")||a.includes("ongoing")||a.includes("alive")))||(a.includes("yes once")&&a.includes("forever"))||(a.includes("yes to this")&&a.includes("all"))||(a.includes("silence")&&a.includes("not consent"))||(a.includes("changed mind")&&a.includes("valid"))||(a.includes("pause")&&a.includes("valid"));location.href=good?"node_03_reward.html":"../../fail/care_gate_failed.html";});
-</script><script src="../../../site/script.js?v=branch-inputs-3"></script></body></html>
+</script><script src="../../../script.js?v=branch-inputs-3"></script></body></html>

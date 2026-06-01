@@ -1,0 +1,138 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GHOSTLIGHT PROTOCOL // CROWNED WYRM PUZZLE</title>
+  <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+  <main class="ghost-page">
+    <article class="ghost-card">
+      <p class="breadcrumb">heartwood // crowned wyrm // puzzle</p>
+      <h1>GHOSTLIGHT PROTOCOL // CROWNED WYRM PUZZLE</h1>
+
+      <section class="warning">
+        <h2>sealed signal boundary</h2>
+        <p>You are not proving you can break into anything. You are proving you can solve a sealed fictional signal without violating the boundary.</p>
+        <p>No live targets. No real interception. No unauthorized systems. No real combat communications. No operational real-world data.</p>
+        <p>Use only the synthetic files linked from this page.</p>
+      </section>
+
+      <section class="gate">
+        <h2>rules</h2>
+        <ol class="path-list">
+          <li>Choose only passes where consent is Y, real_world_source is N, and lab_lock is Y.</li>
+          <li>Score each valid pass with elevation_deg + snr_db - abs(drift_ppm).</li>
+          <li>Select the highest-scoring valid pass.</li>
+          <li>Read only frames in burst_manifest.csv matching that pass_id.</li>
+          <li>Sort those frames by interleave_index, not capture_slot.</li>
+          <li>Decode payload_hex as bytes, then remove the lab mask with XOR 0x13.</li>
+          <li>Normalize the recovered phrase by lowercasing it and removing non-alphanumeric characters before validation.</li>
+        </ol>
+      </section>
+
+      <section class="gate">
+        <h2>synthetic dataset</h2>
+        <ul class="path-list">
+          <li><a href="pass_windows.csv">pass_windows.csv</a></li>
+          <li><a href="burst_manifest.csv">burst_manifest.csv</a></li>
+          <li><a href="validator_hash.html">validator_hash.html</a></li>
+        </ul>
+      </section>
+
+      <section class="gate">
+        <h2>helper tools</h2>
+        <ul class="path-list">
+          <li><a href="../../Tools/final_boss_validator.py">Tools/final_boss_validator.py</a></li>
+          <li><a href="../../Tools/decode_base64.py">Tools/decode_base64.py</a></li>
+          <li><a href="../../Tools/cipher_helper.py">Tools/cipher_helper.py</a></li>
+        </ul>
+      </section>
+
+      <section class="gate">
+        <h2>helper notes</h2>
+        <pre class="code-block">capture_slot:
+The lab recorded arrival order. Arrival is not always reconstruction.
+
+interleave_index:
+A steadier clock appears in the frames. The relay trusts stable sequence more than first sight.
+
+payload_hex:
+The payload is not written in plain language. Hex is only the first skin.
+
+lab mask:
+The lab marked the signal with a small fixed mask: 0x13.
+
+decoy behavior:
+Some passes are loud but unsafe. Some passes look useful but fail the boundary.
+Some frames arrive cleanly but belong to the wrong pass.</pre>
+      </section>
+
+      <section class="gate" aria-labelledby="answer-title">
+        <h2 id="answer-title">validation route</h2>
+        <p>Enter the reconstructed Crowned Wyrm phrase, or run the local validator with the normalized answer.</p>
+        <pre class="code-block">python Tools\final_boss_validator.py &lt;candidate_key&gt;</pre>
+
+        <form id="crowned-wyrm-validator-form">
+          <label for="crowned-wyrm-answer">reconstructed phrase</label><br>
+          <input id="crowned-wyrm-answer" name="crowned_wyrm_answer" type="text" autocomplete="off" spellcheck="false" class="answer-input" placeholder="reconstructed phrase">
+          <button class="audio-button" type="submit">validate reconstruction</button>
+        </form>
+
+        <p id="crowned-wyrm-validator-status" class="audio-status" aria-live="polite"></p>
+      </section>
+
+      <ul class="nav-links">
+        <li><a href="start.html">colored door</a></li>
+        <li><a href="fail.html">failed signal</a></li>
+        <li><a href="../hub.html">hub</a></li>
+      </ul>
+    </article>
+  </main>
+
+  <script>
+    (function () {
+      const expected = "bf942d07f3d95d83e83b5e2c3cf8c6512c6560040283d316e4e831729b3e30bd";
+      const form = document.getElementById("crowned-wyrm-validator-form");
+      const input = document.getElementById("crowned-wyrm-answer");
+      const status = document.getElementById("crowned-wyrm-validator-status");
+
+      function normalize(value) {
+        return value.trim().toLowerCase().replace(/[^a-z0-9]/g, "");
+      }
+
+      function hex(buffer) {
+        return Array.prototype.map.call(new Uint8Array(buffer), function (byte) {
+          return byte.toString(16).padStart(2, "0");
+        }).join("");
+      }
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        const value = normalize(input.value);
+
+        if (!value) {
+          status.textContent = "empty reconstruction";
+          return;
+        }
+
+        crypto.subtle.digest("SHA-256", new TextEncoder().encode(value)).then(function (digest) {
+          if (hex(digest) === expected) {
+            sessionStorage.setItem("ghostlightCrownedWyrmAccepted", "true");
+            status.textContent = "crowned wyrm signal accepted; treasure opening";
+            window.location.href = "treasure.html";
+          } else {
+            status.textContent = "crowned wyrm signal rejected";
+            window.location.href = "fail.html";
+          }
+        }).catch(function () {
+          status.textContent = "validator unavailable";
+        });
+      });
+    }());
+  </script>
+
+  <script src="../../script.js?v=branch-inputs-2"></script>
+</body>
+</html>

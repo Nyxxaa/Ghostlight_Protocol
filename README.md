@@ -11,4 +11,4 @@ index.html
 This is a static puzzle built around curiosity, technical competence, emotional care, and consent.
 
 Access is not entitlement.
-Information is a reward, not a right.
+Information is fruit, not a right.
